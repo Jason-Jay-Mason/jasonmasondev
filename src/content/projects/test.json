@@ -1,0 +1,16 @@
+{
+	"logo": {
+		"src": "blah.com",
+		"alt": "some alt text here"
+	},
+	"headline": {
+		"sub": "Why I'm applying",
+		"main": "COVER LETTER"
+	},
+	"body": "body text here <br/> body text here <a href='/'>blah</a>",
+	"cta": {
+		"innerText": "View Site",
+		"href": "blah.com"
+	},
+	"githubHref": "github.com"
+}

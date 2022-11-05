@@ -1,0 +1,16 @@
+{
+	"logo": {
+		"src": "blah.2com",
+		"alt": "some a22lt text here"
+	},
+	"headline": {
+		"sub": "Why I'm 22applying",
+		"main": "COVER LETTER"
+	},
+	"body": "body text h2ere <br/> body text here <a href='/'>blah</a>",
+	"cta": {
+		"innerText": "View 2Site",
+		"href": "b2lah.com"
+	},
+	"githubHref": "g2ithub.com"
+}
