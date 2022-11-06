@@ -4,7 +4,9 @@ import { error } from '@sveltejs/kit'
 //load the project page based on the slug
 export const load: PageLoad = async ({ params }) => {
 	try {
-		const project = await import(`../../../content/projects/${params.project}`)
+		const project = await import(
+			/* @vite-ignore */ `../../../content/projects/${params.project}.json`
+		)
 		return {
 			project
 		}

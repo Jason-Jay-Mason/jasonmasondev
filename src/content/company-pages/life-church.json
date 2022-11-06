@@ -23,7 +23,7 @@
 		"name": "Life.Church",
 		"logoSrc": "blah.com"
 	},
-	"Hero": {
+	"hero": {
 		"hook": "This is a hook blah blah",
 		"cta": {
 			"isVideo": true,

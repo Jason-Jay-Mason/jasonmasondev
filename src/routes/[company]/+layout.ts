@@ -1,10 +1,15 @@
-import type { PageLoad } from './$types'
+//setting the static prerender on the layout level until further notice. ie, we need server stuff like edge functions
+export const prerender = true
+
+import type { LayoutLoad } from './$types'
 import { error } from '@sveltejs/kit'
 
-export const load: PageLoad = async ({ params, fetch }) => {
+export const load: LayoutLoad = async ({ params, fetch }) => {
 	try {
 		//grab the company page from the slug
-		const page = await import(`../../content/company-pages/${params.company}`)
+		const page = await import(
+			/* @vite-ignore */ `../../content/company-pages/${params.company}.json`
+		)
 		//also grab all of the projects so that we can render them to the projects component
 		const response = await fetch('/api/projects')
 		const projects = await response.json()

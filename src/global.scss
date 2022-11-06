@@ -1,0 +1,54 @@
+body {
+	--color-text-body: black;
+	&[data-theme='light'] {
+		--color-bg-primary: white;
+		--color-text-body: black;
+		--color-rock-100: #1c1917;
+		--color-rock-200: #403c39;
+		--color-rock-300: #57504a;
+		--color-pencil-100: #bdbdbd;
+	}
+
+	&[data-theme='dark'] {
+		--color-bg-primary: #0d0c0c;
+		--color-text-body: #ffffff;
+		--color-rock-100: #ffffff;
+		--color-rock-200: #ffffff;
+		--color-rock-300: #ffffff;
+		--color-pencil-100: #595959;
+	}
+}
+
+@mixin rainbowBackground {
+	background: conic-gradient(
+		from 180deg at 50% 50%,
+		#d54a4a 0deg,
+		#dcd756 63.75deg,
+		#5cd777 123.75deg,
+		#5accbe 187.5deg,
+		#695acb 255deg,
+		#c852db 316.87deg,
+		#ff007a 360deg,
+		#ca4887 360deg
+	);
+}
+
+body {
+	background-color: var(--color-bg-primary);
+}
+
+a {
+	color: var(--color-text-body);
+	text-decoration: none;
+	position: relative;
+	margin: 0px 2px;
+	&::before {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+		background-color: var(--color-text-body);
+	}
+}
