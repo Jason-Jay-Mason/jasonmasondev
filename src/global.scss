@@ -1,4 +1,4 @@
-//#region colors
+@import './lib/theme/breakpoints.scss'; //#region colors
 body {
 	--color-text-body: black;
 	--color-bg-primary: white;
@@ -9,6 +9,17 @@ body {
 	--color-pencil-100: #bdbdbd;
 	--opacity-pencilbg: 1;
 	--icon-filter: none;
+	--color-rainbow: conic-gradient(
+		from 180deg at 50% 50%,
+		#d54a4a 0deg,
+		#dcd756 63.75deg,
+		#5cd777 123.75deg,
+		#5accbe 187.5deg,
+		#695acb 255deg,
+		#c852db 316.87deg,
+		#ff007a 360deg,
+		#ca4887 360deg
+	);
 
 	&[data-theme='dark'] {
 		--color-bg-primary: #0d0c0c;
@@ -21,6 +32,7 @@ body {
 		--icon-filter: brightness(0) invert(1);
 	}
 }
+
 @mixin rainbowBackground {
 	background: conic-gradient(
 		from 180deg at 50% 50%,
@@ -34,45 +46,6 @@ body {
 		#ca4887 360deg
 	);
 }
-//#endregion
-
-//#region breakpoints
-$sm: 640px;
-$md: 768px;
-$lg: 1024px;
-$xl: 1280px;
-$xxl: 1536px;
-
-@mixin sm {
-	@media (min-width: $sm) {
-		@content;
-	}
-}
-
-@mixin md {
-	@media (min-width: $md) {
-		@content;
-	}
-}
-
-@mixin lg {
-	@media (min-width: $lg) {
-		@content;
-	}
-}
-
-@mixin xl {
-	@media (min-width: $xl) {
-		@content;
-	}
-}
-
-@mixin xxl {
-	@media (min-width: $xxl) {
-		@content;
-	}
-}
-
 //#endregion
 
 //fonts
@@ -97,7 +70,11 @@ $xxl: 1536px;
 	--text-xxxl: calc(var(--text-xxl) * var(--text-scale));
 
 	//spacing
-	--spacing-scale: 0.125rem;
+	--spacing-scale: 0.11rem;
+	@include sm {
+		--spacing-scale: 0.125rem;
+	}
+
 	--spacing-multiplyer: 1.4;
 	--s-1: calc(var(--spacing-scale) * var(--spacing-multiplyer));
 	--s-2: calc(var(--s-1) * var(--spacing-multiplyer));

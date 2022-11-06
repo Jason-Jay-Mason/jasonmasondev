@@ -5,7 +5,8 @@
 	// TODO I need to create company page type and project[] type
 	import type { LayoutData } from './$types';
 	export let data: LayoutData;
+	console.log(data);
 </script>
 
-<Hero data={data.page.hero} />
+<Hero hook={data.page.hero.hook} cta={data.page.hero.cta} logo={data.page.company.logoSrc} />
 <CoverLetter data={data.page.coverLetter} />
