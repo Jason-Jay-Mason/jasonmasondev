@@ -10,8 +10,6 @@
 <p class="test">{string}</p>
 
 <style lang="scss">
-	@use '../../theme.scss';
-
 	.test {
 		color: var(--color-text-body);
 	}
