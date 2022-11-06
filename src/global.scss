@@ -1,13 +1,14 @@
+//#region colors
 body {
 	--color-text-body: black;
-	&[data-theme='light'] {
-		--color-bg-primary: white;
-		--color-text-body: black;
-		--color-rock-100: #1c1917;
-		--color-rock-200: #403c39;
-		--color-rock-300: #57504a;
-		--color-pencil-100: #bdbdbd;
-	}
+	--color-bg-primary: white;
+	--color-text-body: black;
+	--color-rock-100: #1c1917;
+	--color-rock-200: #403c39;
+	--color-rock-300: #7d7b79;
+	--color-pencil-100: #bdbdbd;
+	--opacity-pencilbg: 1;
+	--icon-filter: none;
 
 	&[data-theme='dark'] {
 		--color-bg-primary: #0d0c0c;
@@ -16,9 +17,10 @@ body {
 		--color-rock-200: #ffffff;
 		--color-rock-300: #ffffff;
 		--color-pencil-100: #595959;
+		--opacity-pencilbg: 0.3;
+		--icon-filter: brightness(0) invert(1);
 	}
 }
-
 @mixin rainbowBackground {
 	background: conic-gradient(
 		from 180deg at 50% 50%,
@@ -32,9 +34,111 @@ body {
 		#ca4887 360deg
 	);
 }
+//#endregion
 
+//#region breakpoints
+$sm: 640px;
+$md: 768px;
+$lg: 1024px;
+$xl: 1280px;
+$xxl: 1536px;
+
+@mixin sm {
+	@media (min-width: $sm) {
+		@content;
+	}
+}
+
+@mixin md {
+	@media (min-width: $md) {
+		@content;
+	}
+}
+
+@mixin lg {
+	@media (min-width: $lg) {
+		@content;
+	}
+}
+
+@mixin xl {
+	@media (min-width: $xl) {
+		@content;
+	}
+}
+
+@mixin xxl {
+	@media (min-width: $xxl) {
+		@content;
+	}
+}
+
+//#endregion
+
+//fonts
+:root {
+	--font-subheadline: 'Qwigley', cursive;
+	--font-headline: 'Pragati Narrow', sans-serif;
+
+	//font sizes
+	--text-base: 1em;
+	//mobile first ratio
+	--text-scale: 1.4;
+	@include md {
+		--text-scale: 1.58;
+	}
+	//sizes
+	--text-xs: calc((1em / var(--text-scale)) / var(--text-scale));
+	--text-sm: calc(var(--text-xs) * var(--text-scale));
+	--text-md: calc(var(--text-sm) * var(--text-scale) * var(--text-scale));
+	--text-lg: calc(var(--text-md) * var(--text-scale));
+	--text-xl: calc(var(--text-lg) * var(--text-scale));
+	--text-xxl: calc(var(--text-xl) * var(--text-scale));
+	--text-xxxl: calc(var(--text-xxl) * var(--text-scale));
+
+	//spacing
+	--spacing-scale: 0.125rem;
+	--spacing-multiplyer: 1.4;
+	--s-1: calc(var(--spacing-scale) * var(--spacing-multiplyer));
+	--s-2: calc(var(--s-1) * var(--spacing-multiplyer));
+	--s-3: calc(var(--s-2) * var(--spacing-multiplyer));
+	--s-4: calc(var(--s-3) * var(--spacing-multiplyer));
+	--s-5: calc(var(--s-4) * var(--spacing-multiplyer));
+	--s-6: calc(var(--s-5) * var(--spacing-multiplyer));
+	--s-7: calc(var(--s-6) * var(--spacing-multiplyer));
+	--s-8: calc(var(--s-7) * var(--spacing-multiplyer));
+	--s-9: calc(var(--s-8) * var(--spacing-multiplyer));
+	--s-10: calc(var(--s-9) * var(--spacing-multiplyer));
+	--s-11: calc(var(--s-10) * var(--spacing-multiplyer));
+	--s-12: calc(var(--s-11) * var(--spacing-multiplyer));
+	--s-13: calc(var(--s-12) * var(--spacing-multiplyer));
+	--s-14: calc(var(--s-13) * var(--spacing-multiplyer));
+}
+
+//#region gobals
 body {
 	background-color: var(--color-bg-primary);
+}
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	padding: 0;
+	margin: 0;
+}
+
+p {
+	color: var(--color-text-body);
+	font-family: 'Times New Roman';
+	font-style: normal;
+	font-weight: 300;
+	font-size: var(--text-base);
+	line-height: 150%;
+	letter-spacing: 0.07em;
 }
 
 a {
@@ -52,3 +156,5 @@ a {
 		background-color: var(--color-text-body);
 	}
 }
+
+//#endregion globals

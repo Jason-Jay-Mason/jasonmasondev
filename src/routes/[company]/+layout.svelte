@@ -1,7 +1,7 @@
 <script lang="ts">
 	import type { LayoutData } from './$types';
 	export let data: LayoutData;
-	import ThemeSwitcher from '$lib/components/theme-switcher.svelte';
+	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 </script>
 
 <div>

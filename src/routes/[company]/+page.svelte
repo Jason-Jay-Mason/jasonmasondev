@@ -1,16 +1,11 @@
 <!-- [company] the main company page -->
 <script lang="ts">
+	import Hero from '$lib/components/company/Hero.svelte';
+	import CoverLetter from '$lib/components/company/CoverLetter.svelte';
 	// TODO I need to create company page type and project[] type
 	import type { LayoutData } from './$types';
 	export let data: LayoutData;
-
-	const string = JSON.stringify(data);
 </script>
 
-<p class="test">{string}</p>
-
-<style lang="scss">
-	.test {
-		color: var(--color-text-body);
-	}
-</style>
+<Hero data={data.page.hero} />
+<CoverLetter data={data.page.coverLetter} />
