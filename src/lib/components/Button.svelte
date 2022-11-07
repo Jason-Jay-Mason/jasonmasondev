@@ -9,7 +9,8 @@
 <style lang="scss">
 	button {
 		position: relative;
-		width: 100%;
+		width: 98%;
+		margin: 0 auto;
 		box-shadow: none;
 		font-size: calc(var(--text-base) + 5px);
 		color: var(--color-text-body);

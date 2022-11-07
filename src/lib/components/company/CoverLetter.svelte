@@ -18,7 +18,7 @@
 		margin: 0 auto;
 		max-width: 848px;
 		.body {
-			padding: var(--s-10) var(--s-4);
+			padding: var(--s-10) var(--s-7);
 		}
 		img {
 			filter: var(--icon-filter);

@@ -6,7 +6,7 @@
 	export let logo: string;
 </script>
 
-<section class="section">
+<section class="section" id="top">
 	<div class="container">
 		<div class="intro"><h1>Jason's webumé</h1></div>
 		<div class="logo-container">
@@ -38,9 +38,9 @@
 	section {
 		position: relative;
 		width: 100%;
-		padding: var(--s-10) var(--s-4) var(--s-11) var(--s-4);
+		padding: var(--s-10) 0 var(--s-11) 0;
 		@include sm {
-			padding: var(--s-13) var(--s-4) var(--s-14) var(--s-4);
+			padding: var(--s-11) var(--s-4) var(--s-13) var(--s-4);
 		}
 		.cta-container {
 			padding-top: var(--s-7);

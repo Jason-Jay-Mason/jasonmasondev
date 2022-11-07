@@ -13,3 +13,12 @@ export interface Cta {
 	hrefOrSrc: string
 	innerText: string
 }
+
+export interface Link {
+	href: string
+	innerText: string
+}
+
+export interface Nav {
+	links: Link[]
+}

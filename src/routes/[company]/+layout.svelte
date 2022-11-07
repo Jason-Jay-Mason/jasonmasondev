@@ -1,14 +1,13 @@
 <script lang="ts">
 	import type { LayoutData } from './$types';
+	import CompanyNav from '$lib/components/CompanyNav.svelte';
+	import Footer from '$lib/components/Footer.svelte';
 	export let data: LayoutData;
-	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 </script>
 
-<div>
-	{#each data.page.layout.links as link}
-		<a href={link.href}>{link.innerText} </a>
-	{/each}
-</div>
-<ThemeSwitcher />
+<CompanyNav data={data.page.layout} />
 <slot />
-<h1>this is the foorer</h1>
+<Footer data={data.page.layout} />
+
+<style lang="scss">
+</style>
