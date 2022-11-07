@@ -3,7 +3,6 @@
 	import Hero from '$lib/components/company/Hero.svelte';
 	import CoverLetter from '$lib/components/company/CoverLetter.svelte';
 	import Work from '$lib/components/Work.svelte';
-	// TODO I need to create company page type and project[] type
 	import type { LayoutData } from './$types';
 
 	export let data: LayoutData;

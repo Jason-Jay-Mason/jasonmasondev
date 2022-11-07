@@ -2,6 +2,7 @@
 	//swith the theme
 
 	let iconSrc: string;
+	//we store the theme state in local storage so that we can persist between sessions. The initial state is handeled in app.html
 	function switchTheme() {
 		let theme = localStorage.getItem('theme');
 		if (theme === 'dark') {

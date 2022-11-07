@@ -1,25 +1,33 @@
 <script lang="ts">
 	import LargeHeadline from '$lib/components/LargeHeadline.svelte';
 	import GridCard from '$lib/components/GridCard.svelte';
+	//gatta love svelte, I don't have to make animations from scratch
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import type { Headline, Project, TagButtons, TagSelect, SelectedProjects } from '$lib/types';
+	import type { Headline, Project, TagButtons, TagSelect } from '$lib/types';
 	import Button from './Button.svelte';
+
 	export let headline: Headline;
 	export let projects: Project[];
 
+	//we will keep the filter buttons and their stat in this variable
 	let tagButtons: TagButtons = {
 		all: {
 			selected: true,
 			title: 'all'
 		}
 	};
+	// this stores the projects that are currently selected this is updated by the updateSelected function
 	let selectedProjects: Project[] = projects;
-	let gridContainer;
+	// we are getting referece to the grids parent div so that we can set a static height so that it doesnt jump around when filtering
+	let gridContainer: HTMLElement;
 	onMount(() => {
+		//double check for the projects
 		if (projects) {
-			console.log(gridContainer.clientHeight);
+			// set the height of the parent of the grid element because we don't want the height to change when there are less projects visible
 			gridContainer.style.minHeight = `${gridContainer.clientHeight}px`;
+
+			// add all of the types of tags to the tagButtons object, so that we can have as many as we like in the content without worrying about adding hard coded values to this component
 			projects.forEach((project: Project) => {
 				project.data.tags.forEach((tag: string) => {
 					if (tagButtons[tag]) {

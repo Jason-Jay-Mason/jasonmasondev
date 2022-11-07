@@ -6,7 +6,7 @@ import { error } from '@sveltejs/kit'
 
 export const load: LayoutLoad = async ({ params, fetch }) => {
 	try {
-		//grab the company page from the slug
+		//grab the company page from the slug vite ignore is there to eliminate the warning when a param is not found
 		const page = await import(
 			/* @vite-ignore */ `../../content/company-pages/${params.company}.json`
 		)
@@ -19,7 +19,7 @@ export const load: LayoutLoad = async ({ params, fetch }) => {
 			projects
 		}
 	} catch (err) {
-		//just throw a 404 for now for the user if there are errors, this project is not needing to have robust error handleing
+		//just throw a 404 for now for the user if there are errors, this project is not needing to have robust error handling
 		throw error(404, 'Page not found')
 	}
 }

@@ -1,10 +1,10 @@
 <script lang="ts">
+	// this is just the card component for the projects grid on the company pages
 	import type { Headline, Img } from '$lib/types';
 
 	export let headline: Headline;
 	export let description: string;
 	export let img: Img;
-	export let githubHref: string | undefined;
 	export let href: string;
 </script>
 
