@@ -17,6 +17,7 @@
 	#coverletter {
 		margin: 0 auto;
 		max-width: 848px;
+		padding-bottom: var(--s-13);
 		.body {
 			padding: var(--s-10) var(--s-7);
 		}

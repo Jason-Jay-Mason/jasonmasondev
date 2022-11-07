@@ -1,15 +1,21 @@
 <script lang="ts">
-	export let href: string;
+	export let href: string | undefined = undefined;
+	export let selected: boolean = false;
 </script>
 
-<a {href}>
-	<button><slot /></button>
-</a>
+{#if href}
+	<a {href}>
+		<button><slot /></button>
+	</a>
+{:else}
+	<button class:selected={selected === true}><slot /></button>
+{/if}
 
 <style lang="scss">
 	button {
 		position: relative;
 		width: 98%;
+		text-transform: capitalize;
 		margin: 0 auto;
 		box-shadow: none;
 		font-size: calc(var(--text-base) + 5px);
@@ -18,7 +24,8 @@
 		font-family: var(--font-headline);
 		border: 2px solid var(--color-rock-100);
 		background-color: var(--color-bg-primary);
-		padding: var(--s-4) 0;
+
+		padding: var(--s-4) var(--s-8);
 		&::before {
 			content: '';
 			opacity: 0;
@@ -38,6 +45,7 @@
 			border-image-slice: 1;
 			border-image-source: var(--color-rainbow);
 		}
+
 		&:hover {
 			cursor: pointer;
 			border-image-slice: 1;
@@ -51,6 +59,19 @@
 				transform: translateX(-10px) translateY(-10px) rotate(2deg);
 				border-width: 5px 10px 5px 10px;
 			}
+		}
+	}
+	.selected {
+		border-image-slice: 1;
+		border-image-source: var(--color-rainbow);
+		&::before {
+			opacity: 1;
+			transition: transform 0.4s;
+			transition: border-width 0.4s;
+			transition: filter 0.4s;
+			filter: blur(12px);
+			transform: translateX(-10px) translateY(-10px) rotate(2deg);
+			border-width: 5px 10px 5px 10px;
 		}
 	}
 </style>

@@ -6,6 +6,7 @@ body {
 
 	--color-text-body: black;
 	--color-bg-primary: white;
+	--color-bg-card: #ffffffd9;
 	--color-text-body: black;
 	--color-rock-100: #1c1917;
 	--color-rock-200: #403c39;
@@ -28,6 +29,7 @@ body {
 
 	&[data-theme='dark'] {
 		--color-bg-primary: #0d0c0c;
+		--color-bg-card: #0d0c0cd9;
 		--color-text-body: #ffffff;
 		--color-rock-100: #ffffff;
 		--color-rock-200: #ffffff;

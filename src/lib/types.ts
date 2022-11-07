@@ -22,3 +22,36 @@ export interface Link {
 export interface Nav {
 	links: Link[]
 }
+
+export interface Img {
+	src: string
+	alt: string
+}
+
+export interface ProjectData {
+	body: string
+	cta: Cta
+	headline: Headline
+	logo: Img
+	year: number
+	img: Img
+	githubHref?: string
+	tags: string[]
+}
+export interface Project {
+	slug: string
+	data: ProjectData
+}
+
+export interface TagSelect {
+	selected: boolean
+	title: string
+}
+
+export interface TagButtons {
+	[key: string]: TagSelect
+}
+
+export interface SelectedProjects {
+	[key: string]: Project
+}

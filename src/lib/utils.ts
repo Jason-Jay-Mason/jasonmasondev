@@ -29,10 +29,9 @@ export const fetchCompanyPages = async () => {
 }
 
 //TODO actually make this type
-interface Project {
-	slug: string
-	data: object
-}
+
+import type { ProjectData } from './types'
+import type { Project } from './types'
 
 export const fetchProjects = async () => {
 	//vite function that globs a directory and returns {path}:{()=>import(...)}
@@ -43,7 +42,8 @@ export const fetchProjects = async () => {
 	//return a single promise after iterating through all the promises and resoving them
 	const projects: Project[] = await Promise.all(
 		iterable.map(async ([path, resover]) => {
-			let data = await resover()
+			let data: ProjectData = await resover()
+
 			let slug = path.replaceAll('/src/content/projects/', '').replaceAll('.json', '')
 			return {
 				slug,
