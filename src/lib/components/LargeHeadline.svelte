@@ -9,6 +9,7 @@
 </div>
 
 <style lang="scss">
+	@import '../theme/breakpoints.scss';
 	.headline {
 		margin: 0 auto;
 		width: fit-content;

@@ -1,6 +1,9 @@
 <script lang="ts">
 	export let href: string | undefined = undefined;
 	export let selected: boolean = false;
+	$: {
+		console.log(`${selected}`);
+	}
 </script>
 
 {#if href}
@@ -12,20 +15,23 @@
 {/if}
 
 <style lang="scss">
+	@import '../theme/breakpoints.scss';
 	button {
 		position: relative;
 		width: 98%;
 		text-transform: capitalize;
 		margin: 0 auto;
 		box-shadow: none;
-		font-size: calc(var(--text-base) + 5px);
+		font-size: calc(var(--text-base) + 3px);
 		color: var(--color-text-body);
 		letter-spacing: 0.11em;
 		font-family: var(--font-headline);
 		border: 2px solid var(--color-rock-100);
 		background-color: var(--color-bg-primary);
-
 		padding: var(--s-4) var(--s-8);
+		@include sm {
+			font-size: calc(var(--text-base) + 5px);
+		}
 		&::before {
 			content: '';
 			opacity: 0;

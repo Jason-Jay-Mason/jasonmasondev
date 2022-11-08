@@ -15,7 +15,7 @@
 		{#each data as link}
 			<a href={link.href}>{link.innerText}</a>
 		{/each}
-		<a class="link" href="#contact">CONTACT</a>
+		<a class="link" href="/">CONTACT</a>
 	</div>
 
 	<div class="social">

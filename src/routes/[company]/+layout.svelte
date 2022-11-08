@@ -8,6 +8,3 @@
 <CompanyNav data={data.page.layout} />
 <slot />
 <Footer data={data.page.layout} />
-
-<style lang="scss">
-</style>

@@ -13,7 +13,7 @@
 
 <nav>
 	<div class="left">
-		<a href="#top">
+		<a href="/">
 			<img src="/jm-logo.svg" alt="jason's logo" />
 		</a>
 
@@ -25,7 +25,7 @@
 	</div>
 	<div class="right">
 		<div class="social">
-			<a class="link" href="#contact">CONTACT</a>
+			<a class="link" href="/">CONTACT</a>
 			<a href="/">
 				<img src="/github-logo.svg" alt="" />
 			</a>

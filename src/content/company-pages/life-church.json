@@ -3,31 +3,31 @@
 		"links": [
 			{
 				"innerText": "COVER LETTER",
-				"href": "#coverletter"
+				"href": "/"
 			},
 			{
 				"innerText": "PROFILE",
-				"href": "#profile"
+				"href": "/"
 			},
 			{
 				"innerText": "WORK EXPERIENCE",
-				"href": "#work"
+				"href": "/"
 			},
 			{
 				"innerText": "PORTFOLIO",
-				"href": "#portfolio"
+				"href": "/"
 			}
 		]
 	},
 	"company": {
 		"name": "Life.Church",
-		"logoSrc": "blah.com"
+		"logoSrc": "/lc-logo.svg"
 	},
 	"hero": {
 		"hook": "This is a hook blah blah",
 		"cta": {
 			"isVideo": true,
-			"hrefOrSrc": "#contact",
+			"hrefOrSrc": "/",
 			"innerText": "Watch Video"
 		}
 	},
@@ -47,20 +47,20 @@
 		"interests": [
 			{
 				"title": "Snowboardint",
-				"iconSrc": "blah.com"
+				"iconSrc": "/"
 			},
 			{
 				"title": "Jesus",
-				"iconSrc": "blah.com"
+				"iconSrc": "/"
 			},
 			{
 				"title": "Drums",
-				"iconSrc": "blah.com"
+				"iconSrc": "/"
 			}
 		],
 		"img": {
 			"alt": "some alt text here",
-			"src": "blah.com"
+			"src": "/"
 		}
 	},
 	"work": {

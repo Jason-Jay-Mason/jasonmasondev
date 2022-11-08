@@ -8,7 +8,7 @@
 	export let href: string;
 </script>
 
-<a {href}>
+<a data-sveltekit-reload {href}>
 	<div>
 		<img src={img.src} alt={img.alt} />
 		<p class="sub">

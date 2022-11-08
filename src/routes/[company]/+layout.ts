@@ -16,7 +16,8 @@ export const load: LayoutLoad = async ({ params, fetch }) => {
 
 		return {
 			page,
-			projects
+			projects,
+			slug: params.company
 		}
 	} catch (err) {
 		//just throw a 404 for now for the user if there are errors, this project is not needing to have robust error handling

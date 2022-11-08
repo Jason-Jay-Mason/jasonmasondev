@@ -1,6 +1,5 @@
 <!-- src/layout -->
 <svelte:head>
-	<link rel="stylesheet" href="/src/global.scss" />
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
 	<link
@@ -10,3 +9,14 @@
 </svelte:head>
 
 <slot />
+
+<style lang="scss" global>
+	@import '../global.scss';
+	html,
+	body {
+		overflow-x: hidden;
+		-webkit-overflow-scrolling: touch;
+		position: relative;
+		height: 100%;
+	}
+</style>

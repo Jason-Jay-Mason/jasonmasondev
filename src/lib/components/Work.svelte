@@ -57,6 +57,7 @@
 	}
 
 	function selectTag(next: TagSelect): void {
+		console.log(tagButtons);
 		//if all if false and is click, it should deslect all other filters
 		if (next.title === 'all' && next.selected === false) {
 			Object.values(tagButtons).forEach((tag) => {
@@ -123,8 +124,7 @@
 						headline={project.data.headline}
 						description={project.data.body.slice(0, 70)}
 						img={project.data.img}
-						githubHref={project.data.githubHref}
-						href={project.slug}
+						href={`/projects/${project.slug}`}
 					/>
 				</div>
 			{/each}
@@ -134,6 +134,9 @@
 
 <style lang="scss">
 	@import '../theme/breakpoints.scss';
+	#work {
+		overflow: hidden;
+	}
 	.filters {
 		display: flex;
 		align-items: center;

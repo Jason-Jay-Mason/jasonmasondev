@@ -1,9 +1,7 @@
 @import './lib/theme/breakpoints.scss'; //#region colors
 body {
-	overflow-x: hidden;
 	margin: 0;
 	padding: 0;
-
 	--color-text-body: black;
 	--color-bg-primary: white;
 	--color-bg-card: #ffffffd9;
@@ -64,10 +62,14 @@ body {
 	//font sizes
 	--text-base: 1em;
 	//mobile first ratio
-	--text-scale: 1.4;
-	@include md {
+	--text-scale: 1.35;
+	@include xs {
+		--text-scale: 1.44;
+	}
+	@include sm {
 		--text-scale: 1.58;
 	}
+
 	//sizes
 	--text-xs: calc((1em / var(--text-scale)) / var(--text-scale));
 	--text-sm: calc(var(--text-xs) * var(--text-scale));

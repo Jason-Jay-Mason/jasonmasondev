@@ -11,7 +11,7 @@
 		<div class="intro"><h1>Jason's webumé</h1></div>
 		<div class="logo-container">
 			<div class="logo">
-				<img src="/lc-logo.svg" alt="" />
+				<img src={logo} alt="" />
 			</div>
 			<div class="line" />
 		</div>
@@ -36,6 +36,7 @@
 <style lang="scss">
 	@import '../../theme/breakpoints.scss';
 	section {
+		overflow: hidden;
 		position: relative;
 		width: 100%;
 		padding: var(--s-10) 0 var(--s-11) 0;
@@ -219,12 +220,15 @@
 		.intro {
 			position: relative;
 			width: 90%;
-			font-size: calc(var(--text-lg) + 5px);
+			font-size: calc(var(--text-lg) + 1px);
 			color: var(--color-rock-200);
 			font-family: var(--font-subheadline);
 			text-align: center;
 			transform: rotate(-2deg);
 			margin: var(--s-7) auto var(--s-4) auto;
+			@include sm {
+				font-size: calc(var(--text-lg) + 4px);
+			}
 			@include md {
 				font-size: calc(var(--text-lg) + 10px);
 			}
