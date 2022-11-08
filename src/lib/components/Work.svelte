@@ -6,6 +6,7 @@
 	import { onMount } from 'svelte';
 	import type { Headline, Project, TagButtons, TagSelect } from '$lib/types';
 	import Button from './Button.svelte';
+	import FeaturedGrid from './FeaturedGrid.svelte';
 
 	export let headline: Headline;
 	export let projects: Project[];
@@ -57,7 +58,6 @@
 	}
 
 	function selectTag(next: TagSelect): void {
-		console.log(tagButtons);
 		//if all if false and is click, it should deslect all other filters
 		if (next.title === 'all' && next.selected === false) {
 			Object.values(tagButtons).forEach((tag) => {
@@ -106,7 +106,7 @@
 	}
 </script>
 
-<section id="#work">
+<section id="work">
 	<LargeHeadline main={headline.main} sub={headline.sub} />
 	<div class="filters">
 		{#each Object.values(tagButtons) as tag}
@@ -117,18 +117,7 @@
 	</div>
 
 	<div bind:this={gridContainer}>
-		<div class="grid">
-			{#each selectedProjects as project}
-				<div in:fly={{ y: -20 }} out:fly={{ y: -20 }}>
-					<GridCard
-						headline={project.data.headline}
-						description={project.data.body.slice(0, 70)}
-						img={project.data.img}
-						href={`/projects/${project.slug}`}
-					/>
-				</div>
-			{/each}
-		</div>
+		<FeaturedGrid displayElements={selectedProjects} />
 	</div>
 </section>
 
@@ -148,21 +137,6 @@
 		width: fit-content;
 		.filter {
 			padding: var(--s-3) var(--s-3);
-		}
-	}
-	.grid {
-		display: grid;
-		align-items: start;
-		row-gap: 10px;
-		padding-top: var(--s-10);
-		grid-template-columns: 1fr 1fr;
-		max-width: $xl;
-		margin: 0 auto;
-		@include md {
-			grid-template-columns: 1fr 1fr 1fr;
-		}
-		@include lg {
-			grid-template-columns: 1fr 1fr 1fr 1fr;
 		}
 	}
 </style>

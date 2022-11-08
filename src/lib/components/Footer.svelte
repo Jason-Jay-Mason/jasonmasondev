@@ -1,17 +1,18 @@
 <script lang="ts">
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
-	import type { Nav } from '$lib/types';
-	export let data: Nav;
+	import type { Navbar } from '$lib/types';
+	export let data: Navbar;
+	import { company } from '$lib/stores';
 </script>
 
 <footer>
 	<img src="/jm-logo.svg" alt="" />
 	<div class="links">
-		{#each data.links as link}
-			{#if link.href === '#coverletter' || link.href === '#profile' || link.href === '#work'}
-				<a href={link.href}>{link.innerText}</a>
-			{/if}
-		{/each}
+		{#if $company}
+			{#each data.links as link}
+				<a href={`/${$company}${link.href}`}>{link.innerText}</a>
+			{/each}
+		{/if}
 	</div>
 
 	<div class="social">

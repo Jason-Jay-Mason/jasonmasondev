@@ -19,7 +19,7 @@ export interface Link {
 	innerText: string
 }
 
-export interface Nav {
+export interface Navbar {
 	links: Link[]
 }
 
@@ -54,4 +54,15 @@ export interface TagButtons {
 
 export interface SelectedProjects {
 	[key: string]: Project
+}
+
+export interface GridDisplayElement{
+	slug:string
+	data:{
+	body:string
+	headline: Headline
+	img:Img 
+	href?: string
+	}
+
 }

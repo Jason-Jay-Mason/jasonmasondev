@@ -1,26 +1,35 @@
 <script lang="ts">
 	export let href: string | undefined = undefined;
 	export let selected: boolean = false;
-	$: {
-		console.log(`${selected}`);
-	}
+	type Width = 'full' | 'fit-content';
+	export let width: Width = 'fit-content';
 </script>
 
 {#if href}
 	<a {href}>
-		<button><slot /></button>
+		<button class:full={width === 'full'} class:fit-content={width === 'fit-content'}
+			><slot /></button
+		>
 	</a>
 {:else}
-	<button class:selected={selected === true}><slot /></button>
+	<button
+		class:selected={selected === true}
+		class:fullWidth={width === 'full'}
+		class:fit-content={width === 'fit-content'}><slot /></button
+	>
 {/if}
 
 <style lang="scss">
 	@import '../theme/breakpoints.scss';
+	.full {
+		width: 98%;
+	}
+	.fit-content {
+		width: fit-content;
+	}
 	button {
 		position: relative;
-		width: 98%;
 		text-transform: capitalize;
-		margin: 0 auto;
 		box-shadow: none;
 		font-size: calc(var(--text-base) + 3px);
 		color: var(--color-text-body);

@@ -4,14 +4,15 @@
 	import CoverLetter from '$lib/components/company/CoverLetter.svelte';
 	import Work from '$lib/components/Work.svelte';
 	import type { LayoutData } from './$types';
+	import { company } from '$lib/stores';
 	import { onMount } from 'svelte';
 
 	export let data: LayoutData;
 
-	// setting a store for the current company so that as the user navigates to the other pages, we can always have to context of what company they are from in mind
-	import { company } from '$lib/stores';
+	// setting the company page on entry on local storage so that the rest of the pages links come back to this page
 	onMount(() => {
-		company.update(() => data.slug);
+		window.localStorage.setItem('company', `${data.slug}`);
+		company.set(data.slug);
 	});
 </script>
 

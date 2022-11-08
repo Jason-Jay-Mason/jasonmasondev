@@ -17,13 +17,12 @@
 		</div>
 		<div class="blurb">
 			<p>
-				Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-				been the industry's standard dummy text
+				{hook}
 			</p>
 		</div>
 		<div class="cta-container">
 			<div class="cta">
-				<Button href={cta.hrefOrSrc}>Let's Talk</Button>
+				<Button href={cta.hrefOrSrc} width="full">Let's Talk</Button>
 			</div>
 		</div>
 		<div class="bottom">
@@ -176,6 +175,7 @@
 			width: 120%;
 			.logo {
 				width: 70%;
+
 				display: flex;
 				align-items: center;
 				justify-content: center;
@@ -187,6 +187,7 @@
 					padding: 0 var(--s-7);
 				}
 				img {
+					max-height: var(--s-11);
 					filter: var(--icon-filter);
 					width: 90%;
 				}

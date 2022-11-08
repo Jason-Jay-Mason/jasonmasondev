@@ -1,9 +1,10 @@
 <script lang="ts">
-	import type Nav from 'src/routes/[company]/+layout.svelte';
+	import type { Navbar } from '$lib/types';
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import Modal from '$lib/components/Modal.svelte';
+	import { company } from '$lib/stores';
 
-	export let data: Nav;
+	export let data: Navbar;
 
 	let modalActive: boolean = false;
 	function toggleModal() {
@@ -13,19 +14,22 @@
 
 <nav>
 	<div class="left">
-		<a href="/">
-			<img src="/jm-logo.svg" alt="jason's logo" />
-		</a>
+		<img src="/jm-logo.svg" alt="jason's logo" />
 
-		<div class="links">
-			{#each data.links as link}
-				<a class="link" href={link.href}>{link.innerText} </a>
-			{/each}
-		</div>
+		{#if $company}
+			<div class="links">
+				{#each data.links as link}
+					<a class="link" href={`/${$company}${link.href}`}>{link.innerText} </a>
+				{/each}
+			</div>
+		{/if}
 	</div>
 	<div class="right">
 		<div class="social">
-			<a class="link" href="/">CONTACT</a>
+			{#if $company}
+				<a class="link" href={`/${$company}#contact`}>CONTACT</a>
+			{/if}
+
 			<a href="/">
 				<img src="/github-logo.svg" alt="" />
 			</a>

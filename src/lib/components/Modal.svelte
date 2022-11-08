@@ -3,6 +3,7 @@
 	export let data: Link[];
 	export let active: boolean;
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
+	import { company } from '$lib/stores';
 </script>
 
 <div class="modal" class:inactive={active === false}>
@@ -12,10 +13,12 @@
 			active = !active;
 		}}
 	>
-		{#each data as link}
-			<a href={link.href}>{link.innerText}</a>
-		{/each}
-		<a class="link" href="/">CONTACT</a>
+		{#if $company}
+			{#each data as link}
+				<a href={`/${$company}${link.href}`}>{link.innerText}</a>
+			{/each}
+			<a class="link" href={`/${$company}#contact`}>CONTACT</a>
+		{/if}
 	</div>
 
 	<div class="social">
@@ -33,8 +36,7 @@
 
 <style lang="scss">
 	@import '../../lib/theme/breakpoints.scss';
-	.modal,
-	.modalActive {
+	.modal {
 		position: absolute;
 		left: 0;
 		right: 0;
