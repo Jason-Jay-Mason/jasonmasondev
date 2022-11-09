@@ -5,7 +5,6 @@
 	export let data: Profile;
 
 	let featuredInterest: string = 'INTERESTS';
-	console.log(data);
 </script>
 
 <section id="profile">
@@ -82,7 +81,7 @@
 					width: 100%;
 					align-items: center;
 					@include lg {
-						width: 120%;
+						width: 110%;
 						flex-wrap: nowrap;
 						justify-content: flex-start;
 					}
@@ -90,10 +89,9 @@
 						position: relative;
 						height: var(--s-11);
 						width: var(--s-11);
-						margin-right: var(--s-10);
+						margin-right: var(--s-9);
 						border: 2px solid transparent;
-						margin-top: var(--s-8);
-
+						margin-top: var(--s-6);
 						&::before {
 							content: '';
 							opacity: 0;
@@ -123,7 +121,7 @@
 								transition: border-width 0.4s;
 								transition: filter 0.4s;
 								filter: blur(12px);
-								transform: translateX(-10px) translateY(-10px) rotate(2deg);
+								transform: translateY(-7px) rotate(2deg);
 								border-width: 5px 10px 5px 10px;
 							}
 						}
@@ -133,7 +131,7 @@
 							top: 50%;
 							left: 50%;
 							transform: translate(-50%, -50%);
-							height: var(--s-10);
+							height: var(--s-9);
 							width: 100%;
 						}
 					}

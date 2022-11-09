@@ -32,7 +32,8 @@
 	}
 	div {
 		position: relative;
-		width: 88%;
+		width: 94%;
+		height: 100%;
 		cursor: pointer;
 		display: flex;
 		flex-direction: column;
@@ -45,7 +46,7 @@
 		transition: all 0.3s;
 		border: 2px solid var(--color-rock-100);
 		@include md {
-			width: 85%;
+			width: 90%;
 			margin-bottom: var(--s-9);
 			padding: var(--s-10) var(--s-3);
 		}

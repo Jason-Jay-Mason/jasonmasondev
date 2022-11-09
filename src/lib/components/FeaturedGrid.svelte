@@ -23,13 +23,14 @@
 	@import '../theme/breakpoints.scss';
 	.grid {
 		display: grid;
-		align-items: start;
-		row-gap: 10px;
+		align-items: stretch;
+		row-gap: var(--s-7);
 		padding-top: var(--s-10);
 		grid-template-columns: 1fr 1fr;
 		max-width: $xl;
 		margin: 0 auto;
 		@include md {
+			row-gap: var(--s-8);
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 		@include lg {

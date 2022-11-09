@@ -1,10 +1,8 @@
 <script lang="ts">
 	import type { LayoutData } from './$types';
-	import type { Project } from '$lib/types';
 	import Button from '$lib/components/Button.svelte';
 	import HalfHeadline from '$lib/components/HalfHeadline.svelte';
 	import LargeHeadline from '$lib/components/LargeHeadline.svelte';
-	import GridCard from '$lib/components/GridCard.svelte';
 	//we set the company from local storage in the layout component, and we use it here to build out links back
 	import { company } from '$lib/stores';
 	import FeaturedGrid from '$lib/components/FeaturedGrid.svelte';
@@ -38,10 +36,9 @@
 	<div class="description">
 		<div class="text">
 			<HalfHeadline main={data.project.headline.main} sub={data.project.headline.sub} />
-			<p>{@html data.project.body}</p>
+			<p class="blurb">{@html data.project.body}</p>
 			<div class="links">
 				<Button>{data.project.cta.innerText}</Button>
-
 				{#if data.project.githubHref}
 					<a href={data.project.githubHref}>
 						<img src="/github-logo.svg" alt="" />
@@ -71,12 +68,11 @@
 			padding: var(--s-9) var(--s-8) var(--s-13) var(--s-8);
 		}
 		.description {
-			padding-top: var(--s-8);
+			padding-top: var(--s-10);
 			position: relative;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
-
 			@include md {
 				flex-direction: row;
 			}
@@ -86,6 +82,9 @@
 				@include md {
 					width: 50%;
 					padding-right: var(--s-7);
+				}
+				.blurb {
+					padding: var(--s-9) 0 var(--s-10) 0;
 				}
 				.links {
 					display: flex;
@@ -106,14 +105,14 @@
 					}
 					img {
 						filter: var(--icon-filter);
-						margin-top: var(--s-7);
 						padding-right: var(--s-7);
-						height: 40px;
-						width: 40px;
+						height: 42px;
+						width: 42x;
+						margin-top: var(--s-7);
+						@include md {
+							margin: 0;
+						}
 					}
-				}
-				p {
-					padding: var(--s-8) 0;
 				}
 			}
 

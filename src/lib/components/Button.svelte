@@ -3,6 +3,7 @@
 	export let selected: boolean = false;
 	type Width = 'full' | 'fit-content';
 	export let width: Width = 'fit-content';
+	export let type: string | undefined = undefined;
 </script>
 
 {#if href}
@@ -13,6 +14,7 @@
 	</a>
 {:else}
 	<button
+		{type}
 		class:selected={selected === true}
 		class:fullWidth={width === 'full'}
 		class:fit-content={width === 'fit-content'}><slot /></button
@@ -71,7 +73,7 @@
 				transition: border-width 0.4s;
 				transition: filter 0.4s;
 				filter: blur(12px);
-				transform: translateX(-10px) translateY(-10px) rotate(2deg);
+				transform: translateY(-7px) rotate(2deg);
 				border-width: 5px 10px 5px 10px;
 			}
 		}

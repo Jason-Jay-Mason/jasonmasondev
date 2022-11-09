@@ -14,7 +14,7 @@
 
 <nav>
 	<div class="left">
-		<img src="/jm-logo.svg" alt="jason's logo" />
+		<img src="/jm-logo.svg" alt="jason's logo" class="logo" />
 
 		{#if $company}
 			<div class="links">
@@ -31,10 +31,10 @@
 			{/if}
 
 			<a href="/">
-				<img src="/github-logo.svg" alt="" />
+				<img src="/github-logo.svg" alt="" class="icon" />
 			</a>
 			<a href="/">
-				<img src="/linkedin-logo.svg" alt="" />
+				<img src="/linkedin-logo.svg" alt="" class="icon" />
 			</a>
 		</div>
 		<div class="theme">
@@ -63,6 +63,7 @@
 		max-width: $xxl;
 		padding: 0 var(--s-4);
 		@include md {
+			height: 90px;
 			position: relative;
 			padding: var(--s-7) var(--s-6);
 		}
@@ -141,9 +142,10 @@
 			@include md {
 				display: flex;
 			}
-			img {
-				padding: 0 var(--s-3);
-				width: 25px;
+			.icon {
+				filter: var(--icon-filter);
+				margin: 0 var(--s-4);
+				width: 28px;
 			}
 		}
 		.right,
@@ -158,13 +160,13 @@
 				display: flex;
 			}
 		}
-		img {
-			width: 65px;
+		.logo {
+			width: 90px;
 			filter: var(--icon-filter);
 			padding-right: var(--s-6);
 			@include lg {
-				width: 85px;
-				padding-right: var(--s-7);
+				width: 110px;
+				padding-right: var(--s-8);
 			}
 		}
 		.link {

@@ -24,7 +24,7 @@
 		"logoSrc": "/lc-logo.svg"
 	},
 	"hero": {
-		"hook": "This is a hook blah blah",
+		"hook": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ",
 		"cta": {
 			"isVideo": true,
 			"hrefOrSrc": "/",

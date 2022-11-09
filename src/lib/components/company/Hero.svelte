@@ -45,16 +45,15 @@
 		width: 100%;
 		padding: var(--s-10) 0 var(--s-11) 0;
 		@include sm {
-			padding: var(--s-11) var(--s-4) var(--s-13) var(--s-4);
+			padding: var(--s-12) var(--s-4) var(--s-13) var(--s-4);
 		}
 		.cta-container {
-			padding-top: var(--s-7);
 			margin-bottom: var(--s-9);
 			position: relative;
 			width: 87%;
 			@include md {
+				margin-bottom: var(--s-6);
 				width: 70%;
-				margin-bottom: var(--s-4);
 			}
 			&::before,
 			&::after {
@@ -76,7 +75,7 @@
 				background-color: var(--color-bg-primary);
 				z-index: 1;
 				@include sm {
-					width: 45%;
+					width: 50%;
 				}
 				&::before,
 				&::after {
@@ -167,8 +166,7 @@
 		.blurb {
 			width: 90%;
 			text-align: center;
-			padding: 0;
-			padding: var(--s-8) 0;
+			padding: var(--s-9) 0;
 			@include md {
 				width: 80%;
 			}

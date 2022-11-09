@@ -1,8 +1,14 @@
 @import './lib/theme/breakpoints.scss'; //#region colors
+*, *:before, *:after {
+
+      -webkit-box-sizing: border-box !important;
+      -moz-box-sizing: border-box !important;
+      -ms-box-sizing: border-box !important;
+      box-sizing: border-box !important;
+    }
 body {
 	margin: 0;
 	padding: 0;
-	box-sizing:border-box;
 	--color-text-body: black;
 	--color-bg-primary: white;
 	--color-bg-card: #ffffffd9;
@@ -11,6 +17,7 @@ body {
 	--color-rock-200: #403c39;
 	--color-rock-300: #7d7b79;
 	--color-pencil-100: #bdbdbd;
+	--color-error: #D62828;
 	--opacity-pencilbg: 1;
 	--icon-filter: none;
 	--color-rainbow: conic-gradient(

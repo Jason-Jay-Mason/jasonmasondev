@@ -68,7 +68,7 @@
 		.social {
 			display: flex;
 			img {
-				width: 25px;
+				width: 35px;
 				padding-right: var(--s-4);
 			}
 			.icons {
