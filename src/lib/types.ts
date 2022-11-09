@@ -47,7 +47,16 @@ export interface TagSelect {
 	selected: boolean
 	title: string
 }
-
+	export interface Interest{
+	title:string
+	iconSrc: string
+}
+export interface Profile{
+	body:string
+	headline:Headline
+	img:Img
+	interests: Interest[]
+}
 export interface TagButtons {
 	[key: string]: TagSelect
 }

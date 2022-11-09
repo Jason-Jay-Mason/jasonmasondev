@@ -8,7 +8,12 @@
 
 <section class="section" id="top">
 	<div class="container">
-		<div class="intro"><h1>Jason's webumé</h1></div>
+		<div class="intro">
+			<div class="mask">
+				<img src="/pencil-bg.svg" />
+			</div>
+			<h1>Jason's webumé</h1>
+		</div>
 		<div class="logo-container">
 			<div class="logo">
 				<img src={logo} alt="" />
@@ -221,32 +226,35 @@
 		.intro {
 			position: relative;
 			width: 90%;
-			font-size: calc(var(--text-lg) + 1px);
-			color: var(--color-rock-200);
-			font-family: var(--font-subheadline);
-			text-align: center;
-			transform: rotate(-2deg);
 			margin: var(--s-7) auto var(--s-4) auto;
-			@include sm {
-				font-size: calc(var(--text-lg) + 4px);
-			}
-			@include md {
-				font-size: calc(var(--text-lg) + 10px);
-			}
-			&::before {
-				content: '';
-				transform: rotate(2deg);
-				height: 45%;
-				width: 100%;
-				z-index: -1;
-				top: 20%;
-				bottom: 0;
-				left: 0;
-				right: 0;
+			.mask {
 				position: absolute;
-				opacity: var(--opacity-pencilbg);
-				background-size: 300%;
-				background-image: url('/pencil-bg.svg');
+				width: 100%;
+				height: 40%;
+				top: 27%;
+				margin: auto 0;
+				overflow: hidden;
+				img {
+					opacity: var(--opacity-pencilbg);
+					width: 600px;
+					height: 100%;
+					top: 0;
+					object-fit: cover;
+					position: absolute;
+				}
+			}
+			h1 {
+				text-align: center;
+				transform: rotate(-1deg);
+				font-size: calc(var(--text-xl) + 1px);
+				color: var(--color-rock-200);
+				font-family: var(--font-subheadline);
+				@include sm {
+					font-size: calc(var(--text-xl) + 4px);
+				}
+				@include md {
+					font-size: calc(var(--text-xl) + 10px);
+				}
 			}
 		}
 		.container {

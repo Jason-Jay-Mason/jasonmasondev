@@ -3,19 +3,19 @@
 		"links": [
 			{
 				"innerText": "COVER LETTER",
-				"href": "/"
+				"href": "#coverletter"
 			},
 			{
 				"innerText": "PROFILE",
-				"href": "/"
+				"href": "#profile"
 			},
 			{
 				"innerText": "WORK EXPERIENCE",
-				"href": "/"
+				"href": "#experience"
 			},
 			{
 				"innerText": "PORTFOLIO",
-				"href": "/"
+				"href": "#work"
 			}
 		]
 	},
@@ -43,24 +43,32 @@
 			"sub": "About me",
 			"main": "PROFILE"
 		},
-		"body": "some body text here",
+		"body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries <br/><br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriessome body text here",
 		"interests": [
 			{
-				"title": "Snowboardint",
-				"iconSrc": "/"
+				"title": "storm chasing",
+				"iconSrc": "/tornado.svg"
 			},
 			{
-				"title": "Jesus",
-				"iconSrc": "/"
+				"title": "drumming",
+				"iconSrc": "/drums.svg"
 			},
 			{
-				"title": "Drums",
-				"iconSrc": "/"
+				"title": "jesus",
+				"iconSrc": "/bible.svg"
+			},
+			{
+				"title": "mathematics",
+				"iconSrc": "/pi.svg"
+			},
+			{
+				"title": "snowboarding",
+				"iconSrc": "/snowboard.svg"
 			}
 		],
 		"img": {
 			"alt": "some alt text here",
-			"src": "/"
+			"src": "/profile-photo.webp"
 		}
 	},
 	"work": {

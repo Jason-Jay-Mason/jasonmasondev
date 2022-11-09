@@ -4,7 +4,13 @@
 </script>
 
 <div class="headline">
-	<h3>{sub}</h3>
+	<div class="sub">
+		<h3>{sub}</h3>
+		<div class="mask">
+			<img src="/pencil-bg.svg" />
+		</div>
+	</div>
+
 	<h4>{main}</h4>
 </div>
 
@@ -14,28 +20,38 @@
 		margin: 0 auto;
 		width: fit-content;
 		text-align: center;
-		h3 {
-			font-size: calc(var(--text-lg) + 10px);
-			color: var(--color-rock-200);
-			font-family: var(--font-subheadline);
+		.sub {
 			position: relative;
-			transform: rotate(-4deg);
-			&::before {
-				content: '';
-				transform: rotate(4deg);
-				height: 60%;
-				width: 100%;
-				z-index: -1;
-				top: 20%;
-				bottom: 0;
-				left: 0;
-				right: 0;
+			width: 100%;
+			h3 {
+				font-size: calc(var(--text-lg) + 10px);
+				color: var(--color-rock-200);
+				font-family: var(--font-subheadline);
+				position: relative;
+				transform: rotate(-4deg);
+			}
+			.mask {
 				position: absolute;
-				opacity: var(--opacity-pencilbg);
-				background-size: 300%;
-				background-image: url('/pencil-bg.svg');
+				bottom: 0;
+				top: 0;
+				margin: auto 0;
+				z-index: -1;
+				width: 100%;
+				height: 60%;
+				overflow: hidden;
+				img {
+					opacity: var(--opacity-pencilbg);
+					object-fit: cover;
+					position: absolute;
+					width: 600px;
+					top: 0;
+					bottom: 0;
+					margin: auto 0;
+					left: 0;
+				}
 			}
 		}
+
 		h4 {
 			line-height: 100%;
 			font-size: var(--text-xl);

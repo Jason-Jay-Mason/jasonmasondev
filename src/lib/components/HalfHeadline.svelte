@@ -12,7 +12,6 @@
 		<div class="mask">
 			<img src="/pencil-bg.svg" />
 		</div>
-
 		<h4>{sub}</h4>
 	</div>
 </div>
@@ -34,14 +33,14 @@
 				height: 100%;
 				overflow: hidden;
 				img {
-					width: 900px;
-					height: 60%;
+					opacity: var(--opacity-pencilbg);
+					width: 600px;
+					height: 50%;
 					top: 0;
 					bottom: 0;
 					margin: auto 0;
 					object-fit: cover;
 					position: absolute;
-					bottom: 0;
 				}
 			}
 			h4 {
@@ -54,11 +53,14 @@
 				font-family: var(--font-subheadline);
 				transform: rotate(-4deg);
 				text-align: right;
+				@include md {
+					font-size: calc(var(--text-md) + 10px);
+				}
 				@include lg {
-					font-size: calc(var(--text-md) + 7px);
+					font-size: calc(var(--text-lg) + 5px);
 				}
 				@include xl {
-					font-size: calc(var(--text-lg) + 7px);
+					font-size: calc(var(--text-lg) + 12px);
 				}
 			}
 		}
@@ -75,7 +77,7 @@
 				font-size: calc(var(--text-md) + 7px);
 			}
 			@include xl {
-				font-size: calc(var(--text-lg) + 7px);
+				font-size: calc(var(--text-lg));
 			}
 		}
 	}

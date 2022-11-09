@@ -93,7 +93,7 @@
 					flex-direction: row;
 					justify-content: space-between;
 					flex-wrap: wrap;
-					align-items: end;
+					align-items: flex-end;
 					padding-bottom: var(--s-10);
 					@include md {
 						padding-bottom: 0;
@@ -105,6 +105,7 @@
 						}
 					}
 					img {
+						filter: var(--icon-filter);
 						margin-top: var(--s-7);
 						padding-right: var(--s-7);
 						height: 40px;
