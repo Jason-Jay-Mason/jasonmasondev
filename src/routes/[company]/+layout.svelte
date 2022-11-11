@@ -5,6 +5,6 @@
 	export let data: LayoutData;
 </script>
 
-<CompanyNav data={data.page.layout} />
+<CompanyNav data={data.page.layout} isPage={true} />
 <slot />
 <Footer data={data.page.layout} />

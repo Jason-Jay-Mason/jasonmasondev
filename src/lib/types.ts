@@ -75,3 +75,29 @@ export interface GridDisplayElement{
 	}
 
 }
+
+	export interface AnimationFrame{
+	endValue: number
+	length: number
+	start: number
+	startValue: number
+}
+export interface ExpereinceRecord{
+	description: string
+	headline: Headline
+	startYear: number
+	endYear: number
+	fadeIn:AnimationFrame
+}
+
+	export interface Skill{
+	title:string
+	growth: AnimationFrame[]
+}
+
+export interface Experience{
+	headline:Headline
+	records: ExpereinceRecord[]
+	skills: Skill[]
+
+}

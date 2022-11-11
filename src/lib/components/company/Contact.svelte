@@ -3,6 +3,7 @@
 	import Button from '$lib/components/Button.svelte';
 	import Spinner from '$lib/components/Spinner.svelte';
 	import { fade } from 'svelte/transition';
+	import LargeHeadline from '../LargeHeadline.svelte';
 
 	let formValues = {
 		fname: {
@@ -29,7 +30,7 @@
 
 	// $: formValid = !Object.values(formValues).some(({ valid }) => valid === false);
 
-	let success: boolean = false;
+	let success: boolean = true;
 	const formUrl = 'https://submit-form.com/nZtmp841';
 	let loading = false;
 	let formError: string | null = null;
@@ -157,8 +158,8 @@
 		flex-direction: column-reverse;
 		padding: var(--s-11) var(--s-5);
 		@include md {
-			padding: var(--s-13) var(--s-5) var(--s-11) var(--s-5);
-			max-width: $lg;
+			padding: var(--s-14) var(--s-5) var(--s-14) var(--s-5);
+			max-width: $xl;
 			flex-direction: row;
 		}
 		.info {
@@ -166,11 +167,8 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-start;
-			font-family: var(--font-headline);
 			font-size: calc(var(--text-base));
-			text-transform: uppercase;
 			@include md {
-				font-size: calc(var(--text-base) + 2px);
 				width: 50%;
 				align-items: center;
 			}
@@ -179,6 +177,12 @@
 				justify-content: center;
 				flex-direction: column;
 				height: 100%;
+				p {
+					font-size: var(--text-base);
+					text-transform: uppercase;
+					font-family: var(--font-headline);
+					letter-spacing: 0.105em;
+				}
 			}
 			.hours {
 				margin-bottom: var(--s-8);
@@ -210,6 +214,12 @@
 			.status-message {
 				position: absolute;
 				font-size: var(--text-md);
+				margin: 0 auto;
+				width: 100%;
+				@include md {
+					width: auto;
+					margin: 0;
+				}
 			}
 			.field-row {
 				padding-bottom: var(--s-3);

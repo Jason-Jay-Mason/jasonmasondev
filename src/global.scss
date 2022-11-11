@@ -1,6 +1,5 @@
 @import './lib/theme/breakpoints.scss'; //#region colors
 *, *:before, *:after {
-
       -webkit-box-sizing: border-box !important;
       -moz-box-sizing: border-box !important;
       -ms-box-sizing: border-box !important;
@@ -108,12 +107,11 @@ body {
 	--s-12: calc(var(--s-11) * var(--spacing-multiplyer));
 	--s-13: calc(var(--s-12) * var(--spacing-multiplyer));
 	--s-14: calc(var(--s-13) * var(--spacing-multiplyer));
+	--s-15: calc(var(--s-14) * var(--spacing-multiplyer));
 }
 
 //#region gobals
-body {
-	background-color: var(--color-bg-primary);
-}
+
 p,
 a,
 h1,

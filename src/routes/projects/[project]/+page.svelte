@@ -52,20 +52,26 @@
 	</div>
 </section>
 
-<section>
+<section id="more">
 	<LargeHeadline main="MORE PROJECTS" sub="Want to see more?" />
 	<FeaturedGrid displayElements={Array.from(filteredProjects.values())} />
 </section>
 
 <style lang="scss">
 	@import '../../../lib/theme/breakpoints.scss';
-	section {
-		padding: var(--s-8) var(--s-6) var(--s-13) var(--s-6);
+	#more {
+		padding: 0 var(--s-6) var(--s-13) var(--s-6);
+		@include md {
+			padding: 0 var(--s-8) var(--s-14) var(--s-8);
+		}
+	}
+	#project {
+		padding: var(--s-9) var(--s-6) var(--s-14) var(--s-6);
 		max-width: $xl;
 		margin: 0 auto;
 		@include md {
 			flex-direction: row;
-			padding: var(--s-9) var(--s-8) var(--s-13) var(--s-8);
+			padding: var(--s-11) var(--s-8) var(--s-15) var(--s-8);
 		}
 		.description {
 			padding-top: var(--s-10);

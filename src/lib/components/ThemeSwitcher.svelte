@@ -24,12 +24,19 @@
 <style lang="scss">
 	div {
 		transition: all 1s;
+		position: relative;
 		filter: var(--icon-filter);
-		background-image: var(--theme-icon);
-		background-size: contain;
 		height: 25px;
 		width: 25px;
 		cursor: pointer;
 		width: 25px;
+		&::before {
+			position: absolute;
+			content: '';
+			height: 25px;
+			width: 25px;
+			background-image: var(--theme-icon);
+			background-size: contain;
+		}
 	}
 </style>

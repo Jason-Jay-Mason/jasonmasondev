@@ -187,11 +187,7 @@
 				color: var(--color-rock-100);
 				opacity: 1;
 				font-weight: 700;
-				text-align: center;
-				position: absolute;
-				transform: translateY(-50%);
 				font-family: var(--font-headline);
-				line-height: 0.16rem;
 				letter-spacing: 0.105em;
 				text-transform: uppercase;
 				font-size: 1rem;
@@ -205,6 +201,7 @@
 			}
 			&:not(:focus):placeholder-shown {
 				background-image: none;
+				overflow: hidden;
 			}
 		}
 		input {
@@ -219,7 +216,7 @@
 			padding: var(--s-5) var(--s-5);
 			margin-bottom: var(--s-9);
 			&::placeholder {
-				line-height: 13rem;
+				line-height: 11rem;
 			}
 		}
 	}

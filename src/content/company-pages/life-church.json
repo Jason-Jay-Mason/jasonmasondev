@@ -27,8 +27,8 @@
 		"hook": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ",
 		"cta": {
 			"isVideo": true,
-			"hrefOrSrc": "/",
-			"innerText": "Watch Video"
+			"hrefOrSrc": "#contact",
+			"innerText": "Let's Talk"
 		}
 	},
 	"coverLetter": {
@@ -71,19 +71,56 @@
 			"src": "/profile-photo.webp"
 		}
 	},
-	"work": {
+	"experience": {
 		"headline": {
 			"sub": "My skills over time",
 			"main": "WORK EXPERIENCE"
 		},
 		"records": [
 			{
-				"year": 2013,
+				"startYear": 2013,
+				"endYear": 2017,
 				"headline": {
 					"sub": "TERRY CHIROPRACTIC, BOULDER, CO",
 					"main": "MARKETING MANAGER/DEVELOPER"
 				},
-				"description": "this is a description"
+				"fadeIn": {
+					"start": 0,
+					"length": 0,
+					"startValue": 0,
+					"endValue": 1
+				},
+				"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to "
+			},
+			{
+				"startYear": 2018,
+				"endYear": 2019,
+				"headline": {
+					"sub": "MARTECH DEVELOPER",
+					"main": "ACCURENCE, LOUISVILLE, CO"
+				},
+				"fadeIn": {
+					"start": 0.68,
+					"length": 0.05,
+					"startValue": 0,
+					"endValue": 1
+				},
+				"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to "
+			},
+			{
+				"startYear": 2020,
+				"endYear": 2022,
+				"headline": {
+					"sub": "FRONTEND ENGINEER",
+					"main": "JAMSITE, REMOTE"
+				},
+				"fadeIn": {
+					"start": 0.845,
+					"length": 0.05,
+					"startValue": 0,
+					"endValue": 1
+				},
+				"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to "
 			}
 		],
 		"skills": [
@@ -91,16 +128,229 @@
 				"title": "javascript",
 				"growth": [
 					{
-						"start": 0,
-						"length": 0.2,
+						"start": 0.34,
+						"length": 0.3,
 						"startValue": 0,
-						"endValue": 2
+						"endValue": 20
 					},
 					{
-						"start": 0.66,
+						"start": 0.7,
+						"length": 0.1,
+						"startValue": 20,
+						"endValue": 60
+					},
+					{
+						"start": 0.85,
 						"length": 0.2,
-						"startValue": 2,
-						"endValue": 9
+						"startValue": 60,
+						"endValue": 95
+					}
+				]
+			},
+			{
+				"title": "marketing automation",
+				"growth": [
+					{
+						"start": 0.34,
+						"length": 0.3,
+						"startValue": 0,
+						"endValue": 60
+					},
+					{
+						"start": 0.7,
+						"length": 0.1,
+						"startValue": 60,
+						"endValue": 95
+					},
+					{
+						"start": 0.85,
+						"length": 0.2,
+						"startValue": 95,
+						"endValue": 87
+					}
+				]
+			},
+			{
+				"title": "HTML & CSS",
+				"growth": [
+					{
+						"start": 0.34,
+						"length": 0.3,
+						"startValue": 0,
+						"endValue": 60
+					},
+					{
+						"start": 0.7,
+						"length": 0.1,
+						"startValue": 60,
+						"endValue": 80
+					},
+					{
+						"start": 0.85,
+						"length": 0.2,
+						"startValue": 80,
+						"endValue": 97
+					}
+				]
+			},
+			{
+				"title": "digital marketing",
+				"growth": [
+					{
+						"start": 0.34,
+						"length": 0.3,
+						"startValue": 0,
+						"endValue": 90
+					},
+					{
+						"start": 0.7,
+						"length": 0.1,
+						"startValue": 90,
+						"endValue": 80
+					},
+					{
+						"start": 0.85,
+						"length": 0.2,
+						"startValue": 80,
+						"endValue": 60
+					}
+				]
+			},
+			{
+				"title": "react",
+				"growth": [
+					{
+						"start": 0.34,
+						"length": 0.3,
+						"startValue": 0,
+						"endValue": 0
+					},
+					{
+						"start": 0.7,
+						"length": 0.1,
+						"startValue": 0,
+						"endValue": 20
+					},
+					{
+						"start": 0.85,
+						"length": 0.2,
+						"startValue": 20,
+						"endValue": 93
+					}
+				]
+			},
+			{
+				"title": "API consumption",
+				"growth": [
+					{
+						"start": 0.34,
+						"length": 0.3,
+						"startValue": 0,
+						"endValue": 60
+					},
+					{
+						"start": 0.7,
+						"length": 0.1,
+						"startValue": 60,
+						"endValue": 40
+					},
+					{
+						"start": 0.85,
+						"length": 0.2,
+						"startValue": 40,
+						"endValue": 95
+					}
+				]
+			},
+			{
+				"title": "svelte",
+				"growth": [
+					{
+						"start": 0.34,
+						"length": 0.3,
+						"startValue": 0,
+						"endValue": 0
+					},
+					{
+						"start": 0.7,
+						"length": 0.1,
+						"startValue": 0,
+						"endValue": 0
+					},
+					{
+						"start": 0.85,
+						"length": 0.2,
+						"startValue": 0,
+						"endValue": 88
+					}
+				]
+			},
+			{
+				"title": "salesforce dev",
+				"growth": [
+					{
+						"start": 0.34,
+						"length": 0.3,
+						"startValue": 0,
+						"endValue": 0
+					},
+					{
+						"start": 0.7,
+						"length": 0.1,
+						"startValue": 0,
+						"endValue": 40
+					},
+					{
+						"start": 0.85,
+						"length": 0.2,
+						"startValue": 40,
+						"endValue": 50
+					}
+				]
+			},
+			{
+				"title": "reporting",
+				"growth": [
+					{
+						"start": 0.34,
+						"length": 0.3,
+						"startValue": 0,
+						"endValue": 40
+					},
+					{
+						"start": 0.7,
+						"length": 0.1,
+						"startValue": 40,
+						"endValue": 80
+					},
+					{
+						"start": 0.85,
+						"length": 0.2,
+						"startValue": 80,
+						"endValue": 85
+					}
+				]
+			},
+			{
+				"title": "design",
+				"growth": [
+					{
+						"start": 0.34,
+						"length": 0.3,
+						"startValue": 30,
+						"endValue": 50
+					},
+					{
+						"start": 0.7,
+						"length": 0.1,
+						"startValue": 50,
+						"endValue": 70
+					},
+					{
+						"start": 0.85,
+						"length": 0.2,
+						"startValue": 70,
+						"endValue": 80
 					}
 				]
 			}

@@ -50,7 +50,7 @@
 		max-width: $xl;
 		margin: 0 auto;
 		@include md {
-			padding: var(--s-5) 0 var(--s-14) var(--s-7);
+			padding: var(--s-5) 0 var(--s-15) var(--s-7);
 			justify-content: center;
 			flex-direction: row;
 		}
@@ -112,6 +112,7 @@
 							border-image-source: var(--color-rainbow);
 						}
 						&.featured {
+							border: 2px solid var(--color-rock-100);
 							border-image-slice: 1;
 							border-image-source: var(--color-rainbow);
 							background-color: var(--color-bg-primary);
@@ -189,7 +190,7 @@
 			.background {
 				z-index: -1;
 				position: absolute;
-				top: 50%;
+				top: 0%;
 				left: 0;
 				right: 0;
 				transform: translate(-1%, -58%) rotate(7deg);
@@ -198,11 +199,14 @@
 				border-radius: 0 240px 0 100px;
 				overflow: hidden;
 				margin: 0 auto;
+				-webkit-transform: translateZ(0);
+				-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 				@include md {
 					margin: 0;
 					transform: translate(0%, -55%) rotate(7deg);
 					height: 100%;
 					width: 110%;
+					top: 50%;
 				}
 				img {
 					opacity: var(--opacity-pencilbg);
@@ -223,6 +227,8 @@
 				margin: auto;
 				width: calc(var(--height) - 40px);
 				height: calc(var(--height) - 40px);
+				-webkit-transform: translateZ(0);
+				-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 				@include md {
 					margin: 0;
 				}
@@ -235,11 +241,11 @@
 					transition: filter 0.8s;
 					filter: saturate(0);
 					width: 120vw;
+
 					@include md {
 						width: auto;
 						transform: translate(-50%, -50%);
 					}
-
 					&:hover {
 						filter: saturate(1);
 					}

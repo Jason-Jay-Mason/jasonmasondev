@@ -71,7 +71,8 @@
 				position: relative;
 				margin: 0 auto;
 				padding: 0 var(--s-6);
-				width: 60%;
+				width: 80%;
+				max-width: 200px;
 				background-color: var(--color-bg-primary);
 				z-index: 1;
 				@include sm {

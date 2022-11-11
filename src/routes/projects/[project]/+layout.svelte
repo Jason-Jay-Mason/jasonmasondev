@@ -39,6 +39,6 @@
 	});
 </script>
 
-<CompanyNav data={nav} />
+<CompanyNav data={nav} isPage={false} />
 <slot {companySlug} />
 <Footer data={nav} />

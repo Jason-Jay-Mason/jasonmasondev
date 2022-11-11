@@ -125,6 +125,10 @@
 	@import '../theme/breakpoints.scss';
 	#work {
 		overflow: hidden;
+		margin-top: -70%;
+		@include md {
+			margin-top: -10%;
+		}
 	}
 	.filters {
 		display: flex;
