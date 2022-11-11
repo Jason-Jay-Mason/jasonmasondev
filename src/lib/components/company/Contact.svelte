@@ -30,7 +30,7 @@
 
 	// $: formValid = !Object.values(formValues).some(({ valid }) => valid === false);
 
-	let success: boolean = true;
+	let success: boolean = false;
 	const formUrl = 'https://submit-form.com/nZtmp841';
 	let loading = false;
 	let formError: string | null = null;
@@ -207,6 +207,7 @@
 			width: 100%;
 			margin: 0 auto;
 			padding: var(--s-1);
+			position: relative;
 			@include md {
 				padding: var(--s-4);
 				width: 50%;
@@ -214,12 +215,8 @@
 			.status-message {
 				position: absolute;
 				font-size: var(--text-md);
-				margin: 0 auto;
 				width: 100%;
-				@include md {
-					width: auto;
-					margin: 0;
-				}
+				text-align: center;
 			}
 			.field-row {
 				padding-bottom: var(--s-3);
