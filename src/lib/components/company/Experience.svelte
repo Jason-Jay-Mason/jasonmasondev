@@ -24,73 +24,94 @@
 
 <section id="experience">
 	<LargeHeadline main={data.headline.main} sub={data.headline.sub} />
-	<AnimationFrame frameHeight="300vh" bind:progress classes="">
-		<!-- <div style="position:absolute;">{progress}</div> -->
-		<div class="main-container">
-			<div class="main-grid">
-				<div class="work-details">
-					<div class="work-container">
-						<div class="date">
-							<p>{getDate(Math.floor((progress - 0.3) * 1.4 * 9 + 2013))}</p>
+	<div class="desktop">
+		<AnimationFrame frameHeight="300vh" bind:progress classes="">
+			<!-- <div style="position:absolute;">{progress}</div> -->
+			<div class="main-container">
+				<div class="main-grid">
+					<div class="work-details">
+						<div class="work-container">
+							<div class="date">
+								<p>{getDate(Math.floor((progress - 0.3) * 1.4 * 9 + 2013))}</p>
+							</div>
+							<div class="dot" />
+							<div class="details-container">
+								{#each data.records as record}
+									{#if record.startYear <= storedYear && record.endYear >= storedYear}
+										<div
+											class="details"
+											style={`opacity:${getStyleValue(
+												progress,
+												record.fadeIn.start,
+												record.fadeIn.length,
+												record.fadeIn.startValue,
+												record.fadeIn.endValue
+											)}`}
+										>
+											<h4>{record.headline.main}</h4>
+											<h5>{record.headline.sub}</h5>
+											<p class="blurb">{record.description}</p>
+										</div>
+									{/if}
+								{/each}
+							</div>
 						</div>
-						<div class="dot" />
-						<div class="details-container">
-							{#each data.records as record}
-								{#if record.startYear <= storedYear && record.endYear >= storedYear}
-									<div
-										class="details"
-										style={`opacity:${getStyleValue(
-											progress,
-											record.fadeIn.start,
-											record.fadeIn.length,
-											record.fadeIn.startValue,
-											record.fadeIn.endValue
-										)}`}
-									>
-										<h4>{record.headline.main}</h4>
-										<h5>{record.headline.sub}</h5>
-										<p class="blurb">{record.description}</p>
+					</div>
+					<div class="skills-grid">
+						<div class="labels">
+							<p>Novice</p>
+							<p>Expert</p>
+						</div>
+						{#each data.skills as skill}
+							{#each skill.growth as animationFrame, i}
+								{#if data.records[i].startYear <= storedYear && data.records[i].endYear >= storedYear}
+									<div class="skill">
+										<p class="skill-title">{skill.title}</p>
+										<div class="bar">
+											<div class="lower">
+												<img src="/pencil-bg.svg" class="pencil-bg" />
+											</div>
+											<div
+												class="upper"
+												style={`width:${getStyleValue(
+													progress,
+													animationFrame.start,
+													animationFrame.length,
+													animationFrame.startValue,
+													animationFrame.endValue
+												)}%`}
+											/>
+										</div>
 									</div>
 								{/if}
 							{/each}
-						</div>
-					</div>
-				</div>
-				<div class="skills-grid">
-					<div class="labels">
-						<p>Novice</p>
-						<p>Expert</p>
-					</div>
-					{#each data.skills as skill}
-						{#each skill.growth as animationFrame, i}
-							{#if data.records[i].startYear <= storedYear && data.records[i].endYear >= storedYear}
-								<div class="skill">
-									<p class="skill-title">{skill.title}</p>
-									<div class="bar">
-										<div class="lower">
-											<img src="/pencil-bg.svg" class="pencil-bg" />
-										</div>
-										<div
-											class="upper"
-											style={`width:${getStyleValue(
-												progress,
-												animationFrame.start,
-												animationFrame.length,
-												animationFrame.startValue,
-												animationFrame.endValue
-											)}%`}
-										/>
-									</div>
-								</div>
-							{/if}
 						{/each}
-					{/each}
+					</div>
 				</div>
 			</div>
+		</AnimationFrame>
+		<div class="line">
+			<div />
 		</div>
-	</AnimationFrame>
-	<div class="line">
-		<div />
+	</div>
+
+	<div class="mobile">
+		{#each data.records as record}
+			<div
+				class="details"
+				style={`opacity:${getStyleValue(
+					progress,
+					record.fadeIn.start,
+					record.fadeIn.length,
+					record.fadeIn.startValue,
+					record.fadeIn.endValue
+				)}`}
+			>
+				<h4>{record.headline.main}</h4>
+				<h5>{record.headline.sub}</h5>
+				<p class="blurb">{record.description}</p>
+			</div>
+		{/each}
 	</div>
 </section>
 
@@ -98,17 +119,51 @@
 	@import '../../theme/breakpoints.scss';
 	section {
 		position: relative;
+		margin: 0 var(--s-7) var(--s-14) var(--s-7);
+		@include md {
+			margin: 0 var(--s-7) var(--s-13) var(--s-7);
+		}
+		h4,
+		h5 {
+			font-family: var(--font-headline);
+			color: var(--color-rock-100);
+			letter-spacing: 0.045em;
+			line-height: 120%;
+			padding-bottom: var(--s-4);
+		}
+		h4 {
+			font-size: calc(var(--text-md) + 3px);
+			font-weight: 700;
+		}
+		h5 {
+			font-size: calc(var(--text-md) - 1px);
+			font-weight: 400;
+			padding-bottom: var(--s-4);
+		}
+		.mobile {
+			display: block;
+			@include md {
+				display: none;
+			}
+			.details {
+				margin: var(--s-10) 0;
+			}
+		}
+		.desktop {
+			display: none;
+			@include md {
+				display: block;
+			}
+		}
 		.main-container {
 			max-width: $xxl;
-			margin: -28vh auto;
 			position: relative;
 			height: 100vh;
+			margin-top: -20vh;
+			min-height: 700px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			@include md {
-				margin: -20vh auto;
-			}
 			.main-grid {
 				display: grid;
 				align-items: center;
@@ -301,7 +356,6 @@
 			}
 		}
 		.line {
-			padding-bottom: var(--s-14);
 			position: relative;
 			margin: 0 auto;
 			max-width: $xxl;

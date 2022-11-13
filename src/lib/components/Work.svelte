@@ -2,7 +2,6 @@
 	import LargeHeadline from '$lib/components/LargeHeadline.svelte';
 	import GridCard from '$lib/components/GridCard.svelte';
 	//gatta love svelte, I don't have to make animations from scratch
-	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import type { Headline, Project, TagButtons, TagSelect } from '$lib/types';
 	import Button from './Button.svelte';
@@ -125,10 +124,6 @@
 	@import '../theme/breakpoints.scss';
 	#work {
 		overflow: hidden;
-		margin-top: -70%;
-		@include md {
-			margin-top: -10%;
-		}
 	}
 	.filters {
 		display: flex;

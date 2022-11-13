@@ -36,14 +36,14 @@
 			"sub": "Why I'm applying",
 			"main": "COVER LETTER"
 		},
-		"body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries <br/><br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries"
+		"body": "Here, I just want to share my heart as to why I’m applying to the MarCom Web Developer position. But first, I think you might need a bit of background. <br/><br/>In 2019, after the acquisition of Accurence, I decided it was a great time to take a risk and go into business for myself; something I’ve always wanted to do. Without an idea of what product or service I was going to commit to, I brazenly took the first step and decided I’d figure it out, just like I’ve always done. I had forgotten the source of my strength. <br/><br/>You see, I have always been an analytical and thoughtful person, where every decision in my life is made from a strategic mindset based on the odds; much like a game of chess. In the natural, many of the decisions I’ve made in the past few years were objectively logical–backed by sound judgment and intuition. However, at every turn in this season, my wife and I were met with “misfortune” after “misfortune”-- bad circumstances that were totally out of our control. It got so bad that family members began to comment on our situation saying “they have terrible luck” and “It’s like they’re cursed”. <br/><br/>In reality, some of God's best gifts are on the lowest shelves. I think God wanted to teach my wife and I that it is not by our might or strength that battles are won in life but by his spirit. Sure, we have prayed a lot and we both have a desire to do his will. But I realized that over the past few years I had fallen into the mindset of king Saul. Leaning on my own natural abilities, talents, and strategies to accomplish goals that I thought were right. Long story short, when it came to many of the decisions I made, I did not wait on the Lord–which leads us to why I’m applying. <br/><br/>A number of days ago, In one last attempt to figure it all out on my own, I decided to pivot from self employment and try and find a position that suits my strengths in front end development despite my history of mainly working in marketing departments. Logical. So, I dusted off my resume and started applying. When I added Jesus as my top interest on my resume, I realized that it would make it difficult to find work; but I didn’t care. He’s my main interest and not only that but my best friend. After learning that some of my close people thought I should take Jesus off of my resume because of the political climate,  I prayed and said “Jesus, I’m not taking your name off of my resume, what would you have me do?”. I swiped on my phone to look at the verse of the day on YouVersion and felt the Spirit tell me to look for employment with believers. I checked the YouVersion website and found a position that seems to be a perfect fit for my skill set and experience, and felt called to apply.<br/><br/>At the end of the day, my heart in applying is encapsulated in the verse of the day today “As each one has received a special gift, employ it in serving one another as good stewards of the manifold grace of God”. I hope you guys pray on this, and if you feel lead, give me a shout and we’ll talk. "
 	},
 	"profile": {
 		"headline": {
 			"sub": "About me",
 			"main": "PROFILE"
 		},
-		"body": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries <br/><br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuriessome body text here",
+		"body": "In the past, engineering and marketing functions had little cross-over. But now, with the advent of Martech, huge opportunities are being missed by businesses as a result. The skillset I was given as an engineering-minded misfit on marketing teams makes me uniquely qualified to serve businesses in the emerging field of MarTech implementation/development.<br/><br/>All the skills I have built and everything that I am is because of God’s work in my life. Behind every achievement is a prayer, and every talent is a weakness. Therefore, the philosophy at the heart of how I operate in the workplace is Colossians 3:23: “Whatever you do, work heartily, as for the Lord and not for men,  knowing that from the Lord you will receive the inheritance as your reward. You are serving the Lord Christ.” ",
 		"interests": [
 			{
 				"title": "storm chasing",
@@ -82,7 +82,7 @@
 				"endYear": 2017,
 				"headline": {
 					"sub": "TERRY CHIROPRACTIC, BOULDER, CO",
-					"main": "MARKETING MANAGER/DEVELOPER"
+					"main": "MARKETING MANAGER/WEB DEVELOPER"
 				},
 				"fadeIn": {
 					"start": 0,
@@ -90,7 +90,7 @@
 					"startValue": 0,
 					"endValue": 1
 				},
-				"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to "
+				"description": "Built websites that obtained and secured top search rankings in Google for over 3 years in the most competitive chiropractic market in the world. Built automated customer journeys and attribution reporting by synchronizing marketing automation, CRM, analytics, and EHR technology implementations. Results yielded a 30% increase in cash profits leading to acquisition."
 			},
 			{
 				"startYear": 2018,
@@ -105,7 +105,7 @@
 					"startValue": 0,
 					"endValue": 1
 				},
-				"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to "
+				"description": "Leveraged brand style guides to design and build landing pages and company websites using HTML, CSS, and JQuery. Drove internal improvements to martech stack amid political and financial resistance. Researched and developed personas that fueled messaging. Built and deployed automated campaigns that generated leads in the roofer segment for the first time in the company's history. Wore the hat of SalesForce admin/developer and built systems using Apex that drove internal adoption of the SalesForce platform. Implemented customer journeys and marketing automation. "
 			},
 			{
 				"startYear": 2020,
@@ -120,7 +120,7 @@
 					"startValue": 0,
 					"endValue": 1
 				},
-				"description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to "
+				"description": "Designed and built JAM stack websites leveraging figma, headless content management, REST and GraphQL APIs, and modern, component driven javascript web frameworks like Next JS and Sveltkit. Implemented automated customer journeys and campaigns in marketing automation web applications. Built custom components that seamlessly integrate websites with martech stack using Google, Zoho, and SalesForce APIs. Built custom SalesForce functionality using Apex and the SalesForce Developer platform. Consulted marketing leaders on martech stacks. Built and maintained marketing attribution dashboards that tracked customers through every stage of the funnel up to initial sale."
 			}
 		],
 		"skills": [
