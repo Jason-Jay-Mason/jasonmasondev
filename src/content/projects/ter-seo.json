@@ -1,0 +1,18 @@
+{
+	"headline": {
+		"sub": "Top search rankings",
+		"main": "Terry Chiro"
+	},
+	"body": "For over three years, I built websites for Terry Chiropractic that obtained and maintained the top search result rankings in Google for the highest-converting keywords. When I first began the project, Terry Chiropractic’s website was ranking on the second page and was poorly designed. The first thing I did was conduct an audit of all the competitors on the first page. Then I took inspiration by looking at sites that were competing in more advanced markets (like tech, law firms, etc.). I took the best ideas and synthesized them into a new design and built, deployed, and migrated the site. Within a month, we were starting to see a trickle of new patients refered in by the website for the first time despite little to no improvement in the rankings. <br/>Obtaining the top search ranking went beyond typical local SEO tactics at the time. After learning more about how the Google algorithm is constantly improving I identified an opportunity in our market. I saw that most if not all chiropractic offices were working with marketing agencies that were trying to game the algorithm by producing a high volume of keyword-packed content that offered little to no value. Because of this, I shifted my efforts towards producing content that our ideal customers actually found valuable and propagated it to all channels. Asychonasly, I implemented a strategy of gaining backlinks by exchanging value with other businesses in our area. We rapidly rose to the top rankings within a matter of months and the trickle of new patients became a tsunami.",
+	"cta": {
+		"innerText": "View Site",
+		"href": ""
+	},
+	"githubHref": "",
+	"year": 2020,
+	"img": {
+		"src": "/terr-seo.webp",
+		"alt": "Proof of top ranking in SEO"
+	},
+	"tags": ["development", "design", "marketing"]
+}

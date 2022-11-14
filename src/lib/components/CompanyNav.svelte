@@ -72,11 +72,10 @@
 					<a class="link" href={`#contact`} on:click={handleAnchorClick}>CONTACT </a>
 				{/if}
 			{/if}
-
-			<a href="/">
+			<a href="https://github.com/Jason-Jay-Mason/" target="_blank" rel="noreferrer">
 				<img src="/github-logo.svg" alt="" class="icon" />
 			</a>
-			<a href="/">
+			<a href="https://www.linkedin.com/in/jasonjaymason/" target="_blank" rel="noreferrer">
 				<img src="/linkedin-logo.svg" alt="" class="icon" />
 			</a>
 		</div>

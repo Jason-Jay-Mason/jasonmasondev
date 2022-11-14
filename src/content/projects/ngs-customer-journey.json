@@ -1,0 +1,18 @@
+{
+	"headline": {
+		"sub": "Customer Journey",
+		"main": "Next Gear"
+	},
+	"body": "Next Gear Solutions was implementing digital campaigns manually with Pardot. An automated customer journey that delivered personalized messaging to prospects based on thier location in the buying process was needed in order to optimize their return on ad spend. I was contracted to procure and implement a marketing automation solution.<br/>Because they had SalesForce as their CMS, the ideal solution would have been to use the native integrations with Hubspot or SalesForce Marketing Cloud. However, due to budget constraints, Active Campaign was the option that gave them the functionality they needed at a price they were able to swallow. Over the next six to nine months I provided technical support in implementing campaigns that automated engagement-driven messaging and advertising. This included SalesForce development in Apex, working with members of the Active Campaign development team to troubleshoot and debug their salesforce package, and building custom solutions in PHP and Javascript.",
+	"cta": {
+		"innerText": "View Company Site",
+		"href": "https://www.nextgearsolutions.com/"
+	},
+	"githubHref": "",
+	"year": 2020,
+	"img": {
+		"src": "/ngs-automation.webp",
+		"alt": "Fetured image"
+	},
+	"tags": ["development", "martech"]
+}

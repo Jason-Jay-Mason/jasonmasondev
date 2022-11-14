@@ -159,11 +159,11 @@
 			max-width: $xxl;
 			position: relative;
 			height: 100vh;
-			margin-top: -20vh;
-			min-height: 700px;
+			min-height: 720px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			margin: -17vh auto 0 auto;
 			.main-grid {
 				display: grid;
 				align-items: center;

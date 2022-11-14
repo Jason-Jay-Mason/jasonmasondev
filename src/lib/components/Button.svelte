@@ -4,10 +4,11 @@
 	type Width = 'full' | 'fit-content';
 	export let width: Width = 'fit-content';
 	export let type: string | undefined = undefined;
+	export let target: string | undefined = undefined;
 </script>
 
 {#if href}
-	<a {href}>
+	<a {href} {target}>
 		<button class:full={width === 'full'} class:fit-content={width === 'fit-content'}
 			><slot /></button
 		>
@@ -23,6 +24,11 @@
 
 <style lang="scss">
 	@import '../theme/breakpoints.scss';
+	a {
+		&::before {
+			display: none;
+		}
+	}
 	.full {
 		width: 98%;
 	}

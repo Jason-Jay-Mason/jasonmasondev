@@ -137,12 +137,12 @@
 			<div class="hours">
 				<p>
 					MONDAY - FRIDAY<br />
-					12:00OPM-1:00PM & 5:00PM-9:00PM MT
+					12:00PM-1:00PM & 5:00PM-9:00PM MT
 				</p>
 			</div>
 			<div class="hours">
 				<p>
-					SATURDAY-SUNDAY<br /> 12:00OPM-1:00PM & 5:00PM-9:00PM MT
+					SATURDAY-SUNDAY<br /> 12:00PM-9:00PM MT
 				</p>
 			</div>
 		</div>

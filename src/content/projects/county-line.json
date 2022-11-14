@@ -1,0 +1,18 @@
+{
+	"headline": {
+		"sub": "Design & development",
+		"main": "Countyline"
+	},
+	"body": "Countyline Construction predominantly relied on word-of-mouth referrals as their main channel of generating new business. Because of this, I was contracted to build a new company website that would 1. Build brand equity and trust with prospects, and 2. Generate new business from Google search. <br/>I started the project by conducting in-depth market research into County Line’s ideal customers in order to understand their pain points and deep desires. Then I condensed my research into three buyer personas that I would use to craft the brand identity assets. I created a story brand template and tone of voice chart to guide future copywriting, and I used Figma to build out a consistent design system. <br/>From there I created the wireframes for each of the pages within scope and worked with County Line management to reach an agreement on component positioning and functionality. I finished the pre-development process by creating all the final designs in Figma. I developed the site using Next JS and built out a fully customizable drag-and-drop page builder experience using Tina CMS.",
+	"cta": {
+		"innerText": "View Website",
+		"href": "https://www.countylineexcavation.com/"
+	},
+	"githubHref": "https://github.com/Jason-Jay-Mason/county-line",
+	"year": 2022,
+	"img": {
+		"src": "/county-line.webp",
+		"alt": "Fetured image"
+	},
+	"tags": ["design", "development", "martech", "marketing"]
+}

@@ -1,0 +1,18 @@
+{
+	"headline": {
+		"sub": "Full funnel attribution",
+		"main": "Dashboard"
+	},
+	"body": "I was contracted by Next Gear Solutions to build custom dashboards that displayed key performance indicators across the entire customer journey. I built a custom implementation that assigned a unique user id to each prospect. This enabled us to query each API (SalesForce, Active Campaign, Analytics, Website, etc.) and create a blended data set that allowed internal users to gain insights into the efficacy of specific marketing channels. ",
+	"cta": {
+		"innerText": "View Company Site",
+		"href": "https://www.nextgearsolutions.com/"
+	},
+	"githubHref": "",
+	"year": 2020,
+	"img": {
+		"src": "/dashboard.webp",
+		"alt": "Fetured image"
+	},
+	"tags": ["development", "martech"]
+}

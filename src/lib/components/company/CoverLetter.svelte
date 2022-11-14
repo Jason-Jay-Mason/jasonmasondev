@@ -17,13 +17,14 @@
 	#coverletter {
 		margin: 0 auto;
 		max-width: 848px;
-		padding-bottom: var(--s-13);
+		margin: 0 auto var(--s-13) auto;
 		.body {
-			padding: var(--s-10) var(--s-7);
+			margin: var(--s-10) var(--s-7);
 		}
 		img {
 			filter: var(--icon-filter);
 			width: var(--s-13);
+			margin: 0 var(--s-7);
 		}
 	}
 </style>

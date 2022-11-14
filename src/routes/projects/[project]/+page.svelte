@@ -38,9 +38,9 @@
 			<HalfHeadline main={data.project.headline.main} sub={data.project.headline.sub} />
 			<p class="blurb">{@html data.project.body}</p>
 			<div class="links">
-				<Button>{data.project.cta.innerText}</Button>
+				<Button href={data.project.cta.href} target="_blank">{data.project.cta.innerText}</Button>
 				{#if data.project.githubHref}
-					<a href={data.project.githubHref}>
+					<a href={data.project.githubHref} target="_blank">
 						<img src="/github-logo.svg" alt="" />
 					</a>
 				{/if}
@@ -60,7 +60,7 @@
 <style lang="scss">
 	@import '../../../lib/theme/breakpoints.scss';
 	#more {
-		padding: 0 var(--s-6) var(--s-13) var(--s-6);
+		padding: 0 var(--s-1) var(--s-13) var(--s-1);
 		@include md {
 			padding: 0 var(--s-8) var(--s-14) var(--s-8);
 		}
@@ -73,6 +73,7 @@
 			flex-direction: row;
 			padding: var(--s-11) var(--s-8) var(--s-15) var(--s-8);
 		}
+
 		.description {
 			padding-top: var(--s-10);
 			position: relative;

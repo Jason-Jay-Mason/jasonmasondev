@@ -1,0 +1,18 @@
+{
+	"headline": {
+		"sub": "Design & development",
+		"main": "JamSite"
+	},
+	"body": "I designed and built the company site for JamSite. I used a Story Brand to craft my messaging and decided to create a design that used a bit of a parody in order to help communicate technical ideas to non-technical audiences. I started the development by building the game in the hero using HTML canvas. I initially built a game AI using a neural network that I implemented from scratch but soon realized after some research that the idea was overkill, so I rolled back those changes and went with a simple decision tree. Then I built out the rest of the site using Sveltekit and Tailwind CSS. I implemented a custom scheduler that integrates with the Zoho API. ",
+	"cta": {
+		"innerText": "View Website",
+		"href": "https://www.jamsite.agency"
+	},
+	"githubHref": "https://github.com/Jason-Jay-Mason/jamsite-website",
+	"year": 2022,
+	"img": {
+		"src": "/jamsitebg.webp",
+		"alt": "Fetured image"
+	},
+	"tags": ["design", "development"]
+}
