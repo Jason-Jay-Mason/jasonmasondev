@@ -8,7 +8,7 @@
 <footer>
 	<img src="/jm-logo.svg" alt="" />
 	<div class="links">
-		{#if $company}
+		{#if $company && data}
 			{#each data.links as link}
 				<a href={`/${$company}${link.href}`}>{link.innerText}</a>
 			{/each}
@@ -17,10 +17,10 @@
 
 	<div class="social">
 		<div class="icons">
-			<a href="/">
+			<a href="https://github.com/Jason-Jay-Mason/" target="_blank" rel="noreferrer">
 				<img src="/github-logo.svg" alt="" />
 			</a>
-			<a href="/">
+			<a href="https://www.linkedin.com/in/jasonjaymason/" target="_blank" rel="noreferrer">
 				<img src="/linkedin-logo.svg" alt="" />
 			</a>
 		</div>

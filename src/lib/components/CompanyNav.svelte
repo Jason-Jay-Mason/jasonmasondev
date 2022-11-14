@@ -3,7 +3,6 @@
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import Modal from '$lib/components/Modal.svelte';
 	import { company } from '$lib/stores';
-	import { goto } from '$app/navigation';
 
 	import { afterNavigate, beforeNavigate, disableScrollHandling } from '$app/navigation';
 

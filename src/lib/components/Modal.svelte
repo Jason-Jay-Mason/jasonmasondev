@@ -23,10 +23,10 @@
 
 	<div class="social">
 		<div class="icons">
-			<a href="/">
+			<a href="https://github.com/Jason-Jay-Mason/" target="_blank" rel="noreferrer">
 				<img src="/github-logo.svg" alt="" />
 			</a>
-			<a href="/">
+			<a href="https://www.linkedin.com/in/jasonjaymason/" target="_blank" rel="noreferrer">
 				<img src="/linkedin-logo.svg" alt="" />
 			</a>
 		</div>
