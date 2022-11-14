@@ -128,7 +128,7 @@
 			</div>
 			<div class="item">
 				<img src="/mail-icon.svg" alt="mail icon" />
-				<p>jason@jasonmason.dev</p>
+				<p>jason@jamsite.agency</p>
 			</div>
 			<div class="item">
 				<img src="/location-icon.svg" alt="location icon" />
