@@ -111,13 +111,15 @@
 
 <section id="work">
 	<LargeHeadline main={headline.main} sub={headline.sub} />
-	<div class="filters">
+	<div class="filter-container">
 		<p class="filter-label">Filter by tag:</p>
-		{#each Object.values(tagButtons) as tag}
-			<div on:click={() => selectTag(tag)} class="filter">
-				<Button bind:selected={tagButtons[tag.title].selected}>{tag.title}</Button>
-			</div>
-		{/each}
+		<div class="filters">
+			{#each Object.values(tagButtons) as tag}
+				<div on:click={() => selectTag(tag)} class="filter">
+					<Button bind:selected={tagButtons[tag.title].selected}>{tag.title}</Button>
+				</div>
+			{/each}
+		</div>
 	</div>
 
 	<div bind:this={gridContainer}>
@@ -130,25 +132,36 @@
 	#work {
 		overflow: hidden;
 	}
-	.filters {
-		position: relative;
+
+	.filter-container {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-		flex-direction: row;
-		flex-wrap: wrap;
-		padding: var(--s-10) 0 0 0;
-		margin: 0 auto;
+		flex-direction: column;
 		width: fit-content;
+		margin: 0 auto;
 		.filter-label {
-			position: absolute;
-			top: 20%;
+			position: relative;
 			left: var(--s-4);
 			color: var(--color-rock-300);
 			font-size: 0.8rem;
+			padding: var(--s-10) 0 var(--s-4) 0;
+			text-align: center;
+			@include md {
+				text-align: left;
+			}
 		}
-		.filter {
-			padding: var(--s-3) var(--s-3);
+		.filters {
+			position: relative;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin: 0 auto;
+			width: fit-content;
+
+			.filter {
+				padding: var(--s-3) var(--s-3);
+			}
 		}
 	}
 </style>
