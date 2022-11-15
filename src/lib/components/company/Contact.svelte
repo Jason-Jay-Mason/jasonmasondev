@@ -142,7 +142,7 @@
 			</div>
 			<div class="hours">
 				<p>
-					SATURDAY-SUNDAY<br /> 12:00PM-9:00PM MT
+					SATURDAY - SUNDAY<br /> 12:00PM-9:00PM MT
 				</p>
 			</div>
 		</div>
