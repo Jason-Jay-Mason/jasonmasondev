@@ -43,12 +43,17 @@
 <style lang="scss">
 	@import '../../theme/breakpoints.scss';
 	section {
+		position: relative;
 		padding: var(--s-5) var(--s-7) var(--s-14) var(--s-7);
 		display: flex;
 		flex-direction: column-reverse;
 		align-items: center;
 		max-width: $xl;
 		margin: 0 auto;
+		overflow: hidden;
+		@include xl {
+			overflow: unset;
+		}
 		@include md {
 			padding: var(--s-5) 0 var(--s-15) var(--s-7);
 			justify-content: center;
