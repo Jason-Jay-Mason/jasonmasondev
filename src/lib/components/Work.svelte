@@ -103,11 +103,16 @@
 			return;
 		}
 	}
+
+	$: {
+		console.log(tagButtons);
+	}
 </script>
 
 <section id="work">
 	<LargeHeadline main={headline.main} sub={headline.sub} />
 	<div class="filters">
+		<p class="filter-label">Filter by tag:</p>
 		{#each Object.values(tagButtons) as tag}
 			<div on:click={() => selectTag(tag)} class="filter">
 				<Button bind:selected={tagButtons[tag.title].selected}>{tag.title}</Button>
@@ -126,6 +131,7 @@
 		overflow: hidden;
 	}
 	.filters {
+		position: relative;
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -134,6 +140,13 @@
 		padding: var(--s-10) 0 0 0;
 		margin: 0 auto;
 		width: fit-content;
+		.filter-label {
+			position: absolute;
+			top: 20%;
+			left: var(--s-4);
+			color: var(--color-rock-300);
+			font-size: 0.8rem;
+		}
 		.filter {
 			padding: var(--s-3) var(--s-3);
 		}

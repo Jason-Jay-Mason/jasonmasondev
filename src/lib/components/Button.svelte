@@ -5,6 +5,9 @@
 	export let width: Width = 'fit-content';
 	export let type: string | undefined = undefined;
 	export let target: string | undefined = undefined;
+	$: {
+		console.log(selected);
+	}
 </script>
 
 {#if href}
@@ -69,20 +72,20 @@
 			border-image-source: var(--color-rainbow);
 		}
 
-		&:hover {
-			cursor: pointer;
-			border-image-slice: 1;
-			border-image-source: var(--color-rainbow);
-			&::before {
-				opacity: 1;
-				transition: transform 0.4s;
-				transition: border-width 0.4s;
-				transition: filter 0.4s;
-				filter: blur(12px);
-				transform: translateY(-7px) rotate(2deg);
-				border-width: 5px 10px 5px 10px;
-			}
-		}
+		// &:hover {
+		// 	cursor: pointer;
+		// 	border-image-slice: 1;
+		// 	border-image-source: var(--color-rainbow);
+		// 	&::before {
+		// 		opacity: 1;
+		// 		transition: transform 0.4s;
+		// 		transition: border-width 0.4s;
+		// 		transition: filter 0.4s;
+		// 		filter: blur(12px);
+		// 		transform: translateY(-7px) rotate(2deg);
+		// 		border-width: 5px 10px 5px 10px;
+		// 	}
+		// }
 	}
 	.selected {
 		border-image-slice: 1;
