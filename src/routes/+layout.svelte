@@ -16,10 +16,7 @@
 	body {
 		overflow-x: hidden;
 		-webkit-overflow-scrolling: touch;
-		position: relative;
 		height: 100%;
-	}
-	body {
 		background-color: var(--color-bg-primary);
 		z-index: 0;
 	}

@@ -1,0 +1,46 @@
+backend:
+  name: git-gateway 
+local_backend: true
+publish_mode: editorial_workflow
+media_folder: static/
+public_folder: /images
+site_url: 'http://localhost:5173'
+display_url: 'http://localhost:5173'
+editor:
+  preview: false
+collections:
+  - name: company-page 
+    extension: json
+    label: Company Pages
+    label_singular: Company Page
+    folder: 'src/content/company-pages/'
+    create: true
+    slug: '{{slug}}'
+    identifier_field: company.name 
+    fields:
+      - {name: slug, label: Slug, widget: string}
+      - name: company
+        label: Company
+        widget: object
+        fields:
+          - {name: name, label: Company Name, widget: string }
+          - {name: logoSrc, label: Company Logo, widget: image, choose_url: true}
+      - name: layout
+        label: Layout
+        widget: object
+        fields:
+          - name: links
+            label: Links
+            label_singular: Link
+            widget: list
+            fields:
+              - {name: innerText, label: Inner Text, widget: string}
+              - {name: href, label: Href, widget: string}
+      - name: hero
+        label: Hero
+        widget: object
+        fields:
+          - {name: hook, label: Hook, widget: string}
+          - {name: hook, label: Hook, widget: string}
+
+
