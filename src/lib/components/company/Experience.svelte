@@ -2,16 +2,20 @@
 	import type { Experience } from '$lib/types';
 	import LargeHeadline from '../LargeHeadline.svelte';
 	import AnimationFrame from '$lib/components/AnimationFrame.svelte';
+	import { onMount } from 'svelte';
 	import { getStyleValue } from '$lib/utils';
 
 	export let data: Experience;
 
-	let progress: number;
+	let progress: number = 0;
 	let storedYear: number;
 
+	const date = new Date();
+	const thisYear = date.getFullYear();
+
 	function getDate(date: number) {
-		if (date > 2022) {
-			date = 2022;
+		if (date > thisYear) {
+			date = thisYear;
 		}
 		if (date < 2013) {
 			date = 2013;
@@ -20,32 +24,56 @@
 
 		return date;
 	}
+
+	let skillStartPercentOfFrame: number[] = [-10];
+	onMount(() => {
+		// for each skill, compute when the fade in anamtion should occure
+		const totalYears = thisYear - 2013;
+		let acc = 0;
+		for (let i = 0; i < data.records.length - 1; i++) {
+			const record = data.records[i];
+			const percentOfTotal = (record.endYear - record.startYear) / totalYears;
+			acc = acc + percentOfTotal;
+			skillStartPercentOfFrame.push(acc);
+		}
+	});
+
+	function getSkillLength(i: number) {
+		switch (i) {
+			case 0:
+				return skillStartPercentOfFrame[1];
+			case data.records.length - 1:
+				return 1 - skillStartPercentOfFrame[i];
+			default:
+				return skillStartPercentOfFrame[i + 1] - skillStartPercentOfFrame[i];
+		}
+	}
 </script>
 
 <section id="experience">
 	<LargeHeadline main={data.headline.main} sub={data.headline.sub} />
 	<div class="desktop">
-		<AnimationFrame frameHeight="300vh" bind:progress classes="">
-			<!-- <div style="position:absolute;">{progress}</div> -->
+		<AnimationFrame frameHeight="500vh" bind:progress classes="">
+			<!-- <div style="position:absolute;">{(progress - 0.3) * 1.5}</div> -->
 			<div class="main-container">
 				<div class="main-grid">
 					<div class="work-details">
 						<div class="work-container">
 							<div class="date">
-								<p>{getDate(Math.floor((progress - 0.3) * 1.4 * 9 + 2013))}</p>
+								<p>{getDate(Math.floor((progress - 0.3) * 1.5 * 10 + 2013))}</p>
 							</div>
 							<div class="dot" />
 							<div class="details-container">
-								{#each data.records as record}
-									{#if record.startYear <= storedYear && record.endYear >= storedYear}
+								{#each data.records as record, i}
+									{#if (progress - 0.3) * 1.5 > skillStartPercentOfFrame[i] && (i == data.records.length - 1 || (progress - 0.3) * 1.5 < skillStartPercentOfFrame[i + 1])}
 										<div
 											class="details"
 											style={`opacity:${getStyleValue(
 												progress,
-												record.fadeIn.start,
-												record.fadeIn.length,
-												record.fadeIn.startValue,
-												record.fadeIn.endValue
+												i == 0 ? 0 : skillStartPercentOfFrame[i],
+												0.1,
+												0,
+												1
 											)}`}
 										>
 											<h4>{record.headline.main}</h4>
@@ -64,7 +92,7 @@
 						</div>
 						{#each data.skills as skill}
 							{#each skill.growth as animationFrame, i}
-								{#if data.records[i].startYear <= storedYear && data.records[i].endYear >= storedYear}
+								{#if (progress - 0.3) * 1.5 > skillStartPercentOfFrame[i] && (i == data.records.length - 1 || (progress - 0.3) * 1.5 < skillStartPercentOfFrame[i + 1])}
 									<div class="skill">
 										<p class="skill-title">{skill.title}</p>
 										<div class="bar">
@@ -74,9 +102,10 @@
 											<div
 												class="upper"
 												style={`width:${getStyleValue(
-													progress,
-													animationFrame.start,
-													animationFrame.length,
+													(progress - 0.3) * 1.5,
+													i == 0 ? 0 : skillStartPercentOfFrame[i],
+													getSkillLength(i),
+
 													animationFrame.startValue,
 													animationFrame.endValue
 												)}%`}
@@ -371,7 +400,7 @@
 				}
 				&::after {
 					content: '';
-					height: 240vh;
+					height: 440vh;
 					width: 2px;
 					background-color: var(--color-rock-100);
 					position: absolute;

@@ -103,10 +103,6 @@
 			return;
 		}
 	}
-
-	$: {
-		console.log(tagButtons);
-	}
 </script>
 
 <section id="work">

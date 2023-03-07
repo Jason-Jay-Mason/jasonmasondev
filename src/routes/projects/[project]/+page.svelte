@@ -106,9 +106,6 @@
 					}
 					a {
 						line-height: 0;
-						&::before {
-							display: none;
-						}
 					}
 					img {
 						filter: var(--icon-filter);

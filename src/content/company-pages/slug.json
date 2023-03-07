@@ -1,5 +1,5 @@
 {
-  "slug": "life-church",
+  "slug": "slug",
   "layout": {
     "links": [
       {
@@ -21,8 +21,8 @@
     ]
   },
   "company": {
-    "name": "Life.Church",
-    "logoSrc": "/lc-logo.svg"
+    "name": "Vercel",
+    "logoSrc": "/vc-logo.svg"
   },
   "hero": {
     "hook": "Hi, I'm Jason Mason! This is my web resumé for the MarCom Web Developer posisiton at YouVersion. Send me a message or give me a call and we'll talk!",

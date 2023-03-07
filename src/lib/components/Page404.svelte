@@ -38,9 +38,6 @@
 		}
 		a {
 			line-height: 0;
-			&::before {
-				display: none;
-			}
 		}
 		.social {
 			display: flex;

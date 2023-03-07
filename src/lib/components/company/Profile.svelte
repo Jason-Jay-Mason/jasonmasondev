@@ -31,7 +31,7 @@
 	</div>
 	<div class="image">
 		<div class="background">
-			<img src="/pencil-bg.svg" alt="decerative background" />
+			<img src="/pencil-bg-profile.svg" alt="decerative background" />
 			<div class="circle" />
 		</div>
 		<div class="mask">
@@ -198,28 +198,28 @@
 				top: 0%;
 				left: 0;
 				right: 0;
-				transform: translate(-1%, -58%) rotate(7deg);
-				height: 90%;
-				width: 83%;
-				border-radius: 0 240px 0 100px;
+				transform: translate(5%, -3%) rotate(7deg);
+				height: 95%;
+				width: 90%;
+				border-radius: 0px 240px 0 200px;
 				overflow: hidden;
-				margin: 0 auto;
-				-webkit-transform: translateZ(0);
-				-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+				transform: translateZ(0);
 				@include md {
 					margin: 0;
-					transform: translate(0%, -55%) rotate(7deg);
+					transform: translate(0, -53%) rotate(7deg);
 					height: 100%;
-					width: 110%;
+					width: 103%;
 					top: 50%;
 				}
 				img {
 					opacity: var(--opacity-pencilbg);
 					bottom: 0;
+					top: 0;
 					transform: translateY(-11%) rotate(-5deg);
 					object-fit: cover;
 					position: absolute;
-					height: 100%;
+					height: 110%;
+					width: 100%;
 				}
 			}
 			.mask {
@@ -232,7 +232,6 @@
 				margin: auto;
 				width: calc(var(--height) - 40px);
 				height: calc(var(--height) - 40px);
-				-webkit-transform: translateZ(0);
 				-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 				@include md {
 					margin: 0;
@@ -246,7 +245,6 @@
 					transition: filter 0.8s;
 					filter: saturate(0);
 					width: 120vw;
-
 					@include md {
 						width: auto;
 						transform: translate(-50%, -50%);

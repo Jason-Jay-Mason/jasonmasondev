@@ -3,7 +3,7 @@ backend:
 local_backend: true
 publish_mode: editorial_workflow
 media_folder: static/
-public_folder: /images
+public_folder: /
 site_url: 'http://localhost:5173'
 display_url: 'http://localhost:5173'
 editor:
@@ -16,7 +16,7 @@ collections:
     folder: 'src/content/company-pages/'
     create: true
     slug: '{{slug}}'
-    identifier_field: company.name 
+    identifier_field: slug 
     fields:
       - {name: slug, label: Slug, widget: string}
       - name: company
@@ -41,6 +41,105 @@ collections:
         widget: object
         fields:
           - {name: hook, label: Hook, widget: string}
-          - {name: hook, label: Hook, widget: string}
+          - name: cta
+            label: CTA
+            widget: object
+            fields:
+              - {name: isVideo, label: Video, widget: boolean}
+              - {name: hrefOrSrc, label: Href (or Src), widget: string}
+              - {name: innerText, label: Inner Text, widget: string}
+      - name: coverLetter
+        label: Cover Letter 
+        widget: object 
+        fields:
+          - name: headline 
+            label: Headline
+            widget: object
+            fields:
+              - {name: sub, label: Sub Headline, widget: string}
+              - {name: main, label: Main Headline, widget: string}
+          - {name: body, label: Body, widget: text}
+      - name: profile
+        label: Profile
+        widget: object
+        fields:
+          - name: headline
+            label: Headline
+            widget: object
+            fields:
+              - {name: sub, label: Sub Headline, widget: string}
+              - {name: main, label: Main Headline, widget: string}
+          - {name: body, label: Body, widget: text}
+          - name: interests
+            label: interests
+            widget: list
+            fields: 
+              - {name: title, label: Title, widget: string }
+              - {name: iconSrc, label: Icon, widget: image}
+          - name: img
+            label: Image
+            widget: object
+            fields:
+              - {name: alt, label: Alt Text, widget: string}
+              - {name: src, label: Image, widget: image}
+      - name: experience
+        label: Experience
+        widget: object
+        fields: 
+          - name: headline
+            label: Headline
+            widget: object
+            fields:
+              - {name: sub, label: Sub Headline, widget: string}
+              - {name: main, label: Main Headline, widget: string}
+          - name: records
+            label: Experiences
+            widget: list
+            fields:
+              - {name: startYear, label: Start Year, widget: number}
+              - {name: endYear, label: End Year, widget: number}
+              - name: headline
+                label: Headline
+                widget: object
+                fields:
+                  - {name: sub, label: Sub Headline, widget: string}
+                  - {name: main, label: Main Headline, widget: string}
+              - {name: description, label: Description, widget: text}
+              - name: fadeIn
+                label: Animation Fade In
+                widget: object
+                fields:
+                  - {name: start, label: Start, widget: number }
+                  - {name: length, label: Length, widget: number }
+                  - {name: startValue, label: Start Value, widget: number }
+                  - {name: endValue, label: End Value, widget: number }
+          - name: skills
+            label: Skills
+            widget: list
+            fields:
+              - {name: title, label: Title, widget: string}
+              - name: growth
+                label: Growth Animation
+                widget: list
+                fields:
+                  - {name: startValue, label: Start Value, widget: number}
+                  - {name: endValue, label: End Value, widget: number}
+      - name: portfolio 
+        label: Portfolio
+        widget: object
+        fields:
+          - name: headline 
+            label: headline
+            widget: object
+            fields:
+              - {name: sub, label: Sub Headline, widget: string}
+              - {name: main, label: Main Headline, widget: string}
+
+
+                
+
+
+
+          
 
 

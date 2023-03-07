@@ -25,11 +25,6 @@
 
 <style lang="scss">
 	@import '../theme/breakpoints.scss';
-	a {
-		&::before {
-			display: none;
-		}
-	}
 	div {
 		position: relative;
 		width: 94%;

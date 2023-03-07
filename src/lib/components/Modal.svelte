@@ -56,11 +56,6 @@
 			flex-direction: row;
 			justify-content: space-between;
 			height: 20px;
-			a {
-				&::before {
-					display: none;
-				}
-			}
 			.icons {
 				display: flex;
 				flex-direction: row;

@@ -9,11 +9,10 @@
 	export let data: Navbar;
 	export let isPage: boolean;
 
-	//#region dealing with safari bug with scroll to anchor text
+	//#region annoying fix for safari. Safari does not play well with links to id anchors
 	let scrollBottom: number;
 	beforeNavigate(() => {
 		let scrollToBottom = document.body.scrollHeight - window.scrollY;
-		console.log(document.body.scrollTop);
 		scrollBottom = scrollToBottom;
 	});
 	afterNavigate(() => {
@@ -38,29 +37,31 @@
 			behavior: 'smooth'
 		});
 	}
-	//#endregion safari fix
 
 	let modalActive: boolean = false;
 	function toggleModal() {
 		modalActive = !modalActive;
 	}
+	//#endregion
 </script>
 
 <nav>
 	<div class="left">
 		<img src="/jm-logo.svg" alt="jason's logo" class="logo" />
 
-		{#if $company}
-			<div class="links">
-				{#each data.links as link}
-					{#if !isPage}
+		<div class="links">
+			{#each data.links as link}
+				{#if !isPage}
+					{#if $company}
 						<a class="link" href={`/${$company}${link.href}`}>{link.innerText} </a>
 					{:else}
 						<a class="link" href={`${link.href}`} on:click={handleAnchorClick}>{link.innerText} </a>
 					{/if}
-				{/each}
-			</div>
-		{/if}
+				{:else}
+					<a class="link" href={`${link.href}`} on:click={handleAnchorClick}>{link.innerText} </a>
+				{/if}
+			{/each}
+		</div>
 	</div>
 	<div class="right">
 		<div class="social">
@@ -106,12 +107,10 @@
 		@include md {
 			height: 90px;
 			position: relative;
-			padding: var(--s-7) var(--s-6);
+			padding: var(--s-7) var(--s-8);
 		}
-		a {
-			&::before {
-				display: none;
-			}
+		@include xl {
+			padding: var(--s-7) var(--s-9);
 		}
 		.theme {
 			display: none;

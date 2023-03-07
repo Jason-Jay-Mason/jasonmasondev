@@ -39,11 +39,6 @@
 		position: relative;
 		padding: var(--s-10) 0;
 		margin: var(--s-7) auto 0 auto;
-		a {
-			&::before {
-				display: none;
-			}
-		}
 		&::before {
 			content: '';
 			position: absolute;

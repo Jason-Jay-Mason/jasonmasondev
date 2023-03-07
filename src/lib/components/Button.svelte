@@ -1,13 +1,12 @@
 <script lang="ts">
+	import type { Attribute } from 'svelte/types/compiler/interfaces';
+
 	export let href: string | undefined = undefined;
 	export let selected: boolean = false;
 	type Width = 'full' | 'fit-content';
 	export let width: Width = 'fit-content';
 	export let type: string | undefined = undefined;
 	export let target: string | undefined = undefined;
-	$: {
-		console.log(selected);
-	}
 </script>
 
 {#if href}
@@ -27,11 +26,6 @@
 
 <style lang="scss">
 	@import '../theme/breakpoints.scss';
-	a {
-		&::before {
-			display: none;
-		}
-	}
 	.full {
 		width: 98%;
 	}

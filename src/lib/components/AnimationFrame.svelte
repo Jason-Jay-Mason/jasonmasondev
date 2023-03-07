@@ -24,6 +24,7 @@ because we dont want to show the contents until we know the progress so that the
 	function updateProgress() {
 		let { y, height } = frame.getBoundingClientRect(); //getBoundingClientRect is documented on Moz
 		let start = y - window.innerHeight; //Making the y position 0 when the bottom of the screen enters the frame div
+
 		//we don't care to update the progress if we are not viewing the frame div yet
 		if (start <= 0) {
 			let frameLeft = height + start; //Addition is not intuitive here but we do this because we recieve a negative value from y when we enter into the frame. So it gets the amount of the frame we have left to scroll trhough in px.
