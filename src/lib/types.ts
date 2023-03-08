@@ -1,103 +1,112 @@
+
+//Auth 
+
+export interface AuthData {
+  token: string
+  provider: string
+}
+
+// Pages/ Components
 export interface Headline {
-	main: string
-	sub: string
+  main: string
+  sub: string
 }
 
 export interface CoverLetter {
-	headline: Headline
-	body: string
+  headline: Headline
+  body: string
 }
 
 export interface Cta {
-	isVideo: boolean
-	hrefOrSrc: string
-	innerText: string
+  isVideo: boolean
+  hrefOrSrc: string
+  innerText: string
 }
 
 export interface Link {
-	href: string
-	innerText: string
+  href: string
+  innerText: string
 }
 
 export interface Navbar {
-	links: Link[]
+  links: Link[]
 }
 
 export interface Img {
-	src: string
-	alt: string
+  src: string
+  alt: string
 }
 
 export interface ProjectData {
-	body: string
-	cta: Cta
-	headline: Headline
-	logo: Img
-	year: number
-	img: Img
-	githubHref?: string
-	tags: string[]
+  body: string
+  cta: Cta
+  headline: Headline
+  logo: Img
+  year: number
+  img: Img
+  githubHref?: string
+  tags: string[]
 }
 export interface Project {
-	slug: string
-	data: ProjectData
+  slug: string
+  data: ProjectData
 }
 
 export interface TagSelect {
-	selected: boolean
-	title: string
+  selected: boolean
+  title: string
 }
-	export interface Interest{
-	title:string
-	iconSrc: string
+export interface Interest {
+  title: string
+  iconSrc: string
 }
-export interface Profile{
-	body:string
-	headline:Headline
-	img:Img
-	interests: Interest[]
+export interface Profile {
+  body: string
+  headline: Headline
+  img: Img
+  interests: Interest[]
 }
 export interface TagButtons {
-	[key: string]: TagSelect
+  [key: string]: TagSelect
 }
 
 export interface SelectedProjects {
-	[key: string]: Project
+  [key: string]: Project
 }
 
-export interface GridDisplayElement{
-	slug:string
-	data:{
-	body:string
-	headline: Headline
-	img:Img 
-	href?: string
-	}
+export interface GridDisplayElement {
+  slug: string
+  data: {
+    body: string
+    headline: Headline
+    img: Img
+    href?: string
+  }
 
 }
 
-	export interface AnimationFrame{
-	endValue: number
-	length: number
-	start: number
-	startValue: number
+export interface AnimationFrame {
+  endValue: number
+  length: number
+  start: number
+  startValue: number
 }
-export interface ExpereinceRecord{
-	description: string
-	headline: Headline
-	startYear: number
-	endYear: number
-	fadeIn:AnimationFrame
-}
-
-	export interface Skill{
-	title:string
-	growth: AnimationFrame[]
+export interface ExpereinceRecord {
+  description: string
+  headline: Headline
+  startYear: number
+  endYear: number
+  fadeIn: AnimationFrame
 }
 
-export interface Experience{
-	headline:Headline
-	records: ExpereinceRecord[]
-	skills: Skill[]
+export interface Skill {
+  title: string
+  growth: AnimationFrame[]
+}
+
+export interface Experience {
+  headline: Headline
+  records: ExpereinceRecord[]
+  skills: Skill[]
 
 }

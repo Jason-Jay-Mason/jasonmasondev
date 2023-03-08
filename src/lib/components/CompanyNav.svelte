@@ -48,14 +48,13 @@
 <nav>
 	<div class="left">
 		<img src="/jm-logo.svg" alt="jason's logo" class="logo" />
-
 		<div class="links">
 			{#each data.links as link}
 				{#if !isPage}
 					{#if $company}
 						<a class="link" href={`/${$company}${link.href}`}>{link.innerText} </a>
 					{:else}
-						<a class="link" href={`${link.href}`} on:click={handleAnchorClick}>{link.innerText} </a>
+						<a class="link" href="/" on:click={handleAnchorClick}>{link.innerText} </a>
 					{/if}
 				{:else}
 					<a class="link" href={`${link.href}`} on:click={handleAnchorClick}>{link.innerText} </a>

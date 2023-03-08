@@ -1,11 +1,15 @@
 backend:
-  name: git-gateway 
-local_backend: true
+  name: github 
+  repo: Jason-Jay-Mason/jasonmasondev
+  base_url: https://jasonmason.dev
+  branch: cms
+  auth_endpoint: api/auth
+local_backend: false
 publish_mode: editorial_workflow
 media_folder: static/
 public_folder: /
-site_url: 'http://localhost:5173'
-display_url: 'http://localhost:5173'
+site_url: https://jasonmason.dev 
+display_url: https://jasonmason.dev 
 editor:
   preview: false
 collections:
@@ -13,7 +17,7 @@ collections:
     extension: json
     label: Company Pages
     label_singular: Company Page
-    folder: 'src/content/company-pages/'
+    folder: src/content/company-pages/
     create: true
     slug: '{{slug}}'
     identifier_field: slug 
