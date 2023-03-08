@@ -2,6 +2,7 @@ import type { RequestHandler } from './$types';
 import type { AuthData } from '../../../lib/types';
 import { error } from '@sveltejs/kit';
 import { GITHUB_CLIENT_ID, GITHUB_PRIVATE } from '$env/static/private';
+import { config } from '../../../lib/cms/config'
 
 
 export const GET = (async (e) => {
@@ -12,7 +13,7 @@ export const GET = (async (e) => {
     const params = new URLSearchParams({
       client_id: GITHUB_CLIENT_ID,
       client_secret: GITHUB_PRIVATE,
-      redirect_uri: 'https://jasonmason.dev/api/callback',
+      redirect_uri: config.domain + '/api/callback',
       code: code,
     })
     const url = githubEndPoint + params

@@ -1,5 +1,6 @@
 import { redirect } from '@sveltejs/kit'
 import { GITHUB_CLIENT_ID } from '$env/static/private';
+import { config } from '../../../lib/cms/config'
 
 const state = crypto.randomUUID()
 
@@ -9,7 +10,7 @@ export const GET = async () => {
   const params = new URLSearchParams({
     client_id: GITHUB_CLIENT_ID,
     scope: 'repo,user',
-    redirect_uri: 'https://jasonmason.dev/api/callback',
+    redirect_uri: config.domain + '/api/callback',
     state: state,
   })
   throw redirect(301, githubEndPoint + params)
