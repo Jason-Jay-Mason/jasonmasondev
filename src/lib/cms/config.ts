@@ -1,3 +1,3 @@
 export const config = {
-  domain: 'https://jasonmason.dev'
+  domain: 'https://www.jasonmason.dev/api/callback'
 }
