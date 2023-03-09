@@ -9,7 +9,6 @@ export const GET = async () => {
   const githubEndPoint = 'https://github.com/login/oauth/authorize?'
   const params = new URLSearchParams({
     client_id: GITHUB_CLIENT_ID,
-    scope: 'repo,user',
     redirect_uri: config.domain + '/api/callback',
     state: state,
   })
