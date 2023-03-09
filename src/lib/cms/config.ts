@@ -1,3 +1,3 @@
 export const config = {
-  domain: 'https://jasonmasondev-git-cms-jason-jay-mason.vercel.app'
+  domain: 'jasonmasondev-7xrfoii4v-jason-jay-mason.vercel.app'
 }
