@@ -2,7 +2,7 @@ backend:
   name: github 
   repo: Jason-Jay-Mason/jasonmasondev
   base_url: https://jasonmasondev-git-cms-jason-jay-mason.vercel.app
-  branch: cms
+  branch: cms-vercel
   auth_endpoint: api/auth
 local_backend: false
 publish_mode: editorial_workflow
