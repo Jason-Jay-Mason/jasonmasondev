@@ -20,6 +20,7 @@ collections:
     folder: src/content/company-pages/
     create: true
     slug: '{{slug}}'
+    preview_path: '/{{slug}}'
     identifier_field: slug 
     fields:
       - {name: slug, label: Slug, widget: string}
