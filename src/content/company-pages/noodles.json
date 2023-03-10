@@ -1,0 +1,306 @@
+{
+  "slug": "noodles",
+  "layout": {
+    "links": [
+      {
+        "innerText": "COVER LETTER",
+        "href": "#coverletter"
+      },
+      {
+        "innerText": "PROFILE",
+        "href": "#profile"
+      },
+      {
+        "innerText": "WORK EXPERIENCE",
+        "href": "#experience"
+      },
+      {
+        "innerText": "PORTFOLIO",
+        "href": "#work"
+      }
+    ]
+  },
+  "company": {
+    "name": "Noodles & Company",
+    "logoSrc": "/noo-logo.svg"
+  },
+  "hero": {
+    "hook": "Hi, I'm Jason Mason! This is my web resumé for the MarCom Web Developer posisiton at YouVersion. Send me a message or give me a call and we'll talk!",
+    "cta": {
+      "isVideo": false,
+      "hrefOrSrc": "#contact",
+      "innerText": "Let's Talk"
+    }
+  },
+  "coverLetter": {
+    "headline": {
+      "sub": "Why I'm applying",
+      "main": "COVER LETTER"
+    },
+    "body": "Instead of writing the typical cover letter, I felt led to share my heart as to why I’m applying for the MarCom Web Developer position.<br/><br/>In 2019, after the acquisition of Accurence (my employer at the time), I decided it was a great juncture to take a risk and go into business for myself—something I’ve always wanted to do. Without an idea of what product or service I was going to commit to, I brazenly took the first step and decided I’d figure it out—just like I’d always done. I had forgotten the source of my strength.<br/><br/>I’ve always been an analytical and thoughtful person. My natural inclination is to formulate every life decision from a strategic mindset based on the odds—much like a game of chess. In the natural, many of my decisions over the past few years were objectively logical—backed by sound judgment and intuition. However, at every turn in this season, my wife and I were met with “misfortune” after “misfortune”—bad circumstances that were totally out of our control. It got so bad that family members began to comment on our situation saying “They have terrible luck” and “It’s like they’re cursed.”<br/><br/>In reality, some of God's best gifts are on the lowest shelves. I think God wanted to ingrain in us the fact that it is not by our might or strength that battles are won in life but by His Spirit.<br/><br/>Despite spending time with Him every day and possessing a deep desire to do His will, I managed to fall into the mindset of king Saul. In my career, I was leaning on my own natural abilities, talents, and strategies to accomplish goals that I thought were right. Long story short, I didn't wait on the Lord.<br/><br/>A number of days ago, In one last attempt to figure it all out on my own, I decided to pivot away from self-employment to try and find a position that satisfies my enjoyment in frontend development. So, I dusted off my resumé and started applying. When I added Jesus at the top of my interests, I knew it would make it difficult to find work, but I didn’t care. He’s my main interest and best friend. After learning that some of my close people thought I should take Jesus off my resumé due to the political climate, I prayed: “Jesus, I’m not taking your name off of my resumé, what would You have me do?”. I swiped over on my phone and read the YouVersion verse of the day and felt the Spirit prompt me to look for employment with believers. I checked the YouVersion website and found a position that seems to be a perfect fit for my skill set and experience, and felt called to apply.<br/><br/>My heart in reaching out to YouVersion is encapsulated in today's verse of the day: “As each one has received a special gift, employ it in serving one another as good stewards of the manifold grace of God.” I hope you guys pray on this, and if you feel led, give me a shout and we’ll talk!"
+  },
+  "profile": {
+    "headline": {
+      "sub": "About me",
+      "main": "PROFILE"
+    },
+    "body": "In the past, engineering and marketing functions had little cross-over. But now, with the advent of Martech, huge opportunities are being missed by businesses as a result. The skill set I’ve been gifted as an engineering-minded misfit on marketing teams makes me uniquely qualified to serve businesses in the emerging field of MarTech implementation/development.<br/><br/>All the skills I've built and everything that I am is because of God’s work in my life. Behind every achievement is a prayer, and every talent is a weakness. Therefore, the philosophy at the heart of how I operate in the workplace is Colossians 3:23: “Whatever you do, work heartily, as for the Lord and not for men, knowing that from the Lord you will receive the inheritance as your reward. You are serving the Lord Christ.” ",
+    "interests": [
+      {
+        "title": "storm chasing",
+        "iconSrc": "/tornado.svg"
+      },
+      {
+        "title": "drumming",
+        "iconSrc": "/drums.svg"
+      },
+      {
+        "title": "jesus",
+        "iconSrc": "/bible.svg"
+      },
+      {
+        "title": "mathematics",
+        "iconSrc": "/pi.svg"
+      },
+      {
+        "title": "snowboarding",
+        "iconSrc": "/snowboard.svg"
+      }
+    ],
+    "img": {
+      "alt": "some alt text here",
+      "src": "/profile-photo.webp"
+    }
+  },
+  "experience": {
+    "headline": {
+      "sub": "My skills over time",
+      "main": "WORK EXPERIENCE"
+    },
+    "records": [
+      {
+        "startYear": 2013,
+        "endYear": 2018,
+        "headline": {
+          "sub": "TERRY CHIROPRACTIC, BOULDER, CO",
+          "main": "MARKETING MANAGER/WEB DEVELOPER"
+        },
+        "fadeIn": {
+          "start": 0,
+          "length": 0,
+          "startValue": 0,
+          "endValue": 1
+        },
+        "description": "Built websites that obtained and secured top search rankings on Google for over 3 years in the #1 most competitive chiropractic market in the world. Built automated customer journeys and attribution reporting by synchronizing marketing automation, CRM, analytics, and EHR technology implementations. Results yielded a 30% increase in cash profits leading to acquisition."
+      },
+      {
+        "startYear": 2018,
+        "endYear": 2020,
+        "headline": {
+          "main": "MARTECH DEVELOPER",
+          "sub": "ACCURENCE, LOUISVILLE, CO"
+        },
+        "fadeIn": {
+          "start": 0.68,
+          "length": 0.05,
+          "startValue": 0,
+          "endValue": 1
+        },
+        "description": "Leveraged brand style guides to design and build landing pages and company websites using HTML, CSS, and JQuery. Drove internal improvements to MarTech stack amid political and financial resistance. Researched and developed personas that fueled messaging. Built and deployed automated campaigns that generated leads in the roofer segment for the first time in the company's history. Wore the hat of SalesForce admin/developer and built systems using Apex that drove internal adoption of the SalesForce platform. Implemented customer journeys and marketing automation. "
+      },
+      {
+        "startYear": 2020,
+        "endYear": 2023,
+        "headline": {
+          "main": "FRONTEND ENGINEER",
+          "sub": "JAMSITE, REMOTE"
+        },
+        "fadeIn": {
+          "start": 0.845,
+          "length": 0.05,
+          "startValue": 0,
+          "endValue": 1
+        },
+        "description": "Designed and built JAMstack websites leveraging Figma, headless content management, REST and GraphQL APIs, and component-driven javascript web frameworks like Next JS and Sveltkit. Implemented automated customer journeys and campaigns in marketing automation web applications. Built custom components that seamlessly integrate websites with MarTech stack using Google, Zoho, and SalesForce APIs. Built custom SalesForce functionality using Apex and the SalesForce Developer Platform. Consulted marketing leaders on MarTech stacks. Built and maintained marketing attribution dashboards that tracked customers through every stage of the funnel up to initial sale."
+      }
+    ],
+    "skills": [
+      {
+        "title": "javascript",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 20
+          },
+          {
+            "startValue": 20,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 90
+          }
+        ]
+      },
+      {
+        "title": "marketing automation",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 86
+          },
+          {
+            "startValue": 86,
+            "endValue": 80
+          }
+        ]
+      },
+      {
+        "title": "HTML & CSS",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 80
+          },
+          {
+            "startValue": 80,
+            "endValue": 95
+          }
+        ]
+      },
+      {
+        "title": "digital marketing",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 85
+          },
+          {
+            "startValue": 85,
+            "endValue": 80
+          },
+          {
+            "startValue": 80,
+            "endValue": 60
+          }
+        ]
+      },
+      {
+        "title": "react",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 20
+          },
+          {
+            "startValue": 20,
+            "endValue": 90
+          }
+        ]
+      },
+      {
+        "title": "API consumption",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 40
+          },
+          {
+            "startValue": 40,
+            "endValue": 90
+          }
+        ]
+      },
+      {
+        "title": "svelte",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 88
+          }
+        ]
+      },
+      {
+        "title": "salesforce dev",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 40
+          },
+          {
+            "startValue": 40,
+            "endValue": 45
+          }
+        ]
+      },
+      {
+        "title": "reporting",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 40
+          },
+          {
+            "startValue": 40,
+            "endValue": 70
+          },
+          {
+            "startValue": 70,
+            "endValue": 80
+          }
+        ]
+      },
+      {
+        "title": "design",
+        "growth": [
+          {
+            "startValue": 30,
+            "endValue": 50
+          },
+          {
+            "startValue": 50,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 65
+          }
+        ]
+      }
+    ]
+  },
+  "portfolio": {
+    "headline": {
+      "sub": "My work",
+      "main": "PORTFOLIO"
+    }
+  }
+}
