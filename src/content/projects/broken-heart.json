@@ -1,18 +1,24 @@
 {
-	"headline": {
-		"sub": "Design & development",
-		"main": "BHHF"
-	},
-	"body": "Broken Heart Horse Farm approached me to have a website built for their upper-tier equestrian center. Being a new business in the process of being built, I was contracted to be a one-stop shop for a number of brand assets including a messaging guide and visual brand style guide while also providing MarTech consulting and web development. The requirements included: a fully customized, component-driven drag-and-drop page builder; a blog; horse sales content management; camp scheduling; and the implementation of a CRM with marketing automation.<br/>Instead of building the entire site up front, the team opted for a CI/CD model due to the large number of items in scope. I developed a schedule that would get us to the end of the project within 6 months. I designed the first set of features and components in Figma then built the site using Next JS and Tina CMS. Shortly after the second phase of feature releases, the company had an internal issue that forced them to shut down and all work was halted. The site was featured on the <a href='/tina-showcase.png' target='_blank'>official Tina CMS showcase</a> before they went out of business.",
-	"cta": {
-		"innerText": "View Website",
-		"href": "https://broken-heart-website-git-main-brokenhearthorsefarm.vercel.app/"
-	},
-	"githubHref": "https://github.com/Jason-Jay-Mason/bhhf",
-	"year": 2022,
-	"img": {
-		"src": "/bhhf.webp",
-		"alt": "Fetured image"
-	},
-	"tags": ["design", "development", "martech", "marketing"]
+  "slug": "broken-heart",
+  "headline": {
+    "sub": "Design & development",
+    "main": "BHHF"
+  },
+  "body": "Broken Heart Horse Farm approached me to have a website built for their upper-tier equestrian center. Being a new business in the process of being built, I was contracted to be a one-stop shop for a number of brand assets including a messaging guide and visual brand style guide while also providing MarTech consulting and web development. The requirements included: a fully customized, component-driven drag-and-drop page builder; a blog; horse sales content management; camp scheduling; and the implementation of a CRM with marketing automation.<br/>Instead of building the entire site up front, the team opted for a CI/CD model due to the large number of items in scope. I developed a schedule that would get us to the end of the project within 6 months. I designed the first set of features and components in Figma then built the site using Next JS and Tina CMS. Shortly after the second phase of feature releases, the company had an internal issue that forced them to shut down and all work was halted. The site was featured on the <a href='/tina-showcase.png' target='_blank'>official Tina CMS showcase</a> before they went out of business.",
+  "cta": {
+    "innerText": "View Website",
+    "href": "https://broken-heart-website-git-main-brokenhearthorsefarm.vercel.app/"
+  },
+  "githubHref": "https://github.com/Jason-Jay-Mason/bhhf",
+  "year": 2022,
+  "img": {
+    "src": "/bhhf.webp",
+    "alt": "Fetured image"
+  },
+  "tags": [
+    "design",
+    "development",
+    "martech",
+    "marketing"
+  ]
 }

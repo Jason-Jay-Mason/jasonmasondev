@@ -1,18 +1,22 @@
 {
-	"headline": {
-		"sub": "Design & development",
-		"main": "Accurence"
-	},
-	"body": "Shortly after I arrived at Accurence, it became obvious that they were in desperate need of a new website. For tech companies, the quality of a website can make or break brand equity. Following a rebrand in 2018, we asked the marketing agency we were in contract with for a portfolio of items that displayed their web development abilities. After comparing the quality of design and development with my own, the marketing director decided to assign me to design and build the new site. I used WordPress and a hybrid implementation of a no-code page builder with custom components that I built to create a site that was easily editable for content creators but also fast and user-friendly. ",
-	"cta": {
-		"innerText": "View Site",
-		"href": "https://accurence.com/"
-	},
-	"githubHref": "",
-	"year": 2020,
-	"img": {
-		"src": "/acc-website.webp",
-		"alt": "Accurence website thumbnail"
-	},
-	"tags": ["development", "design"]
+  "slug": "acc-website",
+  "headline": {
+    "sub": "Design & development",
+    "main": "Accurence"
+  },
+  "body": "Shortly after I arrived at Accurence, it became obvious that they were in desperate need of a new website. For tech companies, the quality of a website can make or break brand equity. Following a rebrand in 2018, we asked the marketing agency we were in contract with for a portfolio of items that displayed their web development abilities. After comparing the quality of design and development with my own, the marketing director decided to assign me to design and build the new site. I used WordPress and a hybrid implementation of a no-code page builder with custom components that I built to create a site that was easily editable for content creators but also fast and user-friendly. ",
+  "cta": {
+    "innerText": "View Site",
+    "href": "https://accurence.com/"
+  },
+  "githubHref": "",
+  "year": 2020,
+  "img": {
+    "src": "/acc-website.webp",
+    "alt": "Accurence website thumbnail"
+  },
+  "tags": [
+    "development",
+    "design"
+  ]
 }

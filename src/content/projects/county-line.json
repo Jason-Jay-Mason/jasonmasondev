@@ -1,18 +1,24 @@
 {
-	"headline": {
-		"sub": "Design & development",
-		"main": "County Line"
-	},
-	"body": "County Line Construction predominantly relied on word-of-mouth referrals as their main channel of generating new business. Because of this, I was contracted to build a new company website that would: (1) Build brand equity and trust with prospects, and (2) Generate new business from Google search. <br/>I started the project by conducting in-depth market research into County Line’s ideal customers in order to understand their pain points and deep desires. Then I condensed my research into three buyer personas that I would use to craft the brand identity assets. I created a Story Brand template and tone of voice chart to guide future copywriting. I used Figma to build out a consistent design system and developed the site using Next JS and Tina CMS.",
-	"cta": {
-		"innerText": "View Website",
-		"href": "https://www.countylineexcavation.com/"
-	},
-	"githubHref": "https://github.com/Jason-Jay-Mason/county-line",
-	"year": 2022,
-	"img": {
-		"src": "/county-line.webp",
-		"alt": "Fetured image"
-	},
-	"tags": ["design", "development", "martech", "marketing"]
+  "slug": "county-line",
+  "headline": {
+    "sub": "Design & development",
+    "main": "County Line"
+  },
+  "body": "County Line Construction predominantly relied on word-of-mouth referrals as their main channel of generating new business. Because of this, I was contracted to build a new company website that would: (1) Build brand equity and trust with prospects, and (2) Generate new business from Google search. <br/>I started the project by conducting in-depth market research into County Line’s ideal customers in order to understand their pain points and deep desires. Then I condensed my research into three buyer personas that I would use to craft the brand identity assets. I created a Story Brand template and tone of voice chart to guide future copywriting. I used Figma to build out a consistent design system and developed the site using Next JS and Tina CMS.",
+  "cta": {
+    "innerText": "View Website",
+    "href": "https://www.countylineexcavation.com/"
+  },
+  "githubHref": "https://github.com/Jason-Jay-Mason/county-line",
+  "year": 2022,
+  "img": {
+    "src": "/county-line.webp",
+    "alt": "Fetured image"
+  },
+  "tags": [
+    "design",
+    "development",
+    "martech",
+    "marketing"
+  ]
 }

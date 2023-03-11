@@ -13,6 +13,41 @@ display_url:  https://www.jasonmason.dev
 editor:
   preview: false
 collections:
+  - name: project
+    extension: json
+    label: Projects 
+    label_singular: Project 
+    folder: src/content/projects/
+    create: true
+    slug: '{{slug}}'
+    preview_path: '/projects/{{slug}}'
+    identifier_field: slug 
+    fields:
+      - {name: slug, label: Slug, widget: string}
+      - name: headline
+        label: Headline
+        widget: object
+        fields:
+          - {name: sub, label: Sub Headline, widget: string}
+          - {name: main, label: Main Headline, widget: string}
+      - {name: body, label: Body, widget: text}
+      - name: cta
+        label: CTA
+        widget: object
+        fields:
+          - {name: innerText, label: Inner Text, widget: string}
+          - {name: href, label: Href, widget: string}
+      - {name: githubHref, label: Github Href, required: false, widget: string}
+      - {name: year, label: Year, widget: number}
+      - name: img
+        label: Image
+        widget: object
+        fields:
+          - {name: src, label: Image Source, widget: image}
+          - {name: alt, label: Alt Text, widget: string}
+      - name: tags
+        label: Tags
+        widget: list
   - name: company-page 
     extension: json
     label: Company Pages
