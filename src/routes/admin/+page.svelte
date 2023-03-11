@@ -9,3 +9,9 @@
 </script>
 
 <div bind:this={container} />
+
+<style>
+	a {
+		z-index: 1;
+	}
+</style>
