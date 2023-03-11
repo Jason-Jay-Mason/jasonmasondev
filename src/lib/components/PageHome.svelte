@@ -18,8 +18,11 @@
 </div>
 
 <section>
-	<h1>404 Page Not Found</h1>
-	<p>Oops, it looks like this page doesn't exist</p>
+	<h1>What's up!?</h1>
+	<p>
+		I'm glad you have visited my site! As it is currently under construction, some of the pages,
+		including the home page and blog, are not built out. Please stay tuned for updates!
+	</p>
 </section>
 
 <style lang="scss">
@@ -77,6 +80,8 @@
 
 	section {
 		width: 100%;
+		max-width: $lg;
+		margin: 0 auto;
 		height: 70vh;
 		display: flex;
 		flex-direction: column;

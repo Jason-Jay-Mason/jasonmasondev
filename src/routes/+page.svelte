@@ -1,5 +1,5 @@
 <script lang="ts">
-	import Page404 from '$lib/components/Page404.svelte';
+	import PageHome from '$lib/components/PageHome.svelte';
 </script>
 
-<Page404 />
+<PageHome />
