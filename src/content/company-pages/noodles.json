@@ -25,7 +25,7 @@
     "logoSrc": "/noo-logo.svg"
   },
   "hero": {
-    "hook": "Hi, I'm Jason Mason! This is my web resumé for the MarCom Web Developer posisiton at YouVersion. Send me a message or give me a call and we'll talk!",
+    "hook": "Hi, I'm Jason Mason! This is my web resumé for the Marketing Technology Engineer position at Noodles & Company. Send me a message or give me a call and we'll talk!",
     "cta": {
       "isVideo": false,
       "hrefOrSrc": "#contact",
@@ -37,14 +37,14 @@
       "sub": "Why I'm applying",
       "main": "COVER LETTER"
     },
-    "body": "Instead of writing the typical cover letter, I felt led to share my heart as to why I’m applying for the MarCom Web Developer position.<br/><br/>In 2019, after the acquisition of Accurence (my employer at the time), I decided it was a great juncture to take a risk and go into business for myself—something I’ve always wanted to do. Without an idea of what product or service I was going to commit to, I brazenly took the first step and decided I’d figure it out—just like I’d always done. I had forgotten the source of my strength.<br/><br/>I’ve always been an analytical and thoughtful person. My natural inclination is to formulate every life decision from a strategic mindset based on the odds—much like a game of chess. In the natural, many of my decisions over the past few years were objectively logical—backed by sound judgment and intuition. However, at every turn in this season, my wife and I were met with “misfortune” after “misfortune”—bad circumstances that were totally out of our control. It got so bad that family members began to comment on our situation saying “They have terrible luck” and “It’s like they’re cursed.”<br/><br/>In reality, some of God's best gifts are on the lowest shelves. I think God wanted to ingrain in us the fact that it is not by our might or strength that battles are won in life but by His Spirit.<br/><br/>Despite spending time with Him every day and possessing a deep desire to do His will, I managed to fall into the mindset of king Saul. In my career, I was leaning on my own natural abilities, talents, and strategies to accomplish goals that I thought were right. Long story short, I didn't wait on the Lord.<br/><br/>A number of days ago, In one last attempt to figure it all out on my own, I decided to pivot away from self-employment to try and find a position that satisfies my enjoyment in frontend development. So, I dusted off my resumé and started applying. When I added Jesus at the top of my interests, I knew it would make it difficult to find work, but I didn’t care. He’s my main interest and best friend. After learning that some of my close people thought I should take Jesus off my resumé due to the political climate, I prayed: “Jesus, I’m not taking your name off of my resumé, what would You have me do?”. I swiped over on my phone and read the YouVersion verse of the day and felt the Spirit prompt me to look for employment with believers. I checked the YouVersion website and found a position that seems to be a perfect fit for my skill set and experience, and felt called to apply.<br/><br/>My heart in reaching out to YouVersion is encapsulated in today's verse of the day: “As each one has received a special gift, employ it in serving one another as good stewards of the manifold grace of God.” I hope you guys pray on this, and if you feel led, give me a shout and we’ll talk!"
+    "body": "Hey there, Noodles and Company!\n\nFirst and foremost, thanks a ton for taking the time to review my Webumé and considering me for the open position. I'm beyond thrilled to see that you guys are hiring, especially since I'm a huge fan of your mouth-watering dishes. After reading through the job description, I have a strong hunch that I'd be a valuable addition to your team and provide top-notch service to all your customers.\n\nIt's great to know that Noodles and Company shares my belief in the importance of diversity and encourages individuals to express themselves in the workplace. Being able to live and let live is crucial, and it's heartening to live in a country that values diversity as much as we do. Sadly, in many parts of the world, my faith in Jesus would result in a death sentence, but I won't bore you with those details. Let's just say that I'm a Christian, but not the judgmental type. I'm all about spreading love and positivity, making the world a better place for everyone.\n\nI feel a deep connection with Noodles and Company's values, particularly with my passion for MarTech and building business systems. I genuinely care about the work I do and the people around me, and I'm confident that my skills and experience match your job requirements to a tee.\n\nI can't wait to meet you all and discuss this opportunity further. By the way, I wanted to mention that having knowledge of REST and Java, Node, Go, Djengo, C#, or Ruby would be a huge plus for integrating MarTech tools and Sales Force. It's worth considering when updating the job description."
   },
   "profile": {
     "headline": {
       "sub": "About me",
       "main": "PROFILE"
     },
-    "body": "In the past, engineering and marketing functions had little cross-over. But now, with the advent of Martech, huge opportunities are being missed by businesses as a result. The skill set I’ve been gifted as an engineering-minded misfit on marketing teams makes me uniquely qualified to serve businesses in the emerging field of MarTech implementation/development.<br/><br/>All the skills I've built and everything that I am is because of God’s work in my life. Behind every achievement is a prayer, and every talent is a weakness. Therefore, the philosophy at the heart of how I operate in the workplace is Colossians 3:23: “Whatever you do, work heartily, as for the Lord and not for men, knowing that from the Lord you will receive the inheritance as your reward. You are serving the Lord Christ.” ",
+    "body": "In the past, there was little overlap between engineering and marketing functions. However, with the arrival of Martech, businesses are missing out on significant opportunities. As a result, my unique skill set as an engineering-minded misfit on marketing teams has given me the qualifications to serve businesses in the nascent field of MarTech implementation and development.",
     "interests": [
       {
         "title": "storm chasing",
@@ -59,8 +59,8 @@
         "iconSrc": "/bible.svg"
       },
       {
-        "title": "mathematics",
-        "iconSrc": "/pi.svg"
+        "title": "cooking",
+        "iconSrc": "/cooking.svg"
       },
       {
         "title": "snowboarding",
@@ -68,7 +68,7 @@
       }
     ],
     "img": {
-      "alt": "some alt text here",
+      "alt": "Profile photo",
       "src": "/profile-photo.webp"
     }
   },
