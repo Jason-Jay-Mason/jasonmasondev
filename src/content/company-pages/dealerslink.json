@@ -1,0 +1,306 @@
+{
+  "slug": "dealerslink",
+  "layout": {
+    "links": [
+      {
+        "innerText": "COVER LETTER",
+        "href": "#coverletter"
+      },
+      {
+        "innerText": "PROFILE",
+        "href": "#profile"
+      },
+      {
+        "innerText": "WORK EXPERIENCE",
+        "href": "#experience"
+      },
+      {
+        "innerText": "PORTFOLIO",
+        "href": "#work"
+      }
+    ]
+  },
+  "company": {
+    "name": "Dealerslink",
+    "logoSrc": "/dealerslink-logo.svg"
+  },
+  "hero": {
+    "hook": "Hi, I'm Jason Mason! This is my web resumé for the Marketing Technology Engineer position at Noodles & Company. Send me a message or give me a call and we'll talk!",
+    "cta": {
+      "isVideo": false,
+      "hrefOrSrc": "#contact",
+      "innerText": "Let's Talk"
+    }
+  },
+  "coverLetter": {
+    "headline": {
+      "sub": "Why I'm applying",
+      "main": "COVER LETTER"
+    },
+    "body": "Hey there, Noodles and Company!\n\nFirst and foremost, thanks a ton for taking the time to review my Webumé and considering me for the open position. I'm beyond thrilled to see that you guys are hiring, especially since I'm a huge fan of your mouth-watering dishes. After reading through the job description, I have a strong hunch that I'd be a valuable addition to your team and provide top-notch service to all your customers.<br/><br/>\n\nIt's great to know that Noodles and Company shares my belief in the importance of diversity and encourages individuals to express themselves in the workplace. Being able to live and let live is crucial, and it's heartening to live in a country that values diversity as much as we do. Sadly, in many parts of the world, my faith in Jesus would result in a death sentence, but I won't bore you with those details. Let's just say that I'm a Christian, but not the judgmental type. I'm all about spreading love and positivity, making the world a better place for everyone.<br/><br/>\n\nI feel a deep connection with Noodles and Company's values, particularly with my passion for MarTech and building business systems. I genuinely care about the work I do and the people around me, and I'm confident that my skills and experience match your job requirements to a tee.<br/><br/>\n\nI can't wait to meet you all and discuss this opportunity further. By the way, I wanted to mention that having knowledge of REST, and server-side development using Java, Node, Go, Python, C#, or Ruby would be a huge plus for integrating MarTech tools and Sales Force. It's worth considering when updating the job description.<br/><br/>"
+  },
+  "profile": {
+    "headline": {
+      "sub": "About me",
+      "main": "PROFILE"
+    },
+    "body": "In the past, there was little overlap between engineering and marketing functions. However, with the arrival of Martech, businesses are missing out on significant opportunities. As a result, my unique skill set as an engineering-minded misfit on marketing teams has given me the qualifications to serve businesses in the nascent field of MarTech implementation and development.",
+    "interests": [
+      {
+        "title": "storm chasing",
+        "iconSrc": "/tornado.svg"
+      },
+      {
+        "title": "drumming",
+        "iconSrc": "/drums.svg"
+      },
+      {
+        "title": "jesus",
+        "iconSrc": "/bible.svg"
+      },
+      {
+        "title": "cooking",
+        "iconSrc": "/cooking.svg"
+      },
+      {
+        "title": "snowboarding",
+        "iconSrc": "/snowboard.svg"
+      }
+    ],
+    "img": {
+      "alt": "Profile photo",
+      "src": "/profile-photo.webp"
+    }
+  },
+  "experience": {
+    "headline": {
+      "sub": "My skills over time",
+      "main": "WORK EXPERIENCE"
+    },
+    "records": [
+      {
+        "startYear": 2013,
+        "endYear": 2018,
+        "headline": {
+          "sub": "TERRY CHIROPRACTIC, BOULDER, CO",
+          "main": "MARKETING MANAGER/WEB DEVELOPER"
+        },
+        "fadeIn": {
+          "start": 0,
+          "length": 0,
+          "startValue": 0,
+          "endValue": 1
+        },
+        "description": "Built websites that obtained and secured top search rankings on Google for over 3 years in the #1 most competitive chiropractic market in the world. Built automated customer journeys and attribution reporting by synchronizing marketing automation, CRM, analytics, and EHR technology implementations. Results yielded a 30% increase in cash profits leading to acquisition."
+      },
+      {
+        "startYear": 2018,
+        "endYear": 2020,
+        "headline": {
+          "main": "MARTECH DEVELOPER",
+          "sub": "ACCURENCE, LOUISVILLE, CO"
+        },
+        "fadeIn": {
+          "start": 0.68,
+          "length": 0.05,
+          "startValue": 0,
+          "endValue": 1
+        },
+        "description": "Leveraged brand style guides to design and build landing pages and company websites using HTML, CSS, and JQuery. Drove internal improvements to MarTech stack amid political and financial resistance. Researched and developed personas that fueled messaging. Built and deployed automated campaigns that generated leads in the roofer segment for the first time in the company's history. Wore the hat of SalesForce admin/developer and built systems using Apex that drove internal adoption of the SalesForce platform. Implemented customer journeys and marketing automation. "
+      },
+      {
+        "startYear": 2020,
+        "endYear": 2023,
+        "headline": {
+          "main": "FRONTEND ENGINEER",
+          "sub": "JAMSITE, REMOTE"
+        },
+        "fadeIn": {
+          "start": 0.845,
+          "length": 0.05,
+          "startValue": 0,
+          "endValue": 1
+        },
+        "description": "Designed and built JAMstack websites leveraging Figma, headless content management, REST and GraphQL APIs, and component-driven javascript web frameworks like Next JS and Sveltkit. Implemented automated customer journeys and campaigns in marketing automation web applications. Built custom components that seamlessly integrate websites with MarTech stack using Google, Zoho, and SalesForce APIs. Built custom SalesForce functionality using Apex and the SalesForce Developer Platform. Consulted marketing leaders on MarTech stacks. Built and maintained marketing attribution dashboards that tracked customers through every stage of the funnel up to initial sale."
+      }
+    ],
+    "skills": [
+      {
+        "title": "javascript",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 20
+          },
+          {
+            "startValue": 20,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 90
+          }
+        ]
+      },
+      {
+        "title": "marketing automation",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 86
+          },
+          {
+            "startValue": 86,
+            "endValue": 80
+          }
+        ]
+      },
+      {
+        "title": "HTML & CSS",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 80
+          },
+          {
+            "startValue": 80,
+            "endValue": 95
+          }
+        ]
+      },
+      {
+        "title": "digital marketing",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 85
+          },
+          {
+            "startValue": 85,
+            "endValue": 80
+          },
+          {
+            "startValue": 80,
+            "endValue": 60
+          }
+        ]
+      },
+      {
+        "title": "react",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 20
+          },
+          {
+            "startValue": 20,
+            "endValue": 90
+          }
+        ]
+      },
+      {
+        "title": "API consumption",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 40
+          },
+          {
+            "startValue": 40,
+            "endValue": 90
+          }
+        ]
+      },
+      {
+        "title": "svelte",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 88
+          }
+        ]
+      },
+      {
+        "title": "salesforce dev",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 40
+          },
+          {
+            "startValue": 40,
+            "endValue": 45
+          }
+        ]
+      },
+      {
+        "title": "reporting",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 40
+          },
+          {
+            "startValue": 40,
+            "endValue": 70
+          },
+          {
+            "startValue": 70,
+            "endValue": 80
+          }
+        ]
+      },
+      {
+        "title": "design",
+        "growth": [
+          {
+            "startValue": 30,
+            "endValue": 50
+          },
+          {
+            "startValue": 50,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 65
+          }
+        ]
+      }
+    ]
+  },
+  "portfolio": {
+    "headline": {
+      "sub": "My work",
+      "main": "PORTFOLIO"
+    }
+  }
+}
