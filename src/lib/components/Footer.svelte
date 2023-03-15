@@ -31,21 +31,21 @@
 <style lang="scss">
 	@import '../theme/breakpoints.scss';
 	footer {
+		position: relative;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		max-width: $lg;
 		width: 80%;
-		position: relative;
+		max-width: $lg;
 		padding: var(--s-10) 0;
 		margin: var(--s-7) auto 0 auto;
 		&::before {
 			content: '';
 			position: absolute;
-			height: 2px;
 			top: 0;
 			left: 0;
 			right: 0;
+			height: 2px;
 			margin: 0 auto;
 			background-color: var(--color-rock-200);
 		}

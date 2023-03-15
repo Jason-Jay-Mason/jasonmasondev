@@ -82,7 +82,7 @@
 			<ThemeSwitcher />
 		</div>
 
-		<div class="button" class:active={modalActive === true} on:click={toggleModal}>
+		<div class="hamburger" class:active={modalActive === true} on:click={toggleModal}>
 			<div />
 		</div>
 	</div>
@@ -95,17 +95,17 @@
 		position: sticky;
 		top: 0;
 		height: 50px;
-		z-index: 100;
-		background-color: var(--color-bg-primary);
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		margin: 0 auto;
 		max-width: $xxl;
+		z-index: 100;
+		background-color: var(--color-bg-primary);
+		margin: 0 auto;
 		padding: 0 var(--s-4);
 		@include md {
-			height: 90px;
 			position: relative;
+			height: 90px;
 			padding: var(--s-7) var(--s-8);
 		}
 		@include xl {
@@ -123,22 +123,21 @@
 			}
 			&::before {
 				margin: auto;
-				transform: rotate(-45deg) translateX(-7px) translateY(10px);
+				transform: rotate(-45deg) translate(-9px, 8px);
 				transition: all 0.2s;
 			}
 			&::after {
 				margin: auto;
-				transform: rotate(45deg) translateX(-7px) translateY(-10px);
+				transform: rotate(45deg) translate(-8px, -9px);
 				transition: all 0.2s;
 			}
 		}
-		.button {
+		.hamburger {
 			cursor: pointer;
 			position: relative;
-			margin: 0 0 0 var(--s-6);
 			width: 40px;
 			height: 28px;
-			display: block;
+			margin: 0 0 0 var(--s-6);
 			@include md {
 				display: none;
 			}
@@ -146,19 +145,18 @@
 				position: absolute;
 				top: 0;
 				bottom: 0;
-				margin: auto;
-				content: '';
 				height: 4px;
 				width: 100%;
+				margin: auto;
 				background-color: var(--color-rock-100);
 			}
 			&::before,
 			&::after {
-				transition: all 0.2s;
 				content: '';
 				position: absolute;
 				height: 4px;
 				width: 100%;
+				transition: all 0.2s;
 				background-color: var(--color-rock-100);
 			}
 			&::before {
@@ -169,12 +167,12 @@
 			}
 		}
 		.social {
-			line-height: 0;
+			display: none;
 			flex-direction: row;
 			align-items: center;
 			justify-content: center;
+			line-height: 0;
 			padding-right: var(--s-6);
-			display: none;
 			@include lg {
 				padding-right: var(--s-9);
 			}
@@ -182,9 +180,9 @@
 				display: flex;
 			}
 			.icon {
-				filter: var(--icon-filter);
 				margin: 0 var(--s-4);
 				width: 28px;
+				filter: var(--icon-filter);
 			}
 		}
 		.right,
@@ -201,8 +199,8 @@
 		}
 		.logo {
 			width: 90px;
-			filter: var(--icon-filter);
 			padding-right: var(--s-6);
+			filter: var(--icon-filter);
 			@include lg {
 				width: 110px;
 				padding-right: var(--s-8);

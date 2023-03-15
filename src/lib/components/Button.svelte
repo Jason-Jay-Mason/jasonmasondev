@@ -1,6 +1,4 @@
 <script lang="ts">
-	import type { Attribute } from 'svelte/types/compiler/interfaces';
-
 	export let href: string | undefined = undefined;
 	export let selected: boolean = false;
 	type Width = 'full' | 'fit-content';
@@ -48,17 +46,17 @@
 		}
 		&::before {
 			content: '';
-			opacity: 0;
-			z-index: -1;
-			filter: blur(60px);
 			position: absolute;
-			width: 100%;
-			height: 120%;
-			margin: 0 auto;
-			transform: translateX(-50px) translateY(-60px);
 			top: 0px;
 			left: 0px;
 			right: 0;
+			width: 100%;
+			height: 120%;
+			transform: translateX(-50px) translateY(-60px);
+			opacity: 0;
+			z-index: -1;
+			filter: blur(60px);
+			margin: 0 auto;
 			border-style: solid;
 			border-width: 50px;
 			border-radius: 800px;
@@ -71,13 +69,11 @@
 		border-image-source: var(--color-rainbow);
 		pointer-events: none;
 		&::before {
-			opacity: 1;
-			transition: transform 0.4s;
-			transition: border-width 0.4s;
-			transition: filter 0.4s;
-			filter: blur(12px);
 			transform: translateX(-10px) translateY(-10px) rotate(2deg);
 			border-width: 5px 10px 5px 10px;
+			opacity: 1;
+			transition: all 0.4s;
+			filter: blur(12px);
 		}
 	}
 	button:hover {
@@ -85,13 +81,11 @@
 		border-image-slice: 1;
 		border-image-source: var(--color-rainbow);
 		&::before {
-			opacity: 1;
-			transition: transform 0.4s;
-			transition: border-width 0.4s;
-			transition: filter 0.4s;
-			filter: blur(12px);
 			transform: translateY(-7px) rotate(2deg);
 			border-width: 5px 10px 5px 10px;
+			opacity: 1;
+			transition: all 0.4s;
+			filter: blur(12px);
 		}
 	}
 </style>

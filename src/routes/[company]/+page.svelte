@@ -11,7 +11,8 @@
 	import { onMount } from 'svelte';
 
 	export let data: LayoutData;
-	// setting the company page on entry on local storage so that the rest of the pages links come back to this page
+	// Setting the company page in local storage so we can have context on how
+	// the user came to the site and dynamically render all links accordingly
 	onMount(() => {
 		window.localStorage.setItem('company', `${data.slug}`);
 		company.set(data.slug);

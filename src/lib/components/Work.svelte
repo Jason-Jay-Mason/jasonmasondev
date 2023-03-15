@@ -1,7 +1,5 @@
 <script lang="ts">
 	import LargeHeadline from '$lib/components/LargeHeadline.svelte';
-	import GridCard from '$lib/components/GridCard.svelte';
-	//gatta love svelte, I don't have to make animations from scratch
 	import { onMount } from 'svelte';
 	import type { Headline, Project, TagButtons, TagSelect } from '$lib/types';
 	import Button from './Button.svelte';
@@ -10,24 +8,24 @@
 	export let headline: Headline;
 	export let projects: Project[];
 
-	//we will keep the filter buttons and their stat in this variable
+	//We will keep the filter buttons and their state in this variable
 	let tagButtons: TagButtons = {
 		all: {
 			selected: true,
 			title: 'all'
 		}
 	};
-	// this stores the projects that are currently selected this is updated by the updateSelected function
+	// This stores the projects that are currently selected this is updated by the updateSelected function
 	let selectedProjects: Project[] = projects;
 	// we are getting referece to the grids parent div so that we can set a static height so that it doesnt jump around when filtering
 	let gridContainer: HTMLElement;
 	onMount(() => {
-		//double check for the projects
+		//Double check for the projects
 		if (projects) {
-			// set the height of the parent of the grid element because we don't want the height to change when there are less projects visible
+			// Set the height of the parent of the grid element because we don't want the height to change when there are less projects visible
 			gridContainer.style.minHeight = `${gridContainer.clientHeight}px`;
 
-			// add all of the types of tags to the tagButtons object, so that we can have as many as we like in the content without worrying about adding hard coded values to this component
+			// Add all of the tags to the tagButtons object, so that we can have as many as we like in the content without worrying about adding hard coded values to this component
 			projects.forEach((project: Project) => {
 				project.data.tags.forEach((tag: string) => {
 					if (tagButtons[tag]) {
@@ -43,11 +41,11 @@
 		}
 	});
 
-	//a update the projects that a qualified under the current tags
-	function updateSelected(): void {
-		//filter the projects by tag
+	//Update the projects that are qualified under the current tags
+	function updateSelected() {
+		//Filter the projects by tag
 		selectedProjects = projects.filter((project: Project) => {
-			//loop through and look for a tag that is selected and break when one is found
+			//Loop through and look for a tag that is selected and break when one is found
 			for (let i = 0; i < project.data.tags.length; i++) {
 				if (tagButtons[project.data.tags[i]].selected) {
 					return project;
@@ -56,8 +54,9 @@
 		});
 	}
 
+	//Handle when a tag is selected or deslected
 	function selectTag(next: TagSelect): void {
-		//if all if false and is click, it should deslect all other filters
+		//If all was clicked, it should deslect all other filters
 		if (next.title === 'all' && next.selected === false) {
 			Object.values(tagButtons).forEach((tag) => {
 				if (tag.selected === true) {
@@ -68,20 +67,21 @@
 			selectedProjects = projects;
 			return;
 		}
-		//if the button was all but it is alread true do nothing
+		//If the filter all was clicked but it is already true do nothing
 		if (next.title === 'all' && next.selected === true) {
 			return;
 		}
 
-		//if the button that was click was not all lets make a map
+		//If the button that was click was not all lets make a map
 		let selected = new Map();
+		//And put the selected tags in there
 		Object.values(tagButtons).forEach((tag) => {
 			if (tag.selected === true) {
 				selected.set(tag.title, true);
 			}
 		});
 
-		//if there is only one button selected and it was the one that was click then unselect next and select all
+		//If there is only one button selected and it was the one that was click then unselect next and select all
 		if (selected.get(next.title) && selected.size === 1) {
 			tagButtons[next.title].selected = false;
 			tagButtons['all'].selected = true;
@@ -89,14 +89,14 @@
 			return;
 		}
 
-		//if all if the only selected button and it was not clicked
-		if (selected.get('all') && next.title !== 'all') {
+		//If all was the only selected button and it was not clicked
+		if (selected.get('all')) {
 			tagButtons['all'].selected = false;
 			tagButtons[next.title].selected = true;
 			updateSelected();
 		}
 
-		//if all is false and the button that was clicked was not all and this is not the last button to be made false
+		//If all is false and the button that was clicked was not all and this is not the last button to be made false
 		if (!selected.get('all')) {
 			tagButtons[next.title].selected = !tagButtons[next.title].selected;
 			updateSelected();
@@ -137,10 +137,10 @@
 		.filter-label {
 			position: relative;
 			left: var(--s-4);
+			text-align: center;
 			color: var(--color-rock-300);
 			font-size: 0.8rem;
 			padding: var(--s-10) 0 var(--s-4) 0;
-			text-align: center;
 			@include md {
 				text-align: left;
 			}
@@ -150,11 +150,9 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
-			flex-direction: row;
 			flex-wrap: wrap;
 			margin: 0 auto;
 			width: fit-content;
-
 			.filter {
 				padding: var(--s-3) var(--s-3);
 			}

@@ -1,14 +1,14 @@
  //#region colors
 @import './lib/theme/breakpoints.scss';
+ // Set border-box globally
 *, *:before, *:after {
-      -webkit-box-sizing: border-box !important;
-      -moz-box-sizing: border-box !important;
-      -ms-box-sizing: border-box !important;
-      box-sizing: border-box !important;
-    }
+  -webkit-box-sizing: border-box !important;
+  -moz-box-sizing: border-box !important;
+  -ms-box-sizing: border-box !important;
+  box-sizing: border-box !important;
+}
 body {
-	margin: 0;
-	padding: 0;
+ //Set our color vars for light mode
 	--color-text-body: black;
 	--color-bg-primary: white;
 	--color-bg-card: #ffffffd9;
@@ -33,6 +33,7 @@ body {
 	);
 	--theme-icon: url('/dark-icon.svg');
 
+  //Overwrite colors for dark mode
 	&[data-theme='dark'] {
 		--color-bg-primary: #303030;
 		--color-bg-card: #0d0c0cd9;
@@ -45,21 +46,33 @@ body {
 		--icon-filter: brightness(0) invert(1);
 		--theme-icon: url('/light-icon.svg');
 	}
+
+  // Set some globals on the body
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  height: 100%;
+  background-color: white;
+  z-index: 0;
+  background-color: var(--color-bg-primary);
 }
 
-@mixin rainbowBackground {
-	background: conic-gradient(
-		from 180deg at 50% 50%,
-		#d54a4a 0deg,
-		#dcd756 63.75deg,
-		#5cd777 123.75deg,
-		#5accbe 187.5deg,
-		#695acb 255deg,
-		#c852db 316.87deg,
-		#ff007a 360deg,
-		#ca4887 360deg
-	);
-}
+//TODO: delete me if nothing breaks
+// @mixin rainbowBackground {
+// 	background: conic-gradient(
+// 		from 180deg at 50% 50%,
+// 		#d54a4a 0deg,
+// 		#dcd756 63.75deg,
+// 		#5cd777 123.75deg,
+// 		#5accbe 187.5deg,
+// 		#695acb 255deg,
+// 		#c852db 316.87deg,
+// 		#ff007a 360deg,
+// 		#ca4887 360deg
+// 	);
+// }
+
 //#endregion
 
 //fonts

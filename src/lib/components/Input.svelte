@@ -6,10 +6,9 @@
 	export let valid: boolean;
 
 	export let required: boolean = true;
-	export let validExpMessage: string = '';
 	let invalidExpMessage: string;
 
-	//construct the regex for validtion
+	//Regex validtion by field type. This is a setup function
 	function getValidationExpression() {
 		switch (type) {
 			case 'email':
@@ -22,10 +21,26 @@
 				return null;
 		}
 	}
+	//Set of the validtion regex and invalid message for this input
 	export let validationExpression = getValidationExpression();
 
-	let message = validExpMessage || '';
 	let keypress: any = null;
+
+	function handleValidity(e: any) {
+		if (validationExpression && validationExpression.test) {
+			const testPasssed = validationExpression.test(e.target.value);
+			if (!testPasssed) {
+				valid = false;
+				e.target.setCustomValidity(invalidExpMessage);
+			} else {
+				valid = true;
+				e.target.setCustomValidity('');
+			}
+		} else {
+			valid = true;
+			e.target.setCustomValidity('');
+		}
+	}
 
 	//#region form handlers
 	function handlePhoneInput(e: any) {
@@ -71,41 +86,12 @@
 			value = next;
 		}
 
-		if (validationExpression && validationExpression.test) {
-			const testPasssed = validationExpression.test(e.target.value);
-			if (!testPasssed) {
-				valid = false;
-				e.target.setCustomValidity(invalidExpMessage);
-				message = invalidExpMessage;
-			} else {
-				valid = true;
-				e.target.setCustomValidity('');
-				message = validExpMessage || '';
-			}
-		} else {
-			valid = true;
-			e.target.setCustomValidity('');
-			message = validExpMessage || '';
-		}
+		//If there is regex validtion for the phone then we test it
+		handleValidity(e);
 	}
 
 	function handleInput(e: any) {
-		if (validationExpression && validationExpression.test) {
-			const testPasssed = validationExpression.test(e.target.value);
-			if (!testPasssed) {
-				valid = false;
-				e.target.setCustomValidity(invalidExpMessage);
-				message = invalidExpMessage;
-			} else {
-				valid = true;
-				e.target.setCustomValidity('');
-				message = validExpMessage || '';
-			}
-		} else {
-			valid = true;
-			e.target.setCustomValidity('');
-			message = validExpMessage || '';
-		}
+		handleValidity(e);
 	}
 
 	function handleChange(e: any) {
@@ -114,7 +100,6 @@
 				valid = false;
 				let error = 'This field is required.';
 				e.target.setCustomValidity(error);
-				message = error;
 			}
 		}
 	}
@@ -133,7 +118,6 @@
 			class="input"
 			required
 		/>
-		<!-- <p class="message">{message}&nbsp;</p> -->
 	</label>
 {:else if type === 'phone'}
 	<label class="label">
@@ -155,7 +139,6 @@
 	<label class="label">
 		<textarea
 			bind:value
-			type="text"
 			minlength="2"
 			on:input={handleInput}
 			on:blur={handleChange}
@@ -168,12 +151,8 @@
 
 <style lang="scss">
 	label {
-		.message {
-			font-size: calc(var(--text-sm) + 1px);
-		}
 		input,
 		textarea {
-			position: relative;
 			margin: var(--s-3) 0;
 			background-color: var(--color-bg-primary);
 			box-shadow: none;
@@ -211,8 +190,8 @@
 		}
 		textarea {
 			width: 100%;
-			background-size: cover;
 			height: var(--s-14);
+			background-size: cover;
 			padding: var(--s-5) var(--s-5);
 			margin-bottom: var(--s-9);
 			&::placeholder {

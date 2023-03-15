@@ -7,45 +7,54 @@
 
 	export let data: Experience;
 
+	//Keep the progress through the animation frame in state. For more info check the AnimationFrame component
 	let progress: number = 0;
-	let storedYear: number;
 
+	//We want to automatically update the end date so I don't have to later
 	const date = new Date();
 	const thisYear = date.getFullYear();
 
+	//Simple helper function to get the date as a round year for display in the side bar
 	function getDate(date: number) {
 		if (date > thisYear) {
 			date = thisYear;
 		}
+		// 2013 is somewhat arbitrary minimum. It is the first date of me working professionally
+		//because of this we don't want the date to go below 2013
 		if (date < 2013) {
 			date = 2013;
 		}
-		storedYear = date;
-
 		return date;
 	}
 
-	let skillStartPercentOfFrame: number[] = [-10];
+	// We need to keep track of when each record should fade in
+	// We use -10 for the first element because
+	// I want it visible when the user reaches its scroll position
+	// -10 is arbitrary the main idea is I just want a large number for the first record
+	let recordStartPercentOfFrame: number[] = [-10];
 	onMount(() => {
-		// for each skill, compute when the fade in anamtion should occure
+		// For each record, compute when the fade in anamtion should occure
 		const totalYears = thisYear - 2013;
+		//The percent of the next frame depends on the last one so we declare an accumulator here
+		//I could use previous index but I think this is more legible
 		let acc = 0;
 		for (let i = 0; i < data.records.length - 1; i++) {
 			const record = data.records[i];
 			const percentOfTotal = (record.endYear - record.startYear) / totalYears;
-			acc = acc + percentOfTotal;
-			skillStartPercentOfFrame.push(acc);
+			acc += percentOfTotal;
+			recordStartPercentOfFrame.push(acc);
 		}
 	});
 
+	// Returns the total animation duration for the kth skill bar and ith record
 	function getSkillLength(i: number) {
 		switch (i) {
 			case 0:
-				return skillStartPercentOfFrame[1];
+				return recordStartPercentOfFrame[1];
 			case data.records.length - 1:
-				return 1 - skillStartPercentOfFrame[i];
+				return 1 - recordStartPercentOfFrame[i];
 			default:
-				return skillStartPercentOfFrame[i + 1] - skillStartPercentOfFrame[i];
+				return recordStartPercentOfFrame[i + 1] - recordStartPercentOfFrame[i];
 		}
 	}
 </script>
@@ -65,12 +74,12 @@
 							<div class="dot" />
 							<div class="details-container">
 								{#each data.records as record, i}
-									{#if (progress - 0.3) * 1.5 > skillStartPercentOfFrame[i] && (i == data.records.length - 1 || (progress - 0.3) * 1.5 < skillStartPercentOfFrame[i + 1])}
+									{#if (progress - 0.3) * 1.5 > recordStartPercentOfFrame[i] && (i == data.records.length - 1 || (progress - 0.3) * 1.5 < recordStartPercentOfFrame[i + 1])}
 										<div
 											class="details"
 											style={`opacity:${getStyleValue(
 												progress,
-												i == 0 ? 0 : skillStartPercentOfFrame[i],
+												i == 0 ? 0 : recordStartPercentOfFrame[i],
 												0.1,
 												0,
 												1
@@ -92,20 +101,19 @@
 						</div>
 						{#each data.skills as skill}
 							{#each skill.growth as animationFrame, i}
-								{#if (progress - 0.3) * 1.5 > skillStartPercentOfFrame[i] && (i == data.records.length - 1 || (progress - 0.3) * 1.5 < skillStartPercentOfFrame[i + 1])}
+								{#if (progress - 0.3) * 1.5 > recordStartPercentOfFrame[i] && (i == data.records.length - 1 || (progress - 0.3) * 1.5 < recordStartPercentOfFrame[i + 1])}
 									<div class="skill">
 										<p class="skill-title">{skill.title}</p>
 										<div class="bar">
 											<div class="lower">
-												<img src="/pencil-bg.svg" class="pencil-bg" />
+												<img src="/pencil-bg.svg" class="pencil-bg" alt="Stylized background" />
 											</div>
 											<div
 												class="upper"
 												style={`width:${getStyleValue(
 													(progress - 0.3) * 1.5,
-													i == 0 ? 0 : skillStartPercentOfFrame[i],
+													i == 0 ? 0 : recordStartPercentOfFrame[i],
 													getSkillLength(i),
-
 													animationFrame.startValue,
 													animationFrame.endValue
 												)}%`}
@@ -167,10 +175,8 @@
 		h5 {
 			font-size: calc(var(--text-md) - 1px);
 			font-weight: 400;
-			padding-bottom: var(--s-4);
 		}
 		.mobile {
-			display: block;
 			@include md {
 				display: none;
 			}
@@ -185,19 +191,19 @@
 			}
 		}
 		.main-container {
-			max-width: $xxl;
 			position: relative;
 			height: 100vh;
+			max-width: $xxl;
 			min-height: 720px;
 			display: flex;
 			align-items: center;
 			justify-content: center;
 			margin: -17vh auto 0 auto;
 			.main-grid {
+				width: 100%;
 				display: grid;
 				align-items: center;
 				grid-template-columns: 1fr;
-				width: 100%;
 				margin: 0 var(--s-4) 0 0;
 				@include md {
 					margin: 0 var(--s-7);
@@ -207,13 +213,9 @@
 					grid-template-columns: 1.2fr 1fr;
 				}
 				.work-details {
-					position: relative;
-					height: fit-content;
 					.work-container {
 						display: flex;
-						flex-direction: row;
 						align-items: center;
-						justify-content: flex-start;
 						.date {
 							position: relative;
 							background-color: var(--color-rock-100);
@@ -226,11 +228,11 @@
 								position: absolute;
 								width: 0px;
 								height: 0px;
-								border: 13px solid transparent;
-								border-left-color: var(--color-rock-100);
 								top: 50%;
 								left: 100%;
 								transform: translateY(-50%);
+								border: 13px solid transparent;
+								border-left-color: var(--color-rock-100);
 								@include md {
 									border: 15px solid transparent;
 									border-left-color: var(--color-rock-100);
@@ -243,15 +245,14 @@
 							p {
 								color: var(--color-bg-primary);
 								font-size: calc(var(--text-md) - 1);
-								line-height: 0;
 								font-family: var(--font-headline);
+								line-height: 0;
 								@include lg {
 									font-size: var(--text-md);
 								}
 							}
 						}
 						.dot {
-							content: '';
 							position: relative;
 							display: none;
 							z-index: 1;
@@ -276,7 +277,6 @@
 							}
 						}
 						.details-container {
-							width: 100%;
 							position: relative;
 							margin-left: var(--s-7);
 							@include md {
@@ -315,10 +315,9 @@
 					position: relative;
 					display: none;
 					grid-template-columns: 1fr;
+					row-gap: var(--s-7);
 					justify-items: end;
 					align-items: center;
-					row-gap: var(--s-7);
-					height: fit-content;
 					@include md {
 						display: grid;
 					}
@@ -326,15 +325,14 @@
 						grid-template-columns: 1fr 1fr;
 					}
 					.labels {
-						color: var(--color-rock-100);
 						position: absolute;
 						display: flex;
-						flex-direction: row;
 						justify-content: space-between;
 						width: 50%;
 						right: 0;
 						top: -5%;
 						font-size: var(--text-sm);
+						color: var(--color-rock-100);
 						@include lg {
 							width: 27%;
 							left: 25%;
@@ -342,11 +340,8 @@
 						}
 					}
 					.skill {
-						position: relative;
 						display: flex;
-						flex-direction: row;
 						align-items: center;
-						justify-content: flex-end;
 						height: 23px;
 						width: 95%;
 						.skill-title {
@@ -373,11 +368,11 @@
 							.upper {
 								content: '';
 								position: absolute;
-								object-fit: cover;
-								background-color: var(--color-rock-100);
 								height: 100%;
 								top: 0;
 								border-radius: 100px 0 0 100px;
+								object-fit: cover;
+								background-color: var(--color-rock-100);
 							}
 						}
 					}
@@ -385,7 +380,6 @@
 			}
 		}
 		.line {
-			position: relative;
 			margin: 0 auto;
 			max-width: $xxl;
 			div {
@@ -400,12 +394,12 @@
 				}
 				&::after {
 					content: '';
+					position: absolute;
 					height: 440vh;
 					width: 2px;
-					background-color: var(--color-rock-100);
-					position: absolute;
 					bottom: 25vh;
 					left: 4.75%;
+					background-color: var(--color-rock-100);
 				}
 			}
 		}

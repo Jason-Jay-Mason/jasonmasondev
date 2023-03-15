@@ -1,9 +1,10 @@
+<!-- The page for project[i] -->
 <script lang="ts">
 	import type { LayoutData } from './$types';
 	import Button from '$lib/components/Button.svelte';
 	import HalfHeadline from '$lib/components/HalfHeadline.svelte';
 	import LargeHeadline from '$lib/components/LargeHeadline.svelte';
-	//we set the company from local storage in the layout component, and we use it here to build out links back
+	//We set the company to local storage in the layout component, and we use it here to build out links back to that company
 	import { company } from '$lib/stores';
 	import FeaturedGrid from '$lib/components/FeaturedGrid.svelte';
 	export let data: LayoutData;
@@ -11,18 +12,21 @@
 	let filteredProjects = new Map();
 	let i = 0;
 	let j = 0;
-	//generate random projects for the 4 slots on the grid (this might not be the best algorythm for this, but it will do for 4 items)
+	//Generate random projects for the 4 slots on the grid (this might not be the best algorythm for this, but it will do for 4 items)
 	while (filteredProjects.size < 4 && j < 4) {
-		//generate random numer
+		//Generate random numer n > 0 < 10
 		let random = Math.random() * 10;
-		//if the randome number is divisible by 2 and project[i] hasent been addded yet then add it
+		//If the random number is divisible by 2 and project[i] hasen't been added to filteredProjects yet then add it
+		//this literally just simulates a coin flip. It could just as well be not devisible by 2. ie heads or tails
 		if (Math.floor(random) % 2 === 0 && filteredProjects.get(data.projects[i].slug) === undefined) {
 			filteredProjects.set(data.projects[i].slug, data.projects[i]);
 		}
-		//move the index forward
+		//Move the index forward
 		if (i === data.projects.length - 1) {
 			i = 0;
-			//prevent infinit loop if there are errors or we never get an even number until the end of the universe
+			// We will itterate through the projects to generate random selections for projects.length*4
+			// and no more so that we prevent infinit loop if there are errors or we
+			// never get an even number until the end of the universe ( although unlikely)
 			j++;
 		} else {
 			i++;
@@ -40,14 +44,14 @@
 			<div class="links">
 				<Button href={data.project.cta.href} target="_blank">{data.project.cta.innerText}</Button>
 				{#if data.project.githubHref}
-					<a href={data.project.githubHref} target="_blank">
-						<img src="/github-logo.svg" alt="" />
+					<a href={data.project.githubHref} target="_blank" rel="noreferrer">
+						<img src="/github-logo.svg" alt="Github logo" />
 					</a>
 				{/if}
 			</div>
 		</div>
 		<div class="mask">
-			<img src={data.project.img.src} />
+			<img src={data.project.img.src} alt={`Project image for ${data.project.headline.main}`} />
 		</div>
 	</div>
 </section>
@@ -66,8 +70,8 @@
 		}
 	}
 	#project {
-		padding: var(--s-9) var(--s-6) var(--s-14) var(--s-6);
 		max-width: $xl;
+		padding: var(--s-9) var(--s-6) var(--s-14) var(--s-6);
 		margin: 0 auto;
 		@include md {
 			flex-direction: row;
@@ -75,17 +79,14 @@
 		}
 
 		.description {
-			padding-top: var(--s-10);
-			position: relative;
 			display: flex;
 			justify-content: center;
 			flex-direction: column;
+			padding-top: var(--s-10);
 			@include md {
 				flex-direction: row;
 			}
 			.text {
-				width: 100%;
-				height: fit-content;
 				@include md {
 					width: 50%;
 					padding-right: var(--s-7);
@@ -95,7 +96,6 @@
 				}
 				.links {
 					display: flex;
-					width: 100%;
 					flex-direction: row;
 					justify-content: space-between;
 					flex-wrap: wrap;
@@ -104,42 +104,35 @@
 					@include md {
 						padding-bottom: 0;
 					}
-					a {
-						line-height: 0;
-					}
 					img {
-						filter: var(--icon-filter);
-						padding-right: var(--s-7);
 						height: 42px;
 						width: 42x;
+						padding-right: var(--s-7);
 						margin-top: var(--s-7);
+						filter: var(--icon-filter);
 						@include md {
 							margin: 0;
 						}
 					}
 				}
 			}
-
 			.mask {
-				overflow: hidden;
 				position: relative;
 				width: 100%;
-				height: auto;
 				height: 300px;
-				overflow: hidden;
 				max-width: $xs;
+				overflow: hidden;
 				margin: 0 auto;
 				@include md {
 					width: 50%;
-					margin-left: var(--s-8);
 					height: auto;
 					max-width: none;
+					margin-left: var(--s-8);
 				}
 				img {
 					position: absolute;
 					object-fit: cover;
 					width: 100%;
-					height: 100%;
 				}
 			}
 		}

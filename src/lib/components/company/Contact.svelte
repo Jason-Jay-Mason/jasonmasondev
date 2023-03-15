@@ -3,8 +3,8 @@
 	import Button from '$lib/components/Button.svelte';
 	import Spinner from '$lib/components/Spinner.svelte';
 	import { fade } from 'svelte/transition';
-	import LargeHeadline from '../LargeHeadline.svelte';
 
+	//Set the form values in state
 	let formValues = {
 		fname: {
 			valid: false,
@@ -28,16 +28,20 @@
 		}
 	};
 
-	// $: formValid = !Object.values(formValues).some(({ valid }) => valid === false);
-
-	let success: boolean = false;
+	//We are using a formspark endpoint here
 	const formUrl = 'https://submit-form.com/nZtmp841';
+
+	//Form state
+	let success: boolean = false;
 	let loading = false;
 	let formError: string | null = null;
 	async function handleSubmit() {
+		//On submit set the loading state to true
 		loading = true;
 		try {
-			const res = await fetch(formUrl, {
+			//Post the form data to formspark
+			//TODO: write test for this
+			await fetch(formUrl, {
 				method: 'POST',
 				headers: {
 					'Content-Type': 'application/json',
@@ -49,7 +53,7 @@
 			success = true;
 		} catch (err) {
 			loading = false;
-			formError = 'It looks like there was a problem with this form. You can always call though!';
+			formError = 'It looks like there was a problem with this form. Give me a call instead!';
 			console.error(err);
 		}
 	}
@@ -152,31 +156,28 @@
 <style lang="scss">
 	@import '../../theme/breakpoints.scss';
 	section {
-		margin: 0 auto;
 		display: flex;
 		max-width: $sm;
+		margin: 0 auto;
 		flex-direction: column-reverse;
 		padding: var(--s-11) var(--s-5);
 		@include md {
-			padding: var(--s-14) var(--s-5) var(--s-14) var(--s-5);
-			max-width: $xl;
 			flex-direction: row;
+			max-width: $xl;
+			padding: var(--s-14) var(--s-5) var(--s-14) var(--s-5);
 		}
 		.info {
-			width: 100%;
 			display: flex;
 			flex-direction: column;
-			align-items: flex-start;
-			font-size: calc(var(--text-base));
 			@include md {
 				width: 50%;
 				align-items: center;
 			}
 			.container {
+				height: 100%;
 				display: flex;
 				justify-content: center;
 				flex-direction: column;
-				height: 100%;
 				p {
 					font-size: var(--text-base);
 					text-transform: uppercase;
@@ -189,12 +190,11 @@
 			}
 			.item {
 				display: flex;
-				flex-direction: row;
 				margin-bottom: var(--s-9);
 				img {
-					filter: var(--icon-filter);
-					margin-right: var(--s-4);
 					height: var(--s-8);
+					margin-right: var(--s-4);
+					filter: var(--icon-filter);
 					@include md {
 						margin-right: var(--s-8);
 					}
@@ -204,10 +204,7 @@
 
 		.form {
 			text-align: center;
-			width: 100%;
-			margin: 0 auto;
 			padding: var(--s-1);
-			position: relative;
 			@include md {
 				padding: var(--s-4);
 				width: 50%;
@@ -219,11 +216,10 @@
 				text-align: center;
 			}
 			.field-row {
-				padding-bottom: var(--s-3);
-				width: 100%;
 				display: flex;
 				flex-direction: row;
 				justify-content: space-between;
+				padding-bottom: var(--s-3);
 				.left,
 				.right {
 					width: 49%;

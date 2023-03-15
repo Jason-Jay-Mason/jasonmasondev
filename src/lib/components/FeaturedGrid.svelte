@@ -1,8 +1,8 @@
 <script lang="ts">
 	import GridCard from './GridCard.svelte';
 	import type { GridDisplayElement } from '$lib/types';
-	//gatta love svelte, I don't have to make animations from scratch
 	import { fly } from 'svelte/transition';
+
 	export let displayElements: GridDisplayElement[];
 </script>
 
@@ -25,9 +25,9 @@
 		display: grid;
 		align-items: stretch;
 		row-gap: var(--s-7);
-		padding-top: var(--s-10);
 		grid-template-columns: 1fr 1fr;
 		max-width: $xl;
+		padding-top: var(--s-10);
 		margin: 0 auto;
 		@include md {
 			row-gap: var(--s-8);

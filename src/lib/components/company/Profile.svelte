@@ -4,6 +4,7 @@
 
 	export let data: Profile;
 
+	//We change this text on hover
 	let featuredInterest: string = 'INTERESTS';
 </script>
 
@@ -43,25 +44,18 @@
 <style lang="scss">
 	@import '../../theme/breakpoints.scss';
 	section {
-		position: relative;
-		padding: var(--s-5) var(--s-7) var(--s-14) var(--s-7);
 		display: flex;
 		flex-direction: column-reverse;
 		align-items: center;
 		max-width: $xl;
 		margin: 0 auto;
-		overflow: hidden;
-		@include xl {
-			overflow: unset;
-		}
+		padding: var(--s-5) var(--s-7) var(--s-14) var(--s-7);
 		@include md {
-			padding: var(--s-5) 0 var(--s-15) var(--s-7);
 			justify-content: center;
 			flex-direction: row;
+			padding: var(--s-5) 0 var(--s-15) var(--s-7);
 		}
 		.details {
-			width: 100%;
-			padding-right: 0;
 			@include md {
 				padding-right: var(--s-7);
 				width: 50%;
@@ -82,34 +76,32 @@
 				.icons {
 					display: flex;
 					flex-wrap: wrap;
-					flex-direction: row;
-					width: 100%;
 					align-items: center;
+					width: 100%;
 					@include lg {
-						width: 110%;
 						flex-wrap: nowrap;
 						justify-content: flex-start;
+						width: 110%;
 					}
 					.icon {
 						position: relative;
 						height: var(--s-11);
 						width: var(--s-11);
-						margin-right: var(--s-9);
+						margin: var(--s-6) var(--s-9) 0 0;
 						border: 2px solid transparent;
-						margin-top: var(--s-6);
 						&::before {
 							content: '';
-							opacity: 0;
-							z-index: -1;
-							filter: blur(60px);
 							position: absolute;
-							width: 100%;
-							height: 120%;
-							margin: 0 auto;
-							transform: translateX(-50px) translateY(-60px);
 							top: 0px;
 							left: 0px;
 							right: 0;
+							width: 100%;
+							height: 120%;
+							transform: translateX(-50px) translateY(-60px);
+							z-index: -1;
+							margin: 0 auto;
+							opacity: 0;
+							filter: blur(60px);
 							border-style: solid;
 							border-width: 50px;
 							border-radius: 800px;
@@ -122,23 +114,21 @@
 							border-image-source: var(--color-rainbow);
 							background-color: var(--color-bg-primary);
 							&::before {
-								opacity: 1;
-								transition: transform 0.4s;
-								transition: border-width 0.4s;
-								transition: filter 0.4s;
-								filter: blur(12px);
 								transform: translateY(-7px) rotate(2deg);
+								opacity: 1;
+								transition: all 0.4s;
+								filter: blur(12px);
 								border-width: 5px 10px 5px 10px;
 							}
 						}
 						img {
-							filter: var(--icon-filter);
 							position: absolute;
 							top: 50%;
 							left: 50%;
 							transform: translate(-50%, -50%);
 							height: var(--s-9);
 							width: 100%;
+							filter: var(--icon-filter);
 						}
 					}
 				}
@@ -146,25 +136,25 @@
 		}
 
 		.image {
-			--height: 90vw;
 			position: relative;
 			height: var(--height);
 			width: 100%;
+			--height: 90vw;
 			@include sm {
 				--height: 80vw;
 			}
 			@include md {
-				--height: 550px;
 				width: 50%;
 				transform: translateX(10%);
+				--height: 550px;
 			}
 			@include xl {
 				--height: 650px;
 			}
 			&::before,
 			&::after {
-				position: absolute;
 				content: '';
+				position: absolute;
 				z-index: -1;
 				border: solid var(--color-pencil-100) 2px;
 				border-radius: 10000px;
@@ -193,7 +183,6 @@
 				}
 			}
 			.background {
-				z-index: -1;
 				position: absolute;
 				top: 0%;
 				left: 0;
@@ -201,50 +190,53 @@
 				transform: translate(5%, -3%) rotate(7deg);
 				height: 95%;
 				width: 90%;
-				border-radius: 0px 240px 0 200px;
+				z-index: -1;
 				overflow: hidden;
+				border-radius: 0px 240px 0 200px;
+				//Get the gpu involved with this setting
 				transform: translateZ(0);
 				@include md {
-					margin: 0;
-					transform: translate(0, -53%) rotate(7deg);
 					height: 100%;
 					width: 103%;
 					top: 50%;
+					transform: translate(0, -53%) rotate(7deg);
+					margin: 0;
 				}
 				img {
-					opacity: var(--opacity-pencilbg);
+					position: absolute;
+					height: 110%;
+					width: 100%;
 					bottom: 0;
 					top: 0;
 					transform: translateY(-11%) rotate(-5deg);
 					object-fit: cover;
-					position: absolute;
-					height: 110%;
-					width: 100%;
+					opacity: var(--opacity-pencilbg);
 				}
 			}
 			.mask {
 				position: absolute;
+				left: 0;
+				right: 0;
+				width: calc(var(--height) - 40px);
+				height: calc(var(--height) - 40px);
 				border-radius: 1000px;
 				border: solid var(--color-rock-300) 0.1px;
 				overflow: hidden;
-				left: 0;
-				right: 0;
 				margin: auto;
-				width: calc(var(--height) - 40px);
-				height: calc(var(--height) - 40px);
+				mask-image: radial-gradient(circle, white 100%, black 100%);
 				-webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
 				@include md {
 					margin: 0;
 				}
 				img {
 					position: absolute;
-					object-fit: cover;
 					left: 50%;
 					top: 50%;
 					transform: translate(-50%, -40%);
+					width: 120vw;
+					object-fit: cover;
 					transition: filter 0.8s;
 					filter: saturate(0);
-					width: 120vw;
 					@include md {
 						width: auto;
 						transform: translate(-50%, -50%);

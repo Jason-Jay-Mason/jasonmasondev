@@ -41,28 +41,28 @@
 		left: 0;
 		right: 0;
 		top: 50px;
-		margin: 0 auto;
-		z-index: 100;
 		width: 100vw;
+		z-index: 100;
 		background-color: var(--color-bg-primary);
 		transition: all 0.2s;
+		margin: 0 auto;
 		padding-bottom: var(--s-9);
 		@include md {
 			display: none;
 		}
 		.social {
-			padding: var(--s-8) var(--s-6) 0 var(--s-6);
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
 			height: 20px;
+			padding: var(--s-8) var(--s-6) 0 var(--s-6);
 			.icons {
 				display: flex;
 				flex-direction: row;
 				img {
+					width: 30px;
 					padding: 0 var(--s-2);
 					filter: var(--icon-filter);
-					width: 30px;
 				}
 			}
 		}

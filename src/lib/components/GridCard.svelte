@@ -26,18 +26,17 @@
 <style lang="scss">
 	@import '../theme/breakpoints.scss';
 	div {
+		cursor: pointer;
 		position: relative;
 		width: 94%;
 		height: 100%;
-		cursor: pointer;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		text-align: center;
 		padding: var(--s-10) var(--s-3);
-		margin: 0 auto;
-		margin-bottom: var(--s-7);
+		margin: 0 auto var(--s-7) 0;
 		transition: all 0.3s;
 		border: 2px solid var(--color-rock-100);
 		@include md {
@@ -47,17 +46,17 @@
 		}
 		&::before {
 			content: '';
-			opacity: 0;
-			z-index: -1;
-			filter: blur(60px);
 			position: absolute;
-			width: 100%;
-			height: 100%;
-			margin: 0 auto;
-			transform: translateX(-50px) translateY(-60px);
 			top: 0px;
 			left: 0px;
 			right: 0;
+			width: 100%;
+			height: 100%;
+			transform: translateX(-50px) translateY(-60px);
+			opacity: 0;
+			z-index: -1;
+			filter: blur(60px);
+			margin: 0 auto;
 			border-style: solid;
 			border-width: 50px;
 			border-radius: 800px;
@@ -83,10 +82,10 @@
 		}
 		img {
 			position: absolute;
-			z-index: -1;
-			object-fit: cover;
 			width: 100%;
 			height: 100%;
+			z-index: -1;
+			object-fit: cover;
 		}
 		p {
 			opacity: 0;

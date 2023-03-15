@@ -19,11 +19,11 @@
 <style lang="scss">
 	@import '../theme/breakpoints.scss';
 	.headline {
-		width: 100%;
 		display: flex;
 		flex-direction: row;
 		align-items: center;
 		justify-content: space-between;
+		width: 100%;
 		.sub {
 			position: relative;
 			width: 100%;
@@ -33,19 +33,23 @@
 				height: 100%;
 				overflow: hidden;
 				img {
-					opacity: var(--opacity-pencilbg);
-					width: 600px;
-					height: 50%;
+					position: absolute;
 					top: 0;
 					bottom: 0;
+					width: 600px;
+					height: 50%;
 					margin: auto 0;
 					object-fit: cover;
-					position: absolute;
+					opacity: var(--opacity-pencilbg);
 				}
+			}
+			h3,
+			h4 {
+				white-space: nowrap;
 			}
 			h4 {
 				width: fit-content;
-				white-space: nowrap;
+
 				float: right;
 				padding-right: var(--s-3);
 				font-size: calc(var(--text-md) + 5px);
@@ -64,7 +68,6 @@
 				}
 			}
 		}
-
 		h3 {
 			white-space: nowrap;
 			line-height: 100%;

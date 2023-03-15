@@ -1,6 +1,8 @@
 
-//Auth 
+export type IterableGlob = [path: string, resolver: Function]
 
+
+//Auth 
 export interface AuthData {
   token: string
   provider: string

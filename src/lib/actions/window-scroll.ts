@@ -1,7 +1,9 @@
 //This is an action that allows us listen to and us the windowscroll event
-//TODO find the type defenition for this dom node, regular HTMLelement doesnt seem to work here
+//TODO: find the type defenition for this dom node, regular HTMLelement doesnt seem to work here
 export function windowScroll(node: any): object {
   //Event dispatcher function
+  //We use requestAnimationFrame for a debounce effect so that we are not triggering the scroll events 
+  //at the cost of performance 
   let timeout: DOMHighResTimeStamp
   const handleScroll = () => {
     if (timeout) {
@@ -12,10 +14,10 @@ export function windowScroll(node: any): object {
     })
   };
 
-  //instantiating the listener 
+  //Instantiating the listener 
   document.addEventListener('scroll', handleScroll, true);
 
-  //make sure we do cleanup when the component unmounts
+  //Make sure we do cleanup when the component unmounts
   return {
     destroy() {
       document.removeEventListener('scroll', handleScroll, true);

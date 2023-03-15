@@ -10,13 +10,13 @@
 	<div class="container">
 		<div class="intro">
 			<div class="mask">
-				<img src="/pencil-bg.svg" />
+				<img src="/pencil-bg.svg" alt="Stylized background" />
 			</div>
 			<h1>Jason's webumé</h1>
 		</div>
 		<div class="logo-container">
 			<div class="logo">
-				<img src={logo} alt="" />
+				<img src={logo} alt="Company Logo" />
 			</div>
 			<div class="line" />
 		</div>
@@ -40,20 +40,17 @@
 <style lang="scss">
 	@import '../../theme/breakpoints.scss';
 	section {
-		overflow: hidden;
-		position: relative;
-		width: 100%;
 		padding: var(--s-10) 0 var(--s-11) 0;
 		@include sm {
 			padding: var(--s-12) var(--s-4) var(--s-13) var(--s-4);
 		}
 		.cta-container {
-			margin-bottom: var(--s-9);
 			position: relative;
 			width: 87%;
+			margin-bottom: var(--s-9);
 			@include md {
-				margin-bottom: var(--s-6);
 				width: 70%;
+				margin-bottom: var(--s-6);
 			}
 			&::before,
 			&::after {
@@ -69,12 +66,12 @@
 			}
 			.cta {
 				position: relative;
-				margin: 0 auto;
-				padding: 0 var(--s-6);
 				width: 80%;
 				max-width: 200px;
-				background-color: var(--color-bg-primary);
 				z-index: 1;
+				margin: 0 auto;
+				padding: 0 var(--s-6);
+				background-color: var(--color-bg-primary);
 				@include sm {
 					width: 50%;
 				}
@@ -83,10 +80,10 @@
 					z-index: -1;
 					content: '';
 					position: absolute;
-					margin: 0 auto;
 					left: 0;
 					right: 0;
 					height: 2px;
+					margin: 0 auto;
 					background-color: var(--color-rock-200);
 				}
 				&::before {
@@ -100,7 +97,6 @@
 			}
 		}
 		.bottom {
-			position: relative;
 			height: 1px;
 			width: 143%;
 			transform: translateX(-15%) translateY(-2px);
@@ -165,8 +161,8 @@
 			}
 		}
 		.blurb {
-			width: 90%;
 			text-align: center;
+			width: 90%;
 			padding: var(--s-9) 0;
 			@include md {
 				width: 80%;
@@ -178,15 +174,14 @@
 			background-color: var(--color-bg-primary);
 			width: 120%;
 			.logo {
-				width: 70%;
-
 				display: flex;
 				align-items: center;
 				justify-content: center;
+				width: 70%;
 				z-index: 1;
 				margin: 0 auto;
-				background-color: var(--color-bg-primary);
 				padding: 0 var(--s-3);
+				background-color: var(--color-bg-primary);
 				@include md {
 					padding: 0 var(--s-7);
 				}
@@ -234,12 +229,12 @@
 				margin: auto 0;
 				overflow: hidden;
 				img {
-					opacity: var(--opacity-pencilbg);
+					position: absolute;
 					width: 600px;
 					height: 100%;
 					top: 0;
 					object-fit: cover;
-					position: absolute;
+					opacity: var(--opacity-pencilbg);
 				}
 			}
 			h1 {
@@ -257,15 +252,15 @@
 			}
 		}
 		.container {
-			margin: 0 auto var(--s-13) auto;
-			width: 85%;
-			max-width: 587px;
-			border: 4px var(--color-rock-200);
-			border-style: solid solid none solid;
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
+			width: 85%;
+			max-width: 587px;
+			border: 4px var(--color-rock-200);
+			border-style: solid solid none solid;
+			margin: 0 auto var(--s-13) auto;
 		}
 	}
 </style>

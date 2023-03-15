@@ -10,12 +10,11 @@
 	<p class="body">
 		{@html data.body}
 	</p>
-	<img src="/signature.svg" alt="" id="signature" />
+	<img src="/signature.svg" alt="My Signature" id="signature" />
 </section>
 
 <style lang="scss">
 	#coverletter {
-		margin: 0 auto;
 		max-width: 848px;
 		margin: 0 auto var(--s-13) auto;
 		.body {

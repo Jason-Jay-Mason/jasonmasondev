@@ -7,7 +7,7 @@
 	<div class="sub">
 		<h3>{sub}</h3>
 		<div class="mask">
-			<img src="/pencil-bg.svg" />
+			<img src="/pencil-bg.svg" alt="Stylized background" />
 		</div>
 	</div>
 
@@ -17,9 +17,9 @@
 <style lang="scss">
 	@import '../theme/breakpoints.scss';
 	.headline {
-		margin: 0 auto;
 		width: fit-content;
 		text-align: center;
+		margin: 0 auto;
 		.sub {
 			position: relative;
 			width: 100%;
@@ -32,22 +32,22 @@
 			}
 			.mask {
 				position: absolute;
-				bottom: 0;
 				top: 0;
-				margin: auto 0;
-				z-index: -1;
+				bottom: 0;
 				width: 100%;
 				height: 60%;
+				z-index: -1;
+				margin: auto 0;
 				overflow: hidden;
 				img {
-					opacity: var(--opacity-pencilbg);
-					object-fit: cover;
 					position: absolute;
-					width: 600px;
 					top: 0;
 					bottom: 0;
-					margin: auto 0;
 					left: 0;
+					width: 600px;
+					opacity: var(--opacity-pencilbg);
+					object-fit: cover;
+					margin: auto 0;
 				}
 			}
 		}
