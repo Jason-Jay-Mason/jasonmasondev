@@ -203,6 +203,7 @@
 		}
 
 		.form {
+			position: relative;
 			text-align: center;
 			padding: var(--s-1);
 			@include md {
