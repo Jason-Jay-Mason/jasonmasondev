@@ -106,7 +106,7 @@
           "startValue": 0,
           "endValue": 1
         },
-        "description": "Leveraged brand style guides to design and build landing pages and company websites using HTML, CSS, and JQuery. Drove internal improvements to MarTech stack amid political and financial resistance. Researched and developed personas that fueled messaging. Built and deployed automated campaigns that generated leads in the roofer segment for the first time in the company's history. Wore the hat of SalesForce admin/developer and built systems using Apex that drove internal adoption of the SalesForce platform. Implemented customer journeys and marketing automation. "
+        "description": "Leveraged brand style guides to design and build pixel perfect, fully responsive landing pages and company websites using HTML, CSS,  JQuery, and WordPress. Drove internal improvements to MarTech stack amid political and financial resistance. Researched and developed personas that fueled messaging. Built and deployed automated campaigns that generated leads in the roofer segment for the first time in the company's history. Wore the hat of SalesForce admin/developer and built systems using Apex that drove internal adoption of the SalesForce platform. Implemented customer journeys and marketing automation. "
       },
       {
         "startYear": 2020,
@@ -121,7 +121,7 @@
           "startValue": 0,
           "endValue": 1
         },
-        "description": "Designed and built JAMstack websites leveraging Figma, headless content management, REST and GraphQL APIs, and component-driven javascript web frameworks like Next JS and Sveltkit. Implemented automated customer journeys and campaigns in marketing automation web applications. Built custom components that seamlessly integrate websites with MarTech stack using Google, Zoho, and SalesForce APIs. Built custom SalesForce functionality using Apex and the SalesForce Developer Platform. Consulted marketing leaders on MarTech stacks. Built and maintained marketing attribution dashboards that tracked customers through every stage of the funnel up to initial sale."
+        "description": "Designed and built pixel perfect, fully responsive JAMstack websites leveraging Figma, headless content management, REST and GraphQL APIs, SCSS, CSS in JS, and component-driven javascript web frameworks like Next JS and Sveltkit. Implemented automated customer journeys and campaigns in marketing automation web applications. Built custom components that seamlessly integrate websites with MarTech stack using Google, Zoho, and SalesForce APIs. Built custom SalesForce functionality using Apex and the SalesForce Developer Platform. Consulted marketing leaders on MarTech stacks. Built and maintained marketing attribution dashboards that tracked customers through every stage of the funnel up to initial sale."
       }
     ],
     "skills": [
@@ -143,24 +143,7 @@
         ]
       },
       {
-        "title": "marketing automation",
-        "growth": [
-          {
-            "startValue": 0,
-            "endValue": 60
-          },
-          {
-            "startValue": 60,
-            "endValue": 86
-          },
-          {
-            "startValue": 86,
-            "endValue": 80
-          }
-        ]
-      },
-      {
-        "title": "HTML & CSS",
+        "title": "CSS",
         "growth": [
           {
             "startValue": 0,
@@ -177,19 +160,19 @@
         ]
       },
       {
-        "title": "digital marketing",
+        "title": "SCSS",
         "growth": [
           {
             "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 27
+          },
+          {
+            "startValue": 30,
             "endValue": 85
-          },
-          {
-            "startValue": 85,
-            "endValue": 80
-          },
-          {
-            "startValue": 80,
-            "endValue": 60
           }
         ]
       },
@@ -245,6 +228,40 @@
         ]
       },
       {
+        "title": "typescript",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 40
+          },
+          {
+            "startValue": 0,
+            "endValue": 30
+          },
+          {
+            "startValue": 30,
+            "endValue": 65
+          }
+        ]
+      },
+      {
+        "title": "marketing automation",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 86
+          },
+          {
+            "startValue": 86,
+            "endValue": 80
+          }
+        ]
+      },
+      {
         "title": "salesforce dev",
         "growth": [
           {
@@ -258,23 +275,6 @@
           {
             "startValue": 40,
             "endValue": 45
-          }
-        ]
-      },
-      {
-        "title": "reporting",
-        "growth": [
-          {
-            "startValue": 0,
-            "endValue": 40
-          },
-          {
-            "startValue": 40,
-            "endValue": 70
-          },
-          {
-            "startValue": 70,
-            "endValue": 80
           }
         ]
       },
