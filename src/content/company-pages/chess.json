@@ -198,14 +198,14 @@
         "growth": [
           {
             "startValue": 0,
+            "endValue": 30
+          },
+          {
+            "startValue": 30,
             "endValue": 60
           },
           {
             "startValue": 60,
-            "endValue": 40
-          },
-          {
-            "startValue": 40,
             "endValue": 90
           }
         ]
@@ -232,7 +232,7 @@
         "growth": [
           {
             "startValue": 0,
-            "endValue": 40
+            "endValue": 0
           },
           {
             "startValue": 0,
@@ -270,10 +270,10 @@
           },
           {
             "startValue": 0,
-            "endValue": 40
+            "endValue": 60
           },
           {
-            "startValue": 40,
+            "startValue": 60,
             "endValue": 45
           }
         ]
