@@ -36,7 +36,7 @@
 		align-items: center;
 		text-align: center;
 		padding: var(--s-10) var(--s-3);
-		margin: 0 auto var(--s-7) 0;
+		margin: 0 auto var(--s-7) auto;
 		transition: all 0.3s;
 		border: 2px solid var(--color-rock-100);
 		@include md {

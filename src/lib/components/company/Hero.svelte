@@ -40,6 +40,7 @@
 <style lang="scss">
 	@import '../../theme/breakpoints.scss';
 	section {
+		overflow: hidden;
 		padding: var(--s-10) 0 var(--s-11) 0;
 		@include sm {
 			padding: var(--s-12) var(--s-4) var(--s-13) var(--s-4);

@@ -118,7 +118,7 @@
 		</div>
 	</div>
 
-	<div bind:this={gridContainer}>
+	<div bind:this={gridContainer} class="grid-container">
 		<FeaturedGrid displayElements={selectedProjects} />
 	</div>
 </section>
