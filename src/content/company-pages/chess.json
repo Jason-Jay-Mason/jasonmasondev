@@ -25,7 +25,7 @@
     "logoSrc": "/chess-logo.svg"
   },
   "hero": {
-    "hook": "Hi, I'm Jason Mason! This is my web webumé for the Front End Engineer position at Chess.com. Send me a message or give me a call and we'll talk!",
+    "hook": "Hi, I'm Jason Mason! This is my webumé for the Front End Engineer position at Chess.com. Send me a message or give me a call and we'll talk!",
     "cta": {
       "isVideo": false,
       "hrefOrSrc": "#contact",
