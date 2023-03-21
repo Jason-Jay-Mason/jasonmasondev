@@ -25,7 +25,7 @@
     "logoSrc": "/dtn_logo_2019.svg"
   },
   "hero": {
-    "hook": "Hi, I'm Jason Mason! This is my web webumé for the Full Stack Developer position at DTN. Send me a message or give me a call and we'll talk!",
+    "hook": "Hi, I'm Jason Mason! This is my webumé for the Full Stack Developer position at DTN. Send me a message or give me a call and we'll talk!",
     "cta": {
       "isVideo": false,
       "hrefOrSrc": "#contact",
