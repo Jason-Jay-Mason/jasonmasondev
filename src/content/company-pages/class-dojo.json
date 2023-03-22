@@ -25,7 +25,7 @@
     "logoSrc": "/cd-logo.svg"
   },
   "hero": {
-    "hook": "Hi, I'm Jason Mason! This is my webumé for the Sr. Operations Manager at DTN. Send me a message or give me a call and we'll talk!",
+    "hook": "Hi, I'm Jason Mason! This is my webumé for the Sr. Operations Manager at Class Dojo. Send me a message or give me a call and we'll talk!",
     "cta": {
       "isVideo": false,
       "hrefOrSrc": "#contact",
@@ -44,7 +44,7 @@
       "sub": "About me",
       "main": "PROFILE"
     },
-    "body": "I'm a web developer with almost a decade of experience building SEO-friendly websites and responsive user interfaces. I specialize in using HTML, JavaScript, CSS, SCSS, and CSS in JS. I'm well-versed in modern CSS best practices, including Grid, Flexbox, and theme architecture using CSS variables. Additionally, I have extensive experience with server-side API design and consumption on a JAMstack architecture using full-stack web frameworks such as Next.js and Sveltekit. I've also built maintainable systems and processes in SalesForce Apex (Java). In terms of design, I have extensive experience in web and user interface design and consistently achieve pixel-perfect design implementations.\n\nMy approach to work is guided by the principle of delivering value. Whenever I begin a task, I ask myself: how can I bring more value to the company and its clients? This mindset encourages me to think creatively and motivates me to go above and beyond in my work.\n",
+    "body": "In the past, engineering and marketing functions had little cross-over. But now, with the advent of Martech, huge opportunities are being missed by businesses as a result. The skill set I’ve built as an engineering-minded misfit on marketing teams makes me uniquely qualified to serve businesses in the emerging field of MarTech implementation/development and Marketing Operations.\n\nMy approach to work is guided by the principle of delivering value. Whenever I begin a task, I ask myself: how can I bring more value to the company and its clients? This mindset encourages me to think creatively and motivates me to go above and beyond in my work.\n",
     "interests": [
       {
         "title": "storm chasing",
@@ -121,7 +121,7 @@
           "startValue": 0,
           "endValue": 1
         },
-        "description": "Designed and built pixel perfect, fully responsive JAMstack websites leveraging Figma, headless content management, REST and GraphQL APIs, SCSS, CSS in JS, and component-driven javascript web frameworks like Next.js and Sveltkit. Implemented automated customer journeys and campaigns in marketing automation web applications. Built custom components and server side functionality that seamlessly integrate websites with MarTech stack using Google, Zoho, and SalesForce APIs. Built custom SalesForce functionality using Apex and the SalesForce Developer Platform. Consulted marketing leaders on MarTech stacks. Built and maintained marketing attribution dashboards that tracked customers through every stage of the funnel up to initial sale."
+        "description": "Designed and built pixel perfect, fully responsive JAMstack websites leveraging Figma, headless content management, REST and GraphQL APIs, SCSS, CSS in JS, and component-driven javascript web frameworks like Next.js and Sveltkit. Implemented automated customer journeys and campaigns in marketing automation web applications. Built custom components and server-side functionality that seamlessly integrate websites with MarTech stack using Google, Zoho, and SalesForce APIs. Built custom SalesForce functionality using Apex and the SalesForce Developer Platform. Consulted marketing leaders on MarTech stacks. Built and maintained marketing attribution dashboards that tracked customers through every stage of the funnel up to initial sale."
       }
     ],
     "skills": [
@@ -160,19 +160,19 @@
         ]
       },
       {
-        "title": "SCSS",
+        "title": "Marketing",
         "growth": [
           {
             "startValue": 0,
-            "endValue": 0
+            "endValue": 70
           },
           {
-            "startValue": 0,
-            "endValue": 27
-          },
-          {
-            "startValue": 30,
+            "startValue": 70,
             "endValue": 85
+          },
+          {
+            "startValue": 85,
+            "endValue": 87
           }
         ]
       },
@@ -211,7 +211,7 @@
         ]
       },
       {
-        "title": "svelte",
+        "title": "Express.js",
         "growth": [
           {
             "startValue": 0,
@@ -223,7 +223,7 @@
           },
           {
             "startValue": 0,
-            "endValue": 88
+            "endValue": 67
           }
         ]
       },
