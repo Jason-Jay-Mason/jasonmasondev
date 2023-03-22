@@ -1,0 +1,306 @@
+{
+  "slug": "class-dojo",
+  "layout": {
+    "links": [
+      {
+        "innerText": "COVER LETTER",
+        "href": "#coverletter"
+      },
+      {
+        "innerText": "PROFILE",
+        "href": "#profile"
+      },
+      {
+        "innerText": "WORK EXPERIENCE",
+        "href": "#experience"
+      },
+      {
+        "innerText": "PORTFOLIO",
+        "href": "#work"
+      }
+    ]
+  },
+  "company": {
+    "name": "Class Dojo",
+    "logoSrc": "/cd-logo.svg"
+  },
+  "hero": {
+    "hook": "Hi, I'm Jason Mason! This is my webumé for the Sr. Operations Manager at DTN. Send me a message or give me a call and we'll talk!",
+    "cta": {
+      "isVideo": false,
+      "hrefOrSrc": "#contact",
+      "innerText": "Let's Talk"
+    }
+  },
+  "coverLetter": {
+    "headline": {
+      "sub": "Why I'm applying",
+      "main": "COVER LETTER"
+    },
+    "body": "Hey Class Dojo! Your company and vision are really cool! Here's the deal: I care deeply about the impoverished people in our world. Whether it's child slaves mining cobalt in the Congo or a poor single mother in Vietnam struggling to feed her three children in a rundown 200 square foot apartment, my heart aches for them. I refuse to be willingly ignorant, and sit on the side lines, so It's my personal mission to help in every way I can. This is why I'm applying to work at Class Dojo.\n\nI believe education is the best way to help people escape poverty and difficult situations. I think that everyone has something to offer, they just need the right skills and mindset to achieve their potential. Education can make the difference between generational poverty and breaking the cycle of lack for an entire generation. That's why I see working at Class Dojo as an opportunity to collaborate with a company that shares my vision and to be part of a team that lifts up those who need it most. It's an exciting prospect!\n\nRegarding the Marketing Operations Manager position, I believe my qualifications and skills go beyond what is listed in the requirements, specifically full-stack web development. In reality, when it comes to a martech stack that includes tools like Braze, Iterable, Crowdin, and others, ideal implementation and optimization often require in-depth knowledge of server-side APIs and programming methodologies. I noticed that the CD team is working on solving the challenge of handling multiple languages. For instance, if you use Crowdin for translation management, Braze's off-the-shelf integration may not suffice. You may need to resort to tools like Zapier to achieve a no-code approach, which may or may not work as intended. In such cases, basic knowledge of HTML, CSS, and templating languages like Liquid is often inadequate, and engineers may be preoccupied with product development. Sound familiar? Trust me, I've seen this before. However, I believe there's a better way, and I'm eager to discuss it with you.\n\nCheers,\n"
+  },
+  "profile": {
+    "headline": {
+      "sub": "About me",
+      "main": "PROFILE"
+    },
+    "body": "I'm a web developer with almost a decade of experience building SEO-friendly websites and responsive user interfaces. I specialize in using HTML, JavaScript, CSS, SCSS, and CSS in JS. I'm well-versed in modern CSS best practices, including Grid, Flexbox, and theme architecture using CSS variables. Additionally, I have extensive experience with server-side API design and consumption on a JAMstack architecture using full-stack web frameworks such as Next.js and Sveltekit. I've also built maintainable systems and processes in SalesForce Apex (Java). In terms of design, I have extensive experience in web and user interface design and consistently achieve pixel-perfect design implementations.\n\nMy approach to work is guided by the principle of delivering value. Whenever I begin a task, I ask myself: how can I bring more value to the company and its clients? This mindset encourages me to think creatively and motivates me to go above and beyond in my work.\n",
+    "interests": [
+      {
+        "title": "storm chasing",
+        "iconSrc": "/tornado.svg"
+      },
+      {
+        "title": "drumming",
+        "iconSrc": "/drums.svg"
+      },
+      {
+        "title": "jesus",
+        "iconSrc": "/bible.svg"
+      },
+      {
+        "title": "chess",
+        "iconSrc": "/knight.svg"
+      },
+      {
+        "title": "snowboarding",
+        "iconSrc": "/snowboard.svg"
+      }
+    ],
+    "img": {
+      "alt": "Profile photo",
+      "src": "/profile-photo.webp"
+    }
+  },
+  "experience": {
+    "headline": {
+      "sub": "My skills over time",
+      "main": "WORK EXPERIENCE"
+    },
+    "records": [
+      {
+        "startYear": 2013,
+        "endYear": 2018,
+        "headline": {
+          "sub": "TERRY CHIROPRACTIC, BOULDER, CO",
+          "main": "MARKETING MANAGER/WEB DEVELOPER"
+        },
+        "fadeIn": {
+          "start": 0,
+          "length": 0,
+          "startValue": 0,
+          "endValue": 1
+        },
+        "description": "Built websites using HTML, CSS, Javascript, and SEO best practices that obtained and secured top search rankings on Google for over 3 years in the #1 most competitive chiropractic market in the world. Built automated customer journeys and attribution reporting by synchronizing marketing automation, CRM, analytics, and EHR technology implementations. Results yielded a 30% increase in cash profits leading to acquisition."
+      },
+      {
+        "startYear": 2018,
+        "endYear": 2020,
+        "headline": {
+          "main": "MARTECH DEVELOPER",
+          "sub": "ACCURENCE, LOUISVILLE, CO"
+        },
+        "fadeIn": {
+          "start": 0.68,
+          "length": 0.05,
+          "startValue": 0,
+          "endValue": 1
+        },
+        "description": "Leveraged brand style guides to design and build pixel perfect, fully responsive landing pages and company websites using HTML, CSS,  JQuery, and WordPress. Drove internal improvements to MarTech stack amid political and financial resistance. Researched and developed personas that fueled messaging. Built and deployed automated campaigns that generated leads in the roofer segment for the first time in the company's history. Wore the hat of SalesForce admin/developer and built systems using Apex that drove internal adoption of the SalesForce platform. Implemented customer journeys and marketing automation. "
+      },
+      {
+        "startYear": 2020,
+        "endYear": 2023,
+        "headline": {
+          "main": "FRONTEND ENGINEER",
+          "sub": "JAMSITE, REMOTE"
+        },
+        "fadeIn": {
+          "start": 0.845,
+          "length": 0.05,
+          "startValue": 0,
+          "endValue": 1
+        },
+        "description": "Designed and built pixel perfect, fully responsive JAMstack websites leveraging Figma, headless content management, REST and GraphQL APIs, SCSS, CSS in JS, and component-driven javascript web frameworks like Next.js and Sveltkit. Implemented automated customer journeys and campaigns in marketing automation web applications. Built custom components and server side functionality that seamlessly integrate websites with MarTech stack using Google, Zoho, and SalesForce APIs. Built custom SalesForce functionality using Apex and the SalesForce Developer Platform. Consulted marketing leaders on MarTech stacks. Built and maintained marketing attribution dashboards that tracked customers through every stage of the funnel up to initial sale."
+      }
+    ],
+    "skills": [
+      {
+        "title": "javascript",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 20
+          },
+          {
+            "startValue": 20,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 90
+          }
+        ]
+      },
+      {
+        "title": "CSS",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 80
+          },
+          {
+            "startValue": 80,
+            "endValue": 95
+          }
+        ]
+      },
+      {
+        "title": "SCSS",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 27
+          },
+          {
+            "startValue": 30,
+            "endValue": 85
+          }
+        ]
+      },
+      {
+        "title": "react",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 20
+          },
+          {
+            "startValue": 20,
+            "endValue": 90
+          }
+        ]
+      },
+      {
+        "title": "API consumption",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 30
+          },
+          {
+            "startValue": 30,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 90
+          }
+        ]
+      },
+      {
+        "title": "svelte",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 88
+          }
+        ]
+      },
+      {
+        "title": "typescript",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 30
+          },
+          {
+            "startValue": 30,
+            "endValue": 65
+          }
+        ]
+      },
+      {
+        "title": "marketing automation",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 86
+          },
+          {
+            "startValue": 86,
+            "endValue": 80
+          }
+        ]
+      },
+      {
+        "title": "salesforce dev",
+        "growth": [
+          {
+            "startValue": 0,
+            "endValue": 0
+          },
+          {
+            "startValue": 0,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 45
+          }
+        ]
+      },
+      {
+        "title": "design",
+        "growth": [
+          {
+            "startValue": 30,
+            "endValue": 50
+          },
+          {
+            "startValue": 50,
+            "endValue": 60
+          },
+          {
+            "startValue": 60,
+            "endValue": 65
+          }
+        ]
+      }
+    ]
+  },
+  "portfolio": {
+    "headline": {
+      "sub": "My work",
+      "main": "PORTFOLIO"
+    }
+  }
+}
