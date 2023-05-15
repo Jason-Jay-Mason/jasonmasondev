@@ -1,7 +1,3 @@
-<!-- src/layout
-Global layout
-TODO: Implement party town for page speed
--->
 <svelte:head>
 	<link rel="preconnect" href="https://fonts.googleapis.com" />
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="true" />
@@ -16,13 +12,4 @@ TODO: Implement party town for page speed
 <style lang="scss" global>
 	//Import our global syle sheet here
 	@import '../global.scss';
-
-	//TODO: delete me if nothing breaks
-	body {
-		/* overflow-x: hidden; */
-		/* -webkit-overflow-scrolling: touch; */
-		/* height: 100%; */
-		/* z-index: 0; */
-		/* background-color: var(--color-bg-primary); */
-	}
 </style>
