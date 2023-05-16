@@ -1,0 +1,25 @@
+@import './breakpoints.scss';
+
+:root {
+	--spacing-scale: 0.11rem;
+	@include sm {
+		--spacing-scale: 0.125rem;
+	}
+
+	--spacing-multiplyer: 1.4;
+	--s-1: calc(var(--spacing-scale) * var(--spacing-multiplyer));
+	--s-2: calc(var(--s-1) * var(--spacing-multiplyer));
+	--s-3: calc(var(--s-2) * var(--spacing-multiplyer));
+	--s-4: calc(var(--s-3) * var(--spacing-multiplyer));
+	--s-5: calc(var(--s-4) * var(--spacing-multiplyer));
+	--s-6: calc(var(--s-5) * var(--spacing-multiplyer));
+	--s-7: calc(var(--s-6) * var(--spacing-multiplyer));
+	--s-8: calc(var(--s-7) * var(--spacing-multiplyer));
+	--s-9: calc(var(--s-8) * var(--spacing-multiplyer));
+	--s-10: calc(var(--s-9) * var(--spacing-multiplyer));
+	--s-11: calc(var(--s-10) * var(--spacing-multiplyer));
+	--s-12: calc(var(--s-11) * var(--spacing-multiplyer));
+	--s-13: calc(var(--s-12) * var(--spacing-multiplyer));
+	--s-14: calc(var(--s-13) * var(--spacing-multiplyer));
+	--s-15: calc(var(--s-14) * var(--spacing-multiplyer));
+}

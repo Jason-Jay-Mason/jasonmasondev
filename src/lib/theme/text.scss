@@ -1,0 +1,32 @@
+@import './breakpoints.scss';
+
+:root {
+	--font-subheadline: 'Qwigley', cursive;
+	--font-headline: 'Pragati Narrow', sans-serif;
+
+	//font sizes
+	--text-base: 1em;
+	//mobile first ratio
+	--text-scale: 1.35;
+	@include xs {
+		--text-scale: 1.44;
+	}
+	@include sm {
+		--text-scale: 1.58;
+	}
+
+	//sizes
+	--text-xs: calc((1em / var(--text-scale)) / var(--text-scale));
+	--text-sm: calc(var(--text-xs) * var(--text-scale));
+	--text-md: calc(var(--text-sm) * var(--text-scale) * var(--text-scale));
+	--text-lg: calc(var(--text-md) * var(--text-scale));
+	--text-xl: calc(var(--text-lg) * var(--text-scale));
+	--text-xxl: calc(var(--text-xl) * var(--text-scale));
+	--text-xxxl: calc(var(--text-xxl) * var(--text-scale));
+
+	//spacing
+	--spacing-scale: 0.11rem;
+	@include sm {
+		--spacing-scale: 0.125rem;
+	}
+}

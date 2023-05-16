@@ -1,0 +1,40 @@
+body {
+ //Set our color vars for light mode
+	--color-text-body: black;
+	--color-bg-primary: white;
+	--color-bg-card: #ffffffd9;
+	--color-text-body: black;
+	--color-rock-100: #1c1917;
+	--color-rock-200: #403c39;
+	--color-rock-300: #7d7b79;
+	--color-pencil-100: #bdbdbd;
+	--color-error: #D62828;
+	--opacity-pencilbg: 1;
+	--icon-filter: none;
+	--color-rainbow: conic-gradient(
+		from 180deg at 50% 50%,
+		#d54a4a 0deg,
+		#dcd756 63.75deg,
+		#5cd777 123.75deg,
+		#5accbe 187.5deg,
+		#695acb 255deg,
+		#c852db 316.87deg,
+		#ff007a 360deg,
+		#ca4887 360deg
+	);
+	--theme-icon: url('/dark-icon.svg');
+
+  //Overwrite colors for dark mode
+	&[data-theme='dark'] {
+		--color-bg-primary: #303030;
+		--color-bg-card: #0d0c0cd9;
+		--color-text-body: #ffffff;
+		--color-rock-100: #ffffff;
+		--color-rock-200: #ffffff;
+		--color-rock-300: #ffffff;
+		--color-pencil-100: #494949;
+		--opacity-pencilbg: 0.3;
+		--icon-filter: brightness(0) invert(1);
+		--theme-icon: url('/light-icon.svg');
+	}
+}
