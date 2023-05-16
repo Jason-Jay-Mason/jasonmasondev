@@ -1,0 +1,13 @@
+---
+layout: legal
+---
+<script>
+  import Button from '../../../lib/components/Button.svelte'
+</script>
+
+<Button>Hello from svx file!!</Button>
+
+# Make sure you don't use lang='ts' on layout files
+
+
+
