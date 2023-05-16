@@ -1,24 +1,7 @@
 <script lang="ts">
-	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	export let main: string = '404 Page Not Found';
 	export let sub: string = "Oops, it looks like this page doesn't exist.";
 </script>
-
-<!-- TODO: I need to make this into its own component -->
-<div class="generic-nav">
-	<img src="/jm-logo.svg" alt="Jason Logo" class="logo" />
-	<div class="social">
-		<a href="https://github.com/Jason-Jay-Mason/" target="_blank" rel="noreferrer">
-			<img src="/github-logo.svg" alt="" class="icon" />
-		</a>
-		<a href="https://www.linkedin.com/in/jasonjaymason/" target="_blank" rel="noreferrer">
-			<img src="/linkedin-logo.svg" alt="" class="icon" />
-		</a>
-		<div class="theme">
-			<ThemeSwitcher />
-		</div>
-	</div>
-</div>
 
 <section>
 	<h1>{main}</h1>
@@ -84,7 +67,7 @@
 		width: 100%;
 		max-width: $lg;
 		margin: 0 auto;
-		height: 70vh;
+		height: 85vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;

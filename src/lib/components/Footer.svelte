@@ -1,18 +1,31 @@
 <script lang="ts">
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import type { Navbar } from '$lib/types';
-	export let data: Navbar;
-	import { company } from '$lib/stores';
+
+	export let data: Navbar = {
+		links: [
+			{
+				innerText: 'Projects',
+				href: '/projects'
+			},
+			{
+				innerText: 'Blog',
+				href: '/blog'
+			},
+			{
+				innerText: 'Mustachio',
+				href: '/mustachio'
+			}
+		]
+	};
 </script>
 
 <footer>
 	<img src="/jm-logo.svg" alt="" />
 	<div class="links">
-		{#if $company && data}
-			{#each data.links as link}
-				<a href={`/${$company}${link.href}`}>{link.innerText}</a>
-			{/each}
-		{/if}
+		{#each data.links as link}
+			<a href={link.href}>{link.innerText}</a>
+		{/each}
 	</div>
 
 	<div class="social">
@@ -55,9 +68,12 @@
 				display: flex;
 			}
 			a {
+				font-family: var(--font-body);
+				text-transform: uppercase;
+				font-weight: 600;
+				letter-spacing: 0.17rem;
 				color: var(color-rock-300);
 				padding-right: var(--s-9);
-				font-family: var(--font-headline);
 			}
 		}
 		.social {

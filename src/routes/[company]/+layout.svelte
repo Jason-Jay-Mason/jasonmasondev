@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { LayoutData } from './$types';
-	import CompanyNav from '$lib/components/CompanyNav.svelte';
+	import Nav from '$lib/components/Nav.svelte';
 	import Footer from '$lib/components/Footer.svelte';
 	export let data: LayoutData;
 </script>
 
-<CompanyNav data={data.page.layout} isPage={true} />
+<Nav data={data.page.layout} />
 <slot />
 <Footer data={data.page.layout} />

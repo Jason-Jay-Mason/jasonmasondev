@@ -1,5 +1,4 @@
 <script lang="ts">
-	// I have no real home page yet because as it stands right now, this site is just for employers
 	import PageError from '$lib/components/PageError.svelte';
 </script>
 

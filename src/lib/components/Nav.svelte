@@ -2,9 +2,6 @@
 	import type { Navbar } from '$lib/types';
 	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import Modal from '$lib/components/Modal.svelte';
-	import { company } from '$lib/stores';
-
-	import { afterNavigate, beforeNavigate, disableScrollHandling } from '$app/navigation';
 
 	export let data: Navbar = {
 		links: [
@@ -22,42 +19,11 @@
 			}
 		]
 	};
-	export let isPage: boolean;
-
-	//#region annoying fix for safari. Safari does not play well with links to id anchors
-	let scrollBottom: number;
-	beforeNavigate(() => {
-		let scrollToBottom = document.body.scrollHeight - window.scrollY;
-		scrollBottom = scrollToBottom;
-	});
-	afterNavigate(() => {
-		disableScrollHandling();
-		const hash = window.location.hash.replace('#', '');
-		const anchor = document.getElementById(hash)?.getBoundingClientRect();
-		let next = anchor?.y - scrollBottom;
-		if (next) {
-			window.scrollTo({
-				top: next,
-				behavior: 'smooth'
-			});
-		}
-	});
-	function handleAnchorClick(e) {
-		e.preventDefault();
-		const link = e.currentTarget;
-		const anchorId = new URL(link.href).hash.replace('#', '');
-		const anchor = document.getElementById(anchorId);
-		window.scrollTo({
-			top: anchor?.offsetTop,
-			behavior: 'smooth'
-		});
-	}
 
 	let modalActive: boolean = false;
 	function toggleModal() {
 		modalActive = !modalActive;
 	}
-	//#endregion
 </script>
 
 <nav>
@@ -65,27 +31,13 @@
 		<img src="/jm-logo.svg" alt="jason's logo" class="logo" />
 		<div class="links">
 			{#each data.links as link}
-				{#if !isPage}
-					{#if $company}
-						<a class="link" href={`/${$company}${link.href}`}>{link.innerText} </a>
-					{:else}
-						<a class="link" href="/" on:click={handleAnchorClick}>{link.innerText} </a>
-					{/if}
-				{:else}
-					<a class="link" href={`${link.href}`} on:click={handleAnchorClick}>{link.innerText} </a>
-				{/if}
+				<a class="link" href={link.href}>{link.innerText}</a>
 			{/each}
 		</div>
 	</div>
 	<div class="right">
 		<div class="social">
-			{#if $company}
-				{#if !isPage}
-					<a class="link" href={`/${$company}#contact`}>CONTACT</a>
-				{:else}
-					<a class="link" href={`#contact`} on:click={handleAnchorClick}>CONTACT </a>
-				{/if}
-			{/if}
+			<a class="link" href="#contact">Contact</a>
 			<a href="https://github.com/Jason-Jay-Mason/" target="_blank" rel="noreferrer">
 				<img src="/github-logo.svg" alt="" class="icon" />
 			</a>
@@ -97,9 +49,14 @@
 			<ThemeSwitcher />
 		</div>
 
-		<div class="hamburger" class:active={modalActive === true} on:click={toggleModal}>
+		<button
+			class="hamburger"
+			class:active={modalActive === true}
+			aria-label="Toggle Menu"
+			on:click={toggleModal}
+		>
 			<div />
-		</div>
+		</button>
 	</div>
 	<Modal data={data.links} bind:active={modalActive} />
 </nav>
@@ -109,6 +66,7 @@
 	nav {
 		position: sticky;
 		top: 0;
+		width: 100%;
 		height: 50px;
 		display: flex;
 		flex-direction: row;
@@ -119,7 +77,7 @@
 		margin: 0 auto;
 		padding: 0 var(--s-4);
 		@include md {
-			position: relative;
+			position: absolute;
 			height: 90px;
 			padding: var(--s-7) var(--s-8);
 		}
@@ -138,20 +96,27 @@
 			}
 			&::before {
 				margin: auto;
-				transform: rotate(-45deg) translate(-9px, 8px);
+				transform: rotate(-45deg) translate(-7px, 6px);
 				transition: all 0.2s;
 			}
 			&::after {
 				margin: auto;
-				transform: rotate(45deg) translate(-8px, -9px);
+				transform: rotate(45deg) translate(-7px, -7px);
 				transition: all 0.2s;
 			}
 		}
+		.menu-button {
+			display: flex;
+			flex-direction: column;
+			background-color: none;
+		}
 		.hamburger {
+			background: none;
+			border: none;
 			cursor: pointer;
 			position: relative;
-			width: 40px;
-			height: 28px;
+			width: 30px;
+			height: 23px;
 			margin: 0 0 0 var(--s-6);
 			@include md {
 				display: none;
@@ -160,6 +125,7 @@
 				position: absolute;
 				top: 0;
 				bottom: 0;
+				left: 0;
 				height: 4px;
 				width: 100%;
 				margin: auto;
@@ -169,6 +135,7 @@
 			&::after {
 				content: '';
 				position: absolute;
+				left: 0;
 				height: 4px;
 				width: 100%;
 				transition: all 0.2s;
@@ -195,8 +162,8 @@
 				display: flex;
 			}
 			.icon {
-				margin: 0 var(--s-4);
-				width: 28px;
+				margin: 0 var(--s-3);
+				width: 24px;
 				filter: var(--icon-filter);
 			}
 		}
@@ -213,23 +180,24 @@
 			}
 		}
 		.logo {
-			width: 90px;
+			width: 80px;
 			padding-right: var(--s-6);
 			filter: var(--icon-filter);
 			@include lg {
-				width: 110px;
+				width: 103px;
 				padding-right: var(--s-8);
 			}
 		}
 		.link {
-			font-family: var(--font-headline);
-			font-size: calc(var(--text-base) - 5px);
+			font-family: var(--font-body);
+			text-transform: uppercase;
+			font-size: 12px;
 			font-weight: 600;
 			letter-spacing: 0.17rem;
 			padding: 0 var(--s-3);
 			@include lg {
-				font-size: calc(var(--text-base) - 2px);
-				padding: 0 var(--s-7);
+				font-size: 12px;
+				padding: 0 var(--s-8);
 			}
 		}
 	}

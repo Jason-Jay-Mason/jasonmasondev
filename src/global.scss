@@ -38,7 +38,7 @@ a,p {
 }
 
 p {
-	font-family: 'Times New Roman';
+	font-family: var(--font-body);
 	font-style: normal;
 	font-weight: 300;
 	font-size: var(--text-base);
