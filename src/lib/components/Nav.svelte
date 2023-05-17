@@ -28,7 +28,10 @@
 
 <nav>
 	<div class="left">
-		<img src="/jm-logo.svg" alt="jason's logo" class="logo" />
+		<a href="/">
+			<img src="/jm-logo.svg" alt="jason's logo" class="logo" />
+		</a>
+
 		<div class="links">
 			{#each data.links as link}
 				<a class="link" href={link.href}>{link.innerText}</a>

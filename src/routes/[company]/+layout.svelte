@@ -7,4 +7,3 @@
 
 <Nav data={data.page.layout} />
 <slot />
-<Footer data={data.page.layout} />
