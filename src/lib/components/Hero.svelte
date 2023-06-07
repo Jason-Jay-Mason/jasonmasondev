@@ -4,16 +4,17 @@
 
 	export let hook: string;
 	export let cta: Cta;
+	export let subHeadline: string;
 	export let logo: string;
 </script>
 
-<section class="section" id="top">
+<section id="top">
 	<div class="container">
 		<div class="intro">
 			<div class="mask">
 				<img src="/pencil-bg.svg" alt="Stylized background" />
 			</div>
-			<h1>Jason's webumé</h1>
+			<h1>{subHeadline}</h1>
 		</div>
 		<div class="logo-container">
 			<div class="logo">
@@ -28,7 +29,7 @@
 		</div>
 		<div class="cta-container">
 			<div class="cta">
-				<Button href={cta.hrefOrSrc} width="full">Let's Talk</Button>
+				<Button href={cta.hrefOrSrc} width="full">{cta.innerText}</Button>
 			</div>
 		</div>
 		<div class="bottom">
@@ -42,25 +43,25 @@
 	@import '../theme/breakpoints.scss';
 	section {
 		overflow: hidden;
-		padding: var(--s-10) 0 var(--s-11) 0;
+		padding: var(--s-11) 0 var(--s-11) 0;
 		@include sm {
-			padding: var(--s-12) var(--s-4) var(--s-13) var(--s-4);
+			padding: var(--s-13) var(--s-4) var(--s-13) var(--s-4);
 		}
 		.cta-container {
 			position: relative;
 			width: 87%;
 			margin-bottom: var(--s-9);
 			@include md {
-				width: 70%;
-				margin-bottom: var(--s-6);
+				width: 85%;
+				margin-bottom: var(--s-8);
 			}
 			&::before,
 			&::after {
 				content: '';
 				position: absolute;
 				top: 55%;
-				height: 5px;
-				width: 20%;
+				height: 4px;
+				width: 23%;
 				background-color: var(--color-rock-200);
 			}
 			&::after {
@@ -69,8 +70,8 @@
 			.cta {
 				position: relative;
 				width: 80%;
-				max-width: 200px;
-				z-index: 1;
+				max-width: 210px;
+				z-index: 10;
 				margin: 0 auto;
 				padding: 0 var(--s-6);
 				background-color: var(--color-bg-primary);
@@ -99,36 +100,36 @@
 			}
 		}
 		.bottom {
-			height: 1px;
+			height: 2px;
 			width: 143%;
-			transform: translateX(-15%) translateY(-2px);
+			transform: translateX(-15%) translateY(0px);
 			margin: 0 auto;
 			&::before,
 			&::after {
 				content: '';
 				position: absolute;
-				height: 3px;
-				width: 65%;
+				height: 2px;
+				width: 66%;
 			}
 			&::before {
 				left: 0;
-				transform: translateX(-18.1%) translateY(-5px) rotate(25deg);
+				transform: translateX(-19.5%) translateY(-15px) rotate(25deg);
 				background: linear-gradient(
 					90deg,
 					transparent 0%,
-					transparent 48.7%,
-					var(--color-rock-200) 48.7%,
-					var(--color-rock-200) 100%
+					transparent 50%,
+					var(--color-rock-100) 50%,
+					var(--color-rock-100) 100%
 				);
 			}
 			&::after {
-				transform: translateX(18.1%) translateY(-5px) rotate(-25deg);
+				transform: translateX(19.5%) translateY(-15px) rotate(-25deg);
 				right: 0;
 				background: linear-gradient(
 					90deg,
-					var(--color-rock-200) 0%,
-					var(--color-rock-200) 51.2%,
-					transparent 51.2%,
+					var(--color-rock-100) 0%,
+					var(--color-rock-100) 50%,
+					transparent 50%,
 					transparent 100%
 				);
 			}
@@ -136,7 +137,7 @@
 			.right {
 				content: '';
 				position: absolute;
-				height: 4px;
+				height: 6px;
 				width: 76.7%;
 			}
 			.left {
@@ -167,7 +168,7 @@
 			width: 90%;
 			padding: var(--s-9) 0;
 			@include md {
-				width: 80%;
+				width: 85%;
 			}
 		}
 		.logo-container {
@@ -176,16 +177,15 @@
 			background-color: var(--color-bg-primary);
 			width: 120%;
 			.logo {
+				z-index: 1;
 				display: flex;
+				width: 79%;
+				margin: 0 auto;
 				align-items: center;
 				justify-content: center;
-				width: 70%;
-				z-index: 1;
-				margin: 0 auto;
-				padding: 0 var(--s-3);
 				background-color: var(--color-bg-primary);
 				@include md {
-					padding: 0 var(--s-7);
+					padding: 0;
 				}
 				img {
 					max-height: var(--s-11);
@@ -222,7 +222,7 @@
 		.intro {
 			position: relative;
 			width: 90%;
-			margin: var(--s-7) auto var(--s-4) auto;
+			margin: var(--s-8) auto var(--s-7) auto;
 			.mask {
 				position: absolute;
 				width: 100%;
@@ -249,7 +249,7 @@
 					font-size: calc(var(--text-xl) + 4px);
 				}
 				@include md {
-					font-size: calc(var(--text-xl) + 10px);
+					font-size: var(--text-xl);
 				}
 			}
 		}
@@ -259,8 +259,8 @@
 			align-items: center;
 			justify-content: center;
 			width: 85%;
-			max-width: 587px;
-			border: 4px var(--color-rock-200);
+			max-width: 525px;
+			border: 6px var(--color-rock-200);
 			border-style: solid solid none solid;
 			margin: 0 auto var(--s-13) auto;
 		}
