@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Cta } from '$lib/types';
-	import Button from '$lib/components/Button.svelte';
+	import { Button } from '$lib/components';
+
 	export let hook: string;
 	export let cta: Cta;
 	export let logo: string;
@@ -38,7 +39,7 @@
 </section>
 
 <style lang="scss">
-	@import '../../theme/breakpoints.scss';
+	@import '../theme/breakpoints.scss';
 	section {
 		overflow: hidden;
 		padding: var(--s-10) 0 var(--s-11) 0;

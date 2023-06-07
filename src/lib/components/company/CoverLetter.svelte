@@ -1,6 +1,6 @@
 <script lang="ts">
 	import type { CoverLetter } from '$lib/types';
-	import LargeHeadline from '../LargeHeadline.svelte';
+	import { LargeHeadline } from '$lib/components';
 
 	export let data: CoverLetter;
 </script>

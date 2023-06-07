@@ -1,12 +1,7 @@
 <!-- [company] the main company page -->
 <script lang="ts">
-	import Hero from '$lib/components/company/Hero.svelte';
-	import CoverLetter from '$lib/components/company/CoverLetter.svelte';
-	import Work from '$lib/components/Work.svelte';
-	import Profile from '$lib/components/company/Profile.svelte';
-	import Contact from '$lib/components/company/Contact.svelte';
-	import Experience from '$lib/components/company/Experience.svelte';
 	import type { LayoutData } from './$types';
+	import { Hero, CoverLetter, Profile, Contact, Experience } from '$lib/components';
 	import { company } from '$lib/stores';
 	import { onMount } from 'svelte';
 
@@ -23,5 +18,4 @@
 <CoverLetter data={data.page.coverLetter} />
 <Profile data={data.page.profile} />
 <Experience data={data.page.experience} />
-<Work headline={data.page.portfolio.headline} projects={data.projects} />
 <Contact />

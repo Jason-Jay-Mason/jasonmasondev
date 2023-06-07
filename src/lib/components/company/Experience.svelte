@@ -1,9 +1,8 @@
 <script lang="ts">
 	import type { Experience } from '$lib/types';
-	import LargeHeadline from '../LargeHeadline.svelte';
-	import AnimationFrame from '$lib/components/AnimationFrame.svelte';
-	import { onMount } from 'svelte';
+	import { LargeHeadline, AnimationFrame } from '$lib/components';
 	import { getStyleValue } from '$lib/utils';
+	import { onMount } from 'svelte';
 
 	export let data: Experience;
 

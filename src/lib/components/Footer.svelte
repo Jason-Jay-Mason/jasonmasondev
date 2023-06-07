@@ -1,6 +1,6 @@
 <script lang="ts">
-	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
 	import type { Navbar } from '$lib/types';
+	import { ThemeSwitcher } from '$lib/components';
 
 	export let data: Navbar = {
 		links: [

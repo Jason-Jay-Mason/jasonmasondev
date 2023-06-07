@@ -1,10 +1,10 @@
 <script lang="ts">
 	import type { Profile } from '$lib/types';
-	import HalfHeadline from '../HalfHeadline.svelte';
+	import { HalfHeadline } from '$lib/components';
 
 	export let data: Profile;
 
-	//We change this text on hover
+	//Change this text on hover
 	let featuredInterest: string = 'INTERESTS';
 </script>
 

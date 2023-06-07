@@ -1,9 +1,10 @@
 <script lang="ts">
 	import type { Link } from '$lib/types';
+	import { ThemeSwitcher } from '$lib/components';
+	import { company } from '$lib/stores';
+
 	export let data: Link[];
 	export let active: boolean;
-	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
-	import { company } from '$lib/stores';
 </script>
 
 <div class="modal" class:inactive={active === false}>

@@ -1,7 +1,5 @@
 <script lang="ts">
-	import Input from '$lib/components/Input.svelte';
-	import Button from '$lib/components/Button.svelte';
-	import Spinner from '$lib/components/Spinner.svelte';
+	import { Input, Button, Spinner } from '$lib/components';
 	import { fade } from 'svelte/transition';
 
 	//Set the form values in state
@@ -154,7 +152,7 @@
 </section>
 
 <style lang="scss">
-	@import '../../theme/breakpoints.scss';
+	@import '../theme/breakpoints.scss';
 	section {
 		display: flex;
 		max-width: $sm;

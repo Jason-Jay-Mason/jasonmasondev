@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Navbar } from '$lib/types';
-	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
-	import Modal from '$lib/components/Modal.svelte';
+	import { ThemeSwitcher, Modal } from '$lib/components';
 
 	export let data: Navbar = {
 		links: [

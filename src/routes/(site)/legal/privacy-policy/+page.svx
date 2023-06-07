@@ -2,7 +2,7 @@
 layout: legal
 ---
 <script>
-  import Button from '../../../lib/components/Button.svelte'
+	import { Button } from '$lib/components';
 </script>
 
 <Button>Hello from svx file!!</Button>

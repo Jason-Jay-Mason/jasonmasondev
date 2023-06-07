@@ -1,6 +1,6 @@
 <script lang="ts">
-	import Nav from '$lib/components/Nav.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import { Nav, Footer } from '$lib/components';
+	import { page } from '$app/stores';
 </script>
 
 <svelte:head>
@@ -12,9 +12,13 @@
 	/><meta name="robots" content="noindex" /><meta name="googlebot" content="noindex" />
 </svelte:head>
 
-<Nav />
-<slot />
-<Footer />
+{#if $page.error}
+	<Nav />
+	<slot />
+	<Footer />
+{:else}
+	<slot />
+{/if}
 
 <style lang="scss" global>
 	//Import our global syle sheet here
