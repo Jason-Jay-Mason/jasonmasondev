@@ -9,7 +9,7 @@
 		"resolveJsonModule": true,
 		"skipLibCheck": true,
 		"sourceMap": true,
-		"strict": true
+		"strict": true,
 	},
   "exclude":["node_modules","src/lib/components/svx-layouts/*.svelte"]
 }

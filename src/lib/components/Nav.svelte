@@ -1,27 +1,27 @@
 <script lang="ts">
-	import type { Navbar } from '$lib/types';
-	import { ThemeSwitcher, Modal } from '$lib/components';
+	import type { Navbar } from "$lib/types"
+	import { ThemeSwitcher, Modal } from "$lib/components"
 
 	export let data: Navbar = {
 		links: [
 			{
-				innerText: 'Projects',
-				href: '/projects'
+				innerText: "Projects",
+				href: "/projects"
 			},
 			{
-				innerText: 'Blog',
-				href: '/blog'
+				innerText: "Blog",
+				href: "/blog"
 			},
 			{
-				innerText: 'Mustachio',
-				href: '/mustachio'
+				innerText: "Mustachio",
+				href: "/mustachio"
 			}
 		]
-	};
+	}
 
-	let modalActive: boolean = false;
+	let modalActive: boolean = false
 	function toggleModal() {
-		modalActive = !modalActive;
+		modalActive = !modalActive
 	}
 </script>
 
@@ -64,7 +64,7 @@
 </nav>
 
 <style lang="scss">
-	@import '../../lib/theme/breakpoints.scss';
+	@import "../../lib/theme/breakpoints.scss";
 	nav {
 		position: sticky;
 		top: 0;
@@ -75,7 +75,7 @@
 		justify-content: space-between;
 		max-width: $xxl;
 		z-index: 100;
-		background-color: var(--color-bg-primary);
+		//background-color: var(--color-bg-primary);
 		margin: 0 auto;
 		padding: 0 var(--s-4);
 		@include md {
@@ -135,7 +135,7 @@
 			}
 			&::before,
 			&::after {
-				content: '';
+				content: "";
 				position: absolute;
 				left: 0;
 				height: 4px;

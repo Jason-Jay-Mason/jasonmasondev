@@ -1,14 +1,15 @@
 <script lang="ts">
-	import type { Cta } from '$lib/types';
-	import { Button } from '$lib/components';
+	import type { Cta } from "$lib/types"
+	import { Button, Mustachio } from "$lib/components"
 
-	export let hook: string;
-	export let cta: Cta;
-	export let subHeadline: string;
-	export let logo: string;
+	export let hook: string
+	export let cta: Cta
+	export let subHeadline: string
+	export let logo: string
 </script>
 
 <section id="top">
+	<Mustachio />
 	<div class="container">
 		<div class="intro">
 			<div class="mask">
@@ -21,6 +22,7 @@
 				<img src={logo} alt="Company Logo" />
 			</div>
 			<div class="line" />
+			<div class="line-background" />
 		</div>
 		<div class="blurb">
 			<p>
@@ -40,8 +42,9 @@
 </section>
 
 <style lang="scss">
-	@import '../theme/breakpoints.scss';
+	@import "../theme/breakpoints.scss";
 	section {
+		height: 100vh;
 		overflow: hidden;
 		padding: var(--s-11) 0 var(--s-11) 0;
 		@include sm {
@@ -57,7 +60,7 @@
 			}
 			&::before,
 			&::after {
-				content: '';
+				content: "";
 				position: absolute;
 				top: 55%;
 				height: 4px;
@@ -69,19 +72,17 @@
 			}
 			.cta {
 				position: relative;
+				z-index: 11;
 				width: 80%;
 				max-width: 210px;
-				z-index: 10;
 				margin: 0 auto;
 				padding: 0 var(--s-6);
-				background-color: var(--color-bg-primary);
 				@include sm {
 					width: 50%;
 				}
 				&::before,
 				&::after {
-					z-index: -1;
-					content: '';
+					content: "";
 					position: absolute;
 					left: 0;
 					right: 0;
@@ -106,7 +107,7 @@
 			margin: 0 auto;
 			&::before,
 			&::after {
-				content: '';
+				content: "";
 				position: absolute;
 				height: 2px;
 				width: 66%;
@@ -135,7 +136,7 @@
 			}
 			.left,
 			.right {
-				content: '';
+				content: "";
 				position: absolute;
 				height: 6px;
 				width: 76.7%;
@@ -174,10 +175,9 @@
 		.logo-container {
 			position: relative;
 			display: flex;
-			background-color: var(--color-bg-primary);
 			width: 120%;
 			.logo {
-				z-index: 1;
+				z-index: 3;
 				display: flex;
 				width: 79%;
 				margin: 0 auto;
@@ -193,8 +193,17 @@
 					width: 90%;
 				}
 			}
+			.line-background {
+				z-index: 1;
+				position: absolute;
+				right: 6%;
+				width: 88%;
+				height: 100%;
+				background-color: var(--color-bg-primary);
+			}
 			.line {
-				content: '';
+				z-index: 2;
+				content: "";
 				position: absolute;
 				width: 100%;
 				height: 7px;
@@ -203,12 +212,11 @@
 				background-color: var(--color-rock-200);
 				&::before,
 				&::after {
-					content: '';
+					content: "";
 					position: absolute;
 					background-color: var(--color-bg-primary);
 					width: 2%;
-					height: 200%;
-					top: -50%;
+					height: 100%;
 					bottom: 0;
 				}
 				&::before {
@@ -254,6 +262,8 @@
 			}
 		}
 		.container {
+			position: relative;
+			background-color: var(--color-bg-primary);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
