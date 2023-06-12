@@ -1,9 +1,8 @@
 <script lang="ts">
 	import { onMount } from "svelte"
+	import { fade } from "svelte/transition"
 	import { homeConfig } from "../config/game-configs"
 	import { Game } from "../game/"
-	import type { Coordinate } from "$lib/game/types"
-	import Contact from "./Contact.svelte"
 
 	export let ySpawnPosition: number
 	let canvas: HTMLCanvasElement
@@ -34,6 +33,7 @@
 			if (wasResized) {
 				canvas.width = container.clientWidth
 				canvas.height = container.clientHeight
+				game.globals.state.collision.resetGrid()
 				wasResized = false
 			}
 			game.update(f)
@@ -53,7 +53,7 @@
 </script>
 
 <svelte:window on:resize|passive={handleResize} />
-<canvas bind:this={canvas} />
+<canvas bind:this={canvas} transition:fade />
 
 <style lang="scss">
 	@import "../theme/breakpoints.scss";

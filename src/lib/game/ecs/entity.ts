@@ -5,7 +5,7 @@ import { Utils as U, Component as C } from '.';
 
 
 function createExplostion(w: IWorld, g: Globals, sourceEid: Entity): void {
-  let particles = 50
+  let particles = 70
   while (particles > 0) {
     createExplostionParticle(w, g, sourceEid)
     particles--
@@ -27,14 +27,14 @@ function createExplostionParticle(w: IWorld, g: Globals, sourceEid: Entity): voi
   Helpers.addComponents(w, eid, components)
 
 
-  C.ExplosionParticle.lifeTime[eid] = 900
-  C.ExplosionParticle.fade[eid] = U.getBoundedRandom(8, 9) * 0.003
+  C.ExplosionParticle.lifeTime[eid] = 1000
+  C.ExplosionParticle.fade[eid] = U.getBoundedRandom(8, 9) * 0.002
 
   C.Position.x[eid] = C.Position.x[sourceEid] + U.getBoundedRandom(5, 10)
   C.Position.y[eid] = C.Position.y[sourceEid] + U.getBoundedRandom(5, 10)
   C.Position.r[eid] = Math.random() * Math.PI
 
-  const velocityBound = 5
+  const velocityBound = 6
   C.Velocity.x[eid] = U.getBoundedRandom(-velocityBound, velocityBound)
   C.Velocity.y[eid] = U.getBoundedRandom(-velocityBound, velocityBound)
 
@@ -49,12 +49,23 @@ function createExplostionParticle(w: IWorld, g: Globals, sourceEid: Entity): voi
       C.Color[prop as keyof typeof C.Color][eid] = c[prop as keyof RGBA]
     }
   } else {
-    C.Size.w[eid] = U.getBoundedRandom(3, 4)
-    C.Size.h[eid] = U.getBoundedRandom(3, 5)
-    C.Color.r[eid] = 61
-    C.Color.g[eid] = 56
-    C.Color.b[eid] = 52
-    C.Color.a[eid] = 1
+    let isWhite = Math.random() > 0.5
+    if (isWhite) {
+      C.Size.w[eid] = U.getBoundedRandom(3, 4)
+      C.Size.h[eid] = U.getBoundedRandom(3, 5)
+      C.Color.r[eid] = 255
+      C.Color.g[eid] = 255
+      C.Color.b[eid] = 255
+      C.Color.a[eid] = 1
+    } else {
+      C.Size.w[eid] = U.getBoundedRandom(3, 4)
+      C.Size.h[eid] = U.getBoundedRandom(3, 5)
+      C.Color.r[eid] = 61
+      C.Color.g[eid] = 56
+      C.Color.b[eid] = 52
+      C.Color.a[eid] = 1
+    }
+
   }
 }
 

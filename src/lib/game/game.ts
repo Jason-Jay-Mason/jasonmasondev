@@ -103,7 +103,7 @@ function getSprites(c: Config): Sprites {
 
 }
 
-function createCollisionGrid(container: HTMLElement, cellSpacing: number): CollisionGrid {
+export function createCollisionGrid(container: HTMLElement, cellSpacing: number): CollisionGrid {
   let grid: Grid = {
     x: {},
     y: {}
@@ -121,14 +121,19 @@ function createCollisionGrid(container: HTMLElement, cellSpacing: number): Colli
     y += cellSpacing
   }
 
+  //This is nessisary because resizing the window will create a new coordinate grid
+  const coordinateValid = (c: Coordinate) => {
+    return grid.x[c.x] && grid.y[c.y]
+  }
+
   const setEnt = (last: Coordinate, next: Coordinate, e: Entity): Coordinate => {
+
     const nextKeys: Coordinate = {
       x: next.x - (next.x % cellSpacing),
       y: next.y - (next.y % cellSpacing)
     }
 
-    const coordinateKeyExists = grid.x[nextKeys.x] && grid.y[nextKeys.y]
-    if (!coordinateKeyExists) {
+    if (!coordinateValid(last) || !coordinateValid(nextKeys)) {
       return nextKeys
     }
 
@@ -142,8 +147,7 @@ function createCollisionGrid(container: HTMLElement, cellSpacing: number): Colli
   }
 
   const getNearbyEnts = (c: Coordinate, e: Entity): Entity[] => {
-    //We need to check to see if there is a map created for this coordinate because on resize it can take a few frames for the grid to adjust to the new screen size
-    if (!grid.x[c.x] || !grid.y[c.y]) {
+    if (!coordinateValid(c)) {
       return []
     }
 
@@ -168,8 +172,27 @@ function createCollisionGrid(container: HTMLElement, cellSpacing: number): Colli
     grid.y[c.y]?.remove(e)
   }
 
+  const resetGrid = (): void => {
+    grid = {
+      x: {},
+      y: {},
+    }
+    const xMax = container.clientWidth
+    const yMax = container.clientHeight
+
+    let x = 0
+    let y = 0
+    while (x < xMax || y < yMax) {
+      grid.x[x] = U.createSparseSet()
+      grid.y[y] = U.createSparseSet()
+      x += cellSpacing
+      y += cellSpacing
+    }
+  }
+
   return {
     grid,
+    resetGrid,
     lastUpdate: 0,
     setEnt,
     getNearbyEnts,

@@ -132,6 +132,7 @@ export type CollisionGrid = {
   setEnt: (last: Coordinate, next: Coordinate, e: Entity) => Coordinate
   getNearbyEnts: (c: Coordinate, e: Entity) => Entity[]
   removeEnt: (c: Coordinate, e: Entity) => void
+  resetGrid: () => void
 }
 
 type UpdateFunc = (frame: number) => void
