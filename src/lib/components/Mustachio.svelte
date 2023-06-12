@@ -2,7 +2,10 @@
 	import { onMount } from "svelte"
 	import { homeConfig } from "../config/game-configs"
 	import { Game } from "../game/"
+	import type { Coordinate } from "$lib/game/types"
+	import Contact from "./Contact.svelte"
 
+	export let ySpawnPosition: number
 	let canvas: HTMLCanvasElement
 	let container: any
 	let wasResized = true
@@ -15,7 +18,16 @@
 				canvas: canvas,
 				container: container
 			},
-			config: homeConfig
+			config: {
+				...homeConfig,
+				player: {
+					...homeConfig.player,
+					position: {
+						x: container.clientWidth / 2,
+						y: ySpawnPosition
+					}
+				}
+			}
 		})
 
 		const loop = (f: number) => {

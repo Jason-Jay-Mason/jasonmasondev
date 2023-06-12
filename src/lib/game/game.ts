@@ -142,12 +142,17 @@ function createCollisionGrid(container: HTMLElement, cellSpacing: number): Colli
   }
 
   const getNearbyEnts = (c: Coordinate, e: Entity): Entity[] => {
+    //We need to check to see if there is a map created for this coordinate because on resize it can take a few frames for the grid to adjust to the new screen size
+    if (!grid.x[c.x] || !grid.y[c.y]) {
+      return []
+    }
+
     const noEnemiesNearby = grid.x[c.x]?.dense?.length <= 1 || grid.y[c.y]?.dense?.length <= 1
     if (noEnemiesNearby) {
       return []
     }
 
-    const nearbyEnts = grid.x[c.x].dense.filter((eid) => {
+    const nearbyEnts = grid.x[c.x]?.dense.filter((eid) => {
       if (eid === e || !grid.y[c.y].has(eid)) {
         return false
       }
@@ -159,8 +164,8 @@ function createCollisionGrid(container: HTMLElement, cellSpacing: number): Colli
   }
 
   const removeEnt = (c: Coordinate, e: Entity): void => {
-    grid.x[c.x].remove(e)
-    grid.y[c.y].remove(e)
+    grid.x[c.x]?.remove(e)
+    grid.y[c.y]?.remove(e)
   }
 
   return {

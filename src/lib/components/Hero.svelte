@@ -1,25 +1,35 @@
 <script lang="ts">
 	import type { Cta } from "$lib/types"
 	import { Button, Mustachio } from "$lib/components"
+	import { onMount } from "svelte"
 
 	export let hook: string
 	export let cta: Cta
-	export let subHeadline: string
-	export let logo: string
+	export let headline: string
+
+	let introContainer: HTMLDivElement
+	let verticleCenter: number
+	onMount(() => {
+		if (introContainer) {
+			let { top, bottom } = introContainer.getBoundingClientRect()
+			verticleCenter = top + (bottom - top) / 2
+		}
+	})
 </script>
 
 <section id="top">
-	<Mustachio />
+	{#if verticleCenter}
+		<Mustachio ySpawnPosition={verticleCenter} />
+	{/if}
 	<div class="container">
-		<div class="intro">
+		<div class="intro" bind:this={introContainer}>
 			<div class="mask">
 				<img src="/pencil-bg.svg" alt="Stylized background" />
 			</div>
-			<h1>{subHeadline}</h1>
 		</div>
-		<div class="logo-container">
-			<div class="logo">
-				<img src={logo} alt="Company Logo" />
+		<div class="h1-container">
+			<div class="h1-background">
+				<h1>{headline}</h1>
 			</div>
 			<div class="line" />
 			<div class="line-background" />
@@ -33,6 +43,7 @@
 			<div class="cta">
 				<Button href={cta.hrefOrSrc} width="full">{cta.innerText}</Button>
 			</div>
+			<div class="bars" />
 		</div>
 		<div class="bottom">
 			<div class="left" />
@@ -52,51 +63,57 @@
 		}
 		.cta-container {
 			position: relative;
-			width: 87%;
-			margin-bottom: var(--s-9);
-			@include md {
-				width: 85%;
-				margin-bottom: var(--s-8);
-			}
-			&::before,
-			&::after {
-				content: "";
-				position: absolute;
-				top: 55%;
-				height: 4px;
-				width: 23%;
-				background-color: var(--color-rock-200);
-			}
-			&::after {
-				right: 0;
+			width: 78vw;
+			max-width: 400px;
+			margin-bottom: var(--s-10);
+			@include sm {
+				width: 75%;
+				margin-bottom: var(--s-9);
 			}
 			.cta {
 				position: relative;
 				z-index: 11;
 				width: 80%;
-				max-width: 210px;
+				max-width: 220px;
 				margin: 0 auto;
 				padding: 0 var(--s-6);
 				@include sm {
-					width: 50%;
+					width: 90%;
 				}
+			}
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				top: 50%;
+				height: 4px;
+				background-color: var(--color-pencil-100);
+				min-width: 18%;
+				@include sm {
+					width: 20%;
+				}
+			}
+			&::after {
+				right: 0;
+			}
+			.bars {
 				&::before,
 				&::after {
 					content: "";
 					position: absolute;
 					left: 0;
 					right: 0;
-					height: 2px;
+					height: 4px;
 					margin: 0 auto;
-					background-color: var(--color-rock-200);
+					background-color: var(--color-pencil-100);
 				}
 				&::before {
 					top: var(--s-11);
-					width: 83%;
+					width: 50%;
 				}
 				&::after {
-					top: calc(var(--s-11) + var(--s-7));
-					width: 43%;
+					top: calc(var(--s-11) + var(--s-8));
+					width: 23%;
 				}
 			}
 		}
@@ -105,45 +122,16 @@
 			width: 143%;
 			transform: translateX(-15%) translateY(0px);
 			margin: 0 auto;
-			&::before,
-			&::after {
-				content: "";
-				position: absolute;
-				height: 2px;
-				width: 66%;
-			}
-			&::before {
-				left: 0;
-				transform: translateX(-19.5%) translateY(-15px) rotate(25deg);
-				background: linear-gradient(
-					90deg,
-					transparent 0%,
-					transparent 50%,
-					var(--color-rock-100) 50%,
-					var(--color-rock-100) 100%
-				);
-			}
-			&::after {
-				transform: translateX(19.5%) translateY(-15px) rotate(-25deg);
-				right: 0;
-				background: linear-gradient(
-					90deg,
-					var(--color-rock-100) 0%,
-					var(--color-rock-100) 50%,
-					transparent 50%,
-					transparent 100%
-				);
-			}
 			.left,
 			.right {
 				content: "";
 				position: absolute;
 				height: 6px;
-				width: 76.7%;
+				width: 74.7%;
 			}
 			.left {
 				left: 0;
-				transform: translateX(-30%) rotate(25deg);
+				transform: translateX(-29.7%) rotate(20deg);
 				background: linear-gradient(
 					90deg,
 					transparent 0%,
@@ -153,7 +141,7 @@
 				);
 			}
 			.right {
-				transform: translateX(30%) rotate(-25deg);
+				transform: translateX(29.7%) rotate(-20deg);
 				right: 0;
 				background: linear-gradient(
 					90deg,
@@ -166,33 +154,40 @@
 		}
 		.blurb {
 			text-align: center;
+			font-size: 14px;
 			width: 90%;
-			padding: var(--s-9) 0;
+			padding: var(--s-8) 0;
 			@include md {
-				width: 85%;
+				width: 88%;
 			}
 		}
-		.logo-container {
+		.h1-container {
 			position: relative;
 			display: flex;
-			width: 120%;
-			.logo {
-				z-index: 3;
-				display: flex;
-				width: 79%;
-				margin: 0 auto;
-				align-items: center;
-				justify-content: center;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			width: 125%;
+			.h1-background {
+				z-index: 5;
 				background-color: var(--color-bg-primary);
-				@include md {
-					padding: 0;
-				}
-				img {
-					max-height: var(--s-11);
-					filter: var(--icon-filter);
-					width: 90%;
+				padding: 0 var(--s-8);
+				h1 {
+					position: relative;
+					padding: 0 var(--s-4);
+					font-size: 10vw;
+					font-family: var(--font-body);
+					color: var(--color-rock-200);
+					font-weight: 800;
+					letter-spacing: -3px;
+					border: dashed var(--color-pencil-100);
+					border-width: 5px 0 5px 0;
+					@include sm {
+						font-size: calc(var(--text-lg) + 15px);
+					}
 				}
 			}
+
 			.line-background {
 				z-index: 1;
 				position: absolute;
@@ -202,8 +197,8 @@
 				background-color: var(--color-bg-primary);
 			}
 			.line {
-				z-index: 2;
 				content: "";
+				z-index: 2;
 				position: absolute;
 				width: 100%;
 				height: 7px;
@@ -229,13 +224,25 @@
 		}
 		.intro {
 			position: relative;
-			width: 90%;
-			margin: var(--s-8) auto var(--s-7) auto;
+			height: var(--s-9);
+			width: 80%;
+			margin: var(--s-9) auto var(--s-7) auto;
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+			.mustache {
+				z-index: 3;
+				width: 60px;
+				@include sm {
+					width: 70px;
+				}
+			}
 			.mask {
+				z-index: 0;
 				position: absolute;
 				width: 100%;
-				height: 40%;
-				top: 27%;
+				height: 150%;
 				margin: auto 0;
 				overflow: hidden;
 				img {
@@ -247,32 +254,22 @@
 					opacity: var(--opacity-pencilbg);
 				}
 			}
-			h1 {
-				text-align: center;
-				transform: rotate(-1deg);
-				font-size: calc(var(--text-xl) + 1px);
-				color: var(--color-rock-200);
-				font-family: var(--font-subheadline);
-				@include sm {
-					font-size: calc(var(--text-xl) + 4px);
-				}
-				@include md {
-					font-size: var(--text-xl);
-				}
-			}
 		}
 		.container {
 			position: relative;
+			margin: 0 auto;
 			background-color: var(--color-bg-primary);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			width: 85%;
-			max-width: 525px;
+			max-width: 500px;
+			width: 90%;
 			border: 6px var(--color-rock-200);
 			border-style: solid solid none solid;
-			margin: 0 auto var(--s-13) auto;
+			@include sm {
+				width: 80%;
+			}
 		}
 	}
 </style>

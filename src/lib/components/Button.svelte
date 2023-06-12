@@ -1,15 +1,15 @@
 <script lang="ts">
-	export let href: string | undefined = undefined;
-	export let selected: boolean = false;
-	type Width = 'full' | 'fit-content';
-	export let width: Width = 'fit-content';
-	export let type: string | undefined = undefined;
-	export let target: string | undefined = undefined;
+	export let href: string | undefined = undefined
+	export let selected: boolean = false
+	type Width = "full" | "fit-content"
+	export let width: Width = "fit-content"
+	export let type: string | undefined = undefined
+	export let target: string | undefined = undefined
 </script>
 
 {#if href}
 	<a {href} {target}>
-		<button class:full={width === 'full'} class:fit-content={width === 'fit-content'}
+		<button class:full={width === "full"} class:fit-content={width === "fit-content"}
 			><slot /></button
 		>
 	</a>
@@ -17,13 +17,13 @@
 	<button
 		{type}
 		class:selected={selected === true}
-		class:fullWidth={width === 'full'}
-		class:fit-content={width === 'fit-content'}><slot /></button
+		class:fullWidth={width === "full"}
+		class:fit-content={width === "fit-content"}><slot /></button
 	>
 {/if}
 
 <style lang="scss">
-	@import '../theme/breakpoints.scss';
+	@import "../theme/breakpoints.scss";
 	.full {
 		width: 98%;
 	}
@@ -38,6 +38,7 @@
 		color: var(--color-text-body);
 		letter-spacing: 0.11em;
 		font-family: var(--font-headline);
+		font-weight: 700;
 		border: 2px solid var(--color-rock-100);
 		background-color: var(--color-bg-primary);
 		padding: var(--s-4) var(--s-8);
@@ -45,7 +46,7 @@
 			font-size: calc(var(--text-base) + 5px);
 		}
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0px;
 			left: 0px;

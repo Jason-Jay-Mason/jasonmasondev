@@ -1,16 +1,15 @@
 <script lang="ts">
-	import type { Cta } from '$lib/types';
-	import { Hero } from '$lib/components';
+	import type { Cta } from "$lib/types"
+	import { Hero } from "$lib/components"
 
 	const cta: Cta = {
-		hrefOrSrc: '/',
+		hrefOrSrc: "/",
 		innerText: "LET'S TALK",
 		isVideo: false
-	};
+	}
 	const hook =
-		'Mustacheless web developer with a mustache as his logo. Let me help you knock out your next project. Click the button below and we’ll talk!';
-	const logo = '/hero-logo.svg';
-	const subHeadline = 'Developer - Creative';
+		" What’s up! I’m a web developer and marketer building highly customized Martech stacks. Click the button below and let’s talk about how I can knock out your next project. "
+	const headline = "JASON MASON"
 </script>
 
-<Hero {cta} {hook} {logo} {subHeadline} />
+<Hero {cta} {hook} {headline} />

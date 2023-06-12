@@ -5,7 +5,7 @@ import { Utils as U, Component as C } from '.';
 
 
 function createExplostion(w: IWorld, g: Globals, sourceEid: Entity): void {
-  let particles = U.getBoundedRandom(50, 60, 0)
+  let particles = 50
   while (particles > 0) {
     createExplostionParticle(w, g, sourceEid)
     particles--
@@ -28,19 +28,19 @@ function createExplostionParticle(w: IWorld, g: Globals, sourceEid: Entity): voi
 
 
   C.ExplosionParticle.lifeTime[eid] = 900
-  C.ExplosionParticle.fade[eid] = U.getBoundedRandom(8, 9) * 0.001
+  C.ExplosionParticle.fade[eid] = U.getBoundedRandom(8, 9) * 0.003
 
   C.Position.x[eid] = C.Position.x[sourceEid] + U.getBoundedRandom(5, 10)
   C.Position.y[eid] = C.Position.y[sourceEid] + U.getBoundedRandom(5, 10)
   C.Position.r[eid] = Math.random() * Math.PI
 
-  const velocityBound = 8
+  const velocityBound = 5
   C.Velocity.x[eid] = U.getBoundedRandom(-velocityBound, velocityBound)
   C.Velocity.y[eid] = U.getBoundedRandom(-velocityBound, velocityBound)
 
   C.Spawn.created[eid] = g.state.frame
 
-  const isSourceParticle = Math.random() < 0.6
+  const isSourceParticle = Math.random() < 0.5
   if (isSourceParticle) {
     C.Size.w[eid] = U.getBoundedRandom(2, 9)
     C.Size.h[eid] = U.getBoundedRandom(5, 12)

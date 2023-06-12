@@ -66,20 +66,19 @@
 <style lang="scss">
 	@import "../../lib/theme/breakpoints.scss";
 	nav {
+		width: 100%;
 		position: sticky;
 		top: 0;
-		width: 100%;
 		height: 50px;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		max-width: $xxl;
 		z-index: 100;
-		//background-color: var(--color-bg-primary);
 		margin: 0 auto;
 		padding: 0 var(--s-4);
 		@include md {
-			position: absolute;
+			position: relative;
 			height: 90px;
 			padding: var(--s-7) var(--s-8);
 		}
@@ -106,11 +105,6 @@
 				transform: rotate(45deg) translate(-7px, -7px);
 				transition: all 0.2s;
 			}
-		}
-		.menu-button {
-			display: flex;
-			flex-direction: column;
-			background-color: none;
 		}
 		.hamburger {
 			background: none;

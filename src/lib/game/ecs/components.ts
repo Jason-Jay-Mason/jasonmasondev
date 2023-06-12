@@ -2,11 +2,11 @@ import { Types as T, defineComponent } from 'bitecs'
 
 const Size = defineComponent({
   //width
-  w: T.i8,
+  w: T.i16,
   //height 
-  h: T.i8,
+  h: T.i16,
   //padding (radius)
-  p: T.i8
+  p: T.i16
 })
 
 const Position = defineComponent({

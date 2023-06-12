@@ -27,7 +27,6 @@ export function collision(w: IWorld, g: Globals): void {
           }
 
           if (U.isPlayer(w, cid) && Helpers.isColliding(eid, cid) && Helpers.collisionDelayReached(eid, g)) {
-            console.log('collide with mustache')
             if (g.config.player?.godMode) {
               C.Collides.frame[eid] = g.state.frame
 

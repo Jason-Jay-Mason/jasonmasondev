@@ -56,8 +56,8 @@ const Helpers = {
 }
 
 function getSpawnLocation(c: HTMLCanvasElement, q: SpawnQuadrant): SpawnLocation {
-  const velMin = 0.2
-  const velMax = 1
+  const velMin = 0.5
+  const velMax = 1.5
 
   switch (q) {
     case SpawnQuadrant.topl:
