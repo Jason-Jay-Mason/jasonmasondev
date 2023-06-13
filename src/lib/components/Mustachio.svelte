@@ -4,7 +4,6 @@
 	import { homeConfig } from "../config/game-configs"
 	import { Game } from "../game/"
 
-	export let ySpawnPosition: number
 	let canvas: HTMLCanvasElement
 	let container: any
 	let wasResized = true
@@ -17,16 +16,7 @@
 				canvas: canvas,
 				container: container
 			},
-			config: {
-				...homeConfig,
-				player: {
-					...homeConfig.player,
-					position: {
-						x: container.clientWidth / 2,
-						y: ySpawnPosition
-					}
-				}
-			}
+			config: homeConfig
 		})
 
 		const loop = (f: number) => {

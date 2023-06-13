@@ -1,5 +1,5 @@
 import type { Config } from "$lib/game/types";
-const sizeRatio = 10.5
+const sizeRatio = 12
 const braze = {
   imgPath: 'brz-logo.svg',
   size: {
@@ -347,12 +347,12 @@ export const homeConfig: Config = {
       shoot: 'a'
     },
     size: {
-      w: 3.0 * sizeRatio,
-      h: 6.5 * sizeRatio
+      w: 2.5 * sizeRatio,
+      h: 6.0 * sizeRatio
     },
     position: {
-      x: -50,
-      y: 600,
+      x: -30,
+      y: 300,
     },
     shipPath: '/mustache.svg',
     thrusterPath: '/flame.svg',

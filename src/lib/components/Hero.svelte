@@ -1,28 +1,16 @@
 <script lang="ts">
 	import type { Cta } from "$lib/types"
-	import { Button, Mustachio } from "$lib/components"
-	import { onMount } from "svelte"
+	import { Button } from "$lib/components"
 
 	export let hook: string
 	export let cta: Cta
 	export let headline: string
-
-	let introContainer: HTMLDivElement
-	let verticleCenter: number
-	onMount(() => {
-		if (introContainer) {
-			let { top, bottom } = introContainer.getBoundingClientRect()
-			verticleCenter = top + (bottom - top) / 2
-		}
-	})
 </script>
 
 <section id="top">
-	{#if verticleCenter}
-		<Mustachio ySpawnPosition={verticleCenter} />
-	{/if}
 	<div class="container">
-		<div class="intro" bind:this={introContainer}>
+		<div class="intro">
+			<img class="mustache" alt="mustache-logo" src="/hero-mustache.svg" />
 			<div class="mask">
 				<img src="/pencil-bg.svg" alt="Stylized background" />
 			</div>
@@ -55,11 +43,13 @@
 <style lang="scss">
 	@import "../theme/breakpoints.scss";
 	section {
-		height: 100vh;
+		position: relative;
+		height: 100%;
+		width: 100%;
 		overflow: hidden;
 		padding: var(--s-11) 0 var(--s-11) 0;
 		@include sm {
-			padding: var(--s-13) var(--s-4) var(--s-13) var(--s-4);
+			padding: var(--s-11) var(--s-4) var(--s-15) var(--s-4);
 		}
 		.cta-container {
 			position: relative;
@@ -234,8 +224,9 @@
 			.mustache {
 				z-index: 3;
 				width: 60px;
+				filter: var(--icon-filter);
 				@include sm {
-					width: 70px;
+					width: 90px;
 				}
 			}
 			.mask {

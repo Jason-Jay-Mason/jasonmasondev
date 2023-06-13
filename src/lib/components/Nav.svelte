@@ -176,11 +176,13 @@
 			}
 		}
 		.logo {
+			position: relative;
+			top: 5px;
 			width: 80px;
 			padding-right: var(--s-6);
 			filter: var(--icon-filter);
 			@include lg {
-				width: 103px;
+				width: 120px;
 				padding-right: var(--s-8);
 			}
 		}
