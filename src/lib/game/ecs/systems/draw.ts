@@ -1,5 +1,6 @@
 import type { Entity, Globals } from "../../types";
 import { Component as C } from "../";
+import { addComponent, IWorld } from "bitecs";
 
 function hitBox(e: Entity, ctx: CanvasRenderingContext2D): void {
   ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
@@ -84,10 +85,10 @@ function player(e: Entity, g: Globals, ctx: CanvasRenderingContext2D): void {
   ctx.resetTransform()
 }
 
-function particle(e: Entity, g: Globals, ctx: CanvasRenderingContext2D): void {
+function particle(e: Entity, g: Globals, w: IWorld, ctx: CanvasRenderingContext2D): void {
   let timeSinceSpawn = g.state.frame - C.Spawn.created[e]
   if (timeSinceSpawn > C.ExplosionParticle.lifeTime[e]) {
-    C.Spawn.destroyed[e] = g.state.frame
+    addComponent(w, C.Destroy, e)
   } else {
     const color = `rgba(${C.Color.r[e]},${C.Color.g[e]},${C.Color.b[e]}, ${C.Color.a[e]})`
     ctx.fillStyle = color

@@ -15,7 +15,7 @@
 
 	let y = 1
 	function hanldeParalax() {
-		y = 0.3 * window.scrollY
+		y = 0.2 * window.scrollY
 	}
 </script>
 
@@ -31,7 +31,7 @@
 	.mustachio {
 		z-index: 6;
 		position: absolute;
-		height: 150vh;
+		height: 120vh;
 		width: 100%;
 	}
 	.test {

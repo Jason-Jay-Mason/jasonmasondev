@@ -87,8 +87,8 @@ const neovim = {
 const javascript = {
   imgPath: '/js-logo.svg',
   size: {
-    h: 4.5 * sizeRatio,
-    w: 4.5 * sizeRatio,
+    h: 4.0 * sizeRatio,
+    w: 4.0 * sizeRatio,
   },
   colors: [
     {
@@ -329,7 +329,7 @@ export const homeConfig: Config = {
   minEnemies: 14,
   maxEnemies: 15,
   displayHud: true,
-  showFps: false,
+  showFps: true,
   showHitBox: false,
   npc: true,
   lasers: [
