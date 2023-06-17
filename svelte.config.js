@@ -39,7 +39,8 @@ const config = {
     mdsvex({
       extensions: ['.md', '.svx'],
       layout: {
-        legal: path.join(dirname, './src/lib/components/svx-layouts/legal.svelte')
+        legal: path.join(dirname, './src/lib/components/svx-layouts/legal.svelte'),
+        home: path.join(dirname, './src/lib/components/svx-layouts/home.svelte')
       },
       smartypants: {
         dashes: 'oldschool'

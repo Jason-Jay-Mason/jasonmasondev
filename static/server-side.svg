@@ -1,0 +1,39 @@
+<svg width="342" height="104" viewBox="0 0 342 104" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <path d="M212 31H341V5C341 2.79086 339.209 1 337 1H216C213.791 1 212 2.79086 212 5V31Z"
+    fill="white" stroke="#3D3834" stroke-width="2" />
+  <circle cx="304" cy="17" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
+  <circle cx="325" cy="17" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
+  <circle cx="315" cy="17" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
+  <path
+    d="M302.5 52.5C302.5 55.7489 299.436 58.5 295.5 58.5C291.564 58.5 288.5 55.7489 288.5 52.5C288.5 49.2511 291.564 46.5 295.5 46.5C299.436 46.5 302.5 49.2511 302.5 52.5Z"
+    fill="white" stroke="#D1D1D1" />
+  <rect width="25" height="6" transform="matrix(1 0 0 -1 221 15)" fill="#C0C0C0" />
+  <rect width="11" height="5" transform="matrix(1 0 0 -1 221 23)" fill="#D1D1D1" />
+  <rect width="12" height="5" transform="matrix(1 0 0 -1 234 23)" fill="#E7E7E7" />
+  <rect x="1" y="-1" width="129" height="29" transform="matrix(1 0 0 -1 211 67)" fill="white"
+    stroke="#3D3834" stroke-width="2" />
+  <path
+    d="M280.65 53C280.65 55.5375 278.376 57.65 275.5 57.65C272.624 57.65 270.35 55.5375 270.35 53C270.35 50.4625 272.624 48.35 275.5 48.35C278.376 48.35 280.65 50.4625 280.65 53Z"
+    fill="white" stroke="#828282" stroke-width="0.7" />
+  <circle cx="324" cy="53" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
+  <circle cx="231" cy="53" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
+  <path d="M212 99C212 101.209 213.791 103 216 103H337C339.209 103 341 101.209 341 99V74H212V99Z"
+    fill="white" stroke="#3D3834" stroke-width="2" />
+  <circle cx="323" cy="89" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
+  <circle cx="230" cy="89" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
+  <circle cx="275.5" cy="88.5" r="5.15" fill="white" stroke="#828282" stroke-width="0.7" />
+  <rect x="1" y="-1" width="138" height="92" transform="matrix(1 0 0 -1 9 92)" fill="white"
+    stroke="#3D3834" stroke-width="2" />
+  <rect x="0.5" y="-0.5" width="126" height="75" transform="matrix(1 0 0 -1 15 83)" fill="white"
+    stroke="#3D3834" />
+  <rect width="125" height="6" transform="matrix(1 0 0 -1 16 15)" fill="#E6E6E6" />
+  <rect width="69" height="5" transform="matrix(1 0 0 -1 23 26)" fill="#D1D1D1" />
+  <rect width="53" height="7" transform="matrix(1 0 0 -1 23 39)" fill="#D6D6D6" />
+  <rect width="69" height="6" transform="matrix(1 0 0 -1 23 49)" fill="#DCDCDC" />
+  <rect width="69" height="5" transform="matrix(1 0 0 -1 23 59)" fill="#F2F2F2" />
+  <path d="M1 99C1 101.209 2.79086 103 5 103H153C155.209 103 157 101.209 157 99V90H1V99Z"
+    fill="white" stroke="#3D3834" stroke-width="2" />
+  <path
+    d="M64.5 91C64.5 93.4853 66.5147 95.5 69 95.5H87C89.4853 95.5 91.5 93.4853 91.5 91V89.5H64.5V91Z"
+    fill="white" stroke="#3D3834" />
+</svg>

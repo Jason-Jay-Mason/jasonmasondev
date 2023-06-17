@@ -1,7 +1,7 @@
 import type { Config } from "$lib/game/types";
 const sizeRatio = 12
 const braze = {
-  imgPath: 'brz-logo.svg',
+  imgPath: '/brz-logo.svg',
   size: {
     h: 5 * sizeRatio,
     w: 5 * sizeRatio,
@@ -16,7 +16,7 @@ const braze = {
   ]
 }
 const figma = {
-  imgPath: 'fig-logo.svg',
+  imgPath: '/fig-logo.svg',
   size: {
     h: 5.5 * sizeRatio,
     w: 3.5 * sizeRatio,
@@ -64,7 +64,7 @@ const hubspot = {
   ]
 }
 const neovim = {
-  imgPath: 'vim-logo.svg',
+  imgPath: '/vim-logo.svg',
   size: {
     h: 5 * sizeRatio,
     w: 5 * sizeRatio,
@@ -210,7 +210,7 @@ const svelte = {
   ]
 }
 const typescript = {
-  imgPath: 'ts-logo.svg',
+  imgPath: '/ts-logo.svg',
   size: {
     h: 4.5 * sizeRatio,
     w: 4.5 * sizeRatio,
@@ -231,7 +231,7 @@ const typescript = {
   ]
 }
 const next = {
-  imgPath: 'njs-logo.svg',
+  imgPath: '/njs-logo.svg',
   size: {
     h: 5.0 * sizeRatio,
     w: 5.0 * sizeRatio

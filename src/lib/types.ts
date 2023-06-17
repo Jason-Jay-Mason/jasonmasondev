@@ -1,6 +1,12 @@
 
 export type IterableGlob = [path: string, resolver: Function]
 
+export interface GridLinkData {
+  headline: string
+  hook: string
+  href: string
+  animationComponent?: string
+}
 
 //Auth 
 export interface AuthData {
@@ -8,7 +14,7 @@ export interface AuthData {
   provider: string
 }
 
-// Pages/ Components
+// Pages Components
 export interface Headline {
   main: string
   sub: string

@@ -1,0 +1,271 @@
+<script lang="ts">
+	import { AnimatedGridLink } from "$lib/components"
+	import type { GridLinkData } from "$lib/types"
+
+	export let link: GridLinkData
+	const { headline, hook, href } = link
+</script>
+
+<a {href} class="gridlink">
+	<AnimatedGridLink {headline} {hook}>
+		<svg
+			width="348"
+			height="174"
+			viewBox="0 0 348 174"
+			fill="none"
+			xmlns="http://www.w3.org/2000/svg"
+		>
+			<g id="serverside">
+				<g id="static">
+					<path
+						id="server-top"
+						d="M214 66H343V40C343 37.7909 341.209 36 339 36H218C215.791 36 214 37.7909 214 40V66Z"
+						fill="white"
+						stroke="#3D3834"
+						stroke-width="2"
+					/>
+					<rect
+						id="server-middle"
+						x="1"
+						y="-1"
+						width="129"
+						height="29"
+						transform="matrix(1 0 0 -1 213 102)"
+						fill="white"
+						stroke="#3D3834"
+						stroke-width="2"
+					/>
+					<path
+						id="server-bottom"
+						d="M218 138H339C341.209 138 343 136.209 343 134V109H214V134C214 136.209 215.791 138 218 138Z"
+						fill="white"
+						stroke="#3D3834"
+						stroke-width="2"
+					/>
+					<rect
+						id="laptop-top"
+						x="1"
+						y="-1"
+						width="138"
+						height="92"
+						transform="matrix(1 0 0 -1 11 127)"
+						fill="white"
+						stroke="#3D3834"
+						stroke-width="2"
+					/>
+					<rect
+						id="laptom-screen"
+						x="0.5"
+						y="-0.5"
+						width="126"
+						height="75"
+						transform="matrix(1 0 0 -1 17 118)"
+						fill="white"
+						stroke="#3D3834"
+					/>
+					<path
+						id="laptop-bottom"
+						d="M7 138H155C157.209 138 159 136.209 159 134V125H3V134C3 136.209 4.79086 138 7 138Z"
+						fill="white"
+						stroke="#3D3834"
+						stroke-width="2"
+					/>
+					<path
+						id="laptop-notch"
+						d="M71 130.5H89C91.4853 130.5 93.5 128.485 93.5 126V124.5H66.5V126C66.5 128.485 68.5147 130.5 71 130.5Z"
+						fill="white"
+						stroke="#3D3834"
+					/>
+					<path id="track2" d="M80 145V168H278V145" stroke="#828282" stroke-width="1.2" />
+					<path id="track1" d="M80 31V6H278V31" stroke="#828282" stroke-width="1.2" />
+					<rect
+						id="navbar"
+						width="125"
+						height="6"
+						transform="matrix(1 0 0 -1 18 50)"
+						fill="#E6E6E6"
+					/>
+				</g>
+				<g id="lights">
+					<rect id="1" width="25" height="6" transform="matrix(1 0 0 -1 223 50)" fill="#C0C0C0" />
+					<rect id="2" width="11" height="5" transform="matrix(1 0 0 -1 223 58)" fill="#D1D1D1" />
+					<rect id="3" width="12" height="5" transform="matrix(1 0 0 -1 236 58)" fill="#E7E7E7" />
+				</g>
+				<g id="processor">
+					<circle
+						id="1_2"
+						cx="306"
+						cy="52"
+						r="3.65"
+						fill="white"
+						stroke="#828282"
+						stroke-width="0.7"
+					/>
+					<circle
+						id="2_2"
+						cx="317"
+						cy="52"
+						r="3.65"
+						fill="white"
+						stroke="#828282"
+						stroke-width="0.7"
+					/>
+					<circle
+						id="3_2"
+						cx="327"
+						cy="52"
+						r="3.65"
+						fill="white"
+						stroke="#828282"
+						stroke-width="0.7"
+					/>
+					<circle
+						id="4"
+						cx="233"
+						cy="88"
+						r="3.65"
+						fill="white"
+						stroke="#828282"
+						stroke-width="0.7"
+					/>
+					<circle
+						id="5"
+						cx="326"
+						cy="88"
+						r="3.65"
+						fill="white"
+						stroke="#828282"
+						stroke-width="0.7"
+					/>
+					<path
+						id="6"
+						d="M282.65 88C282.65 90.5375 280.376 92.65 277.5 92.65C274.624 92.65 272.35 90.5375 272.35 88C272.35 85.4625 274.624 83.35 277.5 83.35C280.376 83.35 282.65 85.4625 282.65 88Z"
+						fill="white"
+						stroke="#828282"
+						stroke-width="0.7"
+					/>
+					<circle
+						id="7"
+						cx="232"
+						cy="124"
+						r="3.65"
+						fill="white"
+						stroke="#828282"
+						stroke-width="0.7"
+					/>
+					<circle
+						id="8"
+						cx="325"
+						cy="124"
+						r="3.65"
+						fill="white"
+						stroke="#828282"
+						stroke-width="0.7"
+					/>
+					<circle
+						id="9"
+						cx="277.5"
+						cy="123.5"
+						r="5.15"
+						fill="white"
+						stroke="#828282"
+						stroke-width="0.7"
+					/>
+				</g>
+				<g id="page">
+					<rect id="1_3" width="69" height="5" transform="matrix(1 0 0 -1 25 61)" fill="#D1D1D1" />
+					<rect id="2_3" width="53" height="7" transform="matrix(1 0 0 -1 25 74)" fill="#D6D6D6" />
+					<rect id="3_3" width="69" height="6" transform="matrix(1 0 0 -1 25 84)" fill="#DCDCDC" />
+					<rect id="4_2" width="69" height="5" transform="matrix(1 0 0 -1 25 94)" fill="#F2F2F2" />
+				</g>
+				<path
+					id="data-2"
+					d="M281 141L281 144C281 145.657 279.657 147 278 147V147C276.343 147 275 145.657 275 144L275 141L281 141Z"
+					fill="url(#paint0_linear_795_2)"
+				/>
+				<path
+					id="data-1"
+					d="M77 35L77 33C77 31.3431 78.3431 30 80 30V30C81.6569 30 83 31.3431 83 33L83 35L77 35Z"
+					fill="url(#paint1_linear_795_2)"
+				/>
+				<g id="spinner">
+					<path
+						id="edge-1"
+						d="M86.5104 74.4896C85.7211 73.7003 84.7841 73.0742 83.7528 72.647C82.7215 72.2199 81.6162 72 80.5 72C79.3838 72 78.2785 72.2199 77.2472 72.647C76.2159 73.0742 75.2789 73.7003 74.4896 74.4896L80.5 80.5L86.5104 74.4896Z"
+						fill="#D1D1D1"
+					/>
+					<path
+						id="edge-2"
+						d="M74.4896 86.5104C75.2789 87.2997 76.2159 87.9258 77.2472 88.353C78.2785 88.7801 79.3838 89 80.5 89C81.6162 89 82.7215 88.7801 83.7528 88.353C84.7841 87.9258 85.7211 87.2997 86.5104 86.5104L80.5 80.5L74.4896 86.5104Z"
+						fill="#D1D1D1"
+					/>
+					<circle id="center" cx="80.5" cy="80.5005" r="7.12162" fill="white" />
+				</g>
+			</g>
+			<defs>
+				<linearGradient
+					id="paint0_linear_795_2"
+					x1="275"
+					y1="147"
+					x2="275"
+					y2="140.909"
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop offset="0.28125" stop-color="#757575" />
+					<stop offset="1" stop-color="#707070" stop-opacity="0" />
+				</linearGradient>
+				<linearGradient
+					id="paint1_linear_795_2"
+					x1="83"
+					y1="30"
+					x2="83"
+					y2="35.0758"
+					gradientUnits="userSpaceOnUse"
+				>
+					<stop offset="0.28125" stop-color="#757575" />
+					<stop offset="1" stop-color="#707070" stop-opacity="0" />
+				</linearGradient>
+			</defs>
+		</svg>
+	</AnimatedGridLink>
+</a>
+
+<style lang="scss">
+	@keyframes spinner {
+		0% {
+			opacity: 0;
+		}
+		5% {
+			opacity: 1;
+			transform: rotate(0);
+		}
+		60% {
+			opacity: 1;
+			transform: rotate(1080deg);
+		}
+		60% {
+			opacity: 1;
+		}
+		65%,
+		100% {
+			opacity: 0;
+		}
+	}
+	a:hover svg {
+		#spinner {
+			animation: spinner 8s linear infinite;
+			transform: rotate(0);
+			transform-origin: center;
+			transform-box: fill-box;
+		}
+	}
+
+	#spinner {
+		opacity: 1;
+	}
+
+	svg {
+		width: 100%;
+		padding: 0 var(--s-6);
+	}
+</style>

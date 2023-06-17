@@ -7,6 +7,11 @@ export { default as Footer } from './Footer.svelte'
 export { default as Button } from './Button.svelte'
 export { default as LargeHeadline } from './LargeHeadline.svelte'
 export { default as HalfHeadline } from './HalfHeadline.svelte'
+export { default as GridLink } from './GridLink.svelte'
+export { default as ServerSideAnimation } from './ServerSideAnimation.svelte'
+export { default as AnimatedGridLink } from './AnimatedGridLink.svelte'
+
+
 
 //A spinner for loading
 export { default as Spinner } from './Spinner.svelte'
@@ -23,6 +28,7 @@ export { default as Input } from './Input.svelte'
 //Page sections
 //An error display for +error.svelte pages
 export { default as Error } from './Error.svelte'
+export { default as LinkGrid } from './LinkGrid.svelte'
 
 //Contact form
 export { default as Contact } from './Contact.svelte'
@@ -41,3 +47,4 @@ export { default as Profile } from './company/Profile.svelte'
 
 //Utilities and higher order components
 export { default as AnimationFrame } from './AnimationFrame.svelte'
+export { default as AnimationComponent } from './AnimationComponent.svelte'

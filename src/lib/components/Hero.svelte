@@ -47,7 +47,7 @@
 		height: 100%;
 		width: 100%;
 		overflow: hidden;
-		padding: var(--s-11) 0 var(--s-11) 0;
+		padding: var(--s-11) var(--s-4) var(--s-15) var(--s-4);
 		@include sm {
 			padding: var(--s-11) var(--s-4) var(--s-15) var(--s-4);
 		}

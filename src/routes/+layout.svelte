@@ -1,6 +1,14 @@
 <script lang="ts">
 	import { Nav, Footer } from "$lib/components"
 	import { page } from "$app/stores"
+	import { onMount } from "svelte"
+	import { windowWidth } from "$lib/stores.js"
+
+	function setWindowSize() {
+		windowWidth.update((v) => (v = innerWidth))
+	}
+
+	onMount(setWindowSize)
 </script>
 
 <svelte:head>
@@ -12,6 +20,7 @@
 	/><meta name="robots" content="noindex" /><meta name="googlebot" content="noindex" />
 </svelte:head>
 
+<svelte:window on:resize={setWindowSize} />
 {#if $page.error}
 	<Nav />
 	<slot />

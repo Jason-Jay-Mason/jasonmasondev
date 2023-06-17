@@ -1,0 +1,86 @@
+<script lang="ts">
+	import type { GridLinkData } from "$lib/types"
+
+	export let headline: string
+	export let hook: string
+</script>
+
+<div class="gridlink">
+	<div class="frame">
+		<div class="animation">
+			<slot />
+		</div>
+		<div class="mask">
+			<img src="/pencil-bg.svg" alt="Stylized background" />
+		</div>
+	</div>
+	<div class="container">
+		<h3>{headline}</h3>
+		<p>{hook}</p>
+	</div>
+</div>
+
+<style lang="scss">
+	@import "../theme/breakpoints.scss";
+	.gridlink {
+		z-index: 10;
+		position: relative;
+		display: inline-block;
+		margin: 0 auto;
+		background-color: var(--color-bg-primary);
+		border: 4px solid var(--color-rock-200);
+		width: 100%;
+		&:hover {
+			transition: all 0.3s;
+			.container {
+				background-color: var(--color-pencil-200);
+			}
+		}
+		.frame {
+			position: relative;
+			display: flex;
+			height: 281px;
+			align-items: center;
+			justify-content: center;
+			.animation {
+				z-index: 10;
+			}
+			.mask {
+				z-index: -1;
+				position: absolute;
+				width: 100%;
+				height: 100%;
+				top: 0;
+				overflow: hidden;
+				img {
+					top: 0;
+					position: absolute;
+					width: 600px;
+					height: 100%;
+					object-fit: cover;
+					opacity: var(--opacity-pencilbg);
+				}
+			}
+		}
+		.container {
+			background-color: var(--color-bg-primary);
+			padding: var(--s-6) var(--s-7);
+			@include sm {
+				padding: var(--s-7) var(--s-8);
+			}
+			p {
+				font-size: 12px;
+				padding-bottom: var(--s-2);
+			}
+			h3 {
+				color: var(--color-rock-200);
+				font-family: var(--font-headline);
+				font-size: 2em;
+				padding-bottom: var(--s-5);
+				line-height: 100%;
+				letter-spacing: 0.2rem;
+				text-transform: uppercase;
+			}
+		}
+	}
+</style>
