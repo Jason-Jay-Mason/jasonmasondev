@@ -11,9 +11,9 @@
 </script>
 
 <svelte:window on:scroll={handleParalax} />
-<div class="mustachio" style={`transform: translateY(${y}px)`}>
-	<Mustachio />
-</div>
+<!-- <div class="mustachio" style={`transform: translateY(${y}px)`}> -->
+<!-- 	<Mustachio /> -->
+<!-- </div> -->
 <Hero cta={hero.cta} hook={hero.hook} headline={hero.headline} />
 <LinkGrid {links} />
 

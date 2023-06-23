@@ -77,7 +77,7 @@
 				position: absolute;
 				top: 50%;
 				height: 4px;
-				background-color: var(--color-pencil-100);
+				background-color: var(--color-rock-400);
 				min-width: 18%;
 				@include sm {
 					width: 20%;
@@ -95,7 +95,7 @@
 					right: 0;
 					height: 4px;
 					margin: 0 auto;
-					background-color: var(--color-pencil-100);
+					background-color: var(--color-rock-400);
 				}
 				&::before {
 					top: var(--s-11);
@@ -167,10 +167,10 @@
 					padding: 0 var(--s-4);
 					font-size: 10vw;
 					font-family: var(--font-body);
-					color: var(--color-rock-200);
+					color: var(--color-rock-100);
 					font-weight: 800;
-					letter-spacing: -3px;
-					border: dashed var(--color-pencil-100);
+					letter-spacing: -2px;
+					border: dashed var(--color-rock-400);
 					border-width: 5px 0 5px 0;
 					@include sm {
 						font-size: calc(var(--text-lg) + 15px);

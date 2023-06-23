@@ -35,11 +35,11 @@
 		text-transform: capitalize;
 		box-shadow: none;
 		font-size: calc(var(--text-base) + 3px);
-		color: var(--color-text-body);
+		color: var(--color-rock-100);
 		letter-spacing: 0.11em;
 		font-family: var(--font-headline);
 		font-weight: 700;
-		border: 2px solid var(--color-rock-100);
+		border: 3px solid var(--color-rock-100);
 		background-color: var(--color-bg-primary);
 		padding: var(--s-4) var(--s-8);
 		@include sm {

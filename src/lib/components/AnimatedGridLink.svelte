@@ -11,7 +11,7 @@
 			<slot />
 		</div>
 		<div class="mask">
-			<img src="/pencil-bg.svg" alt="Stylized background" />
+			<img class="background" src="/pencil-bg.svg" alt="Stylized background" />
 		</div>
 	</div>
 	<div class="container">
@@ -43,6 +43,8 @@
 			align-items: center;
 			justify-content: center;
 			.animation {
+				height: 100%;
+				width: 100%;
 				z-index: 10;
 			}
 			.mask {
@@ -52,7 +54,7 @@
 				height: 100%;
 				top: 0;
 				overflow: hidden;
-				img {
+				.background {
 					top: 0;
 					position: absolute;
 					width: 600px;

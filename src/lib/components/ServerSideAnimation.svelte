@@ -54,7 +54,7 @@
 						stroke-width="2"
 					/>
 					<rect
-						id="laptom-screen"
+						id="laptop-screen"
 						x="0.5"
 						y="-0.5"
 						width="126"
@@ -87,13 +87,31 @@
 					/>
 				</g>
 				<g id="lights">
-					<rect id="1" width="25" height="6" transform="matrix(1 0 0 -1 223 50)" fill="#C0C0C0" />
-					<rect id="2" width="11" height="5" transform="matrix(1 0 0 -1 223 58)" fill="#D1D1D1" />
-					<rect id="3" width="12" height="5" transform="matrix(1 0 0 -1 236 58)" fill="#E7E7E7" />
+					<rect
+						id="light-1"
+						width="25"
+						height="6"
+						transform="matrix(1 0 0 -1 223 50)"
+						fill="#C0C0C0"
+					/>
+					<rect
+						id="light-2"
+						width="11"
+						height="5"
+						transform="matrix(1 0 0 -1 223 58)"
+						fill="#D1D1D1"
+					/>
+					<rect
+						id="light-3"
+						width="12"
+						height="5"
+						transform="matrix(1 0 0 -1 236 58)"
+						fill="#E7E7E7"
+					/>
 				</g>
 				<g id="processor">
 					<circle
-						id="1_2"
+						id="p-1"
 						cx="306"
 						cy="52"
 						r="3.65"
@@ -102,7 +120,7 @@
 						stroke-width="0.7"
 					/>
 					<circle
-						id="2_2"
+						id="p-2"
 						cx="317"
 						cy="52"
 						r="3.65"
@@ -111,7 +129,7 @@
 						stroke-width="0.7"
 					/>
 					<circle
-						id="3_2"
+						id="p-3"
 						cx="327"
 						cy="52"
 						r="3.65"
@@ -120,7 +138,7 @@
 						stroke-width="0.7"
 					/>
 					<circle
-						id="4"
+						id="p-4"
 						cx="233"
 						cy="88"
 						r="3.65"
@@ -129,7 +147,7 @@
 						stroke-width="0.7"
 					/>
 					<circle
-						id="5"
+						id="p-5"
 						cx="326"
 						cy="88"
 						r="3.65"
@@ -138,14 +156,14 @@
 						stroke-width="0.7"
 					/>
 					<path
-						id="6"
+						id="p-6"
 						d="M282.65 88C282.65 90.5375 280.376 92.65 277.5 92.65C274.624 92.65 272.35 90.5375 272.35 88C272.35 85.4625 274.624 83.35 277.5 83.35C280.376 83.35 282.65 85.4625 282.65 88Z"
 						fill="white"
 						stroke="#828282"
 						stroke-width="0.7"
 					/>
 					<circle
-						id="7"
+						id="p-7"
 						cx="232"
 						cy="124"
 						r="3.65"
@@ -154,7 +172,7 @@
 						stroke-width="0.7"
 					/>
 					<circle
-						id="8"
+						id="p-8"
 						cx="325"
 						cy="124"
 						r="3.65"
@@ -163,7 +181,7 @@
 						stroke-width="0.7"
 					/>
 					<circle
-						id="9"
+						id="p-9"
 						cx="277.5"
 						cy="123.5"
 						r="5.15"
@@ -173,20 +191,43 @@
 					/>
 				</g>
 				<g id="page">
-					<rect id="1_3" width="69" height="5" transform="matrix(1 0 0 -1 25 61)" fill="#D1D1D1" />
-					<rect id="2_3" width="53" height="7" transform="matrix(1 0 0 -1 25 74)" fill="#D6D6D6" />
-					<rect id="3_3" width="69" height="6" transform="matrix(1 0 0 -1 25 84)" fill="#DCDCDC" />
-					<rect id="4_2" width="69" height="5" transform="matrix(1 0 0 -1 25 94)" fill="#F2F2F2" />
+					<g id="Frame 57">
+						<rect
+							id="sec-1"
+							width="69"
+							height="6"
+							transform="matrix(1 0 0 -1 25 62)"
+							fill="#D1D1D1"
+						/>
+						<rect
+							id="sec-2"
+							width="53"
+							height="6"
+							transform="matrix(1 0 0 -1 25 73)"
+							fill="#D6D6D6"
+						/>
+						<rect
+							id="sec-3"
+							width="69"
+							height="6"
+							transform="matrix(1 0 0 -1 25 84)"
+							fill="#DCDCDC"
+						/>
+						<rect
+							id="sec-4"
+							width="69"
+							height="6"
+							transform="matrix(1 0 0 -1 25 95)"
+							fill="#F2F2F2"
+						/>
+					</g>
 				</g>
-				<path
-					id="data-2"
-					d="M281 141L281 144C281 145.657 279.657 147 278 147V147C276.343 147 275 145.657 275 144L275 141L281 141Z"
-					fill="url(#paint0_linear_795_2)"
-				/>
+				<path id="data-2" d="M80 145V168H278V145" stroke="#828282" stroke-width="5" />
 				<path
 					id="data-1"
-					d="M77 35L77 33C77 31.3431 78.3431 30 80 30V30C81.6569 30 83 31.3431 83 33L83 35L77 35Z"
-					fill="url(#paint1_linear_795_2)"
+					d="M80 31V7C80 6.44772 80.4477 6 81 6H277C277.552 6 278 6.44772 278 7V31"
+					stroke="#828282"
+					stroke-width="5"
 				/>
 				<g id="spinner">
 					<path
@@ -202,35 +243,183 @@
 					<circle id="center" cx="80.5" cy="80.5005" r="7.12162" fill="white" />
 				</g>
 			</g>
-			<defs>
-				<linearGradient
-					id="paint0_linear_795_2"
-					x1="275"
-					y1="147"
-					x2="275"
-					y2="140.909"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop offset="0.28125" stop-color="#757575" />
-					<stop offset="1" stop-color="#707070" stop-opacity="0" />
-				</linearGradient>
-				<linearGradient
-					id="paint1_linear_795_2"
-					x1="83"
-					y1="30"
-					x2="83"
-					y2="35.0758"
-					gradientUnits="userSpaceOnUse"
-				>
-					<stop offset="0.28125" stop-color="#757575" />
-					<stop offset="1" stop-color="#707070" stop-opacity="0" />
-				</linearGradient>
-			</defs>
 		</svg>
 	</AnimatedGridLink>
 </a>
 
 <style lang="scss">
+	$length: 6s;
+	//page
+	@for $i from 1 to 5 {
+		$start: (4 * $i) * 1%;
+		@keyframes sec-#{$i} {
+			0% {
+				opacity: 1;
+			}
+			3% {
+				opacity: 0;
+			}
+			4%,
+			#{62% + $start} {
+				opacity: 0;
+			}
+			#{66% + $start},
+			#{70% + $start} {
+				opacity: 1;
+			}
+
+			#{71% + $start},
+			100% {
+				opacity: 1;
+			}
+		}
+
+		#sec-#{$i} {
+			fill: var(--color-rock-#{$i + 4}00);
+		}
+
+		a:hover svg {
+			#sec-#{$i} {
+				animation: sec-#{$i} $length linear infinite;
+			}
+		}
+	}
+
+	#data-2 {
+		opacity: 0;
+		stroke-dasharray: 0 1000 1 1000;
+		stroke-dashoffset: 760;
+		stroke-linecap: round;
+		stroke: var(--color-rock-300);
+		filter: drop-shadow(-2px 0px 2px var(--color-rock-300));
+	}
+	@keyframes data-2 {
+		0%,
+		52% {
+			opacity: 0;
+			stroke-dashoffset: 760;
+		}
+		53%,
+		57% {
+			opacity: 1;
+			stroke-width: 7;
+		}
+		60% {
+			stroke-width: 2;
+		}
+		60% {
+			opacity: 1;
+			stroke-dashoffset: 1000;
+		}
+		61%,
+		100% {
+			opacity: 0;
+			stroke-dashoffset: 1000;
+		}
+	}
+
+	//processor
+	@for $i from 1 to 10 {
+		$start: (4 * $i) * 1%;
+		@keyframes processor-#{$i} {
+			#{10% + $start} {
+				fill: var(--color-bg-primary);
+			}
+			#{11% + $start},
+			#{12% + $start} {
+				fill: var(--color-pencil-100);
+			}
+			#{13% + $start},
+			100% {
+				fill: var(--color-bg-primary);
+			}
+		}
+		#p-#{$i} {
+			fill: var(--color-bg-primary);
+			stroke: var(--color-rock-300);
+		}
+		a:hover svg {
+			#p-#{$i} {
+				animation: processor-#{$i} $length linear infinite;
+			}
+		}
+	}
+
+	//lights
+	$light-steps: 5%, 15%, 25%, 35%, 45%;
+	@for $i from 1 to 4 {
+		@keyframes light-#{$i} {
+			0%,
+			5% {
+				opacity: 1;
+			}
+			@each $percent in $light-steps {
+				$next: $percent + ($i - 1 * 1%);
+				#{$next},
+				#{$next + 4% } {
+					opacity: 1;
+				}
+				#{$next + 4% },
+				#{$next + 5% } {
+					opacity: 0.7;
+				}
+			}
+			55%,
+			100% {
+				opacity: 1;
+			}
+		}
+		#light-#{$i} {
+			fill: var(--color-rock-#{$i + 3}00);
+		}
+		a:hover svg {
+			#light-#{$i} {
+				animation: light-#{$i} $length linear infinite;
+			}
+		}
+	}
+
+	#data-1 {
+		opacity: 0;
+		stroke-dasharray: 0 1000 1 1000;
+		stroke-dashoffset: 1000;
+		stroke-linecap: round;
+		stroke: var(--color-rock-300);
+		filter: drop-shadow(-2px 0px 2px var(--color-rock-300));
+	}
+	@keyframes data-1 {
+		2% {
+			opacity: 0.6;
+		}
+		3%,
+		7% {
+			stroke-width: 7;
+		}
+		10% {
+			opacity: 0.6;
+			stroke-width: 2;
+		}
+		40% {
+			stroke-dashoffset: 0;
+		}
+		30%,
+		100% {
+			stroke: none;
+		}
+	}
+
+	#spinner {
+		opacity: 0;
+		transform-origin: center;
+		transform-box: fill-box;
+		#center {
+			fill: var(--color-bg-primary);
+		}
+		#edge-1,
+		#edge-2 {
+			fill: var(--color-rock-300);
+		}
+	}
 	@keyframes spinner {
 		0% {
 			opacity: 0;
@@ -251,21 +440,38 @@
 			opacity: 0;
 		}
 	}
+
 	a:hover svg {
+		#data-2 {
+			animation: data-2 $length linear infinite;
+		}
+		#data-1 {
+			animation: data-1 $length linear infinite;
+		}
 		#spinner {
-			animation: spinner 8s linear infinite;
-			transform: rotate(0);
-			transform-origin: center;
-			transform-box: fill-box;
+			animation: spinner $length linear infinite;
+		}
+	}
+	#static {
+		#laptop-notch,
+		#laptop-top,
+		#laptop-bottom,
+		#laptop-screen,
+		#server-top,
+		#server-middle,
+		#server-bottom {
+			fill: var(--color-bg-primary);
+			stroke: var(--color-rock-200);
+		}
+		#navbar {
+			fill: var(--color-rock-600);
 		}
 	}
 
-	#spinner {
-		opacity: 1;
-	}
-
 	svg {
+		display: inline-block;
+		height: 100%;
 		width: 100%;
-		padding: 0 var(--s-6);
+		padding: 0 var(--s-9);
 	}
 </style>

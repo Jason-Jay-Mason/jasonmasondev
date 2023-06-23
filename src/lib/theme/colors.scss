@@ -4,13 +4,18 @@ body {
 	--color-bg-primary: white;
 	--color-bg-card: #ffffffd9;
 	--color-text-body: black;
-	--color-rock-100: #1c1917;
-	--color-rock-200: #46423F;
-	--color-rock-300: #7d7b79;
+	--color-rock-100: #46423F;
+	--color-rock-200: #5F5A56;
+	--color-rock-300: #848280;
+	--color-rock-400: #A09E9C;
+	--color-rock-500: #BDBDBD;
+	--color-rock-600: #DCDCDC;
+	--color-rock-700: #F1F1F0;
+	--color-rock-800: #F5F5F4;
 	--color-pencil-100: #bdbdbd;
 	--color-pencil-200: #F2F2F2;
 	--color-error: #D62828;
-	--opacity-pencilbg: 1;
+	--opacity-pencilbg: 0.4;
 	--icon-filter: none;
 	--color-rainbow: conic-gradient(
 		from 180deg at 50% 50%,
@@ -30,11 +35,16 @@ body {
 		--color-bg-primary: #3D3834;
 		--color-bg-card: #0d0c0cd9;
 		--color-text-body: #ffffff;
-		--color-rock-100: #ffffff;
-		--color-rock-200: #ffffff;
-		--color-rock-300: #ffffff;
+    --color-rock-100: #ffffff;
+    --color-rock-200: #ffffff;
+    --color-rock-300: #D8CDC5;
+    --color-rock-400: #A69C95;
+    --color-rock-500: #887F79;
+    --color-rock-600: #5F5A56;
+    --color-rock-700: #564F49;
+    --color-rock-800: #4A443F;
 		--color-pencil-100: #494949;
-		--opacity-pencilbg: 0.3;
+		--opacity-pencilbg: 0.2;
 		--icon-filter: brightness(0) invert(1);
 		--theme-icon: url('/light-icon.svg');
 	}

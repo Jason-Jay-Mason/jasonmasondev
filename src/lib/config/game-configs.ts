@@ -325,8 +325,9 @@ const google = {
   ]
 }
 
+
 export const homeConfig: Config = {
-  minEnemies: 14,
+  minEnemies: 9,
   maxEnemies: 15,
   displayHud: true,
   showFps: true,
@@ -351,7 +352,7 @@ export const homeConfig: Config = {
       h: 6.0 * sizeRatio
     },
     position: {
-      x: -30,
+      x: 30,
       y: 300,
     },
     shipPath: '/mustache.svg',

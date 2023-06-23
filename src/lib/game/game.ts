@@ -63,7 +63,7 @@ function buildGlobalState(r: RenderProps): Globals {
       sprites,
       spawn: {
         last: 0,
-        timeGap: 2000,
+        timeGap: 4000,
         quadrant: SpawnQuadrant.topr,
         maxEnemies: r.config.maxEnemies || 15,
         minEnemies: r.config.minEnemies || 5,

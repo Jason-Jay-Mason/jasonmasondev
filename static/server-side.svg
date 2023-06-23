@@ -1,39 +1,44 @@
-<svg width="342" height="104" viewBox="0 0 342 104" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <path d="M212 31H341V5C341 2.79086 339.209 1 337 1H216C213.791 1 212 2.79086 212 5V31Z"
-    fill="white" stroke="#3D3834" stroke-width="2" />
-  <circle cx="304" cy="17" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
-  <circle cx="325" cy="17" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
-  <circle cx="315" cy="17" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
-  <path
-    d="M302.5 52.5C302.5 55.7489 299.436 58.5 295.5 58.5C291.564 58.5 288.5 55.7489 288.5 52.5C288.5 49.2511 291.564 46.5 295.5 46.5C299.436 46.5 302.5 49.2511 302.5 52.5Z"
-    fill="white" stroke="#D1D1D1" />
-  <rect width="25" height="6" transform="matrix(1 0 0 -1 221 15)" fill="#C0C0C0" />
-  <rect width="11" height="5" transform="matrix(1 0 0 -1 221 23)" fill="#D1D1D1" />
-  <rect width="12" height="5" transform="matrix(1 0 0 -1 234 23)" fill="#E7E7E7" />
-  <rect x="1" y="-1" width="129" height="29" transform="matrix(1 0 0 -1 211 67)" fill="white"
-    stroke="#3D3834" stroke-width="2" />
-  <path
-    d="M280.65 53C280.65 55.5375 278.376 57.65 275.5 57.65C272.624 57.65 270.35 55.5375 270.35 53C270.35 50.4625 272.624 48.35 275.5 48.35C278.376 48.35 280.65 50.4625 280.65 53Z"
-    fill="white" stroke="#828282" stroke-width="0.7" />
-  <circle cx="324" cy="53" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
-  <circle cx="231" cy="53" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
-  <path d="M212 99C212 101.209 213.791 103 216 103H337C339.209 103 341 101.209 341 99V74H212V99Z"
-    fill="white" stroke="#3D3834" stroke-width="2" />
-  <circle cx="323" cy="89" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
-  <circle cx="230" cy="89" r="3.65" fill="white" stroke="#828282" stroke-width="0.7" />
-  <circle cx="275.5" cy="88.5" r="5.15" fill="white" stroke="#828282" stroke-width="0.7" />
-  <rect x="1" y="-1" width="138" height="92" transform="matrix(1 0 0 -1 9 92)" fill="white"
-    stroke="#3D3834" stroke-width="2" />
-  <rect x="0.5" y="-0.5" width="126" height="75" transform="matrix(1 0 0 -1 15 83)" fill="white"
-    stroke="#3D3834" />
-  <rect width="125" height="6" transform="matrix(1 0 0 -1 16 15)" fill="#E6E6E6" />
-  <rect width="69" height="5" transform="matrix(1 0 0 -1 23 26)" fill="#D1D1D1" />
-  <rect width="53" height="7" transform="matrix(1 0 0 -1 23 39)" fill="#D6D6D6" />
-  <rect width="69" height="6" transform="matrix(1 0 0 -1 23 49)" fill="#DCDCDC" />
-  <rect width="69" height="5" transform="matrix(1 0 0 -1 23 59)" fill="#F2F2F2" />
-  <path d="M1 99C1 101.209 2.79086 103 5 103H153C155.209 103 157 101.209 157 99V90H1V99Z"
-    fill="white" stroke="#3D3834" stroke-width="2" />
-  <path
-    d="M64.5 91C64.5 93.4853 66.5147 95.5 69 95.5H87C89.4853 95.5 91.5 93.4853 91.5 91V89.5H64.5V91Z"
-    fill="white" stroke="#3D3834" />
+<svg width="348" height="174" viewBox="0 0 348 174" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="serverside">
+<g id="static">
+<path id="server-top" d="M214 66H343V40C343 37.7909 341.209 36 339 36H218C215.791 36 214 37.7909 214 40V66Z" fill="white" stroke="#3D3834" stroke-width="2"/>
+<rect id="server-middle" x="1" y="-1" width="129" height="29" transform="matrix(1 0 0 -1 213 102)" fill="white" stroke="#3D3834" stroke-width="2"/>
+<path id="server-bottom" d="M214 134C214 136.209 215.791 138 218 138H339C341.209 138 343 136.209 343 134V109H214V134Z" fill="white" stroke="#3D3834" stroke-width="2"/>
+<rect id="laptop-top" x="1" y="-1" width="138" height="92" transform="matrix(1 0 0 -1 11 127)" fill="white" stroke="#3D3834" stroke-width="2"/>
+<rect id="laptom-screen" x="0.5" y="-0.5" width="126" height="75" transform="matrix(1 0 0 -1 17 118)" fill="white" stroke="#3D3834"/>
+<path id="laptop-bottom" d="M3 134C3 136.209 4.79086 138 7 138H155C157.209 138 159 136.209 159 134V125H3V134Z" fill="white" stroke="#3D3834" stroke-width="2"/>
+<path id="laptop-notch" d="M66.5 126C66.5 128.485 68.5147 130.5 71 130.5H89C91.4853 130.5 93.5 128.485 93.5 126V124.5H66.5V126Z" fill="white" stroke="#3D3834"/>
+<path id="track2" d="M80 145V168H278V145" stroke="#828282" stroke-width="1.2"/>
+<path id="track1" d="M80 31V6H278V31" stroke="#828282" stroke-width="1.2"/>
+<rect id="navbar" width="125" height="6" transform="matrix(1 0 0 -1 18 50)" fill="#E6E6E6"/>
+</g>
+<g id="lights">
+<rect id="1" width="25" height="6" transform="matrix(1 0 0 -1 223 50)" fill="#C0C0C0"/>
+<rect id="2" width="11" height="5" transform="matrix(1 0 0 -1 223 58)" fill="#D1D1D1"/>
+<rect id="3" width="12" height="5" transform="matrix(1 0 0 -1 236 58)" fill="#E7E7E7"/>
+</g>
+<g id="processor">
+<circle id="1_2" cx="306" cy="52" r="3.65" fill="white" stroke="#828282" stroke-width="0.7"/>
+<circle id="2_2" cx="317" cy="52" r="3.65" fill="white" stroke="#828282" stroke-width="0.7"/>
+<circle id="3_2" cx="327" cy="52" r="3.65" fill="white" stroke="#828282" stroke-width="0.7"/>
+<circle id="4" cx="233" cy="88" r="3.65" fill="white" stroke="#828282" stroke-width="0.7"/>
+<circle id="5" cx="326" cy="88" r="3.65" fill="white" stroke="#828282" stroke-width="0.7"/>
+<path id="6" d="M282.65 88C282.65 90.5375 280.376 92.65 277.5 92.65C274.624 92.65 272.35 90.5375 272.35 88C272.35 85.4625 274.624 83.35 277.5 83.35C280.376 83.35 282.65 85.4625 282.65 88Z" fill="white" stroke="#828282" stroke-width="0.7"/>
+<circle id="7" cx="232" cy="124" r="3.65" fill="white" stroke="#828282" stroke-width="0.7"/>
+<circle id="8" cx="325" cy="124" r="3.65" fill="white" stroke="#828282" stroke-width="0.7"/>
+<circle id="9" cx="277.5" cy="123.5" r="5.15" fill="white" stroke="#828282" stroke-width="0.7"/>
+</g>
+<g id="page">
+<rect id="1_3" width="69" height="5" transform="matrix(1 0 0 -1 25 61)" fill="#D1D1D1"/>
+<rect id="2_3" width="53" height="7" transform="matrix(1 0 0 -1 25 74)" fill="#D6D6D6"/>
+<rect id="3_3" width="69" height="6" transform="matrix(1 0 0 -1 25 84)" fill="#DCDCDC"/>
+<rect id="4_2" width="69" height="5" transform="matrix(1 0 0 -1 25 94)" fill="#F2F2F2"/>
+</g>
+<path id="data-1" d="M80 31V7C80 6.44772 80.4477 6 81 6H277C277.552 6 278 6.44772 278 7V31" stroke="#8F4949" stroke-width="5"/>
+<g id="spinner">
+<path id="edge-1" d="M86.5104 74.4896C85.7211 73.7003 84.7841 73.0742 83.7528 72.647C82.7215 72.2199 81.6162 72 80.5 72C79.3838 72 78.2785 72.2199 77.2472 72.647C76.2159 73.0742 75.2789 73.7003 74.4896 74.4896L80.5 80.5L86.5104 74.4896Z" fill="#D1D1D1"/>
+<path id="edge-2" d="M74.4896 86.5104C75.2789 87.2997 76.2159 87.9258 77.2472 88.353C78.2785 88.7801 79.3838 89 80.5 89C81.6162 89 82.7215 88.7801 83.7528 88.353C84.7841 87.9258 85.7211 87.2997 86.5104 86.5104L80.5 80.5L74.4896 86.5104Z" fill="#D1D1D1"/>
+<circle id="center" cx="80.5" cy="80.5005" r="7.12162" fill="white"/>
+</g>
+</g>
 </svg>
