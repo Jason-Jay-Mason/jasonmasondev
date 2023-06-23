@@ -33,7 +33,7 @@
 		&:hover {
 			transition: all 0.3s;
 			.container {
-				background-color: var(--color-pencil-200);
+				background-color: var(--color-rock-900);
 			}
 		}
 		.frame {

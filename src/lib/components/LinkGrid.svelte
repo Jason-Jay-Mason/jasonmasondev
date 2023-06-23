@@ -97,7 +97,7 @@
 		}
 
 		.grid {
-			gap: var(--s-4);
+			gap: var(--s-6);
 		}
 
 		.column-1 {
@@ -128,7 +128,7 @@
 		.column {
 			display: flex;
 			flex-direction: column;
-			gap: var(--s-4);
+			gap: var(--s-6);
 		}
 	}
 </style>

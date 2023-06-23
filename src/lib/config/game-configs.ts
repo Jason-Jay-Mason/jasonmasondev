@@ -352,7 +352,7 @@ export const homeConfig: Config = {
       h: 6.0 * sizeRatio
     },
     position: {
-      x: 30,
+      x: -30,
       y: 300,
     },
     shipPath: '/mustache.svg',

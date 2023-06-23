@@ -26,7 +26,7 @@
 			transition: all 0.3s;
 			cursor: pointer;
 			.container {
-				background-color: var(--color-pencil-200);
+				background-color: var(--color-rock-900);
 			}
 		}
 		.container {

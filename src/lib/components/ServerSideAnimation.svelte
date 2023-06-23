@@ -327,7 +327,7 @@
 			}
 			#{11% + $start},
 			#{12% + $start} {
-				fill: var(--color-pencil-100);
+				fill: var(--color-rock-300);
 			}
 			#{13% + $start},
 			100% {
@@ -344,8 +344,37 @@
 			}
 		}
 	}
+	//lights normal
+	$normal-light-steps: 5%, 15%, 25%, 35%, 45%, 55%, 65%, 75%, 85%, 95%;
+	@for $i from 1 to 4 {
+		@keyframes light-#{$i} {
+			0%,
+			50% {
+				opacity: 1;
+			}
+			@each $percent in $normal-light-steps {
+				$next: $percent + ($i - 1 * 1%);
+				#{$next},
+				#{$next + 4% } {
+					opacity: 1;
+				}
+				#{$next + 4% },
+				#{$next + 5% } {
+					opacity: 0.7;
+				}
+			}
+			95%,
+			100% {
+				opacity: 1;
+			}
+		}
+		#light-#{$i} {
+			fill: var(--color-rock-#{$i + 3}00);
+			animation: light-#{$i} $length linear infinite;
+		}
+	}
 
-	//lights
+	//lights hover
 	$light-steps: 5%, 15%, 25%, 35%, 45%;
 	@for $i from 1 to 4 {
 		@keyframes light-#{$i} {
@@ -462,6 +491,10 @@
 		#server-bottom {
 			fill: var(--color-bg-primary);
 			stroke: var(--color-rock-200);
+		}
+		#track1,
+		#track2 {
+			stroke: var(--color-rock-400);
 		}
 		#navbar {
 			fill: var(--color-rock-600);

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { ServerSideAnimation } from "$lib/components"
+	import { ServerSideAnimation, MartechAnimation } from "$lib/components"
 	import type { GridLinkData } from "$lib/types"
 
 	export let link: GridLinkData
@@ -8,6 +8,8 @@
 
 {#if animationComponent === "ServerSideAnimation"}
 	<ServerSideAnimation {link} />
+{:else if animationComponent === "MartechAnimation"}
+	<MartechAnimation {link} />
 {:else}
 	<div>.</div>
 {/if}

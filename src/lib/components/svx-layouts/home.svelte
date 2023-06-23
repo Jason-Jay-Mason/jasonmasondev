@@ -6,14 +6,14 @@
 
 	let y = 1
 	function handleParalax() {
-		y = 0.2 * window.scrollY
+		y = -0.3 * window.scrollY
 	}
 </script>
 
 <svelte:window on:scroll={handleParalax} />
-<!-- <div class="mustachio" style={`transform: translateY(${y}px)`}> -->
-<!-- 	<Mustachio /> -->
-<!-- </div> -->
+<div class="mustachio" style={`transform: translateY(${y}px)`}>
+	<Mustachio />
+</div>
 <Hero cta={hero.cta} hook={hero.hook} headline={hero.headline} />
 <LinkGrid {links} />
 
