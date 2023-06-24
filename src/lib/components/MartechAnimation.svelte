@@ -348,6 +348,7 @@
 </a>
 
 <style lang="scss">
+	@import "../theme/breakpoints.scss";
 	@for $i from 1 to 5 {
 		@keyframes bar-#{$i} {
 			0% {
@@ -913,10 +914,14 @@
 	#person-bottom {
 		fill: var(--color-bg-primary);
 	}
+
 	svg {
 		display: inline-block;
 		height: 100%;
 		width: 100%;
-		padding: var(--s-6) var(--s-9);
+		padding: 0 var(--s-7);
+		@include xs {
+			padding: var(--s-6) var(--s-9);
+		}
 	}
 </style>

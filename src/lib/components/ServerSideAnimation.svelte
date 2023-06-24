@@ -248,6 +248,7 @@
 </a>
 
 <style lang="scss">
+	@import "../theme/breakpoints.scss";
 	$length: 6s;
 	//page
 	@for $i from 1 to 5 {
@@ -506,6 +507,9 @@
 		display: inline-block;
 		height: 100%;
 		width: 100%;
-		padding: 0 var(--s-9);
+		padding: 0 var(--s-7);
+		@include xs {
+			padding: 0 var(--s-8);
+		}
 	}
 </style>

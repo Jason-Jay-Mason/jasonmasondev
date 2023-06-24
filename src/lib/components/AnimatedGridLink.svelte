@@ -49,7 +49,7 @@
 		.frame {
 			position: relative;
 			display: flex;
-			height: 281px;
+			height: 296px;
 			align-items: center;
 			justify-content: center;
 			.animation {
