@@ -6,7 +6,7 @@
 	const { headline, hook, href } = link
 </script>
 
-<a {href} class="gridlink">
+<a {href}>
 	<AnimatedGridLink {headline} {hook}>
 		<svg
 			width="348"
@@ -449,6 +449,7 @@
 			fill: var(--color-rock-300);
 		}
 	}
+
 	@keyframes spinner {
 		0% {
 			opacity: 0;

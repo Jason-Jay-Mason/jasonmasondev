@@ -18,12 +18,12 @@ links:
       Lorem Ipsum is simply dummy text of the printing 
       and typesetting industry. has been the industry's 
   - headline: Client Side
-    animationComponent: ServerSideAnimation 
+    animationComponent: ClientSideAnimation 
     href: /blog
     hook:
       Lorem Ipsum is simply dummy text of the printing 
       and typesetting industry. has been the industry's 
-  - headline: Marcom 
+  - headline: Martech
     animationComponent: MartechAnimation
     href: /blog
     hook:

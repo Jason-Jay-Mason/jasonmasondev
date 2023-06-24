@@ -6,7 +6,7 @@
 	const { headline, hook, href } = link
 </script>
 
-<a {href} class="gridlink">
+<a {href}>
 	<AnimatedGridLink {headline} {hook}>
 		<svg
 			width="287"
@@ -84,84 +84,86 @@
 						stroke="#3D3834"
 					/>
 				</g>
-				<g id="metrics">
-					<rect
-						id="bar-1"
-						x="115.614"
-						y="35.459"
-						width="9.51764"
-						height="11.6118"
-						fill="white"
-						stroke="#3D3834"
-						stroke-width="2"
-					/>
-					<rect
-						id="bar-2"
-						x="130.273"
-						y="24.9893"
-						width="8.47058"
-						height="22.0823"
-						fill="#F9F9F9"
-						stroke="#3D3834"
-						stroke-width="2"
-					/>
-					<rect
-						id="bar-3"
-						x="143.885"
-						y="29.1768"
-						width="9.51764"
-						height="17.8941"
-						fill="#F2F2F2"
-						stroke="#3D3834"
-						stroke-width="2"
-					/>
-					<rect
-						id="bar-4"
-						x="158.544"
-						y="13.4707"
-						width="8.47058"
-						height="33.6"
-						fill="#E4E4E4"
-						stroke="#3D3834"
-						stroke-width="2"
-					/>
-					<path
-						id="metric-linegraph"
-						d="M120.373 27.6534L133.985 17.1829L148.644 21.3711L162.255 4.61816"
-						stroke="#3D3834"
-					/>
-					<circle
-						id="point-4"
-						cx="162.256"
-						cy="4.61765"
-						r="2.11765"
-						fill="white"
-						stroke="#3D3834"
-					/>
-					<circle
-						id="point-3"
-						cx="148.644"
-						cy="21.3706"
-						r="2.11765"
-						fill="white"
-						stroke="#3D3834"
-					/>
-					<circle
-						id="point-2"
-						cx="133.985"
-						cy="17.1821"
-						r="2.11765"
-						fill="white"
-						stroke="#3D3834"
-					/>
-					<circle
-						id="point-1"
-						cx="120.373"
-						cy="27.6528"
-						r="2.11765"
-						fill="white"
-						stroke="#3D3834"
-					/>
+				<g id="Group 84">
+					<g id="metrics">
+						<rect
+							id="bar-1"
+							x="115.614"
+							y="35.459"
+							width="9.51764"
+							height="11.6118"
+							fill="white"
+							stroke="#3D3834"
+							stroke-width="2"
+						/>
+						<rect
+							id="bar-2"
+							x="130.273"
+							y="24.9893"
+							width="8.47058"
+							height="22.0823"
+							fill="#F9F9F9"
+							stroke="#3D3834"
+							stroke-width="2"
+						/>
+						<rect
+							id="bar-3"
+							x="143.885"
+							y="29.1768"
+							width="9.51764"
+							height="17.8941"
+							fill="#F2F2F2"
+							stroke="#3D3834"
+							stroke-width="2"
+						/>
+						<rect
+							id="bar-4"
+							x="158.544"
+							y="13.4707"
+							width="8.47058"
+							height="33.6"
+							fill="#E4E4E4"
+							stroke="#3D3834"
+							stroke-width="2"
+						/>
+						<path
+							id="metric-linegraph"
+							d="M120.373 27.6534L133.985 17.1829L148.644 21.3711L162.255 4.61816"
+							stroke="#3D3834"
+						/>
+						<circle
+							id="point-4"
+							cx="162.256"
+							cy="4.61765"
+							r="2.11765"
+							fill="white"
+							stroke="#3D3834"
+						/>
+						<circle
+							id="point-3"
+							cx="148.644"
+							cy="21.3706"
+							r="2.11765"
+							fill="white"
+							stroke="#3D3834"
+						/>
+						<circle
+							id="point-2"
+							cx="133.985"
+							cy="17.1821"
+							r="2.11765"
+							fill="white"
+							stroke="#3D3834"
+						/>
+						<circle
+							id="point-1"
+							cx="120.373"
+							cy="27.6528"
+							r="2.11765"
+							fill="white"
+							stroke="#3D3834"
+						/>
+					</g>
 				</g>
 				<g id="chatbox-icon">
 					<path
@@ -308,13 +310,523 @@
 					<path id="metricsline" d="M144 70L144 54" stroke="#828282" stroke-width="1.2" />
 					<path id="automationsline" d="M76 146L113 136" stroke="#828282" stroke-width="1.2" />
 				</g>
+				<g id="martechdata">
+					<path id="martechdata-5" d="M76 146L113 136" stroke="#828282" stroke-width="4" />
+					<path id="martechdata-4" d="M144 168L144 152" stroke="#828282" stroke-width="4" />
+					<path
+						id="martechdata-3"
+						d="M209 146L173 136"
+						stroke="#828282"
+						stroke-width="4"
+						stroke-linejoin="bevel"
+					/>
+					<path
+						id="martechdata-2"
+						d="M209 81L173 92"
+						stroke="#828282"
+						stroke-width="4"
+						stroke-linejoin="round"
+					/>
+					<path
+						id="martechdata-0"
+						d="M144 70L144 54"
+						stroke="#828282"
+						stroke-width="4"
+						stroke-linejoin="round"
+					/>
+					<path
+						id="martechdata-1"
+						d="M73 81L109 92"
+						stroke="#828282"
+						stroke-width="5"
+						stroke-linejoin="round"
+					/>
+				</g>
 			</g>
 		</svg>
 	</AnimatedGridLink>
 </a>
 
 <style lang="scss">
-	$length: 6s;
+	@for $i from 1 to 5 {
+		@keyframes bar-#{$i} {
+			0% {
+			}
+			@for $j from 1 to 9 {
+				#{$j * 10%} {
+					transform: scale3d(1, ((random(3) + 6) * 0.1), 1);
+				}
+			}
+			100% {
+			}
+		}
+		#bar-#{$i} {
+			transform-origin: bottom;
+			transform-box: fill-box;
+		}
+		a:hover svg {
+			#bar-#{$i} {
+				animation: bar-#{$i} 5s linear infinite;
+			}
+		}
+	}
+	@for $i from 1 to 4 {
+		$start: $i * 1%;
+		@keyframes automation-#{$i} {
+			0%,
+			#{5% + $start} {
+				fill: var(--color-rock-#{$i + 4}00);
+			}
+			#{7% + $start} {
+				fill: var(--color-rock-#{$i + 1}00);
+			}
+			#{8% + $start},
+			#{78% + $start} {
+				fill: var(--color-rock-#{$i + 4}00);
+			}
+			#{80% + $start} {
+				fill: var(--color-rock-#{$i + 1}00);
+			}
+			#{82% + $start},
+			100% {
+				fill: var(--color-rock-#{$i + 4}00);
+			}
+		}
+
+		a:hover svg {
+			#automation-#{$i} {
+				animation: automation-#{$i} 5s linear infinite;
+			}
+		}
+	}
+	@for $i from 1 to 5 {
+		$start: $i * 1%;
+		@keyframes chatline-#{$i} {
+			#{10% + $start} {
+				opacity: 0;
+			}
+			#{14% + $start},
+			#{50% + $start} {
+				opacity: 1;
+			}
+			#{60% + $start} {
+				opacity: 0;
+			}
+			#{62% + $start} {
+				opacity: 0;
+			}
+			#{64% + $start} {
+				opacity: 1;
+			}
+		}
+		a:hover svg {
+			#chatline-#{$i} {
+				animation: chatline-#{$i} 5s linear infinite;
+			}
+		}
+	}
+
+	@keyframes videotarget {
+		23% {
+			transform: rotate(0);
+		}
+		26% {
+			transform: rotate(180deg);
+		}
+		75% {
+			transform: rotate(180deg);
+		}
+		78%,
+		100% {
+			transform: rotate(0deg);
+		}
+	}
+
+	#videotarget {
+		transform-origin: center;
+		transform-box: fill-box;
+	}
+	a:hover svg {
+		#videotarget {
+			animation: videotarget 5s linear infinite;
+		}
+	}
+	@keyframes notifications {
+		10% {
+			transform: rotate(0);
+		}
+		11% {
+			transform: rotate(5deg);
+		}
+		14% {
+			transform: rotate(-5deg);
+		}
+		16% {
+			transform: rotate(5deg);
+		}
+		17% {
+			transform: rotate(0);
+		}
+		70% {
+			transform: rotate(0);
+		}
+		71% {
+			transform: rotate(5deg);
+		}
+		74% {
+			transform: rotate(-5deg);
+		}
+		76% {
+			transform: rotate(5deg);
+		}
+		77% {
+			transform: rotate(0);
+		}
+	}
+	#notifications {
+		transform-origin: center;
+		transform-box: fill-box;
+	}
+	a:hover svg {
+		#notifications {
+			animation: notifications 5s linear infinite;
+		}
+	}
+
+	@keyframes mail {
+		5% {
+			transform: rotate(0);
+		}
+		6% {
+			transform: rotate(5deg);
+		}
+		9% {
+			transform: rotate(-5deg);
+		}
+		11% {
+			transform: rotate(5deg);
+		}
+		12% {
+			transform: rotate(0);
+		}
+		55% {
+			transform: rotate(0);
+		}
+		56% {
+			transform: rotate(5deg);
+		}
+		57% {
+			transform: rotate(-5deg);
+		}
+		59% {
+			transform: rotate(5deg);
+		}
+		60% {
+			transform: rotate(0);
+		}
+	}
+	#mail {
+		transform-origin: center;
+		transform-box: fill-box;
+	}
+	a:hover svg {
+		#mail {
+			animation: mail 5s linear infinite;
+		}
+	}
+	@keyframes martechdata-0 {
+		@for $i from 0 to 4 {
+			$next: $i * 25%;
+			#{0% + $next},
+			#{5% + $next} {
+				opacity: 0;
+			}
+			#{11% + $next} {
+				stroke-width: 5;
+				opacity: 0.7;
+			}
+			#{20% + $next} {
+				stroke-width: 5;
+				opacity: 0.7;
+			}
+			#{24% + $next} {
+				stroke-width: 1;
+				opacity: 0;
+				stroke-dashoffset: 985;
+			}
+			#{25% + $next} {
+				opacity: 0;
+				stroke-dashoffset: 1000;
+			}
+		}
+	}
+	$dif5: 3%;
+	@keyframes martechdata-5 {
+		#{$dif5},
+		#{8% + $dif5} {
+			opacity: 0;
+		}
+		#{9% + $dif5} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		#{18% + $dif5} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		#{21% + $dif5} {
+			stroke-width: 1;
+			opacity: 0;
+			stroke-dashoffset: 960;
+		}
+		#{24% + $dif5} {
+			stroke-dashoffset: 1000;
+		}
+		#{71%},
+		#{76%} {
+			stroke-dashoffset: 1000;
+			opacity: 0;
+		}
+
+		#{81% } {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+
+		#{86% } {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+
+		#{91%} {
+			stroke-width: 1;
+			opacity: 0;
+			stroke-dashoffset: 960;
+		}
+
+		#{92% } {
+			stroke-dashoffset: 1000;
+		}
+	}
+	$dif4: 20%;
+	@keyframes martechdata-4 {
+		#{$dif4},
+		#{5% + $dif4} {
+			stroke-dashoffset: 1000;
+			opacity: 0;
+		}
+		#{6% + $dif4} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		#{15% + $dif4} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		#{20% + $dif4} {
+			stroke-width: 1;
+			opacity: 0;
+			stroke-dashoffset: 985;
+		}
+		#{21% + $dif4} {
+			stroke-dashoffset: 1000;
+		}
+		#{50% + $dif4},
+		#{55% + $dif4} {
+			stroke-dashoffset: 1000;
+			opacity: 0;
+		}
+
+		#{60% + $dif4} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+
+		#{65% + $dif4} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+
+		#{70% + $dif4} {
+			stroke-width: 1;
+			opacity: 0;
+			stroke-dashoffset: 985;
+		}
+
+		#{71% + $dif4} {
+			stroke-dashoffset: 1000;
+		}
+	}
+	$dif3: 9%;
+	@keyframes martechdata-3 {
+		#{$dif3},
+		#{5% + $dif3} {
+			opacity: 0;
+		}
+		#{6% + $dif3} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		#{15% + $dif3} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		#{20% + $dif3} {
+			stroke-width: 1;
+			opacity: 0;
+			stroke-dashoffset: 960;
+		}
+		#{21% + $dif3} {
+			stroke-dashoffset: 1000;
+		}
+		#{50% + $dif3},
+		#{55% + $dif3} {
+			stroke-dashoffset: 1000;
+			opacity: 0;
+		}
+
+		#{60% + $dif3} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+
+		#{65% + $dif3} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+
+		#{70% + $dif3} {
+			stroke-width: 1;
+			opacity: 0;
+			stroke-dashoffset: 960;
+		}
+
+		#{71% + $dif3} {
+			stroke-dashoffset: 1000;
+		}
+	}
+	$dif2: 6%;
+	@keyframes martechdata-2 {
+		#{$dif3},
+		#{5% + $dif2} {
+			opacity: 0;
+		}
+		#{6% + $dif2} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		#{15% + $dif2} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		#{20% + $dif2} {
+			stroke-width: 1;
+			opacity: 0;
+			stroke-dashoffset: 960;
+		}
+		#{21% + $dif2} {
+			stroke-dashoffset: 1000;
+		}
+		#{60% + $dif2},
+		#{65% + $dif2} {
+			stroke-dashoffset: 1000;
+			opacity: 0;
+		}
+
+		#{70% + $dif2} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+
+		#{75% + $dif2} {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+
+		#{80% + $dif2} {
+			stroke-width: 1;
+			opacity: 0;
+			stroke-dashoffset: 960;
+		}
+
+		#{81% + $dif2} {
+			stroke-dashoffset: 1000;
+		}
+	}
+	@keyframes martechdata-1 {
+		0%,
+		5% {
+			opacity: 0;
+		}
+		6% {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		15% {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		20% {
+			stroke-width: 1;
+			opacity: 0;
+			stroke-dashoffset: 960;
+		}
+		21% {
+			stroke-dashoffset: 1000;
+		}
+		50%,
+		55% {
+			stroke-dashoffset: 1000;
+			opacity: 0;
+		}
+		60% {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		65% {
+			stroke-width: 5;
+			opacity: 0.7;
+		}
+		70% {
+			stroke-width: 1;
+			opacity: 0;
+			stroke-dashoffset: 960;
+		}
+		71% {
+			stroke-dashoffset: 1000;
+		}
+	}
+
+	@for $i from 0 to 6 {
+		#martechdata-#{$i} {
+			opacity: 0;
+			stroke-dasharray: 0 1000 1 1000;
+			stroke-dashoffset: 1000;
+			stroke-linecap: round;
+			stroke: var(--color-rock-300);
+			@if $i == 2 or $i == 3 {
+				filter: drop-shadow(2px 0px 2px var(--color-rock-300));
+			}
+			@if $i == 1 or $i == 5 {
+				filter: drop-shadow(-2px 0px 2px var(--color-rock-300));
+			}
+			@if $i == 0 or $i == 4 {
+				filter: drop-shadow(0px 2px 2px var(--color-rock-300));
+			}
+		}
+
+		a:hover svg {
+			#martechdata-#{$i} {
+				animation: martechdata-#{$i} 5s linear infinite;
+			}
+		}
+	}
+
+	a:hover svg {
+		#maildata {
+			animation: data-forward 5s linear infinite;
+		}
+	}
 
 	#mail-top,
 	#videobox,
@@ -376,8 +888,9 @@
 	}
 	#mail-background,
 	#automation-1,
-	#chatline-2,
-	#gearcontainer {
+	#gearcontainer,
+	#gearcenter,
+	#chatline-2 {
 		fill: var(--color-rock-500);
 	}
 	#videoplayicon,
