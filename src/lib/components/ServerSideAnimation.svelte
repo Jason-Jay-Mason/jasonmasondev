@@ -9,9 +9,9 @@
 <a {href}>
 	<AnimatedGridLink {headline} {hook}>
 		<svg
-			width="348"
+			width="324"
 			height="174"
-			viewBox="0 0 348 174"
+			viewBox="0 0 324 174"
 			fill="none"
 			xmlns="http://www.w3.org/2000/svg"
 		>
@@ -19,7 +19,7 @@
 				<g id="static">
 					<path
 						id="server-top"
-						d="M214 66H343V40C343 37.7909 341.209 36 339 36H218C215.791 36 214 37.7909 214 40V66Z"
+						d="M187 66H316V40C316 37.7909 314.209 36 312 36H191C188.791 36 187 37.7909 187 40V66Z"
 						fill="white"
 						stroke="#3D3834"
 						stroke-width="2"
@@ -30,14 +30,14 @@
 						y="-1"
 						width="129"
 						height="29"
-						transform="matrix(1 0 0 -1 213 102)"
+						transform="matrix(1 0 0 -1 186 102)"
 						fill="white"
 						stroke="#3D3834"
 						stroke-width="2"
 					/>
 					<path
 						id="server-bottom"
-						d="M218 138H339C341.209 138 343 136.209 343 134V109H214V134C214 136.209 215.791 138 218 138Z"
+						d="M191 138H312C314.209 138 316 136.209 316 134V109H187V134C187 136.209 188.791 138 191 138Z"
 						fill="white"
 						stroke="#3D3834"
 						stroke-width="2"
@@ -76,8 +76,8 @@
 						fill="white"
 						stroke="#3D3834"
 					/>
-					<path id="track2" d="M80 145V168H278V145" stroke="#828282" stroke-width="1.2" />
-					<path id="track1" d="M80 31V6H278V31" stroke="#828282" stroke-width="1.2" />
+					<path id="track2" d="M80 145V168H251V145" stroke="#828282" stroke-width="1.2" />
+					<path id="track1" d="M80 31V6H251V31" stroke="#828282" stroke-width="1.2" />
 					<rect
 						id="navbar"
 						width="125"
@@ -91,28 +91,28 @@
 						id="light-1"
 						width="25"
 						height="6"
-						transform="matrix(1 0 0 -1 223 50)"
+						transform="matrix(1 0 0 -1 196 50)"
 						fill="#C0C0C0"
 					/>
 					<rect
 						id="light-2"
 						width="11"
 						height="5"
-						transform="matrix(1 0 0 -1 223 58)"
+						transform="matrix(1 0 0 -1 196 58)"
 						fill="#D1D1D1"
 					/>
 					<rect
 						id="light-3"
 						width="12"
 						height="5"
-						transform="matrix(1 0 0 -1 236 58)"
+						transform="matrix(1 0 0 -1 209 58)"
 						fill="#E7E7E7"
 					/>
 				</g>
 				<g id="processor">
 					<circle
 						id="p-1"
-						cx="306"
+						cx="279"
 						cy="52"
 						r="3.65"
 						fill="white"
@@ -121,7 +121,7 @@
 					/>
 					<circle
 						id="p-2"
-						cx="317"
+						cx="290"
 						cy="52"
 						r="3.65"
 						fill="white"
@@ -130,7 +130,7 @@
 					/>
 					<circle
 						id="p-3"
-						cx="327"
+						cx="300"
 						cy="52"
 						r="3.65"
 						fill="white"
@@ -139,7 +139,7 @@
 					/>
 					<circle
 						id="p-4"
-						cx="233"
+						cx="206"
 						cy="88"
 						r="3.65"
 						fill="white"
@@ -148,7 +148,7 @@
 					/>
 					<circle
 						id="p-5"
-						cx="326"
+						cx="299"
 						cy="88"
 						r="3.65"
 						fill="white"
@@ -157,14 +157,14 @@
 					/>
 					<path
 						id="p-6"
-						d="M282.65 88C282.65 90.5375 280.376 92.65 277.5 92.65C274.624 92.65 272.35 90.5375 272.35 88C272.35 85.4625 274.624 83.35 277.5 83.35C280.376 83.35 282.65 85.4625 282.65 88Z"
+						d="M255.65 88C255.65 90.5375 253.376 92.65 250.5 92.65C247.624 92.65 245.35 90.5375 245.35 88C245.35 85.4625 247.624 83.35 250.5 83.35C253.376 83.35 255.65 85.4625 255.65 88Z"
 						fill="white"
 						stroke="#828282"
 						stroke-width="0.7"
 					/>
 					<circle
 						id="p-7"
-						cx="232"
+						cx="205"
 						cy="124"
 						r="3.65"
 						fill="white"
@@ -173,7 +173,7 @@
 					/>
 					<circle
 						id="p-8"
-						cx="325"
+						cx="298"
 						cy="124"
 						r="3.65"
 						fill="white"
@@ -182,7 +182,7 @@
 					/>
 					<circle
 						id="p-9"
-						cx="277.5"
+						cx="250.5"
 						cy="123.5"
 						r="5.15"
 						fill="white"
@@ -222,10 +222,10 @@
 						/>
 					</g>
 				</g>
-				<path id="data-2" d="M80 145V168H278V145" stroke="#828282" stroke-width="5" />
+				<path id="data-2" d="M80 145V168H251V145" stroke="#828282" stroke-width="5" />
 				<path
 					id="data-1"
-					d="M80 31V7C80 6.44772 80.4477 6 81 6H277C277.552 6 278 6.44772 278 7V31"
+					d="M80 31V7C80 6.44772 80.4477 6 81 6H250C250.552 6 251 6.44772 251 7V31"
 					stroke="#828282"
 					stroke-width="5"
 				/>

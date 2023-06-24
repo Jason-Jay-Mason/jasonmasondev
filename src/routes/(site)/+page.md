@@ -11,24 +11,29 @@ hero:
     hrefOrSrc: /#contact
     isVideo: false
 links:
-  - headline: Server Side
-    animationComponent: ServerSideAnimation
-    href: /blog
-    hook:
-      Lorem Ipsum is simply dummy text of the printing 
-      and typesetting industry. has been the industry's 
   - headline: Client Side
     animationComponent: ClientSideAnimation 
     href: /blog
     hook:
       Lorem Ipsum is simply dummy text of the printing 
       and typesetting industry. has been the industry's 
+
   - headline: Martech
     animationComponent: MartechAnimation
     href: /blog
     hook:
       Lorem Ipsum is simply dummy text of the printing 
       and typesetting industry. has been the industry's 
+
+  - headline: Server Side
+    animationComponent: ServerSideAnimation
+    href: /blog
+    hook:
+      Lorem Ipsum is simply dummy text of the printing 
+      and typesetting industry. has been the industry's 
+
+
+
   - headline: Next Js
     href: /blog
     hook:

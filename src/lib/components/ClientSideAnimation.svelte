@@ -68,7 +68,7 @@
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
-		height: 80%;
+		height: 75%;
 		width: 80%;
 		border: solid 2px var(--color-rock-200);
 		.window-bar {
