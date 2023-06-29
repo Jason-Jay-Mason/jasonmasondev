@@ -1,0 +1,1052 @@
+{
+  "tasks": [
+    {
+      "id": "8684wyzh4",
+      "custom_id": null,
+      "name": "TERRY CHIROPRACTIC",
+      "text_content": "",
+      "description": "",
+      "status": {
+        "status": "done",
+        "color": "#6bc950",
+        "type": "closed",
+        "orderindex": 2
+      },
+      "orderindex": "-2.99999816000000000000000000000000",
+      "date_created": "1687668439463",
+      "date_updated": "1687736146370",
+      "date_closed": "1687736146370",
+      "date_done": "1687736146370",
+      "archived": false,
+      "creator": {
+        "id": 14790665,
+        "username": "Jason Mason",
+        "color": "#5f81ff",
+        "email": "jjm02230@gmail.com",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/14790665_Cyn.jpg"
+      },
+      "assignees": [],
+      "watchers": [],
+      "checklists": [],
+      "tags": [],
+      "parent": null,
+      "priority": null,
+      "due_date": null,
+      "start_date": null,
+      "points": null,
+      "time_estimate": null,
+      "custom_fields": [
+        {
+          "id": "38c0ca37-005d-47ae-a0c8-74f9ef0360c1",
+          "name": "company logo src",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687667955723",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "71599be8-a2b8-4694-8a70-62754edcea78",
+          "name": "company website",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668161777",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "5c3a8f64-0591-4ac9-a9e6-d520203f581d",
+          "name": "figma",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668105303",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "7b693a12-aae2-4f16-a484-83323a4d4b31",
+          "name": "github",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668086274",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "833b351a-bfb7-4319-931a-a3ea3df52830",
+          "name": "technologies",
+          "type": "labels",
+          "type_config": {
+            "options": [
+              {
+                "id": "a5525081-106c-4426-9c55-2478d8f0ea09",
+                "label": "Svelte",
+                "color": null
+              },
+              {
+                "id": "c45170fa-7a33-4157-b0d4-6d6375a5d922",
+                "label": "Go",
+                "color": null
+              },
+              {
+                "id": "b56463ac-204a-4f28-be83-f73a4de15d58",
+                "label": "Next",
+                "color": null
+              },
+              {
+                "id": "f2fc2845-2047-43f3-a359-0d72ea6c23c0",
+                "label": "Tailwind",
+                "color": null
+              },
+              {
+                "id": "79e7d84a-ed47-4af7-877c-5e79cb692880",
+                "label": "Sass",
+                "color": null
+              },
+              {
+                "id": "0601284c-7e8b-404f-9c5f-4d8d256fa1ae",
+                "label": "Styled Components",
+                "color": "#fff"
+              },
+              {
+                "id": "b8e04fc7-7b2a-41d5-8646-38ac23d556d3",
+                "label": "React",
+                "color": "#fff"
+              },
+              {
+                "id": "c54902f2-ff3f-4a91-b84e-2cc2848d7933",
+                "label": "PHP",
+                "color": "#fff"
+              }
+            ]
+          },
+          "date_created": "1687667910751",
+          "hide_from_guests": false,
+          "value": [
+            "c54902f2-ff3f-4a91-b84e-2cc2848d7933"
+          ],
+          "required": false
+        }
+      ],
+      "dependencies": [],
+      "linked_tasks": [],
+      "team_id": "10633106",
+      "url": "https://app.clickup.com/t/8684wyzh4",
+      "sharing": {
+        "public": false,
+        "public_share_expires_on": null,
+        "public_fields": [
+          "assignees",
+          "priority",
+          "due_date",
+          "content",
+          "comments",
+          "attachments",
+          "customFields",
+          "subtasks",
+          "tags",
+          "checklists",
+          "coverimage"
+        ],
+        "token": null,
+        "seo_optimized": false
+      },
+      "permission_level": "create",
+      "list": {
+        "id": "901100158350",
+        "name": "public",
+        "access": true
+      },
+      "project": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "folder": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "space": {
+        "id": "90110013398"
+      }
+    },
+    {
+      "id": "8684wyzh0",
+      "custom_id": null,
+      "name": "ACCURENCE",
+      "text_content": "",
+      "description": "",
+      "status": {
+        "status": "done",
+        "color": "#6bc950",
+        "type": "closed",
+        "orderindex": 2
+      },
+      "orderindex": "-1.99999816000000000000000000000000",
+      "date_created": "1687668427516",
+      "date_updated": "1687736144942",
+      "date_closed": "1687736144942",
+      "date_done": "1687736144942",
+      "archived": false,
+      "creator": {
+        "id": 14790665,
+        "username": "Jason Mason",
+        "color": "#5f81ff",
+        "email": "jjm02230@gmail.com",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/14790665_Cyn.jpg"
+      },
+      "assignees": [],
+      "watchers": [],
+      "checklists": [],
+      "tags": [],
+      "parent": null,
+      "priority": null,
+      "due_date": null,
+      "start_date": null,
+      "points": null,
+      "time_estimate": null,
+      "custom_fields": [
+        {
+          "id": "38c0ca37-005d-47ae-a0c8-74f9ef0360c1",
+          "name": "company logo src",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687667955723",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "71599be8-a2b8-4694-8a70-62754edcea78",
+          "name": "company website",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668161777",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "5c3a8f64-0591-4ac9-a9e6-d520203f581d",
+          "name": "figma",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668105303",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "7b693a12-aae2-4f16-a484-83323a4d4b31",
+          "name": "github",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668086274",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "833b351a-bfb7-4319-931a-a3ea3df52830",
+          "name": "technologies",
+          "type": "labels",
+          "type_config": {
+            "options": [
+              {
+                "id": "a5525081-106c-4426-9c55-2478d8f0ea09",
+                "label": "Svelte",
+                "color": null
+              },
+              {
+                "id": "c45170fa-7a33-4157-b0d4-6d6375a5d922",
+                "label": "Go",
+                "color": null
+              },
+              {
+                "id": "b56463ac-204a-4f28-be83-f73a4de15d58",
+                "label": "Next",
+                "color": null
+              },
+              {
+                "id": "f2fc2845-2047-43f3-a359-0d72ea6c23c0",
+                "label": "Tailwind",
+                "color": null
+              },
+              {
+                "id": "79e7d84a-ed47-4af7-877c-5e79cb692880",
+                "label": "Sass",
+                "color": null
+              },
+              {
+                "id": "0601284c-7e8b-404f-9c5f-4d8d256fa1ae",
+                "label": "Styled Components",
+                "color": "#fff"
+              },
+              {
+                "id": "b8e04fc7-7b2a-41d5-8646-38ac23d556d3",
+                "label": "React",
+                "color": "#fff"
+              },
+              {
+                "id": "c54902f2-ff3f-4a91-b84e-2cc2848d7933",
+                "label": "PHP",
+                "color": "#fff"
+              }
+            ]
+          },
+          "date_created": "1687667910751",
+          "hide_from_guests": false,
+          "value": [
+            "c54902f2-ff3f-4a91-b84e-2cc2848d7933",
+            "b8e04fc7-7b2a-41d5-8646-38ac23d556d3"
+          ],
+          "required": false
+        }
+      ],
+      "dependencies": [],
+      "linked_tasks": [],
+      "team_id": "10633106",
+      "url": "https://app.clickup.com/t/8684wyzh0",
+      "sharing": {
+        "public": false,
+        "public_share_expires_on": null,
+        "public_fields": [
+          "assignees",
+          "priority",
+          "due_date",
+          "content",
+          "comments",
+          "attachments",
+          "customFields",
+          "subtasks",
+          "tags",
+          "checklists",
+          "coverimage"
+        ],
+        "token": null,
+        "seo_optimized": false
+      },
+      "permission_level": "create",
+      "list": {
+        "id": "901100158350",
+        "name": "public",
+        "access": true
+      },
+      "project": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "folder": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "space": {
+        "id": "90110013398"
+      }
+    },
+    {
+      "id": "8684wyzgw",
+      "custom_id": null,
+      "name": "BROKEN HEART HORSEFARM",
+      "text_content": "",
+      "description": "",
+      "status": {
+        "status": "done",
+        "color": "#6bc950",
+        "type": "closed",
+        "orderindex": 2
+      },
+      "orderindex": "-0.99999816000000000000000000000000",
+      "date_created": "1687668415118",
+      "date_updated": "1687736143625",
+      "date_closed": "1687736143625",
+      "date_done": "1687736143625",
+      "archived": false,
+      "creator": {
+        "id": 14790665,
+        "username": "Jason Mason",
+        "color": "#5f81ff",
+        "email": "jjm02230@gmail.com",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/14790665_Cyn.jpg"
+      },
+      "assignees": [],
+      "watchers": [],
+      "checklists": [],
+      "tags": [],
+      "parent": null,
+      "priority": null,
+      "due_date": null,
+      "start_date": null,
+      "points": null,
+      "time_estimate": null,
+      "custom_fields": [
+        {
+          "id": "38c0ca37-005d-47ae-a0c8-74f9ef0360c1",
+          "name": "company logo src",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687667955723",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "71599be8-a2b8-4694-8a70-62754edcea78",
+          "name": "company website",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668161777",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "5c3a8f64-0591-4ac9-a9e6-d520203f581d",
+          "name": "figma",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668105303",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "7b693a12-aae2-4f16-a484-83323a4d4b31",
+          "name": "github",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668086274",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "833b351a-bfb7-4319-931a-a3ea3df52830",
+          "name": "technologies",
+          "type": "labels",
+          "type_config": {
+            "options": [
+              {
+                "id": "a5525081-106c-4426-9c55-2478d8f0ea09",
+                "label": "Svelte",
+                "color": null
+              },
+              {
+                "id": "c45170fa-7a33-4157-b0d4-6d6375a5d922",
+                "label": "Go",
+                "color": null
+              },
+              {
+                "id": "b56463ac-204a-4f28-be83-f73a4de15d58",
+                "label": "Next",
+                "color": null
+              },
+              {
+                "id": "f2fc2845-2047-43f3-a359-0d72ea6c23c0",
+                "label": "Tailwind",
+                "color": null
+              },
+              {
+                "id": "79e7d84a-ed47-4af7-877c-5e79cb692880",
+                "label": "Sass",
+                "color": null
+              },
+              {
+                "id": "0601284c-7e8b-404f-9c5f-4d8d256fa1ae",
+                "label": "Styled Components",
+                "color": "#fff"
+              },
+              {
+                "id": "b8e04fc7-7b2a-41d5-8646-38ac23d556d3",
+                "label": "React",
+                "color": "#fff"
+              },
+              {
+                "id": "c54902f2-ff3f-4a91-b84e-2cc2848d7933",
+                "label": "PHP",
+                "color": "#fff"
+              }
+            ]
+          },
+          "date_created": "1687667910751",
+          "hide_from_guests": false,
+          "value": [
+            "0601284c-7e8b-404f-9c5f-4d8d256fa1ae",
+            "b56463ac-204a-4f28-be83-f73a4de15d58"
+          ],
+          "required": false
+        }
+      ],
+      "dependencies": [],
+      "linked_tasks": [],
+      "team_id": "10633106",
+      "url": "https://app.clickup.com/t/8684wyzgw",
+      "sharing": {
+        "public": false,
+        "public_share_expires_on": null,
+        "public_fields": [
+          "assignees",
+          "priority",
+          "due_date",
+          "content",
+          "comments",
+          "attachments",
+          "customFields",
+          "subtasks",
+          "tags",
+          "checklists",
+          "coverimage"
+        ],
+        "token": null,
+        "seo_optimized": false
+      },
+      "permission_level": "create",
+      "list": {
+        "id": "901100158350",
+        "name": "public",
+        "access": true
+      },
+      "project": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "folder": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "space": {
+        "id": "90110013398"
+      }
+    },
+    {
+      "id": "8684wyzgt",
+      "custom_id": null,
+      "name": "COUNTYLINE CONSTRUCTION",
+      "text_content": "",
+      "description": "",
+      "status": {
+        "status": "done",
+        "color": "#6bc950",
+        "type": "closed",
+        "orderindex": 2
+      },
+      "orderindex": "0.00000184000000000000000000000000",
+      "date_created": "1687668391418",
+      "date_updated": "1687736142073",
+      "date_closed": "1687736142073",
+      "date_done": "1687736142073",
+      "archived": false,
+      "creator": {
+        "id": 14790665,
+        "username": "Jason Mason",
+        "color": "#5f81ff",
+        "email": "jjm02230@gmail.com",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/14790665_Cyn.jpg"
+      },
+      "assignees": [],
+      "watchers": [],
+      "checklists": [],
+      "tags": [],
+      "parent": null,
+      "priority": null,
+      "due_date": null,
+      "start_date": null,
+      "points": null,
+      "time_estimate": null,
+      "custom_fields": [
+        {
+          "id": "38c0ca37-005d-47ae-a0c8-74f9ef0360c1",
+          "name": "company logo src",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687667955723",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "71599be8-a2b8-4694-8a70-62754edcea78",
+          "name": "company website",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668161777",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "5c3a8f64-0591-4ac9-a9e6-d520203f581d",
+          "name": "figma",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668105303",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "7b693a12-aae2-4f16-a484-83323a4d4b31",
+          "name": "github",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668086274",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "833b351a-bfb7-4319-931a-a3ea3df52830",
+          "name": "technologies",
+          "type": "labels",
+          "type_config": {
+            "options": [
+              {
+                "id": "a5525081-106c-4426-9c55-2478d8f0ea09",
+                "label": "Svelte",
+                "color": null
+              },
+              {
+                "id": "c45170fa-7a33-4157-b0d4-6d6375a5d922",
+                "label": "Go",
+                "color": null
+              },
+              {
+                "id": "b56463ac-204a-4f28-be83-f73a4de15d58",
+                "label": "Next",
+                "color": null
+              },
+              {
+                "id": "f2fc2845-2047-43f3-a359-0d72ea6c23c0",
+                "label": "Tailwind",
+                "color": null
+              },
+              {
+                "id": "79e7d84a-ed47-4af7-877c-5e79cb692880",
+                "label": "Sass",
+                "color": null
+              },
+              {
+                "id": "0601284c-7e8b-404f-9c5f-4d8d256fa1ae",
+                "label": "Styled Components",
+                "color": "#fff"
+              },
+              {
+                "id": "b8e04fc7-7b2a-41d5-8646-38ac23d556d3",
+                "label": "React",
+                "color": "#fff"
+              },
+              {
+                "id": "c54902f2-ff3f-4a91-b84e-2cc2848d7933",
+                "label": "PHP",
+                "color": "#fff"
+              }
+            ]
+          },
+          "date_created": "1687667910751",
+          "hide_from_guests": false,
+          "value": [
+            "0601284c-7e8b-404f-9c5f-4d8d256fa1ae",
+            "b56463ac-204a-4f28-be83-f73a4de15d58"
+          ],
+          "required": false
+        }
+      ],
+      "dependencies": [],
+      "linked_tasks": [],
+      "team_id": "10633106",
+      "url": "https://app.clickup.com/t/8684wyzgt",
+      "sharing": {
+        "public": false,
+        "public_share_expires_on": null,
+        "public_fields": [
+          "assignees",
+          "priority",
+          "due_date",
+          "content",
+          "comments",
+          "attachments",
+          "customFields",
+          "subtasks",
+          "tags",
+          "checklists",
+          "coverimage"
+        ],
+        "token": null,
+        "seo_optimized": false
+      },
+      "permission_level": "create",
+      "list": {
+        "id": "901100158350",
+        "name": "public",
+        "access": true
+      },
+      "project": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "folder": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "space": {
+        "id": "90110013398"
+      }
+    },
+    {
+      "id": "8684wyzcb",
+      "custom_id": null,
+      "name": "DRUMIX",
+      "text_content": "This is some test data here. Testing this test data here in the description.",
+      "description": "This is some test data here. Testing this test data here in the description.",
+      "status": {
+        "status": "backlog",
+        "color": "#b5bcc2",
+        "type": "open",
+        "orderindex": 0
+      },
+      "orderindex": "1077.00000000000000000000000000000000",
+      "date_created": "1687668237530",
+      "date_updated": "1687748702266",
+      "date_closed": null,
+      "date_done": null,
+      "archived": false,
+      "creator": {
+        "id": 14790665,
+        "username": "Jason Mason",
+        "color": "#5f81ff",
+        "email": "jjm02230@gmail.com",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/14790665_Cyn.jpg"
+      },
+      "assignees": [],
+      "watchers": [],
+      "checklists": [],
+      "tags": [],
+      "parent": null,
+      "priority": null,
+      "due_date": "1688464800000",
+      "start_date": null,
+      "points": null,
+      "time_estimate": null,
+      "custom_fields": [
+        {
+          "id": "38c0ca37-005d-47ae-a0c8-74f9ef0360c1",
+          "name": "company logo src",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687667955723",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "71599be8-a2b8-4694-8a70-62754edcea78",
+          "name": "company website",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668161777",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "5c3a8f64-0591-4ac9-a9e6-d520203f581d",
+          "name": "figma",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668105303",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "7b693a12-aae2-4f16-a484-83323a4d4b31",
+          "name": "github",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668086274",
+          "hide_from_guests": false,
+          "required": false
+        },
+        {
+          "id": "833b351a-bfb7-4319-931a-a3ea3df52830",
+          "name": "technologies",
+          "type": "labels",
+          "type_config": {
+            "options": [
+              {
+                "id": "a5525081-106c-4426-9c55-2478d8f0ea09",
+                "label": "Svelte",
+                "color": null
+              },
+              {
+                "id": "c45170fa-7a33-4157-b0d4-6d6375a5d922",
+                "label": "Go",
+                "color": null
+              },
+              {
+                "id": "b56463ac-204a-4f28-be83-f73a4de15d58",
+                "label": "Next",
+                "color": null
+              },
+              {
+                "id": "f2fc2845-2047-43f3-a359-0d72ea6c23c0",
+                "label": "Tailwind",
+                "color": null
+              },
+              {
+                "id": "79e7d84a-ed47-4af7-877c-5e79cb692880",
+                "label": "Sass",
+                "color": null
+              },
+              {
+                "id": "0601284c-7e8b-404f-9c5f-4d8d256fa1ae",
+                "label": "Styled Components",
+                "color": "#fff"
+              },
+              {
+                "id": "b8e04fc7-7b2a-41d5-8646-38ac23d556d3",
+                "label": "React",
+                "color": "#fff"
+              },
+              {
+                "id": "c54902f2-ff3f-4a91-b84e-2cc2848d7933",
+                "label": "PHP",
+                "color": "#fff"
+              }
+            ]
+          },
+          "date_created": "1687667910751",
+          "hide_from_guests": false,
+          "value": [
+            "a5525081-106c-4426-9c55-2478d8f0ea09",
+            "c45170fa-7a33-4157-b0d4-6d6375a5d922"
+          ],
+          "required": false
+        }
+      ],
+      "dependencies": [],
+      "linked_tasks": [],
+      "team_id": "10633106",
+      "url": "https://app.clickup.com/t/8684wyzcb",
+      "sharing": {
+        "public": false,
+        "public_share_expires_on": null,
+        "public_fields": [
+          "assignees",
+          "priority",
+          "due_date",
+          "content",
+          "comments",
+          "attachments",
+          "customFields",
+          "subtasks",
+          "tags",
+          "checklists",
+          "coverimage"
+        ],
+        "token": null,
+        "seo_optimized": false
+      },
+      "permission_level": "create",
+      "list": {
+        "id": "901100158350",
+        "name": "public",
+        "access": true
+      },
+      "project": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "folder": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "space": {
+        "id": "90110013398"
+      }
+    },
+    {
+      "id": "8684wyzba",
+      "custom_id": null,
+      "name": "JASONMASON.DEV",
+      "text_content": "",
+      "description": "",
+      "status": {
+        "status": "doing",
+        "color": "#f9d900",
+        "type": "custom",
+        "orderindex": 1
+      },
+      "orderindex": "0.00000106000000000000000000000000",
+      "date_created": "1687667931130",
+      "date_updated": "1687749051143",
+      "date_closed": null,
+      "date_done": null,
+      "archived": false,
+      "creator": {
+        "id": 14790665,
+        "username": "Jason Mason",
+        "color": "#5f81ff",
+        "email": "jjm02230@gmail.com",
+        "profilePicture": "https://attachments.clickup.com/profilePictures/14790665_Cyn.jpg"
+      },
+      "assignees": [],
+      "watchers": [],
+      "checklists": [],
+      "tags": [],
+      "parent": null,
+      "priority": null,
+      "due_date": null,
+      "start_date": null,
+      "points": null,
+      "time_estimate": null,
+      "custom_fields": [
+        {
+          "id": "38c0ca37-005d-47ae-a0c8-74f9ef0360c1",
+          "name": "company logo src",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687667955723",
+          "hide_from_guests": false,
+          "value": "/chess-logo.svg",
+          "required": false
+        },
+        {
+          "id": "71599be8-a2b8-4694-8a70-62754edcea78",
+          "name": "company website",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668161777",
+          "hide_from_guests": false,
+          "value": "https://chess.com",
+          "required": false
+        },
+        {
+          "id": "5c3a8f64-0591-4ac9-a9e6-d520203f581d",
+          "name": "figma",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668105303",
+          "hide_from_guests": false,
+          "value": "https://www.figma.com/file/z55LTmpxLwVzRVoSO8oyIW/Personal-Site?type=design&node-id=795%3A2&mode=design&t=9ZqyvjHYB0SzZi6f-1",
+          "required": false
+        },
+        {
+          "id": "7b693a12-aae2-4f16-a484-83323a4d4b31",
+          "name": "github",
+          "type": "short_text",
+          "type_config": {},
+          "date_created": "1687668086274",
+          "hide_from_guests": false,
+          "value": "https://github.com/Jason-Jay-Mason",
+          "required": false
+        },
+        {
+          "id": "833b351a-bfb7-4319-931a-a3ea3df52830",
+          "name": "technologies",
+          "type": "labels",
+          "type_config": {
+            "options": [
+              {
+                "id": "a5525081-106c-4426-9c55-2478d8f0ea09",
+                "label": "Svelte",
+                "color": null
+              },
+              {
+                "id": "c45170fa-7a33-4157-b0d4-6d6375a5d922",
+                "label": "Go",
+                "color": null
+              },
+              {
+                "id": "b56463ac-204a-4f28-be83-f73a4de15d58",
+                "label": "Next",
+                "color": null
+              },
+              {
+                "id": "f2fc2845-2047-43f3-a359-0d72ea6c23c0",
+                "label": "Tailwind",
+                "color": null
+              },
+              {
+                "id": "79e7d84a-ed47-4af7-877c-5e79cb692880",
+                "label": "Sass",
+                "color": null
+              },
+              {
+                "id": "0601284c-7e8b-404f-9c5f-4d8d256fa1ae",
+                "label": "Styled Components",
+                "color": "#fff"
+              },
+              {
+                "id": "b8e04fc7-7b2a-41d5-8646-38ac23d556d3",
+                "label": "React",
+                "color": "#fff"
+              },
+              {
+                "id": "c54902f2-ff3f-4a91-b84e-2cc2848d7933",
+                "label": "PHP",
+                "color": "#fff"
+              }
+            ]
+          },
+          "date_created": "1687667910751",
+          "hide_from_guests": false,
+          "value": [
+            "79e7d84a-ed47-4af7-877c-5e79cb692880",
+            "a5525081-106c-4426-9c55-2478d8f0ea09"
+          ],
+          "required": false
+        }
+      ],
+      "dependencies": [],
+      "linked_tasks": [],
+      "team_id": "10633106",
+      "url": "https://app.clickup.com/t/8684wyzba",
+      "sharing": {
+        "public": false,
+        "public_share_expires_on": null,
+        "public_fields": [
+          "assignees",
+          "priority",
+          "due_date",
+          "content",
+          "comments",
+          "attachments",
+          "customFields",
+          "subtasks",
+          "tags",
+          "checklists",
+          "coverimage"
+        ],
+        "token": null,
+        "seo_optimized": false
+      },
+      "permission_level": "create",
+      "list": {
+        "id": "901100158350",
+        "name": "public",
+        "access": true
+      },
+      "project": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "folder": {
+        "id": "90110066452",
+        "name": "hidden",
+        "hidden": true,
+        "access": true
+      },
+      "space": {
+        "id": "90110013398"
+      }
+    }
+  ],
+  "last_page": true
+}

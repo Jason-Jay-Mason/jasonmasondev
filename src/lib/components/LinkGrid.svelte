@@ -88,11 +88,11 @@
 		margin: 0 auto;
 		@include md {
 			max-width: $lg;
-			padding: var(--s-6);
+			padding: 0 var(--s-6) var(--s-10) var(--s-6);
 		}
 
 		@include xl {
-			padding: var(--s-9);
+			padding: 0 var(--s-9) var(--s-13) var(--s-9);
 			max-width: $xxl;
 		}
 

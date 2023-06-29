@@ -3,6 +3,11 @@
 
 	export let hero
 	export let links
+	export let data
+
+	$: {
+		console.log(data)
+	}
 
 	let y = 1
 	function handleParalax() {
