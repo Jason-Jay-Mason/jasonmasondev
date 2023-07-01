@@ -1,4 +1,3 @@
-
 export function getStyleValue(progress: number, start: number, length: number, startValue: number, endValue: number) {
   let animationProgress = (progress - start) / length
 
