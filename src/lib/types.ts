@@ -1,5 +1,10 @@
-
 export type IterableGlob = [path: string, resolver: Function]
+
+export interface ClickupData {
+  backlog: object[]
+  doing: object[]
+  done: object[]
+}
 
 export interface GridLinkData {
   headline: string

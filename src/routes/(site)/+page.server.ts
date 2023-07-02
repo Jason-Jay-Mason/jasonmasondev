@@ -1,10 +1,10 @@
 export const prerender = true
 
 import type { PageServerLoad } from './$types';
+import type { ClickupData } from '$lib/types';
+import { error } from '@sveltejs/kit';
 import jsonata from 'jsonata'
-
-//TODO: put this in env
-const apiKey = 'pk_14790665_GTGN961QCES7R4F433P5T1AOHU2TPWF2'
+import { CLICKUP_API_KEY } from '$env/static/private'
 
 const listId = '901100158350'
 const baseUrl = 'https://api.clickup.com/api/v2'
@@ -13,19 +13,7 @@ const params = new URLSearchParams({
   "include_closed": "true"
 })
 
-export const load: PageServerLoad = async (obj) => {
-  try {
-
-    const res = await fetch(endPoint + params, {
-      method: "GET",
-      headers: {
-        "Authorization": apiKey
-      }
-    })
-
-    const raw = await res.json()
-
-    const expression = jsonata(`
+const expression = jsonata(`
     {
       "backlog": [tasks['backlog' in status.status].{
           'id':id,
@@ -70,12 +58,32 @@ export const load: PageServerLoad = async (obj) => {
           'technologyIds': custom_fields[name = 'technologies'].value
       }]
     }
-    `)
+`)
+
+export const load: PageServerLoad = async (): Promise<any> => {
+  try {
+    const res = await fetch(endPoint + params, {
+      method: "GET",
+      headers: {
+        "Authorization": CLICKUP_API_KEY
+      }
+    })
+
+    const raw = await res.json()
+
+    if (raw.err) {
+      console.error(`There was a problem hitting the clickup endpoint ${endPoint} returned: ${raw.err}`)
+
+      const backupTasks = await import(
+			/* @vite-ignore */ `../../../clickup-backup.json`
+      )
+      return backupTasks.default
+    }
 
     const tasks = await expression.evaluate(raw)
     return tasks
 
   } catch (err) {
-    console.error(err)
+    throw error(404, 'Page not found')
   }
 }
