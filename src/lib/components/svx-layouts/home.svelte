@@ -1,13 +1,10 @@
 <script>
-	import { Hero, Mustachio, LinkGrid } from "$lib/components"
+	import { Hero, Mustachio, LinkGrid, Kanban } from "$lib/components"
 
 	export let hero
 	export let links
+	export let kanban
 	export let data
-
-	$: {
-		console.log(data)
-	}
 
 	let y = 1
 	function handleParalax() {
@@ -21,6 +18,7 @@
 <!-- </div> -->
 <Hero cta={hero.cta} hook={hero.hook} headline={hero.headline} />
 <LinkGrid {links} />
+<Kanban tasks={data.tasks} headline={kanban.headline} />
 
 <style lang="scss">
 	.mustachio {

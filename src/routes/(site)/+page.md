@@ -49,4 +49,8 @@ links:
       Lorem Ipsum is simply dummy text of the printing 
       and typesetting industry. has been the industry's 
     href: /blog
+kanban:
+  headline:
+    main: 'PROJECT KANBAN'
+    sub: 'What I’m working on'
 ---

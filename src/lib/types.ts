@@ -1,10 +1,24 @@
 export type IterableGlob = [path: string, resolver: Function]
 
-export interface ClickupData {
-  backlog: object[]
-  doing: object[]
-  done: object[]
+export interface ClickupTask {
+  id: string
+  status: string
+  sharingToken: string
+  teamId: string
+  name: string
+  description: string
+  dueDate: string
+  timeEstimate: string
+  companyLogoSrc: string
+  companyHref: string
+  figmaHref: string
+  githubHref: string
+  technologyIds: string
 }
+export interface HomeData {
+  tasks: ClickupTask[]
+}
+
 
 export interface GridLinkData {
   headline: string

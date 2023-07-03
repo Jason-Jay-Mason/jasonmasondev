@@ -12,6 +12,7 @@ export { default as ServerSideAnimation } from './ServerSideAnimation.svelte'
 export { default as AnimatedGridLink } from './AnimatedGridLink.svelte'
 export { default as MartechAnimation } from './MartechAnimation.svelte'
 export { default as ClientSideAnimation } from './ClientSideAnimation.svelte'
+export { default as Kanban } from './Kanban.svelte'
 
 
 
