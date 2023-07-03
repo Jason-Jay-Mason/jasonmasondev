@@ -6,6 +6,10 @@
 	export let kanban
 	export let data
 
+	$: {
+		console.log(data)
+	}
+
 	let y = 1
 	function handleParalax() {
 		y = -0.3 * window.scrollY

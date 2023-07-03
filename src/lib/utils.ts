@@ -12,6 +12,17 @@ export function getStyleValue(progress: number, start: number, length: number, s
   return startValue + animationProgress * valueDistance
 }
 
+export function debounce(func: Function, delay: number): Function {
+  let timeoutId: NodeJS.Timeout;
+
+  return function(...args: any[]) {
+    clearTimeout(timeoutId);
+
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+}
 
 
 import type { IterableGlob } from './types';

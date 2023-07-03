@@ -9,11 +9,12 @@ export interface ClickupTask {
   description: string
   dueDate: string
   timeEstimate: string
-  companyLogoSrc: string
-  companyHref: string
+  organization: string
+  organizationLogoSrc: string
+  organizationHref: string
   figmaHref: string
   githubHref: string
-  technologyIds: string
+  technologies: string[]
 }
 export interface HomeData {
   tasks: ClickupTask[]

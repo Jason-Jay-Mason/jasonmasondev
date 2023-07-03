@@ -23,60 +23,19 @@ const expression = jsonata(`
     'description': description,
     'dueDate': due_date,
     'timeEstimate': time_estimate,
-    'companyLogoSrc': custom_fields[name = 'company logo src'].value,
-    'companyHref': custom_fields[name = 'company website'].value,
+    'organization': custom_fields[name='organization'].value,
+    'organizationLogoSrc': custom_fields[name = 'organization logo src'].value,
+    'organizationHref': custom_fields[name = 'organization website'].value,
     'figmaHref': custom_fields[name = 'figma'].value,
-    'githubHref': custom_fields[name = 'girhub'].value,
-    'technologyIds': custom_fields[name = 'technologies'].value
+    'githubHref': custom_fields[name = 'github'].value,
+    'technologies': custom_fields[name = 'technologies'].value,
+    'technologyMap': custom_fields[name = 'technologies'].type_config.options{
+        id: label
+    }
   }
 `)
 
-// const expression = jsonata(`
-//     {
-//       "backlog": [tasks['backlog' in status.status].{
-//           'id':id,
-//           'sharingToken': sharing.token,
-//           'teamId': team_id,
-//           'name':name,
-//           'description': description,
-//           'dueDate': due_date,
-//           'timeEstimate': time_estimate,
-//           'companyLogoSrc': custom_fields[name = 'company logo src'].value,
-//           'companyHref': custom_fields[name = 'company website'].value,
-//           'figmaHref': custom_fields[name = 'figma'].value,
-//           'githubHref': custom_fields[name = 'girhub'].value,
-//           'technologyIds': custom_fields[name = 'technologies'].value
-//       }],
-//       "doing": [tasks['doing' in status.status].{
-//           'id':id,
-//           'sharingToken': sharing.token,
-//           'teamId': team_id,
-//           'name':name,
-//           'description': description,
-//           'dueDate': due_date,
-//           'timeEstimate': time_estimate,
-//           'companyLogoSrc': custom_fields[name = 'company logo src'].value,
-//           'companyHref': custom_fields[name = 'company website'].value,
-//           'figmaHref': custom_fields[name = 'figma'].value,
-//           'githubHref': custom_fields[name = 'girhub'].value,
-//           'technologyIds': custom_fields[name = 'technologies'].value
-//           }],
-//       "done": [tasks['done' in status.status].{
-//           'id':id,
-//           'sharingToken': sharing.token,
-//           'teamId': team_id,
-//           'name':name,
-//           'description': description,
-//           'dueDate': due_date,
-//           'timeEstimate': time_estimate,
-//           'companyLogoSrc': custom_fields[name = 'company logo src'].value,
-//           'companyHref': custom_fields[name = 'company website'].value,
-//           'figmaHref': custom_fields[name = 'figma'].value,
-//           'githubHref': custom_fields[name = 'girhub'].value,
-//           'technologyIds': custom_fields[name = 'technologies'].value
-//       }]
-//     }
-// `)
+
 
 export const load: PageServerLoad = async (): Promise<HomeData> => {
   try {
@@ -95,12 +54,17 @@ export const load: PageServerLoad = async (): Promise<HomeData> => {
       const backupTasks = await import(
 			/* @vite-ignore */ `../../../clickup-backup.json`
       )
-      // return {
-      //   tasks: backupTasks.default
-      // }
+      return {
+        tasks: backupTasks.default
+      }
     }
 
-    const tasks = await expression.evaluate(raw)
+    let tasks = await expression.evaluate(raw)
+    for (const task of tasks) {
+      task.technologies = task.technologies.map((id: string) => task.technologyMap[id])
+      delete task.technologyMap
+    }
+
     return {
       tasks,
     }
