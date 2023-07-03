@@ -1,18 +1,10 @@
 <script lang="ts">
 	import type { ClickupTask, Headline } from "$lib/types"
 	import { debounce } from "$lib/utils"
-	import LargeHeadline from "./LargeHeadline.svelte"
-	import ThemeSwitcher from "./ThemeSwitcher.svelte"
+	import { LargeHeadline, KanbanFilter as Filter } from "$lib/components"
 
 	export let tasks: ClickupTask[]
 	export let headline: Headline
-
-	const filterNames = {
-		name: "Name",
-		technologyIds: "Technologies",
-		company: "Organization",
-		dueDate: "Due Date"
-	}
 
 	let searchMatches = tasks
 
@@ -48,6 +40,7 @@
 		<input type="text" placeholder="search" on:keyup={debouncedHandleSearch} />
 		<button>filter</button>
 	</div>
-
-	<div class="filter-menu" />
+	<div class="filter-menu">
+		<Filter />
+	</div>
 </section>

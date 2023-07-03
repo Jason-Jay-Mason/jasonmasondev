@@ -1,5 +1,31 @@
 export type IterableGlob = [path: string, resolver: Function]
 
+
+export enum KanbanFilterType {
+  contains,
+  picklist,
+  numberRange
+}
+export interface DateRange {
+  start: Date
+  end: Date
+}
+
+export interface KanbanFilter {
+  label: string
+  filterType: KanbanFilterType
+  options: string[] | null
+  value: DateRange | string
+}
+export type KanbanFilters = Record<string, KanbanFilter>
+
+export enum KanbanFilterableProp {
+  name = "Name",
+  technologyIds = "Technologies",
+  company = "Company",
+  dueDate = "Due Date"
+}
+
 export interface ClickupTask {
   id: string
   status: string
