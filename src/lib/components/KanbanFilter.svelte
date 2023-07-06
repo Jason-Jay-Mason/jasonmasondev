@@ -1,73 +1,81 @@
 <script lang="ts">
-	import type { KanbanFilters, KanbanFilter } from "$lib/types"
+	import type { KanbanFilters, KanbanFilter, DateRange } from "$lib/types"
 	import { KanbanFilterType } from "$lib/types"
-	import Input from "./Input.svelte"
 
-	export let dropdownOptions: string[] | null
-
-	const filters: KanbanFilters = {
+	const filterOptions: KanbanFilters = {
 		name: {
+			key: "name",
 			label: "Name",
 			filterType: KanbanFilterType.contains,
-			options: dropdownOptions,
+			options: null,
 			value: ""
 		},
 		organization: {
+			key: "organization",
 			label: "Organization",
 			filterType: KanbanFilterType.contains,
-			options: dropdownOptions,
+			options: null,
 			value: ""
 		},
 		dueDate: {
+			key: "dueDate",
 			label: "Due Date",
-			filterType: KanbanFilterType.numberRange,
-			options: dropdownOptions,
+			filterType: KanbanFilterType.dateRange,
+			options: null,
 			value: {
-				start: new Date(),
-				end: new Date()
+				start: "",
+				end: ""
 			}
 		},
-		technolgies: {
+		technologies: {
+			key: "technologies",
 			label: "Tools",
 			filterType: KanbanFilterType.picklist,
-			options: ["PHP", "Svelte"],
+			options: ["PHP", "Svelte", "Go"],
 			value: ""
 		}
 	}
 
-	let activeFilter: KanbanFilter
-	function handlePropChange(e) {
-		activeFilter = filters[e.target.value]
-		console.log(activeFilter)
-	}
+	export let filter: KanbanFilter<any>
 
-	//TODO: build out filter functions based on value
+	function handlePropChange(e) {
+		const selection = filterOptions[e.target.value]
+		if (selection.filterType === KanbanFilterType.dateRange) {
+			const next: KanbanFilter<DateRange> = {
+				id: filter?.id,
+				...selection
+			}
+			filter = next
+		} else {
+			filter = { id: filter?.id, ...filterOptions[e.target.value] }
+		}
+	}
 </script>
 
 <div class="container">
 	<select on:change={handlePropChange}>
 		<option selected>---</option>
-		{#each Object.keys(filters) as key}
-			<option value={key}>{filters[key].label}</option>
+		{#each Object.keys(filterOptions) as key}
+			<option value={key}>{filterOptions[key].label}</option>
 		{/each}
 	</select>
-	{#if activeFilter}
-		{#if activeFilter.filterType === KanbanFilterType.contains}
+	{#if filter}
+		{#if filter.filterType === KanbanFilterType.contains}
 			<p>contains</p>
-			<input bind:value={activeFilter.value} />
+			<input bind:value={filter.value} />
 		{/if}
 
-		{#if activeFilter.filterType === KanbanFilterType.numberRange && typeof activeFilter.value === "object"}
+		{#if filter.filterType === KanbanFilterType.dateRange && typeof filter.value?.start}
 			<p>is within</p>
-			<input bind:value={activeFilter.value.start} type="date" />
+			<input bind:value={filter.value.start} type="date" />
 			<p>and</p>
-			<input bind:value={activeFilter.value.end} type="date" />
+			<input bind:value={filter.value.end} type="date" />
 		{/if}
 
-		{#if activeFilter.filterType === KanbanFilterType.picklist && activeFilter.options}
+		{#if filter.filterType === KanbanFilterType.picklist && filter.options}
 			<p>include</p>
-			<select>
-				{#each activeFilter.options as option}
+			<select bind:value={filter.value}>
+				{#each filter.options as option}
 					<option>{option}</option>
 				{/each}
 			</select>

@@ -14,7 +14,7 @@ export { default as MartechAnimation } from './MartechAnimation.svelte'
 export { default as ClientSideAnimation } from './ClientSideAnimation.svelte'
 export { default as Kanban } from './Kanban.svelte'
 export { default as KanbanFilter } from './KanbanFilter.svelte'
-
+export { default as KanbanFilterMenu } from './KanbanFilterMenu.svelte'
 
 
 //A spinner for loading

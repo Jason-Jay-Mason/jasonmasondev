@@ -1,23 +1,45 @@
 export type IterableGlob = [path: string, resolver: Function]
 
+export type FilterableData = Record<string, any>
 
 export enum KanbanFilterType {
+  nill,
   contains,
   picklist,
-  numberRange
+  dateRange
 }
 export interface DateRange {
-  start: Date
-  end: Date
+  start: string
+  end: string
 }
 
-export interface KanbanFilter {
-  label: string
-  filterType: KanbanFilterType
-  options: string[] | null
-  value: DateRange | string
+export type KanbanFilter<T> = T extends string ? {
+  id?: number,
+  key: string,
+  label: string,
+  filterType: KanbanFilterType,
+  options: string[] | null,
+  value: T,
+} : {
+  id?: number,
+  key: string,
+  label: string,
+  filterType: KanbanFilterType,
+  options: string[] | null,
+  value: T,
 }
-export type KanbanFilters = Record<string, KanbanFilter>
+
+
+// export interface KanbanFilter {
+//   id?: number
+//   key: string
+//   label: string
+//   filterType: KanbanFilterType
+//   options: string[] | null
+//   value: DateRange | string
+// }
+
+export type KanbanFilters = Record<string, KanbanFilter<any>>
 
 export enum KanbanFilterableProp {
   name = "Name",
@@ -29,17 +51,17 @@ export enum KanbanFilterableProp {
 export interface ClickupTask {
   id: string
   status: string
-  sharingToken: string
+  sharingToken: string | null
   teamId: string
   name: string
-  description: string
-  dueDate: string
-  timeEstimate: string
-  organization: string
-  organizationLogoSrc: string
-  organizationHref: string
-  figmaHref: string
-  githubHref: string
+  description: string | null
+  dueDate: string | null
+  timeEstimate: string | null
+  organization: string | null
+  organizationLogoSrc?: string | null
+  organizationHref?: string | null
+  figmaHref?: string | null
+  githubHref?: string | null
   technologies: string[]
 }
 export interface HomeData {

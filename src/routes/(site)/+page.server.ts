@@ -54,6 +54,7 @@ export const load: PageServerLoad = async (): Promise<HomeData> => {
       const backupTasks = await import(
 			/* @vite-ignore */ `../../../clickup-backup.json`
       )
+      console.log(backupTasks.default)
       return {
         tasks: backupTasks.default
       }
