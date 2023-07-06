@@ -4,6 +4,7 @@ export type FilterableData = Record<string, any>
 
 export enum KanbanFilterType {
   nill,
+  fuzzyFind,
   contains,
   picklist,
   dateRange
@@ -18,28 +19,18 @@ export type KanbanFilter<T> = T extends string ? {
   key: string,
   label: string,
   filterType: KanbanFilterType,
-  options: string[] | null,
+  options?: string[] | null,
   value: T,
 } : {
   id?: number,
   key: string,
   label: string,
   filterType: KanbanFilterType,
-  options: string[] | null,
+  options?: string[] | null,
   value: T,
 }
 
-
-// export interface KanbanFilter {
-//   id?: number
-//   key: string
-//   label: string
-//   filterType: KanbanFilterType
-//   options: string[] | null
-//   value: DateRange | string
-// }
-
-export type KanbanFilters = Record<string, KanbanFilter<any>>
+export type KanbanFilterOptions = Record<string, KanbanFilter<any>>
 
 export enum KanbanFilterableProp {
   name = "Name",

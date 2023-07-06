@@ -12,9 +12,9 @@ export { default as ServerSideAnimation } from './ServerSideAnimation.svelte'
 export { default as AnimatedGridLink } from './AnimatedGridLink.svelte'
 export { default as MartechAnimation } from './MartechAnimation.svelte'
 export { default as ClientSideAnimation } from './ClientSideAnimation.svelte'
-export { default as Kanban } from './Kanban.svelte'
-export { default as KanbanFilter } from './KanbanFilter.svelte'
-export { default as KanbanFilterMenu } from './KanbanFilterMenu.svelte'
+export { default as Kanban } from './kanban/Kanban.svelte'
+export { default as FilterField } from './kanban/FilterField.svelte'
+export { default as FilterMenu } from './kanban/FilterMenu.svelte'
 
 
 //A spinner for loading
