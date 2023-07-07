@@ -19,4 +19,18 @@
 </section>
 
 <style lang="scss">
+	@import "../../theme/breakpoints.scss";
+	section {
+		padding: 0 var(--s-4) var(--s-11) var(--s-4);
+		margin: 0 auto;
+		@include md {
+			max-width: $lg;
+			padding: 0 var(--s-6) var(--s-10) var(--s-6);
+		}
+
+		@include xl {
+			padding: 0 var(--s-9) var(--s-13) var(--s-9);
+			max-width: $xxl;
+		}
+	}
 </style>

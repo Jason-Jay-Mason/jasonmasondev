@@ -15,6 +15,7 @@ export { default as ClientSideAnimation } from './ClientSideAnimation.svelte'
 export { default as Kanban } from './kanban/Kanban.svelte'
 export { default as FilterField } from './kanban/FilterField.svelte'
 export { default as FilterMenu } from './kanban/FilterMenu.svelte'
+export { default as TrashIcon } from './kanban/TrashIcon.svelte'
 
 
 //A spinner for loading

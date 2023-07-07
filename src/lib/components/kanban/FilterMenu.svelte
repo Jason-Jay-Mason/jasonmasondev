@@ -3,11 +3,12 @@
 	import Filters from "./filters"
 	import { debounce } from "$lib/utils"
 	import { KanbanFilterType } from "$lib/types"
-	import { FilterField } from "$lib/components"
+	import { FilterField, TrashIcon } from "$lib/components"
 
 	export let data: FilterableData[]
 	export let filtered: FilterableData[]
 
+	let advancedVisible = false
 	let activeFilters: KanbanFilter<any>[] = [
 		{
 			id: 0,
@@ -20,6 +21,7 @@
 
 	$: {
 		if (activeFilters.length) {
+			console.log(activeFilters)
 			handleFiltering()
 		}
 	}
@@ -31,6 +33,8 @@
 				case KanbanFilterType.fuzzyFind:
 					copy = Filters.fuzzyFind(filter, copy, ["name"])
 					continue
+				case KanbanFilterType.contains:
+					copy = Filters.contains(filter, copy)
 				default:
 			}
 		}
@@ -97,15 +101,81 @@
 <div class="filter-menu">
 	<FilterField bind:filter={activeFilters[0]} />
 	<div class="advanced">
-		<button on:click={addFilter}>add one</button>
-		{#each activeFilters as filter, i (filter.id)}
-			{#if i !== 0}
-				<FilterField bind:filter {options} />
-				<button on:click={() => removeFilter(i)}>remove filter</button>
-			{/if}
-		{/each}
+		<button class="filter-button" on:click={() => (advancedVisible = !advancedVisible)}
+			>Filter</button
+		>
+		{#if advancedVisible}
+			<div class="menu">
+				<button class="filter-button" on:click={addFilter}>+Add Filter</button>
+
+				{#each activeFilters as filter, i (filter.id)}
+					{#if i !== 0}
+						<div class="filter-field">
+							<FilterField bind:filter {options} />
+							<button class="delete-filter" on:click={() => removeFilter(i)}>
+								<TrashIcon />
+							</button>
+						</div>
+					{/if}
+				{/each}
+			</div>
+		{/if}
 	</div>
 </div>
 
 <style lang="scss">
+	.filter-menu {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-right: var(--s-7);
+		.advanced {
+			position: relative;
+			width: 35%;
+			display: flex;
+			flex-direction: row;
+			justify-content: flex-end;
+			.filter-button {
+				background: none;
+				border: none;
+				color: var(--color-text-body);
+				text-transform: uppercase;
+				font-family: var(--font-headline);
+				font-size: var(--text-base);
+				line-height: 0;
+				padding: var(--s-7) 0;
+				&:hover {
+					cursor: pointer;
+				}
+			}
+			.menu {
+				background-color: var(--color-rock-900);
+				position: absolute;
+				width: 100%;
+				right: 0;
+				top: 100%;
+				padding: var(--s-4) var(--s-7);
+				border: solid 4px var(--color-rock-200);
+				.filter-field {
+					display: flex;
+					flex-direction: row;
+					justify-content: space-between;
+					align-items: center;
+					padding-bottom: var(--s-5);
+				}
+				.delete-filter {
+					background-color: var(--color-bg-primary);
+					display: flex;
+					justify-content: center;
+					align-items: center;
+					border: none;
+					width: 20px;
+					padding: 2px;
+					&:hover {
+						cursor: pointer;
+					}
+				}
+			}
+		}
+	}
 </style>

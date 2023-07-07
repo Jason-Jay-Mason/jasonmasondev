@@ -59,8 +59,28 @@
 {/if}
 
 <style lang="scss">
+	select,
+	input {
+		color: var(--color-text-body);
+		background-color: var(--color-bg-primary);
+		border: solid 2px var(--color-rock-200);
+	}
 	.container {
 		display: flex;
 		flex-direction: row;
+		width: 90%;
+		input {
+			width: 100%;
+		}
+		input[type="date"] {
+			font-size: 0.8rem;
+			width: 100%;
+			border: none;
+		}
+		p {
+			padding: 0 var(--s-4);
+			font-size: 0.8rem;
+			white-space: nowrap;
+		}
 	}
 </style>
