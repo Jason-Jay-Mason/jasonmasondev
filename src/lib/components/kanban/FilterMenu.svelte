@@ -124,17 +124,24 @@
 </div>
 
 <style lang="scss">
+	@import "../../theme/breakpoints.scss";
 	.filter-menu {
 		display: flex;
 		flex-direction: row;
-		justify-content: space-between;
-		padding-right: var(--s-7);
+		justify-content: center;
+		padding: var(--s-9) var(--s-7) 0 0;
+		@include lg {
+			justify-content: space-between;
+		}
 		.advanced {
 			position: relative;
-			width: 35%;
-			display: flex;
+			display: none;
+			width: 40%;
 			flex-direction: row;
 			justify-content: flex-end;
+			@include xl {
+				display: flex;
+			}
 			.filter-button {
 				background: none;
 				border: none;
@@ -169,8 +176,9 @@
 					justify-content: center;
 					align-items: center;
 					border: none;
-					width: 20px;
+					width: 16px;
 					padding: 2px;
+					margin-left: 10px;
 					&:hover {
 						cursor: pointer;
 					}

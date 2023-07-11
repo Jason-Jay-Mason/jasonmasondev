@@ -2,7 +2,7 @@
 	import type { KanbanFilterOptions, KanbanFilter, DateRange } from "$lib/types"
 	import { KanbanFilterType } from "$lib/types"
 
-	export let options: KanbanFilterOptions | null
+	export let options: KanbanFilterOptions | undefined
 	export let filter: KanbanFilter<any>
 
 	function handlePropChange(e) {
@@ -40,7 +40,7 @@
 			{/if}
 
 			{#if filter.filterType === KanbanFilterType.dateRange && typeof filter.value?.start}
-				<p>is within</p>
+				<p>between</p>
 				<input bind:value={filter.value.start} type="date" />
 				<p>and</p>
 				<input bind:value={filter.value.end} type="date" />
@@ -64,18 +64,36 @@
 		color: var(--color-text-body);
 		background-color: var(--color-bg-primary);
 		border: solid 2px var(--color-rock-200);
+		padding: 5px 20px;
+		font-size: 0.8rem;
+		text-align: center;
+	}
+	input::placeholder {
+		text-align: center;
+		color: var(--color-rock-100);
+		opacity: 1;
+		text-transform: uppercase;
+		font-weight: 700;
+		font-family: var(--font-headline);
+		letter-spacing: 1.7px;
+	}
+	input:focus::placeholder {
+		opacity: 0;
 	}
 	.container {
 		display: flex;
 		flex-direction: row;
-		width: 90%;
+		justify-content: flex-start;
+		align-items: center;
+		width: 96%;
 		input {
 			width: 100%;
 		}
 		input[type="date"] {
 			font-size: 0.8rem;
 			width: 100%;
-			border: none;
+			padding: 5px 0;
+			//border: none;
 		}
 		p {
 			padding: 0 var(--s-4);

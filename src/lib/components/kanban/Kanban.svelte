@@ -11,11 +11,11 @@
 <section id="kanban">
 	<LargeHeadline main={headline.main} sub={headline.sub} />
 	<FilterMenu data={tasks} bind:filtered />
-	<div class="columns">
-		{#each filtered as task}
-			<div>{task.name}</div>
-		{/each}
-	</div>
+	<!-- <div class="columns"> -->
+	<!-- 	{#each filtered as task} -->
+	<!-- 		<div>{task.name}</div> -->
+	<!-- 	{/each} -->
+	<!-- </div> -->
 </section>
 
 <style lang="scss">
