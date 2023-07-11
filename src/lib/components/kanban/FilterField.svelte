@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { KanbanFilterOptions, KanbanFilter, DateRange } from "$lib/types"
 	import { KanbanFilterType } from "$lib/types"
+	import { SearchIcon } from "$lib/components"
 
 	export let options: KanbanFilterOptions | undefined
 	export let filter: KanbanFilter<any>
@@ -22,7 +23,10 @@
 </script>
 
 {#if filter && filter.filterType === KanbanFilterType.fuzzyFind}
-	<input placeholder="Fuzzy Find" bind:value={filter.value} />
+	<div class="fuzzy">
+		<SearchIcon />
+		<input placeholder="Fuzzy Find" bind:value={filter.value} />
+	</div>
 {/if}
 
 {#if options}
@@ -59,12 +63,18 @@
 {/if}
 
 <style lang="scss">
+	.fuzzy {
+		position: relative;
+		height: fit-content;
+		width: fit-content;
+		background: red;
+	}
 	select,
 	input {
 		color: var(--color-text-body);
 		background-color: var(--color-bg-primary);
 		border: solid 2px var(--color-rock-200);
-		padding: 5px 20px;
+		padding: var(--s-4) 20px;
 		font-size: 0.8rem;
 		text-align: center;
 	}

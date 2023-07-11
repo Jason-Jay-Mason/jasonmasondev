@@ -21,7 +21,6 @@
 
 	$: {
 		if (activeFilters.length) {
-			console.log(activeFilters)
 			handleFiltering()
 		}
 	}
@@ -129,7 +128,7 @@
 		display: flex;
 		flex-direction: row;
 		justify-content: center;
-		padding: var(--s-9) var(--s-7) 0 0;
+		padding: var(--s-9) var(--s-7) var(--s-9) 0;
 		@include lg {
 			justify-content: space-between;
 		}

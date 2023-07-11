@@ -16,6 +16,11 @@ export { default as Kanban } from './kanban/Kanban.svelte'
 export { default as FilterField } from './kanban/FilterField.svelte'
 export { default as FilterMenu } from './kanban/FilterMenu.svelte'
 export { default as TrashIcon } from './kanban/TrashIcon.svelte'
+export { default as SearchIcon } from './kanban/SearchIcon.svelte'
+export { default as KanbanColumns } from './kanban/Columns.svelte'
+export { default as KanbanColumn } from './kanban/Column.svelte'
+export { default as KanbanCard } from './kanban/Card.svelte'
+export { default as KanbanTechIcon } from './kanban/TechIcon.svelte'
 
 
 //A spinner for loading
