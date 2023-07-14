@@ -2,7 +2,6 @@ export const prerender = true
 
 import type { PageServerLoad } from './$types';
 import type { HomeData } from '$lib/types';
-import { error } from '@sveltejs/kit';
 import jsonata from 'jsonata'
 import { CLICKUP_API_KEY } from '$env/static/private'
 import { dev } from '$app/environment';
@@ -39,14 +38,14 @@ const expression = jsonata(`
 
 
 export const load: PageServerLoad = async (): Promise<HomeData> => {
-  // if (dev) {
-  //   const backupTasks = await import(
-  // 	/* @vite-ignore */ `../../../clickup-backup.json`
-  //   )
-  //   return {
-  //     tasks: backupTasks.default
-  //   }
-  // }
+  if (dev) {
+    const backupTasks = await import(
+  	/* @vite-ignore */ `../../../clickup-backup.json`
+    )
+    return {
+      tasks: backupTasks.default
+    }
+  }
 
   try {
     const res = await fetch(endPoint + params, {
@@ -58,7 +57,7 @@ export const load: PageServerLoad = async (): Promise<HomeData> => {
 
     const raw = await res.json()
 
-    console.log(res)
+    console.log(raw)
     if (raw.err) {
       console.error(`There was a problem hitting the clickup endpoint ${endPoint} returned: ${raw.err}`)
 
@@ -72,8 +71,10 @@ export const load: PageServerLoad = async (): Promise<HomeData> => {
 
     let tasks = await expression.evaluate(raw)
     for (const task of tasks) {
-      task.technologies = task.technologies.map((id: string) => task.technologyMap[id])
-      delete task.technologyMap
+      if (task.technologies) {
+        task.technologies = task.technologies.map((id: string) => task.technologyMap[id])
+        delete task.technologyMap
+      }
     }
 
     return {
@@ -81,6 +82,12 @@ export const load: PageServerLoad = async (): Promise<HomeData> => {
     }
 
   } catch (err) {
-    throw error(404, 'Page not found')
+    console.error(err)
+    const backupTasks = await import(
+  	/* @vite-ignore */ `../../../clickup-backup.json`
+    )
+    return {
+      tasks: backupTasks.default
+    }
   }
 }

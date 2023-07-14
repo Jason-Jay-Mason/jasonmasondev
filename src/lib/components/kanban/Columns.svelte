@@ -4,18 +4,13 @@
 
 	export let tasks: ClickupTask[]
 	export let statuses: string[]
-	$: {
-		console.log(tasks)
-	}
 </script>
 
 <div class="columns">
 	{#each statuses as status}
 		<Column headline={status}>
-			{#each tasks as task}
-				{#if status === task.status}
-					<Card {task} />
-				{/if}
+			{#each tasks.filter((task) => task.status === status) as task}
+				<Card {task} />
 			{/each}
 		</Column>
 	{/each}
@@ -27,8 +22,7 @@
 		display: grid;
 		grid-template-columns: 1fr;
 		column-gap: var(--s-5);
-
-		@include md {
+		@include lg {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 		.title {

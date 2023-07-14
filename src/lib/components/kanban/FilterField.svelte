@@ -67,7 +67,9 @@
 		position: relative;
 		height: fit-content;
 		width: fit-content;
-		background: red;
+		input {
+			height: 48px;
+		}
 	}
 	select,
 	input {

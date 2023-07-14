@@ -40,6 +40,7 @@
 		filtered = copy
 	}, 300)
 
+	const technologies = new Set(data.flatMap((task) => task.technologies))
 	const options: KanbanFilterOptions = {
 		name: {
 			key: "name",
@@ -69,7 +70,7 @@
 			key: "technologies",
 			label: "Tools",
 			filterType: KanbanFilterType.picklist,
-			options: ["PHP", "Svelte", "Go"],
+			options: Array.from(technologies),
 			value: ""
 		}
 	}
@@ -105,8 +106,7 @@
 		>
 		{#if advancedVisible}
 			<div class="menu">
-				<button class="filter-button" on:click={addFilter}>+Add Filter</button>
-
+				<button class="add-filter" on:click={addFilter}>+Add Filter</button>
 				{#each activeFilters as filter, i (filter.id)}
 					{#if i !== 0}
 						<div class="filter-field">
@@ -127,8 +127,7 @@
 	.filter-menu {
 		display: flex;
 		flex-direction: row;
-		justify-content: center;
-		padding: var(--s-9) var(--s-7) var(--s-9) 0;
+		padding: var(--s-9) var(--s-7) var(--s-7) 0;
 		@include lg {
 			justify-content: space-between;
 		}
@@ -141,7 +140,8 @@
 			@include xl {
 				display: flex;
 			}
-			.filter-button {
+			.filter-button,
+			.add-filter {
 				background: none;
 				border: none;
 				color: var(--color-text-body);
@@ -149,12 +149,18 @@
 				font-family: var(--font-headline);
 				font-size: var(--text-base);
 				line-height: 0;
-				padding: var(--s-7) 0;
 				&:hover {
 					cursor: pointer;
 				}
 			}
+			.filter-button {
+				padding: var(--s-7) 0 0 0;
+			}
+			.add-filter {
+				padding: var(--s-7) 0;
+			}
 			.menu {
+				z-index: 10;
 				background-color: var(--color-rock-900);
 				position: absolute;
 				width: 100%;

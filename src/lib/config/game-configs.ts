@@ -1,7 +1,22 @@
 import type { Config } from "$lib/game/types";
 const sizeRatio = 12
+const mjml = {
+  imgPath: '/Mjml-logo.svg',
+  size: {
+    h: 5 * sizeRatio,
+    w: 5 * sizeRatio,
+  },
+  colors: [
+    {
+      r: 0,
+      g: 0,
+      b: 0,
+      a: 1,
+    }
+  ]
+}
 const braze = {
-  imgPath: '/brz-logo.svg',
+  imgPath: '/Braze-logo.svg',
   size: {
     h: 5 * sizeRatio,
     w: 5 * sizeRatio,
@@ -173,7 +188,7 @@ const salesforce = {
 }
 
 const react = {
-  imgPath: '/r-logo.svg',
+  imgPath: '/React-logo.svg',
   size: {
     h: 5.0 * sizeRatio,
     w: 5.0 * sizeRatio,
@@ -189,7 +204,7 @@ const react = {
 }
 
 const svelte = {
-  imgPath: '/slv-logo.svg',
+  imgPath: '/Svelte-logo.svg',
   size: {
     h: 5.0 * sizeRatio,
     w: 5.0 * sizeRatio,
@@ -231,7 +246,7 @@ const typescript = {
   ]
 }
 const next = {
-  imgPath: '/njs-logo.svg',
+  imgPath: '/Next-logo.svg',
   size: {
     h: 5.0 * sizeRatio,
     w: 5.0 * sizeRatio
@@ -246,8 +261,7 @@ const next = {
   ]
 }
 const golang = {
-
-  imgPath: '/gl-logo.svg',
+  imgPath: '/Go-logo.svg',
   size: {
     h: 3.0 * sizeRatio,
     w: 9.0 * sizeRatio,
@@ -276,8 +290,23 @@ const tailwind = {
     }
   ]
 }
+const php = {
+  imgPath: '/PHP-logo.svg',
+  size: {
+    h: 4.0 * sizeRatio,
+    w: 7 * sizeRatio,
+  },
+  colors: [
+    {
+      r: 205,
+      g: 103,
+      b: 153,
+      a: 1
+    }
+  ]
+}
 const sass = {
-  imgPath: '/sass-logo.svg',
+  imgPath: '/Sass-logo.svg',
   size: {
     h: 4.0 * sizeRatio,
     w: 7 * sizeRatio,
@@ -360,6 +389,8 @@ export const homeConfig: Config = {
     fireRate: 200
   },
   enemies: [
+    mjml,
+    php,
     activecampaign,
     braze,
     figma,
