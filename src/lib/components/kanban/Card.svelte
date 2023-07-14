@@ -11,11 +11,11 @@
 		<div class="title">
 			<h6>{task.name}</h6>
 			{#if task.organizationLogoSrc}
-				<img class="org-logo" src={task.organizationLogoSrc} alt={`${task.organization} logo`} />
+				<img src={task.organizationLogoSrc} alt={`${task.organization} logo`} />
 			{/if}
 		</div>
 		<div>
-			<p class="description">{task.description?.slice(0, 109)}...</p>
+			<p class="description">{task.description}</p>
 		</div>
 		<div class="details">
 			{#if task.technologies}
@@ -26,14 +26,14 @@
 				</div>
 			{/if}
 			<div class="project-links">
-				{#if task.figmaHref}
-					<a href={task.figmaHref} target="_blank" rel="noreferrer">
-						<img src="/figma-link-logo.svg" />
-					</a>
-				{/if}
 				{#if task.githubHref}
 					<a href={task.githubHref} target="_blank" rel="noreferrer">
-						<img src="/github-logo.svg" />
+						<img src="/github-icon.svg" />
+					</a>
+				{/if}
+				{#if task.figmaHref}
+					<a href={task.figmaHref} target="_blank" rel="noreferrer">
+						<img src="/figma-icon.svg" />
 					</a>
 				{/if}
 			</div>
@@ -46,9 +46,9 @@
 	.card {
 		position: relative;
 		width: 100%;
-		margin-bottom: var(--s-4);
-		padding: 15px var(--s-8) 20px var(--s-8);
-		background-color: var(--color-bg-primary);
+		margin-bottom: var(--s-6);
+		padding: 20px 35px 20px 35px;
+		background-color: var(--color-card);
 		filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
 		.title {
 			display: flex;
@@ -71,11 +71,12 @@
 				}
 			}
 			img {
-				max-width: 50px;
+				max-height: 25px;
+				max-width: 70px;
 				filter: var(--icon-filter);
 				@include xl {
+					max-height: 25px;
 					max-width: 70px;
-					max-height: 30px;
 				}
 			}
 		}
@@ -83,14 +84,17 @@
 			position: relative;
 			font-size: 0.8rem;
 			overflow: hidden;
+			display: -webkit-box;
+			-webkit-line-clamp: 3;
+			-webkit-box-orient: vertical;
 		}
 		.details {
 			display: flex;
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			margin-top: var(--s-7);
-			width: 100%;
+			width: 97%;
+			margin: var(--s-8) 0 6px 0;
 			line-height: 0;
 			.project-links {
 				display: flex;
@@ -99,9 +103,10 @@
 				justify-content: flex-end;
 				width: 100%;
 				img {
-					width: 25px;
-					max-width: 25px;
-					max-height: 25px;
+					width: 100%;
+					height: 100%;
+					max-width: 50px;
+					max-height: 20px;
 					margin-left: var(--s-4);
 					filter: var(--icon-filter);
 				}

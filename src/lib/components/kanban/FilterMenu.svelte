@@ -127,7 +127,7 @@
 	.filter-menu {
 		display: flex;
 		flex-direction: row;
-		padding: var(--s-9) var(--s-7) var(--s-7) 0;
+		padding: var(--s-9) var(--s-7) var(--s-6) 0;
 		@include lg {
 			justify-content: space-between;
 		}

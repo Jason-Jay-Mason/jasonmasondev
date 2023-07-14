@@ -17,12 +17,12 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		margin-right: var(--s-3);
+		margin-right: var(--s-4);
 		img {
 			width: 100%;
 			height: 100%;
-			max-width: 55px;
-			max-height: 30px;
+			max-width: 50px;
+			max-height: 25px;
 		}
 	}
 </style>

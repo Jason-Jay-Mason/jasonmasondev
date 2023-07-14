@@ -24,12 +24,13 @@
 		margin: 0 auto;
 		max-width: 600px;
 		margin: 0 auto;
-		@include lg {
-			max-width: $xxl;
+		@include md {
+			max-width: $lg;
 			padding: 0 var(--s-7) var(--s-10) var(--s-7);
 		}
 
 		@include xl {
+			max-width: $xxl;
 			padding: 0 var(--s-9) var(--s-13) var(--s-9);
 		}
 	}

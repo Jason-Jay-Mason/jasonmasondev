@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { ClickupTask } from "$lib/types"
 	import { KanbanColumn as Column, KanbanCard as Card } from "$lib/components"
+	import { dispatch_dev } from "svelte/internal"
 
 	export let tasks: ClickupTask[]
 	export let statuses: string[]
@@ -20,9 +21,12 @@
 	@import "../../theme/breakpoints.scss";
 	.columns {
 		display: grid;
+		gap: var(--s-5);
 		grid-template-columns: 1fr;
-		column-gap: var(--s-5);
-		@include lg {
+		@include md {
+			grid-template-columns: 1fr 1fr;
+		}
+		@include xl {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 		.title {

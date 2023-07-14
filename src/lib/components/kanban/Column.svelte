@@ -2,7 +2,7 @@
 	export let headline: string
 </script>
 
-<div class="column">
+<div class={headline === "done" ? "column span-2-rows" : "column"}>
 	<h5 class="title">{headline}</h5>
 	<div class="cards">
 		<slot />
@@ -11,11 +11,22 @@
 
 <style lang="scss">
 	@import "../../theme/breakpoints.scss";
+	.span-2-rows {
+		grid-column: 1;
+		grid-row: 3;
+		@include md {
+			grid-column: 2;
+			grid-row: 1 / span 2;
+		}
+		@include xl {
+			grid-column: 3;
+			grid-row: 1;
+		}
+	}
 	.column {
 		background-image: url("/pencil-bg.svg");
 		background-size: 200%;
-		border: solid 4px var(--color-rock-100);
-		margin-bottom: var(--s-8);
+		border: solid 3px var(--color-rock-200);
 		.title {
 			width: 100%;
 			text-align: center;
@@ -23,17 +34,21 @@
 			font-size: 2.1rem;
 			font-weight: 700;
 			letter-spacing: 3.36px;
-			background-color: var(--color-rock-100);
+			background-color: var(--color-rock-200);
 			color: var(--color-bg-primary);
 			text-transform: uppercase;
 			padding: var(--s-3) 0;
 		}
 		.cards {
-			height: 700px;
+			max-height: 800px;
+			height: fit-content;
 			overflow: scroll;
 			display: flex;
 			flex-direction: column;
-			padding: var(--s-5) var(--s-6);
+			padding: var(--s-6) var(--s-6);
+			@include xl {
+				height: 700px;
+			}
 		}
 	}
 </style>

@@ -13,6 +13,7 @@ body {
 	--color-rock-700: #F1F1F0;
 	--color-rock-800: #F5F5F4;
 	--color-rock-900: #FAFAFA;
+  --color-card: var(--color-bg-primary);
 	--color-pencil-100: #bdbdbd;
 	--color-pencil-200: #F2F2F2;
 	--color-error: #D62828;
@@ -45,6 +46,7 @@ body {
     --color-rock-700: #504E4C;
     --color-rock-800: #46413C;
     --color-rock-900: #423D38;
+    --color-card: var(--color-rock-800);
 		--color-pencil-100: #494949;
 		--opacity-pencilbg: 0.2;
 		--icon-filter: brightness(0) invert(1);
