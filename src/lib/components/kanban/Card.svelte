@@ -19,6 +19,13 @@
 			<p class="description">{task.description}</p>
 		</div>
 		<div class="details">
+			<div class="due-date">
+				<img src="/calendar.svg" />
+				<p>
+					{date.getMonth()}/{date.getDay()}/{date.getFullYear()}
+				</p>
+			</div>
+
 			{#if task.technologies}
 				<div class="tech">
 					{#each task.technologies as tech}
@@ -26,12 +33,6 @@
 					{/each}
 				</div>
 			{/if}
-			<div class="due-date">
-				<img src="/calendar.svg" />
-				<p>
-					{date.getMonth()}/{date.getDay()}/{date.getFullYear()}
-				</p>
-			</div>
 		</div>
 	</div>
 </a>
@@ -42,9 +43,12 @@
 		position: relative;
 		width: 100%;
 		margin-bottom: var(--s-6);
-		padding: 20px 35px 20px 35px;
+		padding: 18px 20px 18px 20px;
 		background-color: var(--color-card);
 		filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+		@include xs {
+			padding: 18px 30px 18px 30px;
+		}
 		.title {
 			display: flex;
 			flex-direction: row;
@@ -52,23 +56,26 @@
 			align-items: center;
 			width: 100%;
 			padding-bottom: var(--s-4);
+
 			h6 {
 				font-family: var(--font-headline);
-				font-size: 1.4rem;
+				font-size: 1rem;
 				font-weight: 700;
+				line-height: 1.5rem;
 				letter-spacing: 1.25px;
 				text-transform: uppercase;
-				@include md {
+				@include xs {
 					font-size: 1.2rem;
-				}
-				@include xl {
-					font-size: 1.4rem;
 				}
 			}
 			img {
+				display: none;
 				max-height: 25px;
 				max-width: 70px;
 				filter: var(--icon-filter);
+				@include xs {
+					display: block;
+				}
 				@include xl {
 					max-height: 25px;
 					max-width: 70px;
@@ -94,19 +101,24 @@
 				display: flex;
 				flex-direction: row;
 				align-items: center;
-				justify-content: flex-end;
+				justify-content: flex-start;
 				width: 100%;
+				font-size: 0.8rem;
+				@include xs {
+					font-size: 1rem;
+				}
 				img {
-					width: 100%;
 					height: 100%;
-					max-width: 45px;
-					max-height: 18px;
+					max-width: 40px;
+					max-height: 17px;
+					margin-right: 8px;
 					filter: var(--icon-filter);
 				}
 			}
 			.tech {
 				display: flex;
 				flex-direction: row;
+				justify-content: flex-end;
 				width: 100%;
 			}
 		}

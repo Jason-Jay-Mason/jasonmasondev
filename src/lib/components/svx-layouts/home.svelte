@@ -8,7 +8,7 @@
 
 	let y = 1
 	function handleParalax() {
-		y = -0.3 * window.scrollY
+		y = -0.15 * window.scrollY
 	}
 </script>
 

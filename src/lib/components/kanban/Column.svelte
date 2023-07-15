@@ -24,9 +24,9 @@
 		}
 	}
 	.column {
-		background-image: url("/lines.svg");
-		background-size: 200%;
 		border: solid 3px var(--color-rock-200);
+		background-image: url("/lines.svg");
+		background-size: 120%;
 		.title {
 			width: 100%;
 			text-align: center;
@@ -40,8 +40,9 @@
 			padding: var(--s-3) 0;
 		}
 		.cards {
+			background-color: var(--color-column);
 			max-height: 800px;
-			height: fit-content;
+			height: 100%;
 			overflow: scroll;
 			display: flex;
 			flex-direction: column;
