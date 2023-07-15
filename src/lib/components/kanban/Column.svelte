@@ -24,7 +24,7 @@
 		}
 	}
 	.column {
-		background-image: url("/pencil-bg.svg");
+		background-image: url("/lines.svg");
 		background-size: 200%;
 		border: solid 3px var(--color-rock-200);
 		.title {

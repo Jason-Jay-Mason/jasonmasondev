@@ -46,7 +46,7 @@ export interface ClickupTask {
   teamId: string
   name: string
   description: string | null
-  dueDate: string | null
+  dueDate: string
   timeEstimate: string | null
   organization: string | null
   organizationLogoSrc?: string | null

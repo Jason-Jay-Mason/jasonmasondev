@@ -4,6 +4,7 @@
 
 	export let task: ClickupTask
 	const endpoint = `https://sharing.clickup.com/${task.teamId}/v/6-901100158350-1/t/h/${task.id}/b0ef6cf2ff76ff1`
+	const date = new Date(parseInt(task.dueDate))
 </script>
 
 <a href={endpoint} target="_blank" rel="noreferrer">
@@ -25,17 +26,11 @@
 					{/each}
 				</div>
 			{/if}
-			<div class="project-links">
-				{#if task.githubHref}
-					<a href={task.githubHref} target="_blank" rel="noreferrer">
-						<img src="/github-icon.svg" />
-					</a>
-				{/if}
-				{#if task.figmaHref}
-					<a href={task.figmaHref} target="_blank" rel="noreferrer">
-						<img src="/figma-icon.svg" />
-					</a>
-				{/if}
+			<div class="due-date">
+				<img src="/calendar.svg" />
+				<p>
+					{date.getMonth()}/{date.getDay()}/{date.getFullYear()}
+				</p>
 			</div>
 		</div>
 	</div>
@@ -93,10 +88,9 @@
 			flex-direction: row;
 			align-items: center;
 			justify-content: space-between;
-			width: 97%;
-			margin: var(--s-8) 0 6px 0;
+			margin: var(--s-7) 0 6px 0;
 			line-height: 0;
-			.project-links {
+			.due-date {
 				display: flex;
 				flex-direction: row;
 				align-items: center;
@@ -105,9 +99,8 @@
 				img {
 					width: 100%;
 					height: 100%;
-					max-width: 50px;
-					max-height: 20px;
-					margin-left: var(--s-4);
+					max-width: 45px;
+					max-height: 18px;
 					filter: var(--icon-filter);
 				}
 			}

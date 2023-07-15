@@ -1,13 +1,13 @@
 <script lang="ts">
-	export let main: string;
-	export let sub: string;
+	export let main: string
+	export let sub: string
 </script>
 
 <div class="headline">
 	<div class="sub">
 		<h3>{sub}</h3>
 		<div class="mask">
-			<img src="/pencil-bg.svg" alt="Stylized background" />
+			<img src="/lines.svg" alt="Stylized background" />
 		</div>
 	</div>
 
@@ -15,7 +15,7 @@
 </div>
 
 <style lang="scss">
-	@import '../theme/breakpoints.scss';
+	@import "../theme/breakpoints.scss";
 	.headline {
 		width: fit-content;
 		text-align: center;
@@ -28,7 +28,7 @@
 				color: var(--color-rock-200);
 				font-family: var(--font-subheadline);
 				position: relative;
-				transform: rotate(-4deg);
+				transform: rotate(-1deg);
 			}
 			.mask {
 				position: absolute;
@@ -44,9 +44,9 @@
 					top: 0;
 					bottom: 0;
 					left: 0;
-					width: 600px;
+					width: 100%;
 					opacity: var(--opacity-pencilbg);
-					object-fit: cover;
+					object-fit: repeat;
 					margin: auto 0;
 				}
 			}

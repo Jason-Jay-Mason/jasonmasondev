@@ -12,7 +12,7 @@
 		<div class="intro">
 			<img class="mustache" alt="mustache-logo" src="/hero-mustache.svg" />
 			<div class="mask">
-				<img src="/pencil-bg.svg" alt="Stylized background" />
+				<img src="/lines.svg" alt="Stylized background" />
 			</div>
 		</div>
 		<div class="h1-container">

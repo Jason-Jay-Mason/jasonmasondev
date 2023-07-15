@@ -19,26 +19,32 @@
 		}
 	]
 
-	$: {
-		if (activeFilters.length) {
-			handleFiltering()
-		}
-	}
-
 	const handleFiltering = debounce(() => {
 		let copy = [...data]
 		for (const filter of activeFilters) {
 			switch (filter.filterType) {
 				case KanbanFilterType.fuzzyFind:
-					copy = Filters.fuzzyFind(filter, copy, ["name"])
+					copy = Filters.fuzzyFind(filter, copy, ["name", "description", "organization"])
 					continue
 				case KanbanFilterType.contains:
 					copy = Filters.contains(filter, copy)
-				default:
+					continue
+				case KanbanFilterType.picklist:
+					copy = Filters.picklist(filter, copy)
+					continue
+				case KanbanFilterType.dateRange:
+					copy = Filters.dateRange(filter, copy)
+					continue
 			}
 		}
 		filtered = copy
 	}, 300)
+
+	$: {
+		if (activeFilters.length) {
+			handleFiltering()
+		}
+	}
 
 	const technologies = new Set(data.flatMap((task) => task.technologies))
 	const options: KanbanFilterOptions = {
@@ -89,8 +95,7 @@
 		id++
 	}
 
-	type FilterIndex = number
-	function removeFilter(i: FilterIndex): void {
+	function removeFilter(i: number): void {
 		activeFilters = activeFilters.filter((_, index) => index !== i)
 		if (activeFilters.length === 1 && activeFilters[0].value === "") {
 			filtered = data
@@ -102,7 +107,7 @@
 	<FilterField bind:filter={activeFilters[0]} />
 	<div class="advanced">
 		<button class="filter-button" on:click={() => (advancedVisible = !advancedVisible)}
-			>Filter</button
+			>Advanced</button
 		>
 		{#if advancedVisible}
 			<div class="menu">

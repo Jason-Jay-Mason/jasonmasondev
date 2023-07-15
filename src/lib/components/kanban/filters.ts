@@ -22,10 +22,14 @@ function contains(f: KanbanFilter<string>, d: FilterableData[]): FilterableData[
   const removedBackslashes = value.replace(/\\/g, "")
   const regex = new RegExp(`(${removedBackslashes})`, "gi")
 
-  return d.filter((data) => data[key].search(regex) > -1)
+  return d.filter((data) => {
+    if (data[key] && data[key].search(regex) > -1) {
+      return true
+    }
+  })
 }
 
-function picklist(f: KanbanFilter<string>, d: FilterableData[]): FilterableData[] | void {
+function picklist(f: KanbanFilter<string>, d: FilterableData[]): FilterableData[] {
   const { value, key } = f
   if (value.length) {
     return d.filter((data) => {
@@ -38,25 +42,27 @@ function picklist(f: KanbanFilter<string>, d: FilterableData[]): FilterableData[
       }
     })
   }
+  return d
 }
 
-function numberRange(f: KanbanFilter<DateRange>, d: FilterableData[]): FilterableData[] | void {
+function dateRange(f: KanbanFilter<DateRange>, d: FilterableData[]): FilterableData[] {
   const { key } = f
   const { start, end } = f.value
   if (start.length && end.length) {
     const startD = new Date(start)
     const endD = new Date(end)
-    d.filter((data) => {
+    return d.filter((data) => {
       let dateValue = parseInt(data[key])
-      if (dateValue >= startD.getTime() || dateValue <= endD.getTime()) {
+      if (dateValue >= startD.getTime() && dateValue <= endD.getTime()) {
         return true
       }
     })
   }
+  return d
 }
 
 export default {
-  numberRange,
+  dateRange,
   fuzzyFind,
   contains,
   picklist

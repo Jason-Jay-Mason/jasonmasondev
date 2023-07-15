@@ -31,8 +31,8 @@
 
 {#if options}
 	<div class="container">
-		<select on:change={handlePropChange}>
-			<option selected>---</option>
+		<select on:change={handlePropChange} bind:value={filter.key}>
+			<option>---</option>
 			{#each Object.keys(options) as key}
 				<option value={key}>{options[key].label}</option>
 			{/each}
