@@ -53,4 +53,8 @@ kanban:
   headline:
     main: 'PROJECT KANBAN'
     sub: 'What I’m working on'
+contact:
+  headline:
+    main: 'Contact Me'
+    sub: 'Wanna talk?'
 ---

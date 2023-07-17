@@ -24,7 +24,7 @@
 		}
 	}
 	.column {
-		border: solid 3px var(--color-rock-200);
+		border: solid 4px var(--color-rock-200);
 		background-image: url("/lines.svg");
 		background-size: 120%;
 		.title {

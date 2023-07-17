@@ -21,6 +21,7 @@ export { default as KanbanColumns } from './kanban/Columns.svelte'
 export { default as KanbanColumn } from './kanban/Column.svelte'
 export { default as KanbanCard } from './kanban/Card.svelte'
 export { default as KanbanTechIcon } from './kanban/TechIcon.svelte'
+export { default as ContactNew } from './contact/ContactNew.svelte'
 
 
 //A spinner for loading

@@ -55,9 +55,10 @@
 		h4 {
 			line-height: 100%;
 			font-size: var(--text-xl);
-			letter-spacing: 0.105em;
+			letter-spacing: 0.05em;
 			color: var(--color-rock-100);
 			font-family: var(--font-headline);
+			text-transform: uppercase;
 		}
 	}
 </style>

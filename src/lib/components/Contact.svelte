@@ -1,58 +1,58 @@
 <script lang="ts">
-	import { Input, Button, Spinner } from '$lib/components';
-	import { fade } from 'svelte/transition';
+	import { Input, Button, Spinner } from "$lib/components"
+	import { fade } from "svelte/transition"
 
 	//Set the form values in state
 	let formValues = {
 		fname: {
 			valid: false,
-			value: ''
+			value: ""
 		},
 		lname: {
 			valid: false,
-			value: ''
+			value: ""
 		},
 		email: {
 			valid: false,
-			value: ''
+			value: ""
 		},
 		phone: {
 			valid: false,
-			value: ''
+			value: ""
 		},
 		message: {
 			valid: false,
-			value: ''
+			value: ""
 		}
-	};
+	}
 
 	//We are using a formspark endpoint here
-	const formUrl = 'https://submit-form.com/nZtmp841';
+	const formUrl = "https://submit-form.com/nZtmp841"
 
 	//Form state
-	let success: boolean = false;
-	let loading = false;
-	let formError: string | null = null;
+	let success: boolean = false
+	let loading = false
+	let formError: string | null = null
 	async function handleSubmit() {
 		//On submit set the loading state to true
-		loading = true;
+		loading = true
 		try {
 			//Post the form data to formspark
 			//TODO: write test for this
 			await fetch(formUrl, {
-				method: 'POST',
+				method: "POST",
 				headers: {
-					'Content-Type': 'application/json',
-					Accept: 'application/json'
+					"Content-Type": "application/json",
+					Accept: "application/json"
 				},
 				body: JSON.stringify(formValues)
-			});
-			loading = false;
-			success = true;
+			})
+			loading = false
+			success = true
 		} catch (err) {
-			loading = false;
-			formError = 'It looks like there was a problem with this form. Give me a call instead!';
-			console.error(err);
+			loading = false
+			formError = "It looks like there was a problem with this form. Give me a call instead!"
+			console.error(err)
 		}
 	}
 </script>
@@ -152,7 +152,7 @@
 </section>
 
 <style lang="scss">
-	@import '../theme/breakpoints.scss';
+	@import "../theme/breakpoints.scss";
 	section {
 		display: flex;
 		max-width: $sm;

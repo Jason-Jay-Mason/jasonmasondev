@@ -126,7 +126,7 @@
 		>
 		{#if advancedVisible}
 			<div class="menu" use:outclickaction on:outclick={() => (advancedVisible = false)}>
-				<button class="add-filter" on:click={addFilter}>+Add Filter</button>
+				<button class="add-filter" on:click={addFilter}>➕ Add Filter</button>
 				{#each activeFilters as filter, i (filter.id)}
 					{#if i !== 0}
 						<div class="filter-field">
@@ -170,7 +170,8 @@
 			.add-filter {
 				background: none;
 				border: none;
-				color: var(--color-text-body);
+				color: var(--color-rock-100);
+				letter-spacing: 1.3px;
 				text-transform: uppercase;
 				font-family: var(--font-headline);
 				font-size: var(--text-base);

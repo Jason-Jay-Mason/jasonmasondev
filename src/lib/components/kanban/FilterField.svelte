@@ -77,17 +77,17 @@
 		background-color: var(--color-bg-primary);
 		border: solid 2px var(--color-rock-200);
 		padding: var(--s-4) 20px;
-		font-size: 0.8rem;
+		font-size: 0.9rem;
 		text-align: center;
 	}
 	input::placeholder {
 		text-align: center;
+		font-size: 0.9rem;
 		color: var(--color-rock-100);
 		opacity: 1;
 		text-transform: uppercase;
-		font-weight: 700;
 		font-family: var(--font-headline);
-		letter-spacing: 1.7px;
+		letter-spacing: 1.3px;
 	}
 	input:focus::placeholder {
 		opacity: 0;
@@ -105,7 +105,6 @@
 			font-size: 0.8rem;
 			width: 100%;
 			padding: 5px 0;
-			//border: none;
 		}
 		p {
 			padding: 0 var(--s-4);
