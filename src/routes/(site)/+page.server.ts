@@ -2,9 +2,9 @@ export const prerender = true
 
 import type { PageServerLoad } from './$types';
 import type { HomeData } from '$lib/types';
+import { dev } from '$app/environment';
 import jsonata from 'jsonata'
 import { CLICKUP_API_KEY } from '$env/static/private'
-import { dev } from '$app/environment';
 
 const listId = '901100158350'
 const baseUrl = 'https://api.clickup.com/api/v2'

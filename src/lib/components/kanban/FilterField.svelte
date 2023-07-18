@@ -74,8 +74,8 @@
 	select,
 	input {
 		color: var(--color-text-body);
-		background-color: var(--color-bg-primary);
-		border: solid 2px var(--color-rock-200);
+		background-color: var(--color-rock-900);
+		border: solid 2px var(--color-rock-100);
 		padding: var(--s-4) 20px;
 		font-size: 0.9rem;
 		text-align: center;
@@ -83,6 +83,7 @@
 	input::placeholder {
 		text-align: center;
 		font-size: 0.9rem;
+		font-weight: 600;
 		color: var(--color-rock-100);
 		opacity: 1;
 		text-transform: uppercase;

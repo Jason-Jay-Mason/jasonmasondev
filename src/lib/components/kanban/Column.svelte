@@ -24,7 +24,7 @@
 		}
 	}
 	.column {
-		border: solid 4px var(--color-rock-200);
+		border: solid 1px var(--color-rock-700);
 		background-image: url("/lines.svg");
 		background-size: 120%;
 		.title {
@@ -34,7 +34,7 @@
 			font-size: 2.1rem;
 			font-weight: 700;
 			letter-spacing: 3.36px;
-			background-color: var(--color-rock-200);
+			background-color: var(--color-rock-100);
 			color: var(--color-bg-primary);
 			text-transform: uppercase;
 			padding: var(--s-3) 0;

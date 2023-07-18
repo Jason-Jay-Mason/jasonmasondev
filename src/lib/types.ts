@@ -2,6 +2,17 @@ export type IterableGlob = [path: string, resolver: Function]
 
 export type FilterableData = Record<string, any>
 
+export interface FormEventHandler<T> {
+  target: EventTarget | null;
+}
+
+export enum FormInputTypes {
+  text = "text",
+  phone = "phone",
+  email = "email",
+  textarea = "text-area"
+}
+
 export enum KanbanFilterType {
   nill,
   fuzzyFind,

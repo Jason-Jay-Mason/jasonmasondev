@@ -1,25 +1,64 @@
 <script lang="ts">
 	import type { Headline } from "$lib/types"
+	import { FormInputTypes } from "$lib/types"
 	import { LargeHeadline, Button } from "$lib/components"
 	import Info from "./Info.svelte"
 	import Input from "./Input.svelte"
 
 	export let headline: Headline
+	let form: HTMLFormElement
+	let valid = false
+
+	let loading = false
+	let success = false
+	async function handleSubmit(): Promise<void> {
+		loading = true
+		const formData = new FormData(form)
+		const data = {
+			first_name: formData.get("fname"),
+			last_name: formData.get("lname"),
+			email: formData.get("email"),
+			phone: formData.get("phone"),
+			message: formData.get("message")
+		}
+		try {
+			const formUrl = "https://submit-form.com/nZtmp841"
+			await fetch(formUrl, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					Accept: "application/json"
+				},
+				body: JSON.stringify(data)
+			})
+		} catch (e) {
+			console.error(e)
+		} finally {
+			loading = false
+			success = true
+		}
+	}
 </script>
 
 <section id="contact">
 	<LargeHeadline main={headline.main} sub={headline.sub} />
 
 	<div class="form-area">
-		<form method="POST" action="/contact">
+		<form
+			method="POST"
+			on:submit|preventDefault={handleSubmit}
+			bind:this={form}
+			on:keyup={(e) => (valid = form.checkValidity())}
+			on:blur={(e) => (valid = form.checkValidity())}
+		>
 			<div class="inputrow">
-				<Input type="text" placeholder="first name" />
-				<Input type="text" placeholder="last name" />
+				<Input type={FormInputTypes.text} placeholder="first name" name="fname" />
+				<Input type={FormInputTypes.text} placeholder="last name" name="lname" />
 			</div>
 
 			<div class="inputrow">
-				<Input type="email" placeholder="email" />
-				<Input type="phone" placeholder="phone" />
+				<Input type={FormInputTypes.email} placeholder="email" name="email" />
+				<Input type={FormInputTypes.phone} placeholder="phone" name="phone" />
 			</div>
 
 			<div class="info">
@@ -27,10 +66,16 @@
 			</div>
 
 			<div class="textarea">
-				<Input type="text-area" placeholder="message" />
+				<Input type={FormInputTypes.textarea} placeholder="message" name="message" />
 			</div>
-			<div class="submit">
-				<Button type="submit">Send it!</Button>
+			<div class="submit" class:valid>
+				{#if loading}
+					<Button type="submit">Loading...</Button>
+				{:else if success}
+					<p>Message Sent! Talk soon!</p>
+				{:else}
+					<Button type="submit">Send it!</Button>
+				{/if}
 			</div>
 		</form>
 	</div>
@@ -38,6 +83,7 @@
 
 <style lang="scss">
 	@import "../../theme/breakpoints.scss";
+
 	section {
 		padding: var(--s-4);
 		form {
@@ -106,14 +152,23 @@
 				}
 			}
 			.submit {
+				opacity: 0;
 				width: 100%;
 				grid-column: 1 / span 2;
 				text-align: center;
 				padding-top: var(--s-5);
 				max-width: 540px;
+				transition: all 0.5s ease;
 				@include md {
 					grid-column: 1 / 1;
 				}
+				p {
+					font-weight: 700;
+				}
+			}
+			.valid {
+				opacity: 1;
+				transition: all 0.5s ease;
 			}
 		}
 	}

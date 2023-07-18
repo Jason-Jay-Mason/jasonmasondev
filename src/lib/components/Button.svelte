@@ -40,7 +40,7 @@
 		font-family: var(--font-headline);
 		font-weight: 700;
 		border: 3px solid var(--color-rock-100);
-		background-color: var(--color-bg-primary);
+		background-color: var(--color-rock-900);
 		padding: var(--s-4) var(--s-8);
 		@include sm {
 			font-size: calc(var(--text-base) + 5px);
@@ -80,7 +80,7 @@
 	button:hover {
 		cursor: pointer;
 		border-image-slice: 1;
-		border-image-source: var(--color-rainbow);
+		background-color: var(--color-bg-primary);
 		&::before {
 			transform: translateY(-7px) rotate(2deg);
 			border-width: 5px 10px 5px 10px;

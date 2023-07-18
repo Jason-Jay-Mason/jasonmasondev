@@ -15,7 +15,7 @@
 <style lang="scss">
 	svg {
 		position: absolute;
-		background-color: var(--color-bg-primary);
+		background-color: var(--color-rock-900);
 		width: 15%;
 		height: 40%;
 		top: 50%;

@@ -45,9 +45,9 @@
 		margin-bottom: var(--s-6);
 		padding: 18px 20px 18px 20px;
 		background-color: var(--color-card);
-		filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
+		border: solid 2px var(--color-rock-100);
 		@include xs {
-			padding: 18px 30px 18px 30px;
+			padding: 22px 30px 18px 30px;
 		}
 		.title {
 			display: flex;

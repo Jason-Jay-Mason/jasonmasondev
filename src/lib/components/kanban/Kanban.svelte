@@ -31,7 +31,7 @@
 
 		@include xl {
 			max-width: $xxl;
-			padding: 0 var(--s-9) var(--s-13) var(--s-9);
+			padding: 0 var(--s-9) var(--s-14) var(--s-9);
 		}
 	}
 </style>

@@ -110,6 +110,7 @@
 		<button class="filter-toggle" on:click={() => (advancedVisible = !advancedVisible)}>
 			<svg
 				width="18"
+				id="gear-icon"
 				height="18"
 				viewBox="0 0 18 18"
 				fill="none"
@@ -189,6 +190,7 @@
 				svg {
 					width: 15px;
 					margin-right: 5px;
+					stroke: var(--color-rock-100);
 				}
 			}
 			.add-filter {
@@ -196,13 +198,13 @@
 			}
 			.menu {
 				z-index: 10;
-				background-color: var(--color-rock-800);
+				background-color: var(--color-bg-primary);
 				position: absolute;
 				width: 100%;
 				right: 0;
 				top: 100%;
 				padding: var(--s-4) var(--s-7);
-				border: solid 2px var(--color-rock-400);
+				border: solid 2px var(--color-rock-100);
 				.filter-field {
 					display: flex;
 					flex-direction: row;

@@ -1,20 +1,21 @@
 <script lang="ts">
-	type InputTypes = "text" | "phone" | "email" | "text-area"
-	export let type: InputTypes
+	import { FormInputTypes } from "$lib/types"
+	import Handlers from "./Handlers"
+
+	export let type: FormInputTypes
 	export let placeholder: string
+	export let name: string
+	export let required = true
 </script>
 
-{#if type === "text"}
-	<input {type} {placeholder} />
-{/if}
-{#if type === "phone"}
-	<input {type} {placeholder} />
-{/if}
-{#if type === "email"}
-	<input {type} {placeholder} />
-{/if}
-{#if type === "text-area"}
-	<textarea {placeholder} />
+{#if type === FormInputTypes.textarea}
+	<textarea {placeholder} {name} {required} />
+{:else if type === FormInputTypes.email}
+	<input {type} {placeholder} {name} on:input={Handlers.email} {required} />
+{:else if type === FormInputTypes.phone}
+	<input {type} {placeholder} {name} on:keydown|preventDefault={Handlers.phone} {required} />
+{:else}
+	<input {type} {placeholder} {name} {required} />
 {/if}
 
 <style lang="scss">
@@ -24,6 +25,8 @@
 		width: 100%;
 		border: solid 4px var(--color-rock-100);
 		font-size: 1rem;
+		background-color: var(--color-rock-900);
+		color: var(--color-text-body);
 		&::placeholder {
 			text-transform: uppercase;
 			font: var(--font-headline);
@@ -33,7 +36,6 @@
 		}
 		&:placeholder-shown {
 			font-size: 0.9rem;
-			background-color: var(--color-rock-900);
 		}
 		&:focus {
 			background-color: var(--color-bg-primary);
@@ -42,6 +44,7 @@
 			}
 		}
 	}
+
 	input {
 		height: 50px;
 		text-align: center;

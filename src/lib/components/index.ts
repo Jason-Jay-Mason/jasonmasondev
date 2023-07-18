@@ -21,7 +21,7 @@ export { default as KanbanColumns } from './kanban/Columns.svelte'
 export { default as KanbanColumn } from './kanban/Column.svelte'
 export { default as KanbanCard } from './kanban/Card.svelte'
 export { default as KanbanTechIcon } from './kanban/TechIcon.svelte'
-export { default as ContactNew } from './contact/ContactNew.svelte'
+export { default as Contact } from './contact/Contact.svelte'
 
 
 //A spinner for loading
@@ -33,16 +33,11 @@ export { default as ThemeSwitcher } from './ThemeSwitcher.svelte'
 //The mustachio game
 export { default as Mustachio } from './Mustachio.svelte'
 
-//Form components
-export { default as Input } from './Input.svelte'
-
 //Page sections
 //An error display for +error.svelte pages
 export { default as Error } from './Error.svelte'
 export { default as LinkGrid } from './LinkGrid.svelte'
 
-//Contact form
-export { default as Contact } from './Contact.svelte'
 
 //Cover Letter for [company] page
 export { default as CoverLetter } from './company/CoverLetter.svelte'

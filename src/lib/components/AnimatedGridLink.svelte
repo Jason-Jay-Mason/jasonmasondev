@@ -29,10 +29,10 @@
 		position: relative;
 		margin: 0 auto;
 		background-color: var(--color-bg-primary);
-		border: 4px solid var(--color-rock-300);
+		border: 4px solid var(--color-rock-100);
 		width: 100%;
 		h3 {
-			color: var(--color-rock-200);
+			color: var(--color-rock-100);
 			font-family: var(--font-headline);
 			font-size: 2em;
 			padding-bottom: var(--s-5);
