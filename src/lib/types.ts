@@ -6,6 +6,22 @@ export interface FormEventHandler<T> {
   target: EventTarget | null;
 }
 
+export interface Seo {
+  title: string
+}
+
+export interface Tag {
+  name: string
+  slug: string
+}
+
+export interface Post {
+  seo: Seo,
+  body: object[],
+  slug: string,
+  tags: Tag[]
+}
+
 export enum FormInputTypes {
   text = "text",
   phone = "phone",
@@ -66,17 +82,38 @@ export interface ClickupTask {
   githubHref?: string | null
   technologies: string[]
 }
-export interface HomeData {
-  tasks: ClickupTask[]
+
+export interface HeroData {
+  Headline: string
+  cta: Cta
+  hook: string
 }
-
-
 export interface GridLinkData {
   headline: string
   hook: string
   href: string
-  animationComponent?: string
+  animationComponent?: string[]
 }
+
+export interface HomeData {
+  tasks: ClickupTask[]
+  page: {
+    Hero: HeroData
+    LinkGrid: {
+      links: GridLinkData[]
+    }
+    Kanban: {
+      headline: Headline
+    }
+    Contact: {
+      headline: Headline,
+      endPoint: string
+    }
+  }
+}
+
+
+
 
 //Auth 
 export interface AuthData {

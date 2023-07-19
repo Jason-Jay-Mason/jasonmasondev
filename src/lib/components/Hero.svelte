@@ -1,10 +1,8 @@
 <script lang="ts">
-	import type { Cta } from "$lib/types"
+	import type { HeroData } from "$lib/types"
 	import { Button } from "$lib/components"
 
-	export let hook: string
-	export let cta: Cta
-	export let headline: string
+	export let data: HeroData
 </script>
 
 <section id="top">
@@ -17,19 +15,19 @@
 		</div>
 		<div class="h1-container">
 			<div class="h1-background">
-				<h1>{headline}</h1>
+				<h1>{data.headline}</h1>
 			</div>
 			<div class="line" />
 			<div class="line-background" />
 		</div>
 		<div class="blurb">
 			<p>
-				{hook}
+				{data.hook}
 			</p>
 		</div>
 		<div class="cta-container">
 			<div class="cta">
-				<Button href={cta.hrefOrSrc} width="full">{cta.innerText}</Button>
+				<Button href={data.cta.hrefOrSrc} width="full">{data.cta.innerText}</Button>
 			</div>
 			<div class="bars" />
 		</div>
@@ -165,13 +163,14 @@
 				h1 {
 					position: relative;
 					padding: 0 var(--s-4) var(--s-3) var(--s-4);
-					font-size: 10vw;
-					font-family: var(--font-body);
 					color: var(--color-rock-100);
-					font-weight: 800;
-					letter-spacing: -2px;
 					border: dashed var(--color-rock-400);
 					border-width: 5px 0 5px 0;
+					font-size: 10vw;
+					font-family: var(--font-body);
+					font-weight: 800;
+					letter-spacing: -2px;
+					text-transform: uppercase;
 					@include sm {
 						font-size: calc(var(--text-lg) + 15px);
 					}

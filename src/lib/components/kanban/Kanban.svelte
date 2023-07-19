@@ -4,9 +4,6 @@
 
 	export let tasks: ClickupTask[]
 	export let headline: Headline
-	$: {
-		console.log(tasks)
-	}
 
 	let filtered = tasks
 </script>

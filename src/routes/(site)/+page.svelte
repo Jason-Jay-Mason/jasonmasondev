@@ -1,11 +1,8 @@
-<script>
+<script lang="ts">
+	import type { HomeData } from "$lib/types"
 	import { Hero, Mustachio, LinkGrid, Kanban, Contact } from "$lib/components"
 
-	export let hero
-	export let links
-	export let kanban
-	export let contact
-	export let data
+	export let data: HomeData
 	const { page, tasks } = data
 
 	let y = 1

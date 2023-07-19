@@ -3,14 +3,14 @@
 	import type { GridLinkData } from "$lib/types"
 
 	export let link: GridLinkData
-	const { animationComponent } = link || ""
+	const animationComponent = link.animationComponent || ["ServerSideAnimation"]
 </script>
 
-{#if animationComponent === "ServerSideAnimation"}
+{#if animationComponent[0] === "ServerSideAnimation"}
 	<ServerSideAnimation {link} />
-{:else if animationComponent === "MartechAnimation"}
+{:else if animationComponent[0] === "MartechAnimation"}
 	<MartechAnimation {link} />
-{:else if animationComponent === "ClientSideAnimation"}
+{:else if animationComponent[0] === "ClientSideAnimation"}
 	<ClientSideAnimation {link} />
 {:else}
 	<div>.</div>

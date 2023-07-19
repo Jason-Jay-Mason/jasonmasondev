@@ -31,9 +31,6 @@ links:
     hook:
       Lorem Ipsum is simply dummy text of the printing 
       and typesetting industry. has been the industry's 
-
-
-
   - headline: Next Js
     href: /blog
     hook:

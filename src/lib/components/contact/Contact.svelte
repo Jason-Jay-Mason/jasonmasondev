@@ -6,6 +6,7 @@
 	import Input from "./Input.svelte"
 
 	export let headline: Headline
+	export let endPoint = "https://submit-form.com/nZtmp841"
 	let form: HTMLFormElement
 	let valid = false
 
@@ -22,8 +23,7 @@
 			message: formData.get("message")
 		}
 		try {
-			const formUrl = "https://submit-form.com/nZtmp841"
-			await fetch(formUrl, {
+			await fetch(endPoint, {
 				method: "POST",
 				headers: {
 					"Content-Type": "application/json",
