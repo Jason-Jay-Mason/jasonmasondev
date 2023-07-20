@@ -22,6 +22,8 @@ export { default as KanbanColumn } from './kanban/Column.svelte'
 export { default as KanbanCard } from './kanban/Card.svelte'
 export { default as KanbanTechIcon } from './kanban/TechIcon.svelte'
 export { default as Contact } from './contact/Contact.svelte'
+export { default as CardGrid } from './blog/CardGrid.svelte'
+export { default as TagSelect } from './blog/TagSelect.svelte'
 
 
 //A spinner for loading

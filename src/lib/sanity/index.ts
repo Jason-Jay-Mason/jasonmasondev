@@ -12,13 +12,21 @@ interface Getters {
   home: () => any
   post: (slug: string) => any
   posts: () => any
+  tags: () => any
 }
 function get(client: SanityClient): Getters {
   const home = () => client.fetch(`*[_type == 'home']{Hero,LinkGrid,Kanban,Contact}`)
+  const tags = () => client.fetch(`*[_type == 'tags']{name, "slug":slug.current}`)
   const posts = () => client.fetch(`
     *[_type == 'posts']{
       seo,
-      body,
+      preview,
+      date,
+      image,
+      longTitle,
+      shortTitle,
+      readingTime,
+      "imgSrc":image.asset->url,
       "slug": slug.current,
       "tags": tags[] -> {
         name,
@@ -32,6 +40,11 @@ function get(client: SanityClient): Getters {
     *[_type == 'posts' && slug.current == '${slug}']{
       seo,
       body,
+      date,
+      longTitle,
+      shortTitle,
+      readingTime,
+      "imgSrc":image.asset->url,
       "slug": slug.current,
       "tags": tags[] -> {
         name,
@@ -45,6 +58,7 @@ function get(client: SanityClient): Getters {
     home,
     post,
     posts,
+    tags
   }
 }
 

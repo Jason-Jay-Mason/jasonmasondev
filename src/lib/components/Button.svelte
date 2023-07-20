@@ -34,16 +34,16 @@
 		position: relative;
 		text-transform: capitalize;
 		box-shadow: none;
-		font-size: calc(var(--text-base) + 3px);
-		color: var(--color-rock-100);
+		font-size: 1rem;
+		color: var(--color-text-body);
 		letter-spacing: 0.11em;
 		font-family: var(--font-headline);
-		font-weight: 700;
+		font-weight: 900;
 		border: 3px solid var(--color-rock-100);
-		background-color: var(--color-rock-900);
+		background-color: var(--color-bg-field);
 		padding: var(--s-4) var(--s-8);
 		@include sm {
-			font-size: calc(var(--text-base) + 5px);
+			font-size: 1.5rem;
 		}
 		&::before {
 			content: "";
@@ -80,7 +80,6 @@
 	button:hover {
 		cursor: pointer;
 		border-image-slice: 1;
-		background-color: var(--color-bg-primary);
 		&::before {
 			transform: translateY(-7px) rotate(2deg);
 			border-width: 5px 10px 5px 10px;

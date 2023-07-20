@@ -177,6 +177,7 @@
 				font-family: var(--font-headline);
 				font-size: var(--text-base);
 				line-height: 0;
+				filter: var(--icon-filter);
 				&:hover {
 					cursor: pointer;
 				}

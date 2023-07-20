@@ -2,7 +2,8 @@ body {
  //Set our color vars for light mode
 	--color-text-body: black;
 	--color-bg-primary: white;
-	--color-bg-card: #ffffffd9;
+	--color-bg-card: white;
+  --color-bg-field: #FAFAFA;
 	--color-text-body: black;
 	--color-rock-100: #46423F;
 	--color-rock-200: #5F5A56;
@@ -13,6 +14,10 @@ body {
 	--color-rock-700: #F1F1F0;
 	--color-rock-800: #F5F5F4;
 	--color-rock-900: #FAFAFA;
+  --color-rock-invert-900: #FAFAFA;
+  --color-rock-invert-800: #F5F5F4;
+	--color-rock-invert-700: #F1F1F0;
+	--color-rock-invert-600: #DCDCDC;
   --color-card: var(--color-bg-primary);
   --color-column: rgba(255,255,255,0.4);
 	--color-pencil-100: #bdbdbd;
@@ -35,8 +40,9 @@ body {
 
   //Overwrite colors for dark mode
 	&[data-theme='dark'] {
-		--color-bg-primary: #3D3834;
-		--color-bg-card: #0d0c0cd9;
+		--color-bg-primary: #36322F;
+		--color-bg-card: #302C29;
+    --color-bg-field: #302C29;
 		--color-text-body: #ffffff;
     --color-rock-100: #ffffff;
     --color-rock-200: #ffffff;
@@ -47,6 +53,9 @@ body {
     --color-rock-700: #504E4C;
     --color-rock-800: #46413C;
     --color-rock-900: #423D38;
+    --color-rock-invert-900: #36322E;
+    --color-rock-invert-800: #302C29;
+    --color-rock-invert-700: #252220;
     --color-card: var(--color-rock-800);
     --color-column: rgba(61,56,52,0.7);
 		--color-pencil-100: #494949;

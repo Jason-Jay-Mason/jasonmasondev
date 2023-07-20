@@ -19,11 +19,10 @@
 		position: relative;
 		display: inline-block;
 		margin: 0 auto;
-		background-color: var(--color-bg-primary);
 		border: 4px solid var(--color-rock-100);
 		width: 100%;
 		h3 {
-			color: var(--color-rock-100);
+			color: var(--color-rock-200);
 			font-family: var(--font-headline);
 			font-size: 2em;
 			padding-bottom: var(--s-5);
@@ -38,7 +37,7 @@
 			border-color: var(--color-rock-100);
 		}
 		.container {
-			background-color: var(--color-bg-primary);
+			background-color: var(--color-bg-card);
 			padding: var(--s-6) var(--s-7);
 			@include sm {
 				padding: var(--s-7) var(--s-8);

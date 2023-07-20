@@ -74,11 +74,11 @@
 	select,
 	input {
 		color: var(--color-text-body);
-		background-color: var(--color-rock-900);
 		border: solid 2px var(--color-rock-100);
 		padding: var(--s-4) 20px;
 		font-size: 0.9rem;
 		text-align: center;
+		background-color: var(--color-bg-field);
 	}
 	input::placeholder {
 		text-align: center;

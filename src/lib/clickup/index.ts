@@ -1,4 +1,3 @@
-import type { PageServerLoad } from './$types';
 import type { HomeData, ClickupTask } from '$lib/types';
 import { dev } from '$app/environment';
 import jsonata from 'jsonata'

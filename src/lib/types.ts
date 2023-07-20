@@ -5,6 +5,20 @@ export type FilterableData = Record<string, any>
 export interface FormEventHandler<T> {
   target: EventTarget | null;
 }
+export enum Months {
+  Jan = 0,
+  Feb,
+  Mar,
+  Apr,
+  May,
+  Jun,
+  Jul,
+  Aug,
+  Sep,
+  Oct,
+  Nov,
+  Dec
+}
 
 export interface Seo {
   title: string
@@ -16,10 +30,16 @@ export interface Tag {
 }
 
 export interface Post {
-  seo: Seo,
-  body: object[],
-  slug: string,
+  seo: Seo
+  date: string
+  longTitle: string
+  preview: string
+  readingTime: number
+  shortTitle: string
+  slug: string
+  imgSrc: string
   tags: Tag[]
+  body?: object[]
 }
 
 export enum FormInputTypes {

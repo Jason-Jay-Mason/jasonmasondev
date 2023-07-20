@@ -44,7 +44,7 @@
 		width: 100%;
 		margin-bottom: var(--s-6);
 		padding: 18px 20px 18px 20px;
-		background-color: var(--color-card);
+		background-color: var(--color-bg-card);
 		border: solid 2px var(--color-rock-100);
 		@include xs {
 			padding: 22px 30px 18px 30px;
@@ -83,7 +83,6 @@
 			}
 		}
 		.description {
-			position: relative;
 			font-size: 0.8rem;
 			overflow: hidden;
 			display: -webkit-box;

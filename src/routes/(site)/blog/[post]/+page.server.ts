@@ -1,5 +1,4 @@
 import type { PageServerLoad } from './$types';
-import type { HomeData } from '$lib/types';
 import { error } from '@sveltejs/kit';
 import SanityApi from '$lib/sanity';
 

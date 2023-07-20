@@ -25,7 +25,7 @@
 		width: 100%;
 		border: solid 4px var(--color-rock-100);
 		font-size: 1rem;
-		background-color: var(--color-rock-900);
+		background-color: var(--color-bg-field);
 		color: var(--color-text-body);
 		&::placeholder {
 			text-transform: uppercase;
