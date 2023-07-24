@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { Nav, Footer } from '$lib/components';
+	import { Nav, Footer } from "$lib/components"
 </script>
 
 <Nav />

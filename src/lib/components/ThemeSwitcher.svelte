@@ -4,13 +4,13 @@
 	//We store the theme state in local storage so that we can persist between sessions.
 	//The initial state is handeled in app.html
 	function switchTheme() {
-		let theme = localStorage.getItem('theme');
-		if (theme === 'dark') {
-			localStorage.setItem('theme', 'light');
-			document.body.setAttribute('data-theme', 'light');
+		let theme = localStorage.getItem("theme")
+		if (theme === "dark") {
+			localStorage.setItem("theme", "light")
+			document.body.setAttribute("data-theme", "light")
 		} else {
-			localStorage.setItem('theme', 'dark');
-			document.body.setAttribute('data-theme', 'dark');
+			localStorage.setItem("theme", "dark")
+			document.body.setAttribute("data-theme", "dark")
 		}
 	}
 </script>
@@ -21,14 +21,14 @@
 	div {
 		cursor: pointer;
 		position: relative;
-		height: 25px;
-		width: 25px;
+		height: 100%;
+		width: 100%;
 		filter: var(--icon-filter);
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
-			height: 25px;
-			width: 25px;
+			height: 100%;
+			width: 100%;
 			background-image: var(--theme-icon);
 			background-size: contain;
 		}

@@ -1,25 +1,22 @@
 <script lang="ts">
-	import type { Link } from '$lib/types';
-	import { ThemeSwitcher } from '$lib/components';
-	import { company } from '$lib/stores';
+	import type { Link } from "$lib/types"
+	import { ThemeSwitcher } from "$lib/components"
 
-	export let data: Link[];
-	export let active: boolean;
+	export let data: Link[]
+	export let active: boolean
 </script>
 
 <div class="modal" class:inactive={active === false}>
 	<div
 		class="modal-links"
 		on:click={() => {
-			active = !active;
+			active = !active
 		}}
 	>
-		{#if $company}
-			{#each data as link}
-				<a href={`/${$company}${link.href}`}>{link.innerText}</a>
-			{/each}
-			<a class="link" href={`/${$company}#contact`}>CONTACT</a>
-		{/if}
+		{#each data as link}
+			<a href={`${link.href}`}>{link.innerText}</a>
+		{/each}
+		<a class="link" href={`/#contact`}>Contact</a>
 	</div>
 
 	<div class="social">
@@ -31,23 +28,31 @@
 				<img src="/linkedin-logo.svg" alt="" />
 			</a>
 		</div>
-		<ThemeSwitcher />
+		<div class="theme">
+			<ThemeSwitcher />
+		</div>
 	</div>
 </div>
 
 <style lang="scss">
-	@import '../../lib/theme/breakpoints.scss';
+	@import "../../lib/theme/breakpoints.scss";
 	.modal {
 		position: absolute;
 		left: 0;
 		right: 0;
-		top: 50px;
+		top: 59px;
+		display: flex;
+		flex-direction: column;
+		align-items: space-between;
 		width: 100vw;
 		z-index: 100;
 		background-color: var(--color-bg-primary);
+		border-width: 1px 0 1px 0;
+		border-style: solid;
+		border-color: var(--color-rock-400);
 		transition: all 0.2s;
 		margin: 0 auto;
-		padding-bottom: var(--s-9);
+		padding: var(--s-7) var(--s-7) var(--s-7) var(--s-7);
 		@include md {
 			display: none;
 		}
@@ -55,23 +60,26 @@
 			display: flex;
 			flex-direction: row;
 			justify-content: space-between;
-			height: 20px;
-			padding: var(--s-8) var(--s-6) 0 var(--s-6);
+			align-items: center;
 			.icons {
 				display: flex;
 				flex-direction: row;
+				line-height: 0;
 				img {
 					width: 30px;
-					padding: 0 var(--s-2);
+					padding: 0 var(--s-1);
 					filter: var(--icon-filter);
 				}
 			}
+			.theme {
+				width: 22px;
+				height: 22px;
+			}
 		}
 		.modal-links {
-			padding: 0 var(--s-6);
-			margin-top: var(--s-7);
 			display: flex;
 			flex-direction: column;
+			padding-bottom: var(--s-8);
 			a {
 				font-family: var(--font-Headline);
 				letter-spacing: 0.16rem;

@@ -8,7 +8,7 @@
 	let filtered = tasks
 </script>
 
-<section id="kanban">
+<section id="projects">
 	<LargeHeadline main={headline.main} sub={headline.sub} />
 	<FilterMenu data={tasks} bind:filtered />
 	<Columns tasks={filtered} statuses={["backlog", "doing", "done"]} />

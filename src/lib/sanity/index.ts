@@ -10,15 +10,15 @@ const client = createClient({
 
 interface Getters {
   home: () => any
-  post: (slug: string) => any
-  posts: () => any
+  post: (postSlug: string) => any
+  posts: (tagSlug?: string) => any
   tags: () => any
 }
 function get(client: SanityClient): Getters {
   const home = () => client.fetch(`*[_type == 'home']{Hero,LinkGrid,Kanban,Contact}`)
   const tags = () => client.fetch(`*[_type == 'tags']{name, "slug":slug.current}`)
-  const posts = () => client.fetch(`
-    *[_type == 'posts']{
+  const posts = (tag?: string) => client.fetch(`
+    *[_type == 'posts'${tag ? `&& references(*[_type == 'tags' && slug.current == '${tag}'][0]._id)` : ''}]{
       seo,
       preview,
       date,
@@ -44,6 +44,7 @@ function get(client: SanityClient): Getters {
       longTitle,
       shortTitle,
       readingTime,
+      preview,
       "imgSrc":image.asset->url,
       "slug": slug.current,
       "tags": tags[] -> {

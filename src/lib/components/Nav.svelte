@@ -1,12 +1,13 @@
 <script lang="ts">
 	import type { Navbar } from "$lib/types"
 	import { ThemeSwitcher, Modal } from "$lib/components"
+	import { onMount } from "svelte"
 
 	export let data: Navbar = {
 		links: [
 			{
 				innerText: "Projects",
-				href: "/projects"
+				href: "/#projects"
 			},
 			{
 				innerText: "Blog",
@@ -23,9 +24,48 @@
 	function toggleModal() {
 		modalActive = !modalActive
 	}
+
+	let lastScroll = 0
+	let hidePosition = 0
+	let sticky = true
+	function handleSticky() {
+		if (window.scrollY > 80) {
+			sticky = true
+		} else {
+			sticky = false
+		}
+
+		if (window.scrollY > lastScroll && hidePosition > -80) {
+			const next = hidePosition - (window.scrollY - lastScroll)
+			if (next < -80) {
+				hidePosition = -80
+			} else {
+				hidePosition = next
+			}
+		}
+
+		if (window.scrollY < lastScroll && hidePosition < 0) {
+			const next = hidePosition + (lastScroll - window.scrollY)
+			if (next > 0) {
+				hidePosition = 0
+			} else {
+				hidePosition = next
+			}
+		}
+
+		lastScroll = window.scrollY
+	}
+	onMount(() => {
+		handleSticky()
+	})
 </script>
 
-<nav>
+<svelte:window on:scroll={handleSticky} />
+<nav
+	style={`transform:translateY(${hidePosition}px)`}
+	class:sticky
+	class:background={modalActive == true}
+>
 	<div class="left">
 		<a href="/">
 			<img src="/jm-logo.svg" alt="jason's logo" class="logo" />
@@ -51,12 +91,7 @@
 			<ThemeSwitcher />
 		</div>
 
-		<button
-			class="hamburger"
-			class:active={modalActive === true}
-			aria-label="Toggle Menu"
-			on:click={toggleModal}
-		>
+		<button class="hamburger" class:modalActive aria-label="Toggle Menu" on:click={toggleModal}>
 			<div />
 		</button>
 	</div>
@@ -65,39 +100,65 @@
 
 <style lang="scss">
 	@import "../../lib/theme/breakpoints.scss";
+	.background {
+		background-color: var(--color-bg-primary);
+	}
+	.sticky {
+		background-color: var(--color-bg-primary);
+		border-color: var(--color-rock-500);
+		.logo {
+			width: 90px;
+			@include lg {
+				width: 109px;
+			}
+		}
+	}
 	nav {
-		width: 100%;
 		position: sticky;
 		top: 0;
-		height: 50px;
+		height: 60px;
+		width: 100%;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		max-width: $xxl;
 		z-index: 100;
-		margin: 0 auto;
+		margin: 0 auto -75px auto;
 		padding: 0 var(--s-4);
+		background-color: transparent;
+		border-bottom: solid 1px transparent;
+		transition: background, border-color 0.3s ease;
 		@include md {
-			position: relative;
-			height: 90px;
-			padding: var(--s-7) var(--s-8);
+			padding: 0 var(--s-6);
+		}
+		@include lg {
+			height: 75px;
+			padding: 0 var(--s-8);
 		}
 		@include xl {
-			padding: var(--s-7) var(--s-9);
+			padding: 0 var(--s-9);
+		}
+		&:hover {
+			background-color: var(--color-bg-primary);
+			border-bottom: solid 1px var(--color-rock-500);
 		}
 		.theme {
+			position: relative;
 			display: none;
+			bottom: 1px;
+			height: 21px;
+			width: 21px;
 			@include md {
 				display: block;
 			}
 		}
-		.active {
+		.modalActive {
 			div {
 				opacity: 0;
 			}
 			&::before {
 				margin: auto;
-				transform: rotate(-45deg) translate(-7px, 6px);
+				transform: rotate(-45deg) translate(-6px, 6px);
 				transition: all 0.2s;
 			}
 			&::after {
@@ -111,8 +172,8 @@
 			border: none;
 			cursor: pointer;
 			position: relative;
-			width: 30px;
-			height: 23px;
+			width: 28px;
+			height: 22px;
 			margin: 0 0 0 var(--s-6);
 			@include md {
 				display: none;
@@ -152,13 +213,13 @@
 			line-height: 0;
 			padding-right: var(--s-6);
 			@include lg {
-				padding-right: var(--s-9);
+				padding-right: var(--s-7);
 			}
 			@include md {
 				display: flex;
 			}
 			.icon {
-				margin: 0 var(--s-3);
+				margin: 0 var(--s-2);
 				width: 24px;
 				filter: var(--icon-filter);
 			}
@@ -177,25 +238,27 @@
 		}
 		.logo {
 			position: relative;
-			top: 5px;
-			width: 80px;
+			top: 6px;
+			width: 90px;
 			padding-right: var(--s-6);
 			filter: var(--icon-filter);
+			transition: all 0.1s ease;
 			@include lg {
-				width: 120px;
+				width: 110px;
 				padding-right: var(--s-8);
 			}
 		}
 		.link {
 			font-family: var(--font-body);
-			text-transform: uppercase;
-			font-size: 12px;
-			font-weight: 600;
-			letter-spacing: 0.17rem;
-			padding: 0 var(--s-3);
+			font-size: 0.8rem;
+			font-weight: 400;
+			letter-spacing: 0.1rem;
+			padding: 0 var(--s-6);
+			color: var(--color-text-body);
 			@include lg {
-				font-size: 12px;
-				padding: 0 var(--s-8);
+				font-size: 14px;
+				letter-spacing: 0.15rem;
+				padding: 0 var(--s-7);
 			}
 		}
 	}

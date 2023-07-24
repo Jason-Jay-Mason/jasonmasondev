@@ -29,7 +29,7 @@ export interface Tag {
   slug: string
 }
 
-export interface Post {
+export interface PostData {
   seo: Seo
   date: string
   longTitle: string

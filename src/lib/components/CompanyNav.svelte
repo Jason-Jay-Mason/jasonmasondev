@@ -1,61 +1,61 @@
 <script lang="ts">
-	import type { Navbar } from '$lib/types';
-	import ThemeSwitcher from '$lib/components/ThemeSwitcher.svelte';
-	import Modal from '$lib/components/Modal.svelte';
-	import { company } from '$lib/stores';
+	import type { Navbar } from "$lib/types"
+	import ThemeSwitcher from "$lib/components/ThemeSwitcher.svelte"
+	import Modal from "$lib/components/Modal.svelte"
+	import { company } from "$lib/stores"
 
-	import { afterNavigate, beforeNavigate, disableScrollHandling } from '$app/navigation';
+	import { afterNavigate, beforeNavigate, disableScrollHandling } from "$app/navigation"
 
 	export let data: Navbar = {
 		links: [
 			{
-				innerText: 'Projects',
-				href: '/projects'
+				innerText: "Projects",
+				href: "/#projects"
 			},
 			{
-				innerText: 'Blog',
-				href: '/blog'
+				innerText: "Blog",
+				href: "/blog"
 			},
 			{
-				innerText: 'Mustachio',
-				href: '/mustachio'
+				innerText: "Mustachio",
+				href: "/mustachio"
 			}
 		]
-	};
-	export let isPage: boolean;
+	}
+	export let isPage: boolean
 
 	//#region annoying fix for safari. Safari does not play well with links to id anchors
-	let scrollBottom: number;
+	let scrollBottom: number
 	beforeNavigate(() => {
-		let scrollToBottom = document.body.scrollHeight - window.scrollY;
-		scrollBottom = scrollToBottom;
-	});
+		let scrollToBottom = document.body.scrollHeight - window.scrollY
+		scrollBottom = scrollToBottom
+	})
 	afterNavigate(() => {
-		disableScrollHandling();
-		const hash = window.location.hash.replace('#', '');
-		const anchor = document.getElementById(hash)?.getBoundingClientRect();
-		let next = anchor?.y - scrollBottom;
+		disableScrollHandling()
+		const hash = window.location.hash.replace("#", "")
+		const anchor = document.getElementById(hash)?.getBoundingClientRect()
+		let next = anchor?.y - scrollBottom
 		if (next) {
 			window.scrollTo({
 				top: next,
-				behavior: 'smooth'
-			});
+				behavior: "smooth"
+			})
 		}
-	});
+	})
 	function handleAnchorClick(e) {
-		e.preventDefault();
-		const link = e.currentTarget;
-		const anchorId = new URL(link.href).hash.replace('#', '');
-		const anchor = document.getElementById(anchorId);
+		e.preventDefault()
+		const link = e.currentTarget
+		const anchorId = new URL(link.href).hash.replace("#", "")
+		const anchor = document.getElementById(anchorId)
 		window.scrollTo({
 			top: anchor?.offsetTop,
-			behavior: 'smooth'
-		});
+			behavior: "smooth"
+		})
 	}
 
-	let modalActive: boolean = false;
+	let modalActive: boolean = false
 	function toggleModal() {
-		modalActive = !modalActive;
+		modalActive = !modalActive
 	}
 	//#endregion
 </script>
@@ -105,7 +105,7 @@
 </nav>
 
 <style lang="scss">
-	@import '../../lib/theme/breakpoints.scss';
+	@import "../../lib/theme/breakpoints.scss";
 	nav {
 		position: sticky;
 		top: 0;
@@ -167,7 +167,7 @@
 			}
 			&::before,
 			&::after {
-				content: '';
+				content: "";
 				position: absolute;
 				height: 4px;
 				width: 100%;

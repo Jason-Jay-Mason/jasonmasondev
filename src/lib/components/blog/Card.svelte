@@ -1,15 +1,15 @@
 <script lang="ts">
-	import type { Post } from "$lib/types"
+	import type { PostData } from "$lib/types"
 	import { Months } from "$lib/types"
-	import Profile from "../company/Profile.svelte"
+	import { blur } from "svelte/transition"
 
-	export let post: Post
+	export let post: PostData
 	const date = new Date(post.date)
 </script>
 
-<a href={`/blog/${post.slug}`}>
+<a href={`/blog/${post.slug}`} transition:blur>
 	<div class="card rainbow-hover">
-		<img src={post.imgSrc} />
+		<img src={post.imgSrc} alt={post.longTitle} />
 		<div class="details">
 			<h5>{post.shortTitle}</h5>
 			<p>{post.preview}</p>

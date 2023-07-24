@@ -47,7 +47,7 @@
 		overflow: hidden;
 		padding: var(--s-12) var(--s-4) var(--s-15) var(--s-4);
 		@include sm {
-			padding: var(--s-11) var(--s-4) var(--s-15) var(--s-4);
+			padding: var(--s-13) var(--s-4) var(--s-15) var(--s-4);
 		}
 		.cta-container {
 			position: relative;

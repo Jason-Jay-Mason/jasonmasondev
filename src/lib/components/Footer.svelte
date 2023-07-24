@@ -1,23 +1,23 @@
 <script lang="ts">
-	import type { Navbar } from '$lib/types';
-	import { ThemeSwitcher } from '$lib/components';
+	import type { Navbar } from "$lib/types"
+	import { ThemeSwitcher } from "$lib/components"
 
 	export let data: Navbar = {
 		links: [
 			{
-				innerText: 'Projects',
-				href: '/projects'
+				innerText: "Projects",
+				href: "/#projects"
 			},
 			{
-				innerText: 'Blog',
-				href: '/blog'
+				innerText: "Blog",
+				href: "/blog"
 			},
 			{
-				innerText: 'Mustachio',
-				href: '/mustachio'
+				innerText: "Mustachio",
+				href: "/mustachio"
 			}
 		]
-	};
+	}
 </script>
 
 <footer>
@@ -42,7 +42,7 @@
 </footer>
 
 <style lang="scss">
-	@import '../theme/breakpoints.scss';
+	@import "../theme/breakpoints.scss";
 	footer {
 		position: relative;
 		display: flex;
@@ -53,7 +53,7 @@
 		padding: var(--s-10) 0;
 		margin: var(--s-7) auto 0 auto;
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0;
 			left: 0;

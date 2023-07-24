@@ -1,7 +1,8 @@
 <script lang="ts">
-	import type { Post } from "$lib/types"
+	import type { PostData } from "$lib/types"
+	import { Post } from "$lib/components"
 
-	export let data: Post
+	export let data: PostData
 </script>
 
-<h1>{data.slug} from cms</h1>
+<Post {data} />
