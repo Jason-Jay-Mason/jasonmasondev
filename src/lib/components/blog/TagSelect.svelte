@@ -2,7 +2,7 @@
 	import type { Tag } from "$lib/types"
 
 	export let tags: Tag[]
-	export let selected: string
+	export let selected: string | null
 	let tagScroll: HTMLDivElement
 	let scrollArrows = {
 		left: false,

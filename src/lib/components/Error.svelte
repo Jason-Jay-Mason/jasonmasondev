@@ -1,6 +1,6 @@
 <script lang="ts">
-	export let main: string = '404 Page Not Found';
-	export let sub: string = "Oops, it looks like this page doesn't exist.";
+	export let main: string = "404 Page Not Found"
+	export let sub: string = "Oops, it looks like this page doesn't exist."
 </script>
 
 <section>
@@ -11,58 +11,7 @@
 </section>
 
 <style lang="scss">
-	@import '../theme/breakpoints.scss';
-	.generic-nav {
-		margin: 0 auto;
-		max-width: $xxl;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-items: center;
-		padding: 0 var(--s-4);
-		height: 40px;
-		@include md {
-			height: 90px;
-			padding: var(--s-7) var(--s-8);
-		}
-		@include xl {
-			padding: var(--s-7) var(--s-9);
-		}
-		a {
-			line-height: 0;
-		}
-		.social {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-		}
-		.theme {
-			margin-left: var(--s-8);
-			display: none;
-			@include md {
-				display: block;
-			}
-		}
-		.icon,
-		.logo {
-			filter: var(--icon-filter);
-		}
-		.icon {
-			margin: 0 var(--s-4);
-			width: 28px;
-		}
-		.logo {
-			width: 90px;
-			filter: var(--icon-filter);
-			padding-right: var(--s-6);
-			@include lg {
-				width: 110px;
-				padding-right: var(--s-8);
-			}
-		}
-	}
-
+	@import "../theme/breakpoints.scss";
 	section {
 		width: 100%;
 		max-width: $lg;

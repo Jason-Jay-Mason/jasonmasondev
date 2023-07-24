@@ -1,15 +1,26 @@
 <script lang="ts">
-	import type { Post } from "$lib/types"
+	import type { PostData } from "$lib/types"
 	import Card from "./Card.svelte"
+	import { Button } from "$lib/components"
 
-	export let posts: Post[]
+	export let posts: PostData[]
 </script>
 
-<div class="post-grid">
-	{#each posts as post}
-		<Card {post} />
-	{/each}
-</div>
+{#if !posts.length}
+	<div class="error">
+		<h1>Sorry, there are no posts yet.</h1>
+		<p>
+			Although I plan on writing on this topic, there are not posts yet. Please check back later.
+		</p>
+		<Button href="/blog">Clear Filter</Button>
+	</div>
+{:else}
+	<div class="post-grid">
+		{#each posts as post}
+			<Card {post} />
+		{/each}
+	</div>
+{/if}
 
 <style lang="scss">
 	@import "../../theme/breakpoints.scss";
@@ -33,6 +44,29 @@
 		}
 		@include xl {
 			gap: var(--s-7);
+		}
+	}
+
+	.error {
+		width: 100%;
+		max-width: $lg;
+		margin: 0 auto;
+		height: clamp(400px, 40vh, 500px);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		padding: 0 var(--s-7);
+		h1 {
+			color: var(--color-rock-100);
+			font-family: var(--font-headline);
+			font-size: var(--text-xl);
+		}
+		p {
+			color: var(--color-rock-100);
+			text-align: center;
+			font-size: var(--text-md);
+			padding-bottom: var(--s-9);
 		}
 	}
 </style>

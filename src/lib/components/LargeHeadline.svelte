@@ -44,7 +44,7 @@
 					top: 0;
 					bottom: 0;
 					left: 0;
-					width: 100%;
+					width: 500px;
 					opacity: var(--opacity-pencilbg);
 					object-fit: repeat;
 					margin: auto 0;
