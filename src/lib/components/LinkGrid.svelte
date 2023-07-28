@@ -97,6 +97,8 @@
 		}
 
 		.grid {
+			position: relative;
+			z-index: 5;
 			gap: var(--s-6);
 		}
 

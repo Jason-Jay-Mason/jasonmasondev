@@ -1,10 +1,10 @@
 <script lang="ts">
 	import { Mustachio } from "$lib/components"
-	let container: HTMLDivElement
+	import { mustachioConfig } from "$lib/config/game-configs"
 </script>
 
-<div class="container" bind:this={container}>
-	<Mustachio {container} />
+<div class="container">
+	<Mustachio config={mustachioConfig} />
 </div>
 
 <style lang="scss">

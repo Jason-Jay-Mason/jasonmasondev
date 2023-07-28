@@ -1,22 +1,14 @@
 <script lang="ts">
-	import type { Tag, Post } from "$lib/types"
-	import { CardGrid, TagSelect } from "$lib/components"
+	import type { Tag, PostData } from "$lib/types"
+	import { CardGrid } from "$lib/components"
+	import TagSection from "./TagSection.svelte"
 
-	export let posts: Post[]
+	export let posts: PostData[]
 	export let tags: Tag[]
-	export let selected: string | null
 </script>
 
 <section id="blog">
-	<div class="top">
-		<div class="headline">
-			<h1>Woh! Neat blog!</h1>
-			<div class="mask">
-				<img src="/lines.svg" alt="Stylized background" />
-			</div>
-		</div>
-		<TagSelect {tags} {selected} />
-	</div>
+	<TagSection {tags} />
 	<CardGrid {posts} />
 </section>
 
@@ -31,9 +23,10 @@
 		}
 		@include lg {
 			max-width: 1400px;
+			padding: var(--s-5) var(--s-5) var(--s-7) var(--s-5);
 		}
 		@include xl {
-			padding: 0 var(--s-9) var(--s-14) var(--s-9);
+			padding: var(--s-6) var(--s-9) var(--s-12) var(--s-9);
 		}
 		.top {
 			display: flex;

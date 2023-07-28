@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { HomeData } from "$lib/types"
-	import { Hero, Mustachio, LinkGrid, Kanban, Contact } from "$lib/components"
+	import { Hero, Mustachio, LinkGrid, Kanban, Contact, Seo } from "$lib/components"
+	import { homeConfig } from "$lib/config/game-configs"
 
 	export let data: HomeData
 	const { page, tasks } = data
@@ -11,9 +12,11 @@
 	}
 </script>
 
+<Seo data={data.page.seo} />
+
 <svelte:window on:scroll={handleParalax} />
 <div class="mustachio" style={`transform: translateY(${y}%)`}>
-	<Mustachio />
+	<Mustachio config={homeConfig} />
 </div>
 <Hero data={page.Hero} />
 <LinkGrid links={page?.LinkGrid?.links} />

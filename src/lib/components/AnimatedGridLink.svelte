@@ -23,7 +23,6 @@
 <style lang="scss">
 	@import "../theme/breakpoints.scss";
 	.gridlink {
-		z-index: 10;
 		position: relative;
 		margin: 0 auto;
 		border: 4px solid var(--color-rock-100);

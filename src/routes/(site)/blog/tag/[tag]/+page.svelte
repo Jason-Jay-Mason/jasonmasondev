@@ -1,7 +1,10 @@
 <script lang="ts">
 	import Blog from "$lib/components/blog/Blog.svelte"
-	import type { PageData } from "../../[post]/$types"
+	import type { PageData } from "./$types"
 	export let data: PageData
 </script>
 
-<Blog posts={data.posts} tags={data.tags} selected={data.tag} />
+<svelte:head>
+	<link rel="canonical" href="http://jasonmason.dev/blog" />
+</svelte:head>
+<Blog posts={data.posts} tags={data.tags} />

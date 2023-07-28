@@ -354,12 +354,66 @@ const google = {
   ]
 }
 
+export const mustachioConfig: Config = {
+  minEnemies: 9,
+  maxEnemies: 20,
+  displayHud: true,
+  showFps: false,
+  showHitBox: false,
+  npc: false,
+  lasers: [
+    '/h-laser.svg',
+    '/j-laser.svg',
+    '/k-laser.svg',
+    '/l-laser.svg',
+  ],
+  player: {
+    godMode: false,
+    controls: {
+      thrust: 'k',
+      left: 'h',
+      right: 'l',
+      shoot: 'j'
+    },
+    size: {
+      w: 2.5 * sizeRatio,
+      h: 6.0 * sizeRatio
+    },
+    position: {
+      x: 0,
+      y: 0,
+    },
+    shipPath: '/mustache.svg',
+    thrusterPath: '/flame.svg',
+    fireRate: 200
+  },
+  enemies: [
+    mjml,
+    php,
+    activecampaign,
+    braze,
+    figma,
+    hubspot,
+    tailwind,
+    neovim,
+    javascript,
+    salesforce,
+    sass,
+    google,
+    golang,
+    next,
+    typescript,
+    svelte,
+    react,
+    vite,
+  ],
+}
 
 export const homeConfig: Config = {
   minEnemies: 9,
   maxEnemies: 15,
-  displayHud: true,
-  showFps: true,
+  displayHud: false,
+  showFps: false,
   showHitBox: false,
   npc: true,
   lasers: [

@@ -20,8 +20,19 @@ export enum Months {
   Dec
 }
 
-export interface Seo {
+export interface SeoData {
   title: string
+  description: string
+  robots: {
+    follow: boolean,
+    index: boolean,
+  }
+  ogtype: string,
+  ogurl: string,
+  ogimage: {
+    src: string,
+    altText: string,
+  },
 }
 
 export interface Tag {
@@ -39,7 +50,7 @@ export interface PostData {
   slug: string
   imgSrc: string
   tags: Tag[]
-  body?: object[]
+  body: object[]
 }
 
 export enum FormInputTypes {
@@ -129,6 +140,7 @@ export interface HomeData {
       headline: Headline,
       endPoint: string
     }
+    seo: SeoData
   }
 }
 

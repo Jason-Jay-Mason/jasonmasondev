@@ -1,6 +1,6 @@
 import type { Entity, SparceSet } from '../types.ts'
 import type { IWorld, Component } from 'bitecs'
-import { getEntityComponents, removeComponent, hasComponent } from 'bitecs'
+import { getEntityComponents, removeComponent, hasComponent, resetWorld } from 'bitecs'
 import { Component as C } from '.'
 
 const isEnemy = (w: IWorld, e: Entity) => hasComponent(w, C.Enemy, e)
@@ -16,6 +16,11 @@ function recycleEntity(w: IWorld, e: Entity): void {
   for (const component of components) {
     removeComponent(w, component, e)
   }
+}
+
+function resetGame(w: IWorld): void {
+  resetWorld(w)
+  console.log('here')
 }
 
 function getBoundedRandom(min: number, max: number, roundto?: number): number {
@@ -75,6 +80,7 @@ export default {
   isNpc,
   createSparseSet,
   normalizeAngle,
+  resetGame,
 }
 
 

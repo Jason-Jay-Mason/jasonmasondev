@@ -58,6 +58,8 @@
 		justify-content: center;
 		padding: 0 var(--s-7);
 		h1 {
+			text-align: center;
+			line-height: 1.2;
 			color: var(--color-rock-100);
 			font-family: var(--font-headline);
 			font-size: var(--text-xl);

@@ -85,6 +85,7 @@ function createEnemy(w: IWorld, g: Globals, t: EnemyType, s: SpawnLocation): voi
   Helpers.addComponents(w, eid, components)
 
   C.Enemy.type[eid] = t
+  C.Enemy.scoreValue[eid] = 10
 
   const width = g.config.enemies[t].size.w
   const height = g.config.enemies[t].size.h
@@ -206,8 +207,8 @@ function createPlayer(w: IWorld, g: Globals): Entity {
   C.Size.h[eid] = height
   C.Size.p[eid] = 15
 
-  C.Position.x[eid] = g.config.player.position.x
-  C.Position.y[eid] = g.config.player.position.y
+  C.Position.x[eid] = g.config.player.position.x || window.innerWidth / 2
+  C.Position.y[eid] = g.config.player.position.y || window.innerHeight / 2
   C.Position.r[eid] = (3 / 4) * 2 * Math.PI
 
   C.Acceleration.xy[eid] = 0.05
@@ -219,7 +220,7 @@ function createPlayer(w: IWorld, g: Globals): Entity {
   C.Sprite.h[eid] = 45
   C.Sprite.maxFrames[eid] = 7
 
-  C.Weapon.fireRate[eid] = 10
+  C.Weapon.fireRate[eid] = g.config.player.fireRate
 
   C.Collides.x[eid] = width
   C.Collides.y[eid] = height

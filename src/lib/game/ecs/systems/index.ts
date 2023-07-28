@@ -1,10 +1,10 @@
-import { boundary } from './boundary.ts'
-import { collision } from './collision.ts'
-import { controls } from './controls.ts'
-import { spawn } from './spawn.ts'
-import { render } from './render.ts'
-import { npc } from './npc.ts'
-import { movement } from './movement.ts'
+import { boundary } from './boundary'
+import { collision } from './collision'
+import { controls } from './controls'
+import { spawn } from './spawn'
+import { render } from './render'
+import { npc } from './npc'
+import { movement } from './movement'
 
 export default {
   collision,

@@ -14,12 +14,23 @@ interface Getters {
   posts: (tagSlug?: string) => any
   tags: () => any
 }
-function get(client: SanityClient): Getters {
-  const home = () => client.fetch(`*[_type == 'home']{Hero,LinkGrid,Kanban,Contact}`)
+export function get(client: SanityClient): Getters {
+  const home = () => client.fetch(`*[_type == 'home']{
+    Hero,
+    LinkGrid,
+    Kanban,
+    Contact,
+    "seo": seo{
+      ...,
+      "ogimage": ogimage {
+        "src": image.asset -> url,
+        altText
+      }
+    }
+  }`)
   const tags = () => client.fetch(`*[_type == 'tags']{name, "slug":slug.current}`)
   const posts = (tag?: string) => client.fetch(`
     *[_type == 'posts'${tag ? `&& references(*[_type == 'tags' && slug.current == '${tag}'][0]._id)` : ''}]{
-      seo,
       preview,
       date,
       image,
@@ -31,6 +42,13 @@ function get(client: SanityClient): Getters {
       "tags": tags[] -> {
         name,
         "slug": slug.current
+      },
+      "seo": seo{
+        ...,
+        "ogimage": ogimage {
+          "src": image.asset -> url,
+          altText
+        }
       }
     }
   `)
@@ -38,18 +56,29 @@ function get(client: SanityClient): Getters {
   const post = (slug: string) => {
     return client.fetch(`
     *[_type == 'posts' && slug.current == '${slug}']{
-      seo,
-      body,
       date,
       longTitle,
       shortTitle,
       readingTime,
       preview,
+      "body":body[]{
+        ...,
+        asset != null => {
+          "src": asset -> url
+        }
+      },
       "imgSrc":image.asset->url,
       "slug": slug.current,
       "tags": tags[] -> {
         name,
         "slug": slug.current
+      },
+      "seo": seo{
+        ...,
+        "ogimage": ogimage {
+          "src": image.asset -> url,
+          altText
+        }
       }
     }[0]
   `)

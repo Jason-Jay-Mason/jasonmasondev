@@ -1,13 +1,15 @@
 <script lang="ts">
+	import { page } from "$app/stores"
 	import type { Tag } from "$lib/types"
 
 	export let tags: Tag[]
-	export let selected: string | null
 	let tagScroll: HTMLDivElement
 	let scrollArrows = {
 		left: false,
 		right: true
 	}
+
+	$: selected = $page.url.pathname.replace("/blog/tag/", "")
 
 	function handleScroll(n: number) {
 		tagScroll.scrollTo({
@@ -39,7 +41,7 @@
 	<div class="tags" bind:this={tagScroll}>
 		{#each tags as tag}
 			<a href={`/blog/tag/${tag.slug}`}>
-				<button class={selected === tag.slug ? "tag selected" : "tag rainbow-hover"}>
+				<button class={selected === tag.slug ? "tag selected" : "tag"}>
 					{tag.name}
 				</button>
 			</a>
@@ -87,7 +89,7 @@
 				z-index: 1;
 				background: linear-gradient(
 					to right,
-					rgba(255, 255, 255, 1) 50%,
+					var(--color-bg-primary) 50%,
 					rgba(255, 255, 255, 0) 100%
 				);
 				right: -80%;

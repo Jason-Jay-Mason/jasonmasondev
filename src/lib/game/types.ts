@@ -46,6 +46,7 @@ export interface Globals {
   config: Config
   state: {
     score: number
+    highScore: number
     frame: number
     collision: CollisionGrid
     sprites: Sprites

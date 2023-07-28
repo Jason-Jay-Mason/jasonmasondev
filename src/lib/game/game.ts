@@ -58,6 +58,7 @@ function buildGlobalState(r: RenderProps): Globals {
     config: r.config,
     state: {
       score: 0,
+      highScore: 0,
       frame: 0,
       collision: createCollisionGrid(r.dom.container, collisionGridSpacing),
       sprites,

@@ -2,6 +2,17 @@ import type { Entity, Globals } from "../../types";
 import { Component as C } from "../";
 import { addComponent, IWorld } from "bitecs";
 
+function hud(g: Globals, ctx: CanvasRenderingContext2D): void {
+  ctx.translate(0, 0)
+  ctx.fillStyle = 'grey'
+  ctx.font = "25px serif";
+  ctx.fillText(`Score ${g.state.score}`, 30, 40)
+  const high = `High ${g.state.highScore}`
+  const textBox = ctx.measureText(high)
+  ctx.fillText(high, g.dom.container.clientWidth - 40 - textBox.width, 40)
+  ctx.resetTransform()
+}
+
 function hitBox(e: Entity, ctx: CanvasRenderingContext2D): void {
   ctx.fillStyle = "rgba(255, 0, 0, 0.2)";
   ctx.fillRect(-C.Collides.x[e] / 2, -C.Collides.y[e] / 2, C.Collides.x[e], C.Collides.y[e])
@@ -105,4 +116,5 @@ export default {
   enemy,
   particle,
   player,
+  hud,
 }

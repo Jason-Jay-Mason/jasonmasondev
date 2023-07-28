@@ -21,7 +21,7 @@
 </script>
 
 <footer>
-	<img src="/jm-logo.svg" alt="" />
+	<img class="logo" src="/jm-logo.svg" alt="Jason Mason logo" />
 	<div class="links">
 		{#each data.links as link}
 			<a href={link.href}>{link.innerText}</a>
@@ -29,15 +29,15 @@
 	</div>
 
 	<div class="social">
-		<div class="icons">
-			<a href="https://github.com/Jason-Jay-Mason/" target="_blank" rel="noreferrer">
-				<img src="/github-logo.svg" alt="" />
-			</a>
-			<a href="https://www.linkedin.com/in/jasonjaymason/" target="_blank" rel="noreferrer">
-				<img src="/linkedin-logo.svg" alt="" />
-			</a>
+		<a href="https://github.com/Jason-Jay-Mason/" target="_blank" rel="noreferrer">
+			<img src="/github-logo.svg" alt="" />
+		</a>
+		<a href="https://www.linkedin.com/in/jasonjaymason/" target="_blank" rel="noreferrer">
+			<img src="/linkedin-logo.svg" alt="" />
+		</a>
+		<div class="theme">
+			<ThemeSwitcher />
 		</div>
-		<ThemeSwitcher />
 	</div>
 </footer>
 
@@ -52,6 +52,11 @@
 		max-width: $lg;
 		padding: var(--s-10) 0;
 		margin: var(--s-7) auto 0 auto;
+		.logo {
+			position: relative;
+			filter: var(--icon-filter);
+			width: var(--s-12);
+		}
 		&::before {
 			content: "";
 			position: absolute;
@@ -69,29 +74,30 @@
 			}
 			a {
 				font-family: var(--font-body);
-				text-transform: uppercase;
-				font-weight: 600;
+				font-weight: 400;
 				letter-spacing: 0.17rem;
-				color: var(color-rock-300);
+				color: var(--color-text-body);
 				padding-right: var(--s-9);
+				font-size: 1.2rem;
+				&:hover {
+					opacity: 0.9;
+				}
 			}
 		}
 		.social {
 			display: flex;
-			img {
-				width: 35px;
-				padding-right: var(--s-4);
-			}
-			.icons {
-				padding-right: var(--s-4);
-				@include md {
-					padding-right: var(--s-8);
-				}
-			}
-		}
-		img {
 			filter: var(--icon-filter);
-			width: var(--s-12);
+			gap: var(--s-4);
+			img {
+				width: 30px;
+				height: 30px;
+			}
+			.theme {
+				position: relative;
+				width: 30px;
+				height: 30px;
+				margin-left: var(--s-5);
+			}
 		}
 	}
 </style>

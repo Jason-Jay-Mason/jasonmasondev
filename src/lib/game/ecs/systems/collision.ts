@@ -18,11 +18,14 @@ export function collision(w: IWorld, g: Globals): void {
       if (potentialCollisions) {
         for (const cid of collisionIds) {
           if (U.isLaser(w, cid) && Helpers.isColliding(eid, cid)) {
+            g.state.score += C.Enemy.scoreValue[eid]
+            if (g.state.score > g.state.highScore) g.state.highScore = g.state.score
             g.state.collision.removeEnt({ x: C.Collides.xKey[cid], y: C.Collides.yKey[cid] }, cid)
             g.state.collision.removeEnt({ x: C.Collides.xKey[eid], y: C.Collides.yKey[eid] }, eid)
             addComponent(w, C.Destroy, eid)
             addComponent(w, C.Destroy, cid)
             E.createExplostion(w, g, eid)
+
             continue
           }
 
@@ -39,8 +42,22 @@ export function collision(w: IWorld, g: Globals): void {
               addComponent(w, C.Destroy, eid)
               E.createExplostion(w, g, eid)
               continue
+            } else {
+              g.state.score = 0
+              C.Collides.frame[eid] = g.state.frame
+
+              C.Velocity.x[cid] = -0.5 * C.Velocity.x[cid] + 0.5 * C.Velocity.x[eid];
+              C.Velocity.y[cid] = -0.5 * C.Velocity.y[cid] + 0.5 * C.Velocity.y[eid];
+
+              C.Velocity.x[eid] = -0.5 * C.Velocity.x[eid] - 0.5 * C.Velocity.x[cid];
+              C.Velocity.y[eid] = -0.5 * C.Velocity.y[eid] - 0.5 * C.Velocity.y[cid];
+
+              addComponent(w, C.Destroy, eid)
+              addComponent(w, C.Destroy, cid)
+              E.createExplostion(w, g, eid)
+              E.createExplostion(w, g, cid)
+              continue
             }
-            //Make logic for triggering a lose game here
           }
         }
       }

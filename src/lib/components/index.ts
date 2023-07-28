@@ -29,6 +29,7 @@ export { default as CoverLetter } from './company/CoverLetter.svelte'
 export { default as Mustachio } from './Mustachio.svelte'
 export { default as Profile } from './company/Profile.svelte'
 export { default as ThemeSwitcher } from './ThemeSwitcher.svelte'
+export { default as TagSection } from './blog/TagSection.svelte'
 
 //Layout
 export { default as Nav } from './Nav.svelte'
@@ -45,3 +46,4 @@ export { default as Spinner } from './Spinner.svelte'
 //Utilities and higher order components
 export { default as AnimationFrame } from './AnimationFrame.svelte'
 export { default as AnimationComponent } from './AnimationComponent.svelte'
+export { default as Seo } from './Seo.svelte'

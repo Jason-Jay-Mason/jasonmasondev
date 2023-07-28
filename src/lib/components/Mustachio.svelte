@@ -1,13 +1,14 @@
 <script lang="ts">
+	import type { Config } from "$lib/game/types"
+	import { Game } from "../game/"
 	import { onMount } from "svelte"
 	import { fade } from "svelte/transition"
-	import { homeConfig } from "../config/game-configs"
-	import { Game } from "../game/"
 
+	export let config: Config
 	let canvas: HTMLCanvasElement
 	let container: any
-	let wasResized = true
 	let frame: number
+	let wasResized = true
 
 	function renderloop() {
 		container = canvas.parentElement
@@ -16,7 +17,7 @@
 				canvas: canvas,
 				container: container
 			},
-			config: homeConfig
+			config: config
 		})
 
 		const loop = (f: number) => {

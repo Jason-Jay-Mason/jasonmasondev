@@ -66,36 +66,43 @@
 	class:sticky
 	class:background={modalActive == true}
 >
-	<div class="left">
-		<a href="/">
-			<img src="/jm-logo.svg" alt="jason's logo" class="logo" />
-		</a>
-
-		<div class="links">
-			{#each data.links as link}
-				<a class="link" href={link.href}>{link.innerText}</a>
-			{/each}
-		</div>
-	</div>
-	<div class="right">
-		<div class="social">
-			<a class="link" href="#contact">Contact</a>
-			<a href="https://github.com/Jason-Jay-Mason/" target="_blank" rel="noreferrer">
-				<img src="/github-logo.svg" alt="" class="icon" />
+	<div class="container">
+		<div class="left">
+			<a href="/">
+				<img src="/jm-logo.svg" alt="jason's logo" class="logo" />
 			</a>
-			<a href="https://www.linkedin.com/in/jasonjaymason/" target="_blank" rel="noreferrer">
-				<img src="/linkedin-logo.svg" alt="" class="icon" />
-			</a>
+
+			<div class="links">
+				{#each data.links as link}
+					<a class="link" href={link.href}>{link.innerText}</a>
+				{/each}
+			</div>
 		</div>
-		<div class="theme">
-			<ThemeSwitcher />
+		<div class="right">
+			<div class="social">
+				<a class="link" href="/#contact">Contact</a>
+				<a href="https://github.com/Jason-Jay-Mason/" target="_blank" rel="noreferrer">
+					<img src="/github-logo.svg" alt="" class="icon" />
+				</a>
+				<a href="https://www.linkedin.com/in/jasonjaymason/" target="_blank" rel="noreferrer">
+					<img src="/linkedin-logo.svg" alt="" class="icon" />
+				</a>
+			</div>
+			<div class="theme">
+				<ThemeSwitcher />
+			</div>
 		</div>
 
-		<button class="hamburger" class:modalActive aria-label="Toggle Menu" on:click={toggleModal}>
+		<button
+			class="hamburger"
+			class:modalActive
+			aria-label="Toggle Menu"
+			on:click={() => (modalActive = !modalActive)}
+		>
 			<div />
 		</button>
 	</div>
-	<Modal data={data.links} bind:active={modalActive} />
+	<Modal data={data.links.filter((link) => link.href !== "/mustachio")} bind:active={modalActive} />
 </nav>
 
 <style lang="scss">
@@ -118,10 +125,6 @@
 		top: 0;
 		height: 60px;
 		width: 100%;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		max-width: $xxl;
 		z-index: 100;
 		margin: 0 auto -75px auto;
 		padding: 0 var(--s-4);
@@ -140,125 +143,147 @@
 		}
 		&:hover {
 			background-color: var(--color-bg-primary);
-			border-bottom: solid 1px var(--color-rock-500);
-		}
-		.theme {
-			position: relative;
-			display: none;
-			bottom: 1px;
-			height: 21px;
-			width: 21px;
-			@include md {
-				display: block;
-			}
-		}
-		.modalActive {
-			div {
-				opacity: 0;
-			}
-			&::before {
-				margin: auto;
-				transform: rotate(-45deg) translate(-6px, 6px);
-				transition: all 0.2s;
-			}
-			&::after {
-				margin: auto;
-				transform: rotate(45deg) translate(-7px, -7px);
-				transition: all 0.2s;
-			}
-		}
-		.hamburger {
-			background: none;
-			border: none;
-			cursor: pointer;
-			position: relative;
-			width: 28px;
-			height: 22px;
-			margin: 0 0 0 var(--s-6);
-			@include md {
-				display: none;
-			}
-			div {
-				position: absolute;
-				top: 0;
-				bottom: 0;
-				left: 0;
-				height: 4px;
-				width: 100%;
-				margin: auto;
-				background-color: var(--color-rock-100);
-			}
-			&::before,
-			&::after {
-				content: "";
-				position: absolute;
-				left: 0;
-				height: 4px;
-				width: 100%;
-				transition: all 0.2s;
-				background-color: var(--color-rock-100);
-			}
-			&::before {
-				top: 0;
-			}
-			&::after {
-				bottom: 0;
-			}
-		}
-		.social {
-			display: none;
-			flex-direction: row;
-			align-items: center;
-			justify-content: center;
-			line-height: 0;
-			padding-right: var(--s-6);
-			@include lg {
-				padding-right: var(--s-7);
-			}
-			@include md {
-				display: flex;
-			}
-			.icon {
-				margin: 0 var(--s-2);
-				width: 24px;
-				filter: var(--icon-filter);
-			}
-		}
-		.right,
-		.left {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-		}
-		.links {
-			display: none;
-			@include md {
-				display: flex;
-			}
-		}
-		.logo {
-			position: relative;
-			top: 6px;
-			width: 90px;
-			padding-right: var(--s-6);
-			filter: var(--icon-filter);
-			transition: all 0.1s ease;
-			@include lg {
-				width: 110px;
-				padding-right: var(--s-8);
-			}
+			border-color: var(--color-rock-500);
 		}
 		.link {
+			position: relative;
 			font-family: var(--font-body);
 			font-size: 0.8rem;
 			font-weight: 400;
 			letter-spacing: 0.1rem;
-			padding: 0 var(--s-6);
+			margin: 0 var(--s-6);
 			color: var(--color-text-body);
 			@include lg {
 				font-size: 14px;
 				letter-spacing: 0.15rem;
-				padding: 0 var(--s-7);
+				margin: 0 var(--s-7);
+			}
+			&:hover {
+				opacity: 0.8;
+			}
+		}
+		.container {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+			max-width: $xxl;
+			margin: 0 auto;
+
+			.left {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.logo {
+					position: relative;
+					top: 6px;
+					width: 90px;
+					padding-right: var(--s-6);
+					filter: var(--icon-filter);
+					transition: all 0.1s ease;
+					@include lg {
+						width: 110px;
+						padding-right: var(--s-8);
+					}
+				}
+				.links {
+					display: none;
+					@include md {
+						display: flex;
+					}
+				}
+			}
+
+			.right {
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				.social {
+					display: none;
+					flex-direction: row;
+					align-items: center;
+					justify-content: center;
+					line-height: 0;
+					padding-right: var(--s-6);
+					@include lg {
+						padding-right: var(--s-7);
+					}
+					@include md {
+						display: flex;
+					}
+					.icon {
+						margin: 0 var(--s-2);
+						width: 24px;
+						filter: var(--icon-filter);
+					}
+				}
+				.theme {
+					position: relative;
+					display: none;
+					bottom: 1px;
+					height: 21px;
+					width: 21px;
+					@include md {
+						display: block;
+					}
+				}
+			}
+
+			.hamburger {
+				background: none;
+				border: none;
+				cursor: pointer;
+				position: relative;
+				width: 28px;
+				height: 22px;
+				margin: 0 0 0 var(--s-6);
+				@include md {
+					display: none;
+				}
+				div {
+					position: absolute;
+					top: 0;
+					bottom: 0;
+					left: 0;
+					height: 4px;
+					width: 100%;
+					margin: auto;
+					background-color: var(--color-rock-100);
+				}
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					height: 4px;
+					width: 100%;
+					transition: all 0.2s;
+					background-color: var(--color-rock-100);
+				}
+				&::before {
+					top: 0;
+				}
+				&::after {
+					bottom: 0;
+				}
+			}
+
+			.modalActive {
+				div {
+					opacity: 0;
+				}
+				&::before {
+					margin: auto;
+					transform: rotate(-45deg) translate(-6px, 6px);
+					transition: all 0.2s;
+				}
+				&::after {
+					margin: auto;
+					transform: rotate(45deg) translate(-7px, -7px);
+					transition: all 0.2s;
+				}
 			}
 		}
 	}

@@ -20,7 +20,7 @@
 		</div>
 		<div class="details">
 			<div class="due-date">
-				<img src="/calendar.svg" />
+				<img src="/calendar-icon.svg" />
 				<p>
 					{date.getMonth()}/{date.getDay()}/{date.getFullYear()}
 				</p>
@@ -49,6 +49,7 @@
 		@include xs {
 			padding: 22px 30px 18px 30px;
 		}
+
 		.title {
 			display: flex;
 			flex-direction: row;
@@ -56,7 +57,6 @@
 			align-items: center;
 			width: 100%;
 			padding-bottom: var(--s-4);
-
 			h6 {
 				font-family: var(--font-headline);
 				font-size: 1rem;
@@ -108,9 +108,8 @@
 				}
 				img {
 					height: 100%;
-					max-width: 40px;
-					max-height: 17px;
-					margin-right: 8px;
+					max-height: 15px;
+					margin: -1px 8px 0 0;
 					filter: var(--icon-filter);
 				}
 			}

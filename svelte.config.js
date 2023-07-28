@@ -1,6 +1,7 @@
 import adapter from '@sveltejs/adapter-auto'
 import preprocess from 'svelte-preprocess'
 
+
 const config = {
   extensions: ['.svelte', '.svelte.md', '.md', '.svx'],
   preprocess: [
@@ -11,9 +12,6 @@ const config = {
 
   kit: {
     adapter: adapter(),
-    prerender: {
-      entries: ['/']
-    }
   }
 }
 
