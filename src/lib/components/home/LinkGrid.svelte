@@ -2,6 +2,8 @@
 	import type { GridLinkData } from "$lib/types"
 	import { GridLink, AnimationComponent } from "$lib/components"
 
+	//TODO: make this a display grid and don't use hidden divs
+
 	export let links: GridLinkData[]
 </script>
 
@@ -81,8 +83,10 @@
 </section>
 
 <style lang="scss">
-	@import "../../lib/theme/breakpoints.scss";
+	@import "../../../lib/theme/breakpoints.scss";
 	section {
+		z-index: 7;
+		position: relative;
 		max-width: 600px;
 		padding: 0 var(--s-4) var(--s-11) var(--s-4);
 		margin: 0 auto;

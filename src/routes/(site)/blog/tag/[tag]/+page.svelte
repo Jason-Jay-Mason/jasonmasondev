@@ -7,4 +7,5 @@
 <svelte:head>
 	<link rel="canonical" href="http://jasonmason.dev/blog" />
 </svelte:head>
+
 <Blog posts={data.posts} tags={data.tags} />

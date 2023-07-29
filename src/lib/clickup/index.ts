@@ -1,4 +1,4 @@
-import type { HomeData, ClickupTask } from '$lib/types';
+import type { ClickupTask } from '$lib/types';
 import { dev } from '$app/environment';
 import jsonata from 'jsonata'
 import { CLICKUP_API_KEY } from '$env/static/private'
@@ -9,6 +9,7 @@ const endPoint = `${baseUrl}/list/${listId}/task?`
 const params = new URLSearchParams({
   "include_closed": "true"
 })
+
 const taskExpression = jsonata(`
   tasks.{
     'id': id,
@@ -32,8 +33,8 @@ const taskExpression = jsonata(`
 `)
 
 interface Getters {
-  tasks: () => Promise<ClickupTask[]>
   backupTasks: () => Promise<ClickupTask[]>
+  tasks: () => Promise<ClickupTask[]>
 }
 
 function get(): Getters {
@@ -59,7 +60,11 @@ function get(): Getters {
 
     const raw = await res.json()
 
-    if (raw.err || !raw) {
+    if (!raw) {
+      console.error(`There was a problem hitting the clickup endpoint ${endPoint} returned null`)
+    }
+
+    if (raw.err) {
       console.error(`There was a problem hitting the clickup endpoint ${endPoint} returned: ${raw.err}`)
       return await backupTasks()
     }

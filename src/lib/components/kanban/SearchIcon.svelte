@@ -15,13 +15,13 @@
 <style lang="scss">
 	svg {
 		position: absolute;
-		background-color: var(--color-bg-field);
-		width: 15%;
-		height: 40%;
 		top: 50%;
 		left: 11%;
-		padding-right: 5px;
 		transform: translate(-50%, -50%);
+		width: 15%;
+		height: 40%;
+		padding-right: 5px;
+		background-color: var(--color-bg-field);
 		circle {
 			stroke: var(--color-rock-200);
 		}

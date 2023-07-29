@@ -13,23 +13,23 @@
 <style lang="scss">
 	@import "../theme/breakpoints.scss";
 	section {
-		width: 100%;
-		max-width: $lg;
-		margin: 0 auto;
-		height: 85vh;
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		width: 100%;
+		max-width: $lg;
+		margin: 0 auto;
+		height: 85vh;
 		padding: 0 var(--s-7);
 		h1 {
-			color: var(--color-rock-100);
-			font-family: var(--font-headline);
 			font-size: var(--text-xl);
+			font-family: var(--font-headline);
+			color: var(--color-rock-100);
 		}
 		p {
-			color: var(--color-rock-100);
 			font-size: var(--text-md);
+			color: var(--color-rock-100);
 		}
 	}
 </style>

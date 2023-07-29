@@ -86,8 +86,8 @@
 		}
 		.social {
 			display: flex;
-			filter: var(--icon-filter);
 			gap: var(--s-4);
+			filter: var(--icon-filter);
 			img {
 				width: 30px;
 				height: 30px;

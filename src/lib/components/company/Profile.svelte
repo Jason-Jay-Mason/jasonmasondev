@@ -1,11 +1,10 @@
 <script lang="ts">
-	import type { Profile } from '$lib/types';
-	import { HalfHeadline } from '$lib/components';
+	import type { Profile } from "$lib/types"
+	import { HalfHeadline } from "$lib/components"
 
-	export let data: Profile;
+	export let data: Profile
 
-	//Change this text on hover
-	let featuredInterest: string = 'INTERESTS';
+	let featuredInterest: string = "INTERESTS"
 </script>
 
 <section id="profile">
@@ -42,7 +41,7 @@
 </section>
 
 <style lang="scss">
-	@import '../../theme/breakpoints.scss';
+	@import "../../theme/breakpoints.scss";
 	section {
 		display: flex;
 		flex-direction: column-reverse;
@@ -90,7 +89,7 @@
 						margin: var(--s-6) var(--s-9) 0 0;
 						border: 2px solid transparent;
 						&::before {
-							content: '';
+							content: "";
 							position: absolute;
 							top: 0px;
 							left: 0px;
@@ -153,7 +152,7 @@
 			}
 			&::before,
 			&::after {
-				content: '';
+				content: "";
 				position: absolute;
 				z-index: -1;
 				border: solid var(--color-pencil-100) 2px;

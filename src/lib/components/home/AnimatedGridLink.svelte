@@ -1,6 +1,4 @@
 <script lang="ts">
-	import type { GridLinkData } from "$lib/types"
-
 	export let headline: string
 	export let hook: string
 </script>
@@ -21,49 +19,49 @@
 </div>
 
 <style lang="scss">
-	@import "../theme/breakpoints.scss";
+	@import "../../theme/breakpoints.scss";
 	.gridlink {
 		position: relative;
+		width: 100%;
 		margin: 0 auto;
 		border: 4px solid var(--color-rock-100);
-		width: 100%;
-		h3 {
-			color: var(--color-rock-100);
-			font-family: var(--font-headline);
-			font-size: 2em;
-			padding-bottom: var(--s-5);
-			line-height: 100%;
-			letter-spacing: 0.2rem;
-			text-transform: uppercase;
-		}
 		&:hover {
 			border: 4px solid var(--color-rock-100);
 			h3 {
 				color: var(--color-rock-100);
 			}
 		}
+		h3 {
+			font-size: 2em;
+			font-family: var(--font-headline);
+			line-height: 100%;
+			letter-spacing: 0.2rem;
+			text-transform: uppercase;
+			color: var(--color-rock-100);
+			padding-bottom: var(--s-5);
+		}
 		.frame {
 			position: relative;
 			display: flex;
-			height: 296px;
 			align-items: center;
 			justify-content: center;
+			height: 296px;
 			.animation {
+				z-index: 10;
 				height: 100%;
 				width: 100%;
-				z-index: 10;
 			}
 			.mask {
 				z-index: 0;
-				background-color: var(--color-bg-card);
 				position: absolute;
+				top: 0;
 				width: 100%;
 				height: 100%;
-				top: 0;
 				overflow: hidden;
+				background-color: var(--color-bg-card);
 				.background {
-					top: 0;
 					position: absolute;
+					top: 0;
 					width: 600px;
 					height: 100%;
 					object-fit: cover;

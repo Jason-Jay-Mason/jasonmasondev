@@ -1,3 +1,4 @@
+import type { HomeData, PostData, Tag } from "$lib/types";
 import type { SanityClient } from "@sanity/client"
 import { createClient } from "@sanity/client";
 
@@ -9,10 +10,10 @@ const client = createClient({
 });
 
 interface Getters {
-  home: () => any
-  post: (postSlug: string) => any
-  posts: (tagSlug?: string) => any
-  tags: () => any
+  home: () => Promise<HomeData>
+  post: (postSlug: string) => Promise<PostData>
+  posts: (tagSlug?: string) => Promise<PostData[]>
+  tags: () => Promise<Tag[]>
 }
 export function get(client: SanityClient): Getters {
   const home = () => client.fetch(`*[_type == 'home']{
@@ -27,7 +28,7 @@ export function get(client: SanityClient): Getters {
         altText
       }
     }
-  }`)
+  }[0]`)
   const tags = () => client.fetch(`*[_type == 'tags']{name, "slug":slug.current}`)
   const posts = (tag?: string) => client.fetch(`
     *[_type == 'posts'${tag ? `&& references(*[_type == 'tags' && slug.current == '${tag}'][0]._id)` : ''}]{

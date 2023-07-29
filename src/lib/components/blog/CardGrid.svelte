@@ -31,12 +31,12 @@
 		padding: var(--s-4) 0;
 		margin: 0 auto;
 		@include sm {
-			gap: var(--s-4);
 			grid-template-columns: 1fr 1fr;
+			gap: var(--s-4);
 		}
 		@include md {
-			max-width: 920px;
 			gap: var(--s-6);
+			max-width: 920px;
 		}
 		@include lg {
 			grid-template-columns: 1fr 1fr 1fr;
@@ -48,26 +48,26 @@
 	}
 
 	.error {
-		width: 100%;
-		max-width: $lg;
-		margin: 0 auto;
-		height: clamp(400px, 40vh, 500px);
 		display: flex;
 		flex-direction: column;
 		align-items: center;
 		justify-content: center;
+		width: 100%;
+		max-width: $lg;
+		height: clamp(400px, 40vh, 500px);
+		margin: 0 auto;
 		padding: 0 var(--s-7);
 		h1 {
+			font-size: var(--text-xl);
+			font-family: var(--font-headline);
 			text-align: center;
 			line-height: 1.2;
 			color: var(--color-rock-100);
-			font-family: var(--font-headline);
-			font-size: var(--text-xl);
 		}
 		p {
-			color: var(--color-rock-100);
-			text-align: center;
 			font-size: var(--text-md);
+			text-align: center;
+			color: var(--color-rock-100);
 			padding-bottom: var(--s-9);
 		}
 	}

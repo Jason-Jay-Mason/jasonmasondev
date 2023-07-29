@@ -1,59 +1,47 @@
 <script lang="ts">
-	import type { Experience } from '$lib/types';
-	import { LargeHeadline, AnimationFrame } from '$lib/components';
-	import { getStyleValue } from '$lib/utils';
-	import { onMount } from 'svelte';
+	import type { Experience } from "$lib/types"
+	import { LargeHeadline, AnimationFrame } from "$lib/components"
+	import { getStyleValue } from "$lib/utils"
+	import { onMount } from "svelte"
 
-	export let data: Experience;
+	export let data: Experience
 
-	//Keep the progress through the animation frame in state. For more info check the AnimationFrame component
-	let progress: number = 0;
+	let progress: number = 0
 
-	//We want to automatically update the end date so I don't have to later
-	const date = new Date();
-	const thisYear = date.getFullYear();
+	const date = new Date()
+	const thisYear = date.getFullYear()
 
-	//Simple helper function to get the date as a round year for display in the side bar
 	function getDate(date: number) {
 		if (date > thisYear) {
-			date = thisYear;
+			date = thisYear
 		}
-		// 2013 is somewhat arbitrary minimum. It is the first date of me working professionally
-		//because of this we don't want the date to go below 2013
 		if (date < 2013) {
-			date = 2013;
+			date = 2013
 		}
-		return date;
+		return date
 	}
 
-	// We need to keep track of when each record should fade in
-	// We use -10 for the first element because
-	// I want it visible when the user reaches its scroll position
-	// -10 is arbitrary the main idea is I just want a large number for the first record
-	let recordStartPercentOfFrame: number[] = [-10];
+	let recordStartPercentOfFrame: number[] = [-10]
 	onMount(() => {
-		// For each record, compute when the fade in anamtion should occure
-		const totalYears = thisYear - 2013;
-		//The percent of the next frame depends on the last one so we declare an accumulator here
-		//I could use previous index but I think this is more legible
-		let acc = 0;
-		for (let i = 0; i < data.records.length - 1; i++) {
-			const record = data.records[i];
-			const percentOfTotal = (record.endYear - record.startYear) / totalYears;
-			acc += percentOfTotal;
-			recordStartPercentOfFrame.push(acc);
-		}
-	});
+		const totalYears = thisYear - 2013
 
-	// Returns the total animation duration for the kth skill bar and ith record
+		let acc = 0
+		for (let i = 0; i < data.records.length - 1; i++) {
+			const record = data.records[i]
+			const percentOfTotal = (record.endYear - record.startYear) / totalYears
+			acc += percentOfTotal
+			recordStartPercentOfFrame.push(acc)
+		}
+	})
+
 	function getSkillLength(i: number) {
 		switch (i) {
 			case 0:
-				return recordStartPercentOfFrame[1];
+				return recordStartPercentOfFrame[1]
 			case data.records.length - 1:
-				return 1 - recordStartPercentOfFrame[i];
+				return 1 - recordStartPercentOfFrame[i]
 			default:
-				return recordStartPercentOfFrame[i + 1] - recordStartPercentOfFrame[i];
+				return recordStartPercentOfFrame[i + 1] - recordStartPercentOfFrame[i]
 		}
 	}
 </script>
@@ -152,7 +140,7 @@
 </section>
 
 <style lang="scss">
-	@import '../../theme/breakpoints.scss';
+	@import "../../theme/breakpoints.scss";
 	section {
 		position: relative;
 		margin: 0 var(--s-7) var(--s-14) var(--s-7);
@@ -223,7 +211,7 @@
 								padding: var(--s-7) var(--s-6);
 							}
 							&::before {
-								content: '';
+								content: "";
 								position: absolute;
 								width: 0px;
 								height: 0px;
@@ -264,7 +252,7 @@
 								width: 20%;
 							}
 							&::before {
-								content: '';
+								content: "";
 								position: absolute;
 								width: var(--s-6);
 								height: var(--s-6);
@@ -365,7 +353,7 @@
 								}
 							}
 							.upper {
-								content: '';
+								content: "";
 								position: absolute;
 								height: 100%;
 								top: 0;
@@ -392,7 +380,7 @@
 					margin: 0 var(--s-7) 0 calc(var(--s-7) + 89px);
 				}
 				&::after {
-					content: '';
+					content: "";
 					position: absolute;
 					height: 440vh;
 					width: 2px;

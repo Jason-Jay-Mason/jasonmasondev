@@ -1,6 +1,6 @@
 <script lang="ts">
-	import { AnimatedGridLink } from "$lib/components"
 	import type { GridLinkData } from "$lib/types"
+	import { AnimatedGridLink } from "$lib/components"
 
 	export let link: GridLinkData
 	const { headline, hook, href } = link
@@ -348,7 +348,7 @@
 </a>
 
 <style lang="scss">
-	@import "../theme/breakpoints.scss";
+	@import "../../theme/breakpoints.scss";
 	@for $i from 1 to 5 {
 		@keyframes bar-#{$i} {
 			0% {

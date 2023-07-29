@@ -66,22 +66,22 @@
 				column-gap: var(--s-4);
 			}
 			span {
-				line-height: 1;
-				margin-top: -3px;
-				color: var(--color-text-body);
-				font-family: Open Sans;
 				font-size: 1rem;
+				font-family: Open Sans;
 				text-align: center;
+				line-height: 1;
 				letter-spacing: 2px;
-				margin-left: 10px;
+				color: var(--color-text-body);
+				margin: -3px 0 0 10px;
 				@include lg {
 					font-size: 1.3rem;
 				}
 			}
 			.icon {
-				padding: 0;
 				line-height: 0;
 				min-width: 25px;
+				padding: 0;
+
 				@include md {
 					width: 35px;
 				}

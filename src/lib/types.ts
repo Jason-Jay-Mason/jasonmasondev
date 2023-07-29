@@ -1,64 +1,7 @@
-export type IterableGlob = [path: string, resolver: Function]
-
+//Kanban
 export type FilterableData = Record<string, any>
 
-export interface FormEventHandler<T> {
-  target: EventTarget | null;
-}
-export enum Months {
-  Jan = 0,
-  Feb,
-  Mar,
-  Apr,
-  May,
-  Jun,
-  Jul,
-  Aug,
-  Sep,
-  Oct,
-  Nov,
-  Dec
-}
-
-export interface SeoData {
-  title: string
-  description: string
-  robots: {
-    follow: boolean,
-    index: boolean,
-  }
-  ogtype: string,
-  ogurl: string,
-  ogimage: {
-    src: string,
-    altText: string,
-  },
-}
-
-export interface Tag {
-  name: string
-  slug: string
-}
-
-export interface PostData {
-  seo: Seo
-  date: string
-  longTitle: string
-  preview: string
-  readingTime: number
-  shortTitle: string
-  slug: string
-  imgSrc: string
-  tags: Tag[]
-  body: object[]
-}
-
-export enum FormInputTypes {
-  text = "text",
-  phone = "phone",
-  email = "email",
-  textarea = "text-area"
-}
+export type KanbanFilterOptions = Record<string, KanbanFilter<any>>
 
 export enum KanbanFilterType {
   nill,
@@ -67,19 +10,13 @@ export enum KanbanFilterType {
   picklist,
   dateRange
 }
+
 export interface DateRange {
   start: string
   end: string
 }
 
-export type KanbanFilter<T> = T extends string ? {
-  id?: number,
-  key: string,
-  label: string,
-  filterType: KanbanFilterType,
-  options?: string[] | null,
-  value: T,
-} : {
+export type KanbanFilter<T> = {
   id?: number,
   key: string,
   label: string,
@@ -88,15 +25,7 @@ export type KanbanFilter<T> = T extends string ? {
   value: T,
 }
 
-export type KanbanFilterOptions = Record<string, KanbanFilter<any>>
-
-export enum KanbanFilterableProp {
-  name = "Name",
-  technologyIds = "Technologies",
-  company = "Company",
-  dueDate = "Due Date"
-}
-
+//Clickup
 export interface ClickupTask {
   id: string
   status: string
@@ -114,10 +43,63 @@ export interface ClickupTask {
   technologies: string[]
 }
 
+//Contact
+
+export enum FormInputTypes {
+  text = "text",
+  phone = "phone",
+  email = "email",
+  textarea = "text-area"
+}
+
+export enum Months {
+  Jan = 0,
+  Feb,
+  Mar,
+  Apr,
+  May,
+  Jun,
+  Jul,
+  Aug,
+  Sep,
+  Oct,
+  Nov,
+  Dec
+}
+
+//Utility
+export interface AnimationFrame {
+  endValue: number
+  length: number
+  start: number
+  startValue: number
+}
+
+export interface SeoData {
+  title: string
+  description: string
+  robots: {
+    follow: boolean,
+    index: boolean,
+  }
+  ogtype: string,
+  ogurl: string,
+  ogimage: {
+    src: string,
+    altText: string,
+  },
+}
+
+//Home
 export interface HeroData {
-  Headline: string
+  headline: string
   cta: Cta
   hook: string
+}
+export interface Cta {
+  isVideo: boolean
+  hrefOrSrc: string
+  innerText: string
 }
 export interface GridLinkData {
   headline: string
@@ -125,51 +107,46 @@ export interface GridLinkData {
   href: string
   animationComponent?: string[]
 }
-
 export interface HomeData {
-  tasks: ClickupTask[]
-  page: {
-    Hero: HeroData
-    LinkGrid: {
-      links: GridLinkData[]
-    }
-    Kanban: {
-      headline: Headline
-    }
-    Contact: {
-      headline: Headline,
-      endPoint: string
-    }
-    seo: SeoData
+  Hero: HeroData
+  LinkGrid: {
+    links: GridLinkData[]
   }
+  Kanban: {
+    headline: Headline
+  }
+  Contact: {
+    headline: Headline,
+    endPoint: string
+  }
+  seo: SeoData
 }
 
-
-
-
-//Auth 
-export interface AuthData {
-  token: string
-  provider: string
+//Blog
+export interface Tag {
+  name: string
+  slug: string
 }
 
-// Pages Components
-export interface Headline {
-  main: string
-  sub: string
+export interface TagSelect {
+  selected: boolean
+  title: string
 }
 
-export interface CoverLetter {
-  headline: Headline
-  body: string
+export interface PostData {
+  seo: SeoData
+  date: string
+  longTitle: string
+  preview: string
+  readingTime: number
+  shortTitle: string
+  slug: string
+  imgSrc: string
+  tags: Tag[]
+  body: object[]
 }
 
-export interface Cta {
-  isVideo: boolean
-  hrefOrSrc: string
-  innerText: string
-}
-
+//Nav
 export interface Link {
   href: string
   innerText: string
@@ -179,10 +156,6 @@ export interface Navbar {
   links: Link[]
 }
 
-export interface Img {
-  src: string
-  alt: string
-}
 
 export interface ProjectData {
   body: string
@@ -194,27 +167,52 @@ export interface ProjectData {
   githubHref?: string
   tags: string[]
 }
+
 export interface Project {
   slug: string
   data: ProjectData
 }
 
-export interface TagSelect {
-  selected: boolean
-  title: string
+// Page Components
+export interface Headline {
+  main: string
+  sub: string
 }
+
+export interface CoverLetter {
+  headline: Headline
+  body: string
+}
+
+//TODO: delete these mabey?
+
+// export enum KanbanFilterableProp {
+//   name = "Name",
+//   technologyIds = "Technologies",
+//   company = "Company",
+//   dueDate = "Due Date"
+// }
+
+//Auth 
+// export interface AuthData {
+//   token: string
+//   provider: string
+// }
+export interface Img {
+  src: string
+  alt: string
+}
+
 export interface Interest {
   title: string
   iconSrc: string
 }
+
 export interface Profile {
   body: string
   headline: Headline
   img: Img
   interests: Interest[]
-}
-export interface TagButtons {
-  [key: string]: TagSelect
 }
 
 export interface SelectedProjects {
@@ -229,15 +227,9 @@ export interface GridDisplayElement {
     img: Img
     href?: string
   }
-
 }
 
-export interface AnimationFrame {
-  endValue: number
-  length: number
-  start: number
-  startValue: number
-}
+
 export interface ExpereinceRecord {
   description: string
   headline: Headline
@@ -255,5 +247,4 @@ export interface Experience {
   headline: Headline
   records: ExpereinceRecord[]
   skills: Skill[]
-
 }

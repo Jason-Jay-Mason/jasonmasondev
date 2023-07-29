@@ -1,8 +1,9 @@
 <script lang="ts">
-	import type { PostData } from "$lib/types"
-	import { Post } from "$lib/components"
+	import { Post, Seo } from "$lib/components"
+	import type { PageData } from "./$types"
 
-	export let data: PostData
+	export let data: PageData
 </script>
 
-<Post {data} />
+<Seo data={data.post.seo} />
+<Post post={data.post} />

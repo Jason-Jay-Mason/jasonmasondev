@@ -1,8 +1,8 @@
 <script lang="ts">
 	import type { FilterableData, KanbanFilter, KanbanFilterOptions } from "$lib/types"
+	import { KanbanFilterType } from "$lib/types"
 	import Filters from "./filters"
 	import { debounce } from "$lib/utils"
-	import { KanbanFilterType } from "$lib/types"
 	import { outclickaction } from "$lib/actions/outclick"
 	import { FilterField, TrashIcon } from "$lib/components"
 
@@ -106,7 +106,7 @@
 
 <div class="filter-menu">
 	<FilterField bind:filter={activeFilters[0]} />
-	<div class="advanced">
+	<div class="advanced" use:outclickaction on:outclick={() => (advancedVisible = false)}>
 		<button class="filter-toggle" on:click={() => (advancedVisible = !advancedVisible)}>
 			<svg
 				width="18"
@@ -126,7 +126,7 @@
 			Advanced</button
 		>
 		{#if advancedVisible}
-			<div class="menu" use:outclickaction on:outclick={() => (advancedVisible = false)}>
+			<div class="menu">
 				<button class="add-filter" on:click={addFilter}>➕ Add Filter</button>
 				{#each activeFilters as filter, i (filter.id)}
 					{#if i !== 0}
@@ -148,17 +148,17 @@
 	.filter-menu {
 		display: flex;
 		flex-direction: row;
-		padding: var(--s-9) var(--s-7) var(--s-4) 0;
 		justify-content: center;
 		align-items: flex-end;
+		padding: var(--s-9) var(--s-7) var(--s-4) 0;
 		@include md {
 			justify-content: space-between;
 		}
 		.advanced {
+			position: relative;
 			display: none;
 			flex-direction: row;
 			justify-content: flex-end;
-			position: relative;
 			min-width: 480px;
 			@include md {
 				display: flex;
@@ -169,14 +169,14 @@
 			}
 			.filter-toggle,
 			.add-filter {
+				font-size: var(--text-base);
+				font-family: var(--font-headline);
+				letter-spacing: 1.3px;
+				text-transform: uppercase;
+				line-height: 0;
 				background: none;
 				border: none;
 				color: var(--color-rock-100);
-				letter-spacing: 1.3px;
-				text-transform: uppercase;
-				font-family: var(--font-headline);
-				font-size: var(--text-base);
-				line-height: 0;
 				filter: var(--icon-filter);
 				&:hover {
 					cursor: pointer;
@@ -199,13 +199,13 @@
 			}
 			.menu {
 				z-index: 10;
-				background-color: var(--color-bg-primary);
 				position: absolute;
-				width: 100%;
-				right: 0;
 				top: 100%;
+				right: 0;
+				width: 100%;
 				padding: var(--s-4) var(--s-7);
 				border: solid 2px var(--color-rock-100);
+				background-color: var(--color-bg-primary);
 				.filter-field {
 					display: flex;
 					flex-direction: row;
@@ -214,12 +214,12 @@
 					padding-bottom: var(--s-5);
 				}
 				.delete-filter {
-					background-color: transparent;
 					display: flex;
 					justify-content: center;
 					align-items: center;
-					border: none;
 					min-width: 18px;
+					border: none;
+					background-color: transparent;
 					padding: 2px;
 					margin-left: 10px;
 					&:hover {

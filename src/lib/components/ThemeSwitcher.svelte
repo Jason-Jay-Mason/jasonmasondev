@@ -1,8 +1,4 @@
 <script lang="ts">
-	//swith the theme
-
-	//We store the theme state in local storage so that we can persist between sessions.
-	//The initial state is handeled in app.html
 	function switchTheme() {
 		let theme = localStorage.getItem("theme")
 		if (theme === "dark") {
@@ -19,10 +15,10 @@
 
 <style lang="scss">
 	div {
-		cursor: pointer;
 		position: relative;
 		height: 100%;
 		width: 100%;
+		cursor: pointer;
 		filter: var(--icon-filter);
 		&::before {
 			content: "";

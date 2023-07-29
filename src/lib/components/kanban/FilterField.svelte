@@ -3,7 +3,7 @@
 	import { KanbanFilterType } from "$lib/types"
 	import { SearchIcon } from "$lib/components"
 
-	export let options: KanbanFilterOptions | undefined
+	export let options: KanbanFilterOptions | undefined = undefined
 	export let filter: KanbanFilter<any>
 
 	function handlePropChange(e) {
@@ -73,22 +73,22 @@
 	}
 	select,
 	input {
-		color: var(--color-text-body);
-		border: solid 2px var(--color-rock-100);
-		padding: var(--s-4) 20px;
 		font-size: 0.9rem;
 		text-align: center;
+		color: var(--color-text-body);
+		padding: var(--s-4) 20px;
+		border: solid 2px var(--color-rock-100);
 		background-color: var(--color-bg-field);
 	}
 	input::placeholder {
-		text-align: center;
 		font-size: 0.9rem;
-		font-weight: 600;
-		color: var(--color-rock-100);
-		opacity: 1;
-		text-transform: uppercase;
 		font-family: var(--font-headline);
+		font-weight: 600;
 		letter-spacing: 1.3px;
+		color: var(--color-rock-100);
+		text-transform: uppercase;
+		text-align: center;
+		opacity: 1;
 	}
 	input:focus::placeholder {
 		opacity: 0;
@@ -108,8 +108,8 @@
 			padding: 5px 0;
 		}
 		p {
-			padding: 0 var(--s-4);
 			font-size: 0.8rem;
+			padding: 0 var(--s-4);
 			white-space: nowrap;
 		}
 	}

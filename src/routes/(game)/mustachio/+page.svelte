@@ -12,7 +12,4 @@
 		height: 100vh;
 		width: 100%;
 	}
-	h1 {
-		font-size: 100px;
-	}
 </style>

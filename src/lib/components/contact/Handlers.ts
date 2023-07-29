@@ -1,8 +1,6 @@
-import type { FormEventHandler } from "../../types";
 
-type Field = HTMLInputElement | HTMLTextAreaElement
-const email = (e: FormEventHandler<Field>): void => {
-  const field = e.target as Field
+const email = (e: InputEvent): void => {
+  const field = e.target as HTMLInputElement
   const validation = new RegExp(/^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/);
   if (!validation.test(field.value)) {
     field.setCustomValidity("Please enter a valid email.")
@@ -15,7 +13,7 @@ const email = (e: FormEventHandler<Field>): void => {
 
 const phone = (e: KeyboardEvent): void => {
   const { code } = e
-  const field = e.target as Field
+  const field = e.target as HTMLInputElement
   const numExp = new RegExp(/^[0-9]$/)
   const isNumber = numExp.test(e.key)
   const isBackspace = code === 'Backspace'

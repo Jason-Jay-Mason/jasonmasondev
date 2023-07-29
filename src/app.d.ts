@@ -10,9 +10,6 @@ declare global {
   }
   namespace svelteHTML {
     //Add custom actions here
-    interface HTMLAttributes<T> {
-      'on:windowresize'?: (event: CustomEvent) => void
-    }
   }
 }
 

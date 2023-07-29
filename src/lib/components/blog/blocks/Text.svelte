@@ -1,11 +1,7 @@
-<script lang="ts">
-	export let portableText
-</script>
-
-<p class="text"><slot /></p>
+<p><slot /></p>
 
 <style lang="scss">
-	.text {
+	p {
 		line-height: 220%;
 	}
 </style>

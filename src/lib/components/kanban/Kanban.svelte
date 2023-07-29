@@ -17,9 +17,8 @@
 <style lang="scss">
 	@import "../../theme/breakpoints.scss";
 	section {
-		padding: 0 var(--s-4) var(--s-11) var(--s-4);
-		margin: 0 auto;
 		max-width: 600px;
+		padding: 0 var(--s-4) var(--s-11) var(--s-4);
 		margin: 0 auto;
 		@include md {
 			max-width: $lg;

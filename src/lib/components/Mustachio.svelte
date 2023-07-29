@@ -36,14 +36,11 @@
 			cancelAnimationFrame(frame)
 		}
 	}
-	function handleResize() {
-		wasResized = true
-	}
 
 	onMount(renderloop)
 </script>
 
-<svelte:window on:resize|passive={handleResize} />
+<svelte:window on:resize|passive={() => (wasResized = true)} />
 <canvas bind:this={canvas} transition:fade />
 
 <style lang="scss">
@@ -53,6 +50,5 @@
 		top: 0;
 		height: 100%;
 		width: 100%;
-		z-index: 10;
 	}
 </style>

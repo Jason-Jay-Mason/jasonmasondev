@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Tag } from "$lib/types"
 	import { TagSelect } from "$lib/components"
+
 	export let tags: Tag[]
 </script>
 
@@ -36,20 +37,20 @@
 						transform: rotate(-724deg);
 					}
 				}
-				padding: var(--s-4) var(--s-10) 0 var(--s-10);
-				color: var(--color-rock-100);
-				font-family: var(--font-subheadline);
 				font-size: var(--text-xl);
+				font-family: var(--font-subheadline);
+				color: var(--color-rock-100);
 				transform: rotate(-4deg);
+				padding: var(--s-4) var(--s-10) 0 var(--s-10);
 				animation: headline 1.5s 1;
 			}
 			.mask {
+				z-index: -1;
 				position: absolute;
 				top: 0;
 				bottom: 0;
 				width: 100%;
 				height: 60%;
-				z-index: -1;
 				margin: auto 0;
 				overflow: hidden;
 				img {
@@ -58,9 +59,9 @@
 					bottom: 0;
 					left: 0;
 					width: 1000px;
-					opacity: var(--opacity-pencilbg);
 					object-fit: repeat;
 					margin: auto 0;
+					opacity: var(--opacity-pencilbg);
 				}
 			}
 		}

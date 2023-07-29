@@ -121,15 +121,15 @@
 		}
 	}
 	nav {
+		z-index: 100;
 		position: sticky;
 		top: 0;
 		height: 60px;
 		width: 100%;
-		z-index: 100;
 		margin: 0 auto -75px auto;
 		padding: 0 var(--s-4);
-		background-color: transparent;
 		border-bottom: solid 1px transparent;
+		background-color: transparent;
 		transition: background, border-color 0.3s ease;
 		@include md {
 			padding: 0 var(--s-6);
@@ -147,8 +147,8 @@
 		}
 		.link {
 			position: relative;
-			font-family: var(--font-body);
 			font-size: 0.8rem;
+			font-family: var(--font-body);
 			font-weight: 400;
 			letter-spacing: 0.1rem;
 			margin: 0 var(--s-6);
@@ -168,10 +168,9 @@
 			justify-content: space-between;
 			align-items: center;
 			width: 100%;
-			height: 100%;
 			max-width: $xxl;
+			height: 100%;
 			margin: 0 auto;
-
 			.left {
 				display: flex;
 				justify-content: center;
@@ -195,7 +194,6 @@
 					}
 				}
 			}
-
 			.right {
 				display: flex;
 				justify-content: center;
@@ -214,31 +212,30 @@
 						display: flex;
 					}
 					.icon {
-						margin: 0 var(--s-2);
 						width: 24px;
+						margin: 0 var(--s-2);
 						filter: var(--icon-filter);
 					}
 				}
 				.theme {
-					position: relative;
 					display: none;
 					bottom: 1px;
-					height: 21px;
+					position: relative;
 					width: 21px;
+					height: 21px;
 					@include md {
 						display: block;
 					}
 				}
 			}
-
 			.hamburger {
-				background: none;
-				border: none;
-				cursor: pointer;
 				position: relative;
 				width: 28px;
 				height: 22px;
 				margin: 0 0 0 var(--s-6);
+				border: none;
+				cursor: pointer;
+				background: none;
 				@include md {
 					display: none;
 				}

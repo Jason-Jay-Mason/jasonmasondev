@@ -1,9 +1,10 @@
 <script lang="ts">
-	import { page } from "$app/stores"
 	import type { Tag } from "$lib/types"
+	import { page } from "$app/stores"
 
 	export let tags: Tag[]
 	let tagScroll: HTMLDivElement
+
 	let scrollArrows = {
 		left: false,
 		right: true
@@ -73,20 +74,20 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+			border: none;
 			background: transparent;
 			opacity: 1;
-			border: none;
 			cursor: pointer;
 			svg {
 				z-index: 2;
 				filter: var(--icon-filter);
 			}
-			&:after {
+			&::after {
 				content: "";
+				z-index: 1;
 				position: absolute;
 				height: 100%;
 				width: 160%;
-				z-index: 1;
 				background: linear-gradient(
 					to right,
 					var(--color-bg-primary) 50%,
@@ -110,20 +111,20 @@
 			scroll-behavior: smooth;
 			.tag {
 				position: relative;
-				white-space: nowrap;
 				font-size: 1rem;
 				font-weight: 400;
+				color: var(--color-rock-100);
+				white-space: nowrap;
 				padding: 10px 20px 11px 20px;
 				background-color: var(--color-bg-field);
 				border: solid 2px var(--color-rock-100);
-				color: var(--color-rock-100);
 				cursor: pointer;
 				&:hover {
 					background-color: var(--color-rock-700);
 				}
 			}
 			.selected {
-				background: var(--color-rock-100);
+				background-color: var(--color-rock-100);
 				color: var(--color-bg-primary);
 				&:hover {
 					background-color: var(--color-rock-100);

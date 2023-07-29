@@ -1,5 +1,4 @@
 import type { FilterableData, KanbanFilter, DateRange } from "$lib/types"
-import { debounce } from "$lib/utils"
 
 function fuzzyFind(f: KanbanFilter<string>, d: FilterableData[], searchProps: string[]): FilterableData[] {
   const { value } = f

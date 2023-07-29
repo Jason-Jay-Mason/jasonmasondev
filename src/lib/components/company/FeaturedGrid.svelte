@@ -1,9 +1,9 @@
 <script lang="ts">
-	import GridCard from './GridCard.svelte';
-	import type { GridDisplayElement } from '$lib/types';
-	import { fly } from 'svelte/transition';
+	import type { GridDisplayElement } from "$lib/types"
+	import GridCard from "./GridCard.svelte"
+	import { fly } from "svelte/transition"
 
-	export let displayElements: GridDisplayElement[];
+	export let displayElements: GridDisplayElement[]
 </script>
 
 <div class="grid">
@@ -20,7 +20,7 @@
 </div>
 
 <style lang="scss">
-	@import '../theme/breakpoints.scss';
+	@import "../../theme/breakpoints.scss";
 	.grid {
 		display: grid;
 		align-items: stretch;

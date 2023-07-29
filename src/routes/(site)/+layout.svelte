@@ -5,3 +5,9 @@
 <Nav />
 <slot />
 <Footer />
+
+<style>
+	.blah {
+		height: 100vh;
+	}
+</style>

@@ -1,11 +1,11 @@
 <script lang="ts">
 	// this is just the card component for the projects grid on the company pages
-	import type { Headline, Img } from '$lib/types';
+	import type { Headline, Img } from "$lib/types"
 
-	export let headline: Headline;
-	export let description: string;
-	export let img: Img;
-	export let href: string;
+	export let headline: Headline
+	export let description: string
+	export let img: Img
+	export let href: string
 </script>
 
 <a data-sveltekit-reload {href}>
@@ -24,7 +24,7 @@
 </a>
 
 <style lang="scss">
-	@import '../theme/breakpoints.scss';
+	@import "../../theme/breakpoints.scss";
 	div {
 		cursor: pointer;
 		position: relative;
@@ -45,7 +45,7 @@
 			padding: var(--s-10) var(--s-3);
 		}
 		&::before {
-			content: '';
+			content: "";
 			position: absolute;
 			top: 0px;
 			left: 0px;

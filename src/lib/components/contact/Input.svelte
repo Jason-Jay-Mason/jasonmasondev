@@ -22,15 +22,15 @@
 	@import "../../theme/breakpoints.scss";
 	input,
 	textarea {
+		font-size: 1rem;
+		color: var(--color-text-body);
 		width: 100%;
 		border: solid 4px var(--color-rock-100);
-		font-size: 1rem;
 		background-color: var(--color-bg-field);
-		color: var(--color-text-body);
 		&::placeholder {
-			text-transform: uppercase;
 			font: var(--font-headline);
 			font-weight: 600;
+			text-transform: uppercase;
 			color: var(--color-rock-100);
 			opacity: 1;
 		}

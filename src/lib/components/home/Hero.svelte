@@ -39,7 +39,7 @@
 </section>
 
 <style lang="scss">
-	@import "../theme/breakpoints.scss";
+	@import "../../theme/breakpoints.scss";
 	section {
 		position: relative;
 		height: 100%;
@@ -59,8 +59,8 @@
 				margin-bottom: var(--s-9);
 			}
 			.cta {
-				position: relative;
 				z-index: 11;
+				position: relative;
 				width: 80%;
 				max-width: 220px;
 				margin: 0 auto;
@@ -106,9 +106,9 @@
 			}
 		}
 		.bottom {
+			transform: translateX(-15%) translateY(0px);
 			height: 2px;
 			width: 143%;
-			transform: translateX(-15%) translateY(0px);
 			margin: 0 auto;
 			.left,
 			.right {
@@ -141,8 +141,8 @@
 			}
 		}
 		.blurb {
-			text-align: center;
 			font-size: 14px;
+			text-align: center;
 			width: 90%;
 			padding: var(--s-8) 0;
 			@include md {
@@ -158,19 +158,19 @@
 			width: 125%;
 			.h1-background {
 				z-index: 5;
-				background-color: var(--color-bg-primary);
 				padding: 0 var(--s-8);
+				background-color: var(--color-bg-primary);
 				h1 {
 					position: relative;
-					padding: 0 var(--s-4) var(--s-3) var(--s-4);
-					color: var(--color-rock-100);
-					border: dashed var(--color-rock-400);
-					border-width: 5px 0 5px 0;
 					font-size: 10vw;
 					font-family: var(--font-body);
 					font-weight: 800;
 					letter-spacing: -2px;
 					text-transform: uppercase;
+					color: var(--color-rock-100);
+					padding: 0 var(--s-4) var(--s-3) var(--s-4);
+					border: dashed var(--color-rock-400);
+					border-width: 5px 0 5px 0;
 					@include sm {
 						font-size: calc(var(--text-lg) + 15px);
 					}
@@ -189,19 +189,19 @@
 				content: "";
 				z-index: 2;
 				position: absolute;
-				width: 100%;
-				height: 7px;
 				top: 43%;
 				bottom: 50%;
+				width: 100%;
+				height: 7px;
 				background-color: var(--color-rock-200);
 				&::before,
 				&::after {
 					content: "";
 					position: absolute;
-					background-color: var(--color-bg-primary);
+					bottom: 0;
 					width: 2%;
 					height: 100%;
-					bottom: 0;
+					background-color: var(--color-bg-primary);
 				}
 				&::before {
 					left: 3%;
@@ -213,13 +213,13 @@
 		}
 		.intro {
 			position: relative;
-			height: var(--s-9);
-			width: 80%;
-			margin: var(--s-9) auto var(--s-7) auto;
 			display: flex;
 			flex-direction: row;
 			justify-content: center;
 			align-items: center;
+			height: var(--s-9);
+			width: 80%;
+			margin: var(--s-9) auto var(--s-7) auto;
 			.mustache {
 				z-index: 3;
 				width: 60px;
@@ -237,9 +237,9 @@
 				overflow: hidden;
 				img {
 					position: absolute;
+					top: 0;
 					width: 600px;
 					height: 100%;
-					top: 0;
 					object-fit: cover;
 					opacity: var(--opacity-pencilbg);
 				}
@@ -247,14 +247,14 @@
 		}
 		.container {
 			position: relative;
-			margin: 0 auto;
-			background-color: var(--color-bg-primary);
 			display: flex;
 			flex-direction: column;
 			align-items: center;
 			justify-content: center;
-			max-width: 500px;
 			width: 90%;
+			max-width: 500px;
+			margin: 0 auto;
+			background-color: var(--color-bg-primary);
 			border: 6px var(--color-rock-200);
 			border-style: solid solid none solid;
 			@include sm {

@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { AnimatedGridLink } from "$lib/components"
 	import type { GridLinkData } from "$lib/types"
+	import { AnimatedGridLink } from "$lib/components"
 
 	export let link: GridLinkData
-	const { headline, hook, href } = link
+	$: ({ headline, hook, href } = link)
 </script>
 
 <a {href}>
@@ -60,32 +60,32 @@
 </a>
 
 <style lang="scss">
-	@import "../theme/breakpoints.scss";
+	@import "../../theme/breakpoints.scss";
 	.mock-window {
 		position: relative;
-		display: flex;
-		flex-direction: column;
 		top: 50%;
 		left: 50%;
 		transform: translate(-50%, -50%);
+		display: flex;
+		flex-direction: column;
 		height: 75%;
 		width: 80%;
 		border: solid 2px var(--color-rock-200);
 		.window-bar {
 			position: relative;
+			top: 0;
 			display: flex;
 			flex-direction: row;
 			align-items: center;
-			top: 0;
-			background-color: var(--color-rock-700);
 			height: 10%;
 			padding-left: var(--s-3);
+			background-color: var(--color-rock-700);
 			.window-icons {
 				position: relative;
 				width: 10px;
 				height: 10px;
-				border-radius: 100px;
 				margin: 0 var(--s-1);
+				border-radius: 100px;
 				border: solid 1px var(--color-rock-200);
 				background-color: var(--color-bg-primary);
 			}
@@ -96,8 +96,8 @@
 			flex-direction: row;
 			justify-content: space-between;
 			align-items: center;
-			background-color: var(--color-rock-600);
 			height: var(--s-7);
+			background-color: var(--color-rock-600);
 			padding: 0 var(--s-3);
 			.hamburger {
 				position: relative;
@@ -107,9 +107,9 @@
 				&::after {
 					content: "";
 					position: absolute;
+					left: 50%;
 					height: 2px;
 					width: 10px;
-					left: 50%;
 					background-color: var(--color-rock-200);
 				}
 				&::after {
@@ -144,11 +144,11 @@
 				background-color: var(--color-rock-800);
 				padding: 10%;
 				.bars {
-					opacity: 1;
 					display: flex;
 					flex-direction: column;
 					justify-content: center;
 					align-items: flex-start;
+					opacity: 1;
 					@for $i from 1 to 5 {
 						.bar-#{$i} {
 							height: var(--s-4);
@@ -159,10 +159,10 @@
 					}
 				}
 				.settings {
-					opacity: 1;
 					display: flex;
 					flex-direction: row;
 					width: 90%;
+					opacity: 1;
 					.user-icon {
 						height: 10px;
 						width: 20%;
@@ -183,14 +183,14 @@
 			display: grid;
 			grid-template-columns: 1fr;
 			grid-template-rows: 1fr 1fr 2fr;
-			padding: var(--s-5) var(--s-5);
 			gap: var(--s-4);
+			padding: var(--s-5) var(--s-5);
 			overflow: hidden;
 			.slider-container {
+				transform: translateX(-20%);
 				display: flex;
 				flex-direction: row;
 				width: 130%;
-				transform: translateX(-20%);
 				margin-bottom: 2%;
 				.slider {
 					display: flex;

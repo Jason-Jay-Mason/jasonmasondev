@@ -48,10 +48,10 @@
 							transform: rotate(-724deg);
 						}
 					}
-					padding: var(--s-4) var(--s-10) 0 var(--s-10);
-					color: var(--color-rock-100);
-					font-family: var(--font-subheadline);
 					font-size: var(--text-xl);
+					font-family: var(--font-subheadline);
+					color: var(--color-rock-100);
+					padding: var(--s-4) var(--s-10) 0 var(--s-10);
 					transform: rotate(-4deg);
 					animation: headline 1.5s 1;
 				}
@@ -70,9 +70,9 @@
 						bottom: 0;
 						left: 0;
 						width: 1000px;
-						opacity: var(--opacity-pencilbg);
-						object-fit: repeat;
 						margin: auto 0;
+						object-fit: repeat;
+						opacity: var(--opacity-pencilbg);
 					}
 				}
 			}

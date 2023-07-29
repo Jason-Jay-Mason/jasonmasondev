@@ -1,12 +1,10 @@
-<script>
+<script lang="ts">
+	import type { HomeData, ClickupTask } from "$lib/types"
 	import { Hero, Mustachio, LinkGrid, Kanban, Contact } from "$lib/components"
+	import { homeConfig } from "$lib/config/game-configs"
 
-	export let hero
-	export let links
-	export let kanban
-	export let contact
-	export let data
-	const { page, tasks } = data
+	export let page: HomeData
+	export let tasks: ClickupTask[]
 
 	let y = 1
 	function handleParalax() {
@@ -16,7 +14,7 @@
 
 <svelte:window on:scroll={handleParalax} />
 <div class="mustachio" style={`transform: translateY(${y}%)`}>
-	<Mustachio />
+	<Mustachio config={homeConfig} />
 </div>
 <Hero data={page.Hero} />
 <LinkGrid links={page?.LinkGrid?.links} />
@@ -27,7 +25,7 @@
 	.mustachio {
 		z-index: 6;
 		position: absolute;
-		height: 1000px;
+		height: 1200px;
 		width: 100%;
 	}
 </style>

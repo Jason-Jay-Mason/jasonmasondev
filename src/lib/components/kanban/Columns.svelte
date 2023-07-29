@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { ClickupTask } from "$lib/types"
 	import { KanbanColumn as Column, KanbanCard as Card } from "$lib/components"
-	import { dispatch_dev } from "svelte/internal"
 
 	export let tasks: ClickupTask[]
 	export let statuses: string[]
@@ -30,14 +29,14 @@
 			grid-template-columns: 1fr 1fr 1fr;
 		}
 		.title {
-			width: 100%;
+			font-size: var(--text-md);
 			text-align: center;
 			font-family: var(--font-headline);
-			font-size: var(--text-md);
 			letter-spacing: 3.36px;
-			background-color: var(--color-rock-100);
 			color: var(--color-bg-primary);
 			text-transform: uppercase;
+			width: 100%;
+			background-color: var(--color-rock-100);
 		}
 		.column {
 			background-image: url("/pencil-bg.svg");

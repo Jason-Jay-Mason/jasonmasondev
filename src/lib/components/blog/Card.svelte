@@ -36,9 +36,9 @@
 		display: flex;
 		flex-direction: column;
 		width: 100%;
+		max-width: 480px;
 		margin: 0 auto;
 		border: solid 4px var(--color-rock-100);
-		max-width: 480px;
 		&:hover {
 			img {
 				filter: grayscale(0);
@@ -70,13 +70,13 @@
 				padding: var(--s-7) var(--s-8);
 			}
 			h5 {
-				font-family: var(--font-headline);
 				font-size: clamp(1.2rem, 5vw, 1.6rem);
+				font-family: var(--font-headline);
 				letter-spacing: 2px;
 				line-height: 1.5;
 				font-weight: 700;
-				margin: var(--s-3) 0 var(--s-4) 0;
 				text-transform: uppercase;
+				margin: var(--s-3) 0 var(--s-4) 0;
 				@include sm {
 					font-size: clamp(1.2rem, 3vw, 1.6rem);
 				}
@@ -86,10 +86,10 @@
 			}
 			p {
 				font-size: 0.7rem;
-				overflow: hidden;
 				display: -webkit-box;
 				-webkit-line-clamp: 3;
 				-webkit-box-orient: vertical;
+				overflow: hidden;
 				margin-bottom: var(--s-7);
 			}
 			.info {
@@ -98,36 +98,35 @@
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
-				padding-bottom: var(--s-5);
 				gap: var(--s-5);
+				padding-bottom: var(--s-5);
 				.time {
+					font-size: 0.8rem;
 					font-family: var(--font-body);
 					font-weight: 400;
-					font-size: 0.8rem;
 					white-space: nowrap;
 				}
 				.tags {
-					width: fit-content;
 					display: flex;
 					flex-direction: row;
 					justify-content: center;
 					align-content: center;
+					width: fit-content;
 					.tag {
 						display: flex;
 						justify-content: center;
 						align-content: center;
-						border: solid 1px var(--color-rock-100);
-						background-color: var(--color-rock-800);
-						margin-right: 4px;
 						height: fit-content;
-						background-color: var(--color-rock-invert-700);
+						margin-right: 4px;
 						padding: var(--s-4) 10px;
+						border: solid 1px var(--color-rock-100);
+						background-color: var(--color-rock-invert-700);
 						.tag-name {
+							font-size: 0.7rem;
 							font-family: var(--font-body);
 							font-weight: 400;
-							margin-top: -2px;
-							font-size: 0.7rem;
 							white-space: nowrap;
+							margin-top: -2px;
 						}
 					}
 				}

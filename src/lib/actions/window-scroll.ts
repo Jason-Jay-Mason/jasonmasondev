@@ -1,24 +1,22 @@
-export function windowScroll(node: any): object {
-  //Event dispatcher function
-  //We use requestAnimationFrame for a debounce effect so that we are not triggering the scroll events 
-  //at the cost of performance 
+import type { Action } from 'svelte/action';
+
+export const windowScroll: Action<HTMLElement> = (node) => {
   let timeout: DOMHighResTimeStamp
   const handleScroll = () => {
     if (timeout) {
       window.cancelAnimationFrame(timeout)
     }
     timeout = window.requestAnimationFrame(() => {
-      node.dispatchEvent(new CustomEvent('windowscroll'));
+      node.dispatchEvent(new CustomEvent('windowscroll'))
     })
-  };
+  }
 
-  //Instantiating the listener 
-  document.addEventListener('scroll', handleScroll, true);
+  document.addEventListener('scroll', handleScroll, true)
 
-  //Make sure we do cleanup when the component unmounts
   return {
     destroy() {
-      document.removeEventListener('scroll', handleScroll, true);
+      document.removeEventListener('scroll', handleScroll, true)
     }
-  };
+  }
 }
+
