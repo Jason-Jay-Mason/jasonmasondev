@@ -87,8 +87,11 @@
 <style lang="scss">
 	@import "../../theme/breakpoints.scss";
 	section {
+		position: relative;
 		padding: var(--s-4);
 		form {
+			z-index: 10;
+			position: relative;
 			display: grid;
 			grid-template-columns: 1fr;
 			justify-items: center;
@@ -127,6 +130,8 @@
 				}
 			}
 			.contact-info {
+				z-index: 10;
+				position: relative;
 				display: none;
 				grid-column: 2 / 2;
 				grid-row: 1 / span 2;

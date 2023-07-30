@@ -9,6 +9,7 @@
 
 <style lang="scss">
 	.container {
+		position: relative;
 		height: 100vh;
 		width: 100%;
 	}

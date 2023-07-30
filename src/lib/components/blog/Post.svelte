@@ -1,10 +1,7 @@
 <script lang="ts">
 	import type { PostData } from "$lib/types"
 	import { Months } from "$lib/types"
-	import Text from "./blocks/Text.svelte"
-	import Image from "./blocks/Image.svelte"
-	import Headline from "./blocks/Headline.svelte"
-	import { PortableText } from "@portabletext/svelte"
+	import { TextBlock } from "$lib/components"
 
 	export let post: PostData
 	const date = new Date(post.date)
@@ -43,20 +40,7 @@
 		</div>
 	</section>
 	<section id="post">
-		<PortableText
-			value={post.body}
-			components={{
-				types: {
-					image: Image
-				},
-				block: {
-					normal: Text,
-					h2: Headline,
-					h3: Headline,
-					h4: Headline
-				}
-			}}
-		/>
+		<TextBlock value={post.body} />
 	</section>
 </article>
 

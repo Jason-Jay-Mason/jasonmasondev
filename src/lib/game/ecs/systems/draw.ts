@@ -6,10 +6,18 @@ function hud(g: Globals, ctx: CanvasRenderingContext2D): void {
   ctx.translate(0, 0)
   ctx.fillStyle = 'grey'
   ctx.font = "25px serif";
-  ctx.fillText(`Score ${g.state.score}`, 30, 40)
+  ctx.fillText(`Score ${g.state.score}`, 30, g.dom.container.clientHeight - 40)
   const high = `High ${g.state.highScore}`
-  const textBox = ctx.measureText(high)
-  ctx.fillText(high, g.dom.container.clientWidth - 40 - textBox.width, 40)
+  let textBox = ctx.measureText(high)
+  ctx.fillText(high, g.dom.container.clientWidth - 40 - textBox.width, g.dom.container.clientHeight - 40)
+
+  if (!g.state.highScore) {
+    const controles = `Left: ${g.config.player.controls.left} Right: ${g.config.player.controls.right} Thrust: ${g.config.player.controls.thrust} Shoot: ${g.config.player.controls.shoot}`
+    textBox = ctx.measureText(controles)
+    ctx.fillText(controles, (g.dom.container.clientWidth / 2) - (textBox.width / 2), (g.dom.container.clientHeight / 2) - 40)
+  }
+
+
   ctx.resetTransform()
 }
 

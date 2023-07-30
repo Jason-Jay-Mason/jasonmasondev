@@ -1,6 +1,9 @@
 <script lang="ts">
+	import type { LayoutData } from "./$types"
 	import { Nav, Footer } from "$lib/components"
 	import { page } from "$app/stores"
+
+	export let data: LayoutData
 </script>
 
 <svelte:head>
@@ -15,7 +18,7 @@
 {#if $page.error}
 	<Nav />
 	<slot />
-	<Footer />
+	<Footer legal={data.legal} />
 {:else}
 	<slot />
 {/if}

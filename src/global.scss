@@ -72,7 +72,7 @@ a,p{
 	color: var(--color-text-body);
 }
 
-p{
+p, li{
 	font-family: var(--font-body);
 	font-style: normal;
 	font-weight: 300;
@@ -81,12 +81,15 @@ p{
 	letter-spacing: 0.07em;
 }
 
+
+
 a {
 	text-decoration: none;
 	position: relative;
   padding:0;
   margin:0;
 }
+
 .text a {
   color: #575BB1;
   font-weight: 400;

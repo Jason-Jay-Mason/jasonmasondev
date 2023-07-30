@@ -1,20 +1,20 @@
 export const prerender = true;
 
 import type { PageServerLoad } from './$types';
-import type { PostData } from '$lib/types';
+import type { LegalData } from '$lib/types';
 import SanityApi from '$lib/sanity';
 import { error } from '@sveltejs/kit';
 
 export const load: PageServerLoad = async ({ params }) => {
   try {
-    const post: PostData = await SanityApi.get.post(params.post)
+    const legal: LegalData = (await SanityApi.get.legal(params.slug))[0]
 
-    if (!post) {
+    if (!legal) {
       throw error(404, 'Page not found.')
     }
 
     return {
-      post
+      legal
     }
   } catch (err) {
     console.error(err)

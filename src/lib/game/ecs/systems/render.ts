@@ -8,6 +8,8 @@ export function render(w: IWorld, g: Globals, ctx: CanvasRenderingContext2D): vo
 
   ctx.clearRect(0, 0, g.dom.container.clientWidth, g.dom.container.clientHeight)
 
+  if (g.config.displayHud) Draw.hud(g, ctx)
+
   let eids: Entity[] = Q.player(w)
   if (eids.length) Draw.player(eids[0], g, ctx)
 
@@ -20,6 +22,6 @@ export function render(w: IWorld, g: Globals, ctx: CanvasRenderingContext2D): vo
   eids = Q.particles(w)
   if (eids.length) eids.forEach(eid => Draw.particle(eid, g, w, ctx))
 
-  if (g.config.displayHud) Draw.hud(g, ctx)
+
 
 }

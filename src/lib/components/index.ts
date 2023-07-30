@@ -16,8 +16,11 @@ export { default as KanbanCard } from './kanban/Card.svelte'
 export { default as KanbanTechIcon } from './kanban/TechIcon.svelte'
 export { default as CardGrid } from './blog/CardGrid.svelte'
 export { default as TagSelect } from './blog/TagSelect.svelte'
+export { default as TextBlock } from './blog/TextBlock.svelte'
 export { default as ContactInfo } from './contact/ContactInfo.svelte'
 export { default as Input } from './contact/Input.svelte'
+export { default as LegalBar } from './legal/LegalBar.svelte'
+
 
 //Sections
 export { default as Error } from './Error.svelte'
@@ -28,6 +31,7 @@ export { default as Contact } from './contact/Contact.svelte'
 export { default as Mustachio } from './Mustachio.svelte'
 export { default as TagSection } from './blog/TagSection.svelte'
 
+
 //Layout
 export { default as Nav } from './Nav.svelte'
 export { default as Modal } from './Modal.svelte'
@@ -37,6 +41,7 @@ export { default as Footer } from './Footer.svelte'
 export { default as Blog } from './blog/Blog.svelte'
 export { default as Post } from './blog/Post.svelte'
 export { default as Home } from './home/Home.svelte'
+export { default as Legal } from './legal/Legal.svelte'
 
 
 

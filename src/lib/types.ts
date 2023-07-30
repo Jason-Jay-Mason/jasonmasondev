@@ -67,6 +67,15 @@ export enum Months {
   Dec
 }
 
+//legal 
+export interface LegalData {
+  seo: SeoData
+  date: string
+  title: string
+  slug: string
+  body: object[]
+}
+
 //Utility
 export interface AnimationFrame {
   endValue: number

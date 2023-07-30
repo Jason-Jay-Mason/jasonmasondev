@@ -108,10 +108,10 @@
 <style lang="scss">
 	@import "../../lib/theme/breakpoints.scss";
 	.background {
-		background-color: var(--color-bg-primary);
+		background-color: var(--color-rock-invert-900);
 	}
 	.sticky {
-		background-color: var(--color-bg-primary);
+		background-color: var(--color-rock-invert-900);
 		border-color: var(--color-rock-500);
 		.logo {
 			width: 90px;
@@ -142,7 +142,7 @@
 			padding: 0 var(--s-9);
 		}
 		&:hover {
-			background-color: var(--color-bg-primary);
+			background-color: var(--color-rock-invert-900);
 			border-color: var(--color-rock-500);
 		}
 		.link {

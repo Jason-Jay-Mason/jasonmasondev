@@ -6,6 +6,12 @@
 	<h5 class="title">{headline}</h5>
 	<div class="cards">
 		<slot />
+
+		{#if headline === "backlog"}
+			<a href="/#contact">
+				<button class="add-project">+ Add One</button>
+			</a>
+		{/if}
 	</div>
 </div>
 
@@ -49,6 +55,25 @@
 			background-color: var(--color-column);
 			@include xl {
 				height: 700px;
+			}
+		}
+		.add-project {
+			font-size: 1.1rem;
+			font-family: var(--font-body);
+			font-weight: 700;
+			align-self: center;
+			color: var(--color-rock-100);
+			text-transform: uppercase;
+			border: none;
+			padding: var(--s-5) var(--s-6);
+			margin: var(--s-4);
+			background: none;
+			transition: all 0.3s ease;
+			&:hover {
+				color: var(--color-bg-primary);
+				background-color: var(--color-rock-100);
+				cursor: pointer;
+				opacity: 1;
 			}
 		}
 	}
