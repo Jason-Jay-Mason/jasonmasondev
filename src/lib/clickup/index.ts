@@ -7,7 +7,8 @@ const listId = '901100158350'
 const baseUrl = 'https://api.clickup.com/api/v2'
 const endPoint = `${baseUrl}/list/${listId}/task?`
 const params = new URLSearchParams({
-  "include_closed": "true"
+  "include_closed": "true",
+  "order_by": "due_date"
 })
 
 const taskExpression = jsonata(`
@@ -47,9 +48,9 @@ function get(): Getters {
   }
 
   const tasks = async () => {
-    if (dev) {
-      return await backupTasks()
-    }
+    // if (dev) {
+    //   return await backupTasks()
+    // }
 
     const res = await fetch(endPoint + params, {
       method: "GET",

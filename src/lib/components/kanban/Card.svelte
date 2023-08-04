@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { ClickupTask } from "$lib/types"
+	import { Months } from "$lib/types"
 	import { KanbanTechIcon as TechIcon } from "$lib/components"
 
 	export let task: ClickupTask
@@ -21,9 +22,13 @@
 		<div class="details">
 			<div class="due-date">
 				<img src="/calendar-icon.svg" alt="Calendar icon" />
-				<p>
-					{date.getMonth()}/{date.getDay()}/{date.getFullYear()}
-				</p>
+				{#if task.dueDate}
+					<p>
+						{Months[date.getMonth()]}&nbsp;{date.getFullYear()}
+					</p>
+				{:else}
+					<p>TBD</p>
+				{/if}
 			</div>
 
 			{#if task.technologies}
