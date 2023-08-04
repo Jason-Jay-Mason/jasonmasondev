@@ -8,9 +8,3 @@
 <Nav />
 <slot />
 <Footer legal={data.legal} />
-
-<style>
-	.blah {
-		height: 100vh;
-	}
-</style>
