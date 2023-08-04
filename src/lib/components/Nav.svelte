@@ -102,7 +102,7 @@
 	.sticky {
 		background-color: var(--color-rock-invert-900);
 		border-color: var(--color-rock-500);
-		transition: transform 0.2s ease;
+		transition: transform 200ms ease;
 		.logo {
 			width: 90px;
 			@include lg {
