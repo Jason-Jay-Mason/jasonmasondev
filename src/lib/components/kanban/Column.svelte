@@ -23,6 +23,9 @@
 		@include md {
 			grid-column: 2;
 			grid-row: 1 / span 2;
+			.cards {
+				max-height: 1020px;
+			}
 		}
 		@include xl {
 			grid-column: 3;
@@ -30,9 +33,12 @@
 		}
 	}
 	.column {
+		position: relative;
+		height: 100%;
 		border: solid 1px var(--color-rock-700);
 		background-image: url("/lines.svg");
 		background-size: 120%;
+		overflow: hidden;
 		.title {
 			font-size: 2.1rem;
 			font-family: var(--font-headline);
@@ -49,7 +55,6 @@
 			display: flex;
 			flex-direction: column;
 			height: 100%;
-			max-height: 800px;
 			overflow: scroll;
 			padding: var(--s-6) var(--s-6);
 			background-color: var(--color-column);

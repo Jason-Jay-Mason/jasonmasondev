@@ -21,7 +21,7 @@
 </script>
 
 <svelte:window on:scroll={handleParalax} />
-<div class="blob" bind:this={body}>
+<div class="container" bind:this={body}>
 	<div class="mustachio" class:bottom style={`transform: translateY(${y}%)`}>
 		<Mustachio config={homeConfig} />
 	</div>
@@ -32,15 +32,20 @@
 </div>
 
 <style lang="scss">
-	.blob {
+	@import "../../theme/breakpoints.scss";
+	.container {
 		position: relative;
 	}
 	.mustachio {
+		display: none;
 		z-index: 6;
 		position: absolute;
 		top: 0;
 		height: 1200px;
 		width: 100%;
+		@include sm {
+			display: inline-block;
+		}
 	}
 	.bottom {
 		top: auto;

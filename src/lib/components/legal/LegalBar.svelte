@@ -20,6 +20,7 @@
 </div>
 
 <style lang="scss">
+	@import "../../theme/breakpoints.scss";
 	.legal {
 		width: 100%;
 		padding: var(--s-7) 0;
@@ -27,20 +28,33 @@
 		.content {
 			display: flex;
 			flex-direction: row;
+			flex-wrap: wrap;
+			gap: var(--s-6);
 			justify-content: space-between;
-			width: 75%;
+			width: 80%;
+			max-width: $lg;
 			margin: 0 auto;
+			white-space: nowrap;
+			@include lg {
+				width: 75%;
+			}
 			.links {
 				display: flex;
 				flex-direction: row;
-				gap: var(--s-7);
+				gap: var(--s-4);
+				@include sm {
+					gap: var(--s-7);
+				}
 			}
 			a,
 			p {
-				font-size: 0.9rem;
+				font-size: 0.7rem;
 				font-family: var(--font-body);
 				font-weight: 300;
 				color: var(--color-rock-300);
+				@include sm {
+					font-size: 0.9rem;
+				}
 			}
 		}
 	}

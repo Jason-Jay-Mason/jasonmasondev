@@ -20,7 +20,7 @@
 	@import "../../theme/breakpoints.scss";
 	.columns {
 		display: grid;
-		gap: var(--s-5);
+		gap: var(--s-6);
 		grid-template-columns: 1fr;
 		@include md {
 			grid-template-columns: 1fr 1fr;
