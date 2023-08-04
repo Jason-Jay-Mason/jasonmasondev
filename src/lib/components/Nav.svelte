@@ -26,7 +26,7 @@
 	}
 
 	let lastScroll = 0
-	let hidePosition = 0
+	let hidden: boolean
 	let sticky = true
 	function handleSticky() {
 		if (window.scrollY > 80) {
@@ -35,22 +35,12 @@
 			sticky = false
 		}
 
-		if (window.scrollY > lastScroll && hidePosition > -80) {
-			const next = hidePosition - (window.scrollY - lastScroll)
-			if (next < -80) {
-				hidePosition = -80
-			} else {
-				hidePosition = next
-			}
+		if (window.scrollY > lastScroll && sticky) {
+			hidden = true
 		}
 
-		if (window.scrollY < lastScroll && hidePosition < 0) {
-			const next = hidePosition + (lastScroll - window.scrollY)
-			if (next > 0) {
-				hidePosition = 0
-			} else {
-				hidePosition = next
-			}
+		if (window.scrollY < lastScroll && sticky) {
+			hidden = false
 		}
 
 		lastScroll = window.scrollY
@@ -61,11 +51,7 @@
 </script>
 
 <svelte:window on:scroll={handleSticky} />
-<nav
-	style={`transform:translateY(${hidePosition}px)`}
-	class:sticky
-	class:background={modalActive == true}
->
+<nav class:hidden class:sticky class:background={modalActive == true}>
 	<div class="container">
 		<div class="left">
 			<a href="/">
@@ -110,9 +96,13 @@
 	.background {
 		background-color: var(--color-rock-invert-900);
 	}
+	.hidden {
+		transform: translateY(-75px);
+	}
 	.sticky {
 		background-color: var(--color-rock-invert-900);
 		border-color: var(--color-rock-500);
+		transition: transform 0.2s ease;
 		.logo {
 			width: 90px;
 			@include lg {

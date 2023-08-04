@@ -20,6 +20,9 @@
 	.span-2-rows {
 		grid-column: 1;
 		grid-row: 3;
+		.cards {
+			max-height: 400px;
+		}
 		@include md {
 			grid-column: 2;
 			grid-row: 1 / span 2;
