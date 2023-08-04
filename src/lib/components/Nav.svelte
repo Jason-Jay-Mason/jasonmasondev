@@ -102,6 +102,7 @@
 	.sticky {
 		background-color: var(--color-rock-invert-900);
 		border-color: var(--color-rock-500);
+		-webkit-transition: -webkit-transform 200ms;
 		transition: transform 200ms ease;
 		.logo {
 			width: 90px;
