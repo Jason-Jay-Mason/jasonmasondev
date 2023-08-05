@@ -22,21 +22,14 @@
 	}
 
 	let scrollY = 0
-	let hidden: boolean
-	$: {
-		console.log(hidden)
-	}
 	let modalActive: boolean = false
 	function toggleModal() {
 		modalActive = !modalActive
 	}
 </script>
 
-<svelte:window
-	bind:scrollY
-	on:scroll={(e) => (window.scrollY > scrollY ? (hidden = true) : (hidden = false))}
-/>
-<nav class:sticky={scrollY > 10} style={`transform: translateY(${hidden ? "-70px" : "0"})`}>
+<svelte:window bind:scrollY />
+<nav class:sticky={scrollY > 10}>
 	<div class="container">
 		<div class="left">
 			<a href="/">
