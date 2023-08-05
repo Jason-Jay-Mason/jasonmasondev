@@ -26,8 +26,12 @@
 			</p>
 		</div>
 		<div class="cta-container">
-			<div class="cta">
-				<Button href={data.cta.hrefOrSrc} width="full">{data.cta.innerText}</Button>
+			<div class="row">
+				<div class="bar" />
+				<div class="cta">
+					<Button href={data.cta.hrefOrSrc} width="full">{data.cta.innerText}</Button>
+				</div>
+				<div class="bar" />
 			</div>
 			<div class="bars" />
 		</div>
@@ -51,57 +55,51 @@
 		}
 		.cta-container {
 			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: var(--s-7);
 			width: 78vw;
 			max-width: 400px;
-			margin-bottom: var(--s-10);
+			margin-bottom: 10px;
 			@include sm {
 				width: 75%;
-				margin-bottom: var(--s-9);
+				margin-bottom: -2px;
 			}
-			.cta {
-				z-index: 11;
-				position: relative;
-				width: 80%;
-				max-width: 220px;
-				margin: 0 auto;
-				padding: 0 var(--s-6);
-				@include sm {
-					width: 90%;
-				}
-			}
-			&::before,
+			.bars,
 			&::after {
 				content: "";
-				position: absolute;
-				top: 50%;
-				height: 4px;
 				background-color: var(--color-rock-400);
-				min-width: 18%;
-				@include sm {
-					width: 20%;
-				}
-			}
-			&::after {
-				right: 0;
+				height: 5px;
 			}
 			.bars {
-				&::before,
-				&::after {
-					content: "";
-					position: absolute;
-					left: 0;
-					right: 0;
-					height: 4px;
-					margin: 0 auto;
-					background-color: var(--color-rock-400);
+				width: 50%;
+			}
+			&::after {
+				width: 20%;
+			}
+			.row {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				width: 100%;
+				.bar {
+					width: 15%;
+					height: 5px;
+					background: var(--color-rock-400);
 				}
-				&::before {
-					top: var(--s-11);
-					width: 50%;
-				}
-				&::after {
-					top: calc(var(--s-11) + var(--s-8));
-					width: 23%;
+				.cta {
+					z-index: 11;
+					position: relative;
+					width: 100%;
+					max-width: 230px;
+					padding: 0 var(--s-6);
+					@include sm {
+						padding: 0 var(--s-6);
+						width: 80%;
+					}
 				}
 			}
 		}
