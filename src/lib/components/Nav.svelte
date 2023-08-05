@@ -101,7 +101,10 @@
 <style lang="scss">
 	@import "../../lib/theme/breakpoints.scss";
 	.hidden {
-		transform: translateY(-75px);
+		transform: translateY(0);
+		@include sm {
+			transform: translateY(-75px);
+		}
 	}
 	.sticky {
 		background-color: var(--color-rock-invert-900);
@@ -116,22 +119,23 @@
 	nav {
 		z-index: 100;
 		position: sticky;
+		display: flex;
 		top: 0;
 		height: 60px;
 		width: 100%;
 		margin: 0 auto -75px auto;
-		padding: 0 var(--s-4);
+		padding: 0 var(--s-5);
 		border-bottom: solid 1px transparent;
 		background-color: transparent;
 		transition: all 0.2s;
 		-webkit-transition: -webkit-transform 0.2s;
-		transform: translateY(0) translateZ(0);
+		transform: translateY(0px) translateZ(0px);
 		@include md {
 			padding: 0 var(--s-6);
 		}
 		@include lg {
-			height: 75px;
 			padding: 0 var(--s-8);
+			height: 75px;
 		}
 		@include xl {
 			padding: 0 var(--s-9);
