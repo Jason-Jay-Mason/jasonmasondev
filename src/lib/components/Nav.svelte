@@ -125,6 +125,7 @@
 		background-color: transparent;
 		transition: all 200ms ease;
 		-webkit-transition: -webkit-transform 200ms ease;
+		transform: translateY(0) translateZ(0);
 		@include md {
 			padding: 0 var(--s-6);
 		}
