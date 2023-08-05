@@ -2,6 +2,7 @@
 	import type { Navbar } from "$lib/types"
 	import { ThemeSwitcher, Modal } from "$lib/components"
 	import { onMount } from "svelte"
+	import { afterNavigate } from "$app/navigation"
 
 	export let data: Navbar = {
 		links: [
@@ -45,7 +46,12 @@
 
 		lastScroll = window.scrollY
 	}
+
 	onMount(() => {
+		handleSticky()
+	})
+
+	afterNavigate(() => {
 		handleSticky()
 	})
 </script>
