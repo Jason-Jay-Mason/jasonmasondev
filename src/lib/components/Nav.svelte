@@ -58,7 +58,7 @@
 </script>
 
 <svelte:window on:scroll={handleSticky} />
-<nav class:hidden class:sticky class:background={modalActive == true}>
+<nav class:sticky class:background={modalActive == true}>
 	<div class="container">
 		<div class="left">
 			<a href="/">
@@ -101,14 +101,12 @@
 <style lang="scss">
 	@import "../../lib/theme/breakpoints.scss";
 	.hidden {
-		transform: translateY(0);
-		@include sm {
-			transform: translateY(-75px);
-		}
+		transform: translateY(-75px);
 	}
 	.sticky {
 		background-color: var(--color-rock-invert-900);
 		border-color: var(--color-rock-500);
+		transition: all 0.2s;
 		.logo {
 			width: 90px;
 			@include lg {
@@ -128,14 +126,12 @@
 		border-bottom: solid 1px transparent;
 		background-color: transparent;
 		transition: all 0.2s;
-		-webkit-transition: -webkit-transform 0.2s;
-		transform: translateY(0px) translateZ(0px);
 		@include md {
 			padding: 0 var(--s-6);
 		}
 		@include lg {
 			padding: 0 var(--s-8);
-			height: 75px;
+			height: 68px;
 		}
 		@include xl {
 			padding: 0 var(--s-9);
