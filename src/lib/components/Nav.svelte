@@ -53,6 +53,7 @@
 
 	afterNavigate(() => {
 		hidden = false
+		handleSticky()
 	})
 </script>
 
@@ -116,15 +117,14 @@
 		z-index: 100;
 		position: sticky;
 		top: 0;
-		transform: translateX(0);
 		height: 60px;
 		width: 100%;
 		margin: 0 auto -75px auto;
 		padding: 0 var(--s-4);
 		border-bottom: solid 1px transparent;
 		background-color: transparent;
-		transition: all 200ms ease;
-		-webkit-transition: -webkit-transform 200ms ease;
+		transition: all 0.2s;
+		-webkit-transition: -webkit-transform 0.2s;
 		transform: translateY(0) translateZ(0);
 		@include md {
 			padding: 0 var(--s-6);
