@@ -120,6 +120,7 @@
 		border-bottom: solid 1px transparent;
 		background-color: transparent;
 		transition: all 200ms ease;
+		-webkit-transition: -webkit-transform 200ms ease;
 		@include md {
 			padding: 0 var(--s-6);
 		}
