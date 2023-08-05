@@ -21,44 +21,22 @@
 		]
 	}
 
+	let scrollY = 0
+	let hidden: boolean
+	$: {
+		console.log(hidden)
+	}
 	let modalActive: boolean = false
 	function toggleModal() {
 		modalActive = !modalActive
 	}
-
-	let lastScroll = 0
-	let hidden: boolean
-	let sticky = true
-	function handleSticky() {
-		if (window.scrollY > 0) {
-			sticky = true
-		} else {
-			sticky = false
-		}
-
-		if (window.scrollY > lastScroll && sticky) {
-			hidden = true
-		}
-
-		if (window.scrollY < lastScroll && sticky) {
-			hidden = false
-		}
-
-		lastScroll = window.scrollY
-	}
-
-	onMount(() => {
-		handleSticky()
-	})
-
-	afterNavigate(() => {
-		hidden = false
-		handleSticky()
-	})
 </script>
 
-<svelte:window on:scroll={handleSticky} />
-<nav class:sticky class:background={modalActive == true}>
+<svelte:window
+	bind:scrollY
+	on:scroll={(e) => (window.scrollY > scrollY ? (hidden = true) : (hidden = false))}
+/>
+<nav class:sticky={scrollY > 10} style={`transform: translateY(${hidden ? "-70px" : "0"})`}>
 	<div class="container">
 		<div class="left">
 			<a href="/">
