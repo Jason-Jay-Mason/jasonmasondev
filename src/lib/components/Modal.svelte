@@ -81,7 +81,7 @@
 			flex-direction: column;
 			padding-bottom: var(--s-8);
 			a {
-				font-family: var(--font-Headline);
+				font-family: var(--font-body);
 				letter-spacing: 0.16rem;
 				font-size: var(--text-base);
 				padding: var(--s-6) 0;
