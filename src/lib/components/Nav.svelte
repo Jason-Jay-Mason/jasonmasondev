@@ -30,7 +30,7 @@
 	let hidden: boolean
 	let sticky = true
 	function handleSticky() {
-		if (window.scrollY > 80) {
+		if (window.scrollY > 0) {
 			sticky = true
 		} else {
 			sticky = false
@@ -52,7 +52,7 @@
 	})
 
 	afterNavigate(() => {
-		handleSticky()
+		hidden = false
 	})
 </script>
 
@@ -99,9 +99,6 @@
 
 <style lang="scss">
 	@import "../../lib/theme/breakpoints.scss";
-	.background {
-		background-color: var(--color-rock-invert-900);
-	}
 	.hidden {
 		transform: translateY(-75px);
 	}
