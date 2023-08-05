@@ -113,6 +113,7 @@
 		z-index: 100;
 		position: sticky;
 		top: 0;
+		transform: translateX(0);
 		height: 60px;
 		width: 100%;
 		margin: 0 auto -75px auto;

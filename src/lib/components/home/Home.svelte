@@ -37,10 +37,12 @@
 		position: relative;
 	}
 	.mustachio {
-		display: none;
 		z-index: 6;
 		position: absolute;
 		top: 0;
+		transform: translateZ(0);
+		will-change: true;
+		display: none;
 		height: 1200px;
 		width: 100%;
 		@include sm {
