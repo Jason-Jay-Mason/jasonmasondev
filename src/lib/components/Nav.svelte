@@ -102,8 +102,6 @@
 	.sticky {
 		background-color: var(--color-rock-invert-900);
 		border-color: var(--color-rock-500);
-		-webkit-transition: -webkit-transform 200ms;
-		transition: transform 200ms ease;
 		.logo {
 			width: 90px;
 			@include lg {
@@ -121,7 +119,7 @@
 		padding: 0 var(--s-4);
 		border-bottom: solid 1px transparent;
 		background-color: transparent;
-		transition: background, border-color 0.3s ease;
+		transition: all 200ms ease;
 		@include md {
 			padding: 0 var(--s-6);
 		}
