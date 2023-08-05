@@ -1,7 +1,6 @@
 <script lang="ts">
 	import type { Navbar } from "$lib/types"
 	import { ThemeSwitcher, Modal } from "$lib/components"
-	import { onMount } from "svelte"
 	import { afterNavigate } from "$app/navigation"
 
 	export let data: Navbar = {
@@ -22,14 +21,33 @@
 	}
 
 	let scrollY = 0
+	let hidden = false
+	let sticky = true
 	let modalActive: boolean = false
 	function toggleModal() {
 		modalActive = !modalActive
 	}
+	function handleHide() {
+		if (window.scrollY > 50) {
+			sticky = true
+		} else {
+			sticky = false
+		}
+		if (window.scrollY > scrollY + 20 && window.scrollY > 20) {
+			hidden = true
+		}
+		if (window.scrollY < scrollY) {
+			hidden = false
+		}
+	}
+	afterNavigate(() => {
+		hidden = false
+		handleHide()
+	})
 </script>
 
-<svelte:window bind:scrollY />
-<nav class:sticky={scrollY > 10}>
+<svelte:window bind:scrollY on:scroll={handleHide} />
+<nav class:hidden class:sticky>
 	<div class="container">
 		<div class="left">
 			<a href="/">
@@ -71,24 +89,10 @@
 
 <style lang="scss">
 	@import "../../lib/theme/breakpoints.scss";
-	.hidden {
-		transform: translateY(-75px);
-	}
-	.sticky {
-		background-color: var(--color-rock-invert-900);
-		border-color: var(--color-rock-500);
-		transition: all 0.2s;
-		.logo {
-			width: 90px;
-			@include lg {
-				width: 109px;
-			}
-		}
-	}
+
 	nav {
+		position: fixed;
 		z-index: 100;
-		position: sticky;
-		display: flex;
 		top: 0;
 		height: 60px;
 		width: 100%;
@@ -96,7 +100,8 @@
 		padding: 0 var(--s-5);
 		border-bottom: solid 1px transparent;
 		background-color: transparent;
-		transition: all 0.2s;
+		transform: translateY(0);
+		transition: all 0.3s;
 		@include md {
 			padding: 0 var(--s-6);
 		}
@@ -137,6 +142,7 @@
 			max-width: $xxl;
 			height: 100%;
 			margin: 0 auto;
+			transition: all 2s;
 			.left {
 				display: flex;
 				justify-content: center;
@@ -247,6 +253,21 @@
 					transform: rotate(45deg) translate(-7px, -7px);
 					transition: all 0.2s;
 				}
+			}
+		}
+	}
+
+	.hidden {
+		transform: translateY(-100%);
+	}
+
+	.sticky {
+		background-color: var(--color-rock-invert-900);
+		border-color: var(--color-rock-500);
+		.logo {
+			width: 90px;
+			@include lg {
+				width: 109px;
 			}
 		}
 	}

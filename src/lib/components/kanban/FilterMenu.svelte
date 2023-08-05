@@ -150,9 +150,10 @@
 		flex-direction: row;
 		justify-content: center;
 		align-items: flex-end;
-		padding: var(--s-9) var(--s-7) var(--s-4) 0;
+		padding: var(--s-9) var(--s-7) var(--s-7) 0;
 		@include md {
 			justify-content: space-between;
+			padding: var(--s-9) var(--s-7) var(--s-5) 0;
 		}
 		.advanced {
 			position: relative;

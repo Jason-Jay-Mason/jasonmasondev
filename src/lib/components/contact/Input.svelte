@@ -46,7 +46,7 @@
 	}
 
 	input {
-		height: 50px;
+		height: 55px;
 		text-align: center;
 		@include lg {
 			height: 60px;

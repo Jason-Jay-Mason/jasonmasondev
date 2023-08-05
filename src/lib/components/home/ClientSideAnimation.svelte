@@ -246,6 +246,7 @@
 			}
 		}
 		.content-box {
+			position: relative;
 			border: solid 2px var(--color-rock-400);
 		}
 	}
