@@ -5,6 +5,8 @@
 	import Headline from "./blocks/Headline.svelte"
 	import List from "./blocks/List.svelte"
 	import ListItem from "./blocks/ListItem.svelte"
+	import Code from "./blocks/Code.svelte"
+	import Math from "./blocks/Math.svelte"
 
 	export let value
 </script>
@@ -13,7 +15,9 @@
 	{value}
 	components={{
 		types: {
-			image: Image
+			image: Image,
+			code: Code,
+			latex: Math
 		},
 		block: {
 			normal: Text,

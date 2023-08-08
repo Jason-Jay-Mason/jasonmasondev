@@ -35,6 +35,8 @@
   "type": "module",
   "dependencies": {
     "@sanity/client": "^6.1.7",
-    "dotenv": "^16.0.3"
+    "dotenv": "^16.0.3",
+    "highlight.js": "^11.8.0",
+    "mathjax": "^3.2.2"
   }
 }

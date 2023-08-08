@@ -54,7 +54,7 @@
 			font-family: var(--font-headline);
 			color: var(--color-rock-100);
 			@include lg {
-				font-size: var(--text-xl);
+				font-size: var(--text-lg);
 			}
 		}
 		img {

@@ -1,13 +1,14 @@
 <script lang="ts">
 	import type { Tag } from "$lib/types"
 	import { page } from "$app/stores"
+	import { onMount } from "svelte"
 
 	export let tags: Tag[]
 	let tagScroll: HTMLDivElement
 
 	let scrollArrows = {
 		left: false,
-		right: true
+		right: false
 	}
 
 	$: selected = $page.url.pathname.replace("/blog/tag/", "")
@@ -27,6 +28,10 @@
 			scrollArrows.right = true
 		}
 	}
+
+	onMount(() => {
+		handleScroll(0)
+	})
 </script>
 
 <nav>
@@ -64,6 +69,7 @@
 	nav {
 		display: none;
 		flex-direction: row;
+		justify-content: flex-end;
 		width: 50%;
 		@include lg {
 			display: flex;

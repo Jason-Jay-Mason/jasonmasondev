@@ -18,11 +18,6 @@ function recycleEntity(w: IWorld, e: Entity): void {
   }
 }
 
-function resetGame(w: IWorld): void {
-  resetWorld(w)
-  console.log('here')
-}
-
 function getBoundedRandom(min: number, max: number, roundto?: number): number {
   if (roundto === undefined) {
     return Math.floor((Math.random() * (max - min) + min) * 100) / 100
@@ -80,7 +75,6 @@ export default {
   isNpc,
   createSparseSet,
   normalizeAngle,
-  resetGame,
 }
 
 

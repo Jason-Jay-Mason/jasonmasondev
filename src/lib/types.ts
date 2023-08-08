@@ -152,7 +152,11 @@ export interface PostData {
   slug: string
   imgSrc: string
   tags: Tag[]
-  body: object[]
+  body: {
+    _type: string
+    code: string
+    markup?: string
+  }[]
 }
 
 //Nav

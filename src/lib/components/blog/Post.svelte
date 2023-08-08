@@ -13,6 +13,7 @@
 			<div class="preview">
 				<h1>{post.longTitle}</h1>
 				<p class="preview-text">{post.preview}</p>
+
 				<div class="details">
 					<div class="row">
 						<img src="/calendar-icon.svg" alt="Calendar icon" />
@@ -48,9 +49,9 @@
 	@import "../../theme/breakpoints.scss";
 	#summary {
 		background-color: var(--color-rock-invert-700);
-		padding: var(--s-13) 0 var(--s-10) 0;
+		padding: var(--s-12) 0 var(--s-12) 0;
 		@include lg {
-			padding: var(--s-13) 0 var(--s-12) 0;
+			padding: calc(var(--s-11) + 60px) 0 var(--s-12) 0;
 		}
 		.container {
 			display: grid;
@@ -60,7 +61,8 @@
 			padding: 0 var(--s-6);
 			@include lg {
 				grid-template-columns: 3fr 2fr;
-				gap: var(--s-2);
+				align-items: center;
+				gap: var(--s-5);
 				max-width: 1300px;
 				padding: 0 var(--s-8);
 			}
@@ -68,7 +70,7 @@
 				display: flex;
 				flex-direction: column;
 				gap: var(--s-8);
-				max-width: 600px;
+				max-width: 720px;
 				padding-bottom: var(--s-10);
 				@include lg {
 					padding-bottom: 0;
@@ -76,56 +78,52 @@
 				h1 {
 					font-size: var(--text-lg);
 					font-family: var(--font-headline);
-					line-height: 120%;
-					letter-spacing: 2px;
+					line-height: 100%;
 					text-align: center;
 					color: var(--color-rock-100);
 					text-transform: uppercase;
-					padding-bottom: var(--s-4);
 					@include lg {
 						text-align: left;
+						font-size: var(--text-xl);
 					}
 					@include xl {
-						font-size: var(--text-xl);
 						line-height: 110%;
 					}
 				}
 				.preview-text {
 					line-height: 220%;
-					padding-bottom: var(--s-4);
 					text-align: center;
 					@include lg {
 						text-align: left;
-					}
-					@include xl {
-						font-size: 18px;
+						padding-bottom: var(--s-5);
+						font-size: 1.2rem;
 					}
 				}
 				.details {
 					display: flex;
 					flex-wrap: wrap;
 					justify-content: center;
-					gap: var(--s-7);
+					gap: var(--s-6);
 					width: 100%;
-					padding-bottom: var(--s-4);
 					@include lg {
 						justify-content: flex-start;
+						gap: var(--s-8);
 					}
 					.row {
 						display: flex;
 						align-items: center;
 						img {
 							filter: var(--icon-filter);
-							width: 23px;
+							width: 18px;
 							margin-right: 10px;
 						}
 						span {
-							font-size: 1.2rem;
-							font-family: var(--font-headline);
-							font-weight: 300;
+							font-size: 0.9rem;
+							font-family: var(--font-body);
+							font-weight: 400;
 							color: var(--color-rock-100);
 							@include lg {
-								font-size: 1.4em;
+								font-size: 0.9em;
 							}
 						}
 					}
@@ -140,7 +138,7 @@
 				margin: 0 auto;
 				border: solid 4px var(--color-rock-100);
 				@include xl {
-					height: 100%;
+					height: 110%;
 				}
 				img {
 					object-fit: cover;
