@@ -156,6 +156,7 @@ export interface PostData {
     _type: string
     code: string
     markup?: string
+    body?: string
   }[]
 }
 

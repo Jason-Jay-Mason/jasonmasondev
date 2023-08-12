@@ -7,6 +7,7 @@
 	import ListItem from "./blocks/ListItem.svelte"
 	import Code from "./blocks/Code.svelte"
 	import Math from "./blocks/Math.svelte"
+	import Marks from "./blocks/Marks.svelte"
 
 	export let value
 </script>
@@ -18,6 +19,12 @@
 			image: Image,
 			code: Code,
 			latex: Math
+		},
+		marks: {
+			sub: Marks,
+			sup: Marks,
+			bold: Marks,
+			Italic: Marks
 		},
 		block: {
 			normal: Text,
