@@ -2,6 +2,8 @@
 
 <style lang="scss">
 	p {
-		line-height: 220%;
+		font-weight: 400;
+		line-height: 210%;
+		color: var(--color-text-body);
 	}
 </style>

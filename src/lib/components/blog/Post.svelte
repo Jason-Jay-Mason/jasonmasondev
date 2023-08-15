@@ -51,7 +51,7 @@
 		background-color: var(--color-rock-invert-700);
 		padding: var(--s-12) 0 var(--s-12) 0;
 		@include lg {
-			padding: calc(var(--s-11) + 60px) 0 var(--s-12) 0;
+			padding: calc(var(--s-13) + 60px) 0 var(--s-13) 0;
 		}
 		.container {
 			display: grid;
@@ -96,6 +96,7 @@
 					@include lg {
 						text-align: left;
 						padding-bottom: var(--s-5);
+						font-weight: 300;
 						font-size: 1.2rem;
 					}
 				}
@@ -123,7 +124,7 @@
 							font-weight: 400;
 							color: var(--color-rock-100);
 							@include lg {
-								font-size: 0.9em;
+								font-size: 1rem;
 							}
 						}
 					}
@@ -150,7 +151,7 @@
 	}
 	#post {
 		max-width: $sm;
-		padding: var(--s-10) var(--s-6);
+		padding: var(--s-12) var(--s-6);
 		margin: 0 auto;
 		background-color: var(--color-bg-primary);
 		@include lg {

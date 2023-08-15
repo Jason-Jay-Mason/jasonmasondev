@@ -31,11 +31,10 @@
 		font-size: var(--text-md);
 		line-height: 1.2;
 		font-family: var(--font-headline);
-		text-transform: uppercase;
 		color: var(--color-rock-100);
-		padding: var(--s-10) 0 0 0;
+		padding: var(--s-10) 0 var(--s-6) 0;
 		@include lg {
-			font-size: var(--text-lg);
+			font-size: 2rem;
 		}
 	}
 	.h2-container {
