@@ -7,8 +7,11 @@
 </script>
 
 {#if type}
-	<button {type} class:fullWidth={width === "full"} class:fit-content={width === "fit-content"}
-		><slot /></button
+	<button
+		{type}
+		class="rainbow-hover"
+		class:fullWidth={width === "full"}
+		class:fit-content={width === "fit-content"}><slot /></button
 	>
 {:else}
 	<a {href} {target}>

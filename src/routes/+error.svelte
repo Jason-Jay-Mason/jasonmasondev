@@ -18,10 +18,15 @@
 />
 
 <style lang="scss">
+	@import "../lib/theme/breakpoints.scss";
 	.mustachio {
 		z-index: 6;
+		display: none;
 		position: absolute;
 		height: 100vh;
 		width: 100%;
+		@include sm {
+			display: inline-block;
+		}
 	}
 </style>

@@ -28,7 +28,7 @@
 	h3,
 	h4 {
 		position: relative;
-		font-size: var(--text-md);
+		font-size: var(--text-lg);
 		line-height: 1.2;
 		font-family: var(--font-headline);
 		color: var(--color-rock-100);

@@ -53,7 +53,7 @@
 	footer {
 		z-index: 99;
 		position: relative;
-		background-color: var(--color-rock-invert-900);
+		background-color: var(--color-rock-invert-800);
 		.top {
 			display: flex;
 			justify-content: space-between;

@@ -24,7 +24,7 @@
 	.legal {
 		width: 100%;
 		padding: var(--s-7) 0;
-		background-color: var(--color-rock-invert-900);
+		background-color: var(--color-rock-invert-800);
 		.content {
 			display: flex;
 			flex-direction: row;

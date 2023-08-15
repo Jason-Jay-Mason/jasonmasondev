@@ -28,14 +28,18 @@
 		border: solid 4px var(--color-rock-100);
 		background-color: var(--color-bg-field);
 		&::placeholder {
-			font: var(--font-headline);
+			font-family: var(--font-headline);
+			letter-spacing: 1.2px;
 			font-weight: 600;
 			text-transform: uppercase;
 			color: var(--color-rock-100);
 			opacity: 1;
 		}
 		&:placeholder-shown {
-			font-size: 0.9rem;
+			font-size: 1rem;
+		}
+		&:not(placeholder-shown) {
+			font-family: var(--font-body);
 		}
 		&:focus {
 			background-color: var(--color-bg-primary);
@@ -55,10 +59,10 @@
 
 	textarea {
 		height: 250px;
-		padding: var(--s-4);
+		padding: var(--s-6);
 		&::placeholder {
 			text-align: center;
-			line-height: 14rem;
+			line-height: 12rem;
 		}
 	}
 </style>

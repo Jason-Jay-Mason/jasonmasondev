@@ -28,7 +28,7 @@
 								{#if i === post.tags.length - 1}
 									{tag.name}
 								{:else}
-									{tag.name}&nbsp;•&nbsp;
+									{tag.name} &nbsp;• &nbsp;
 								{/if}
 							{/each}
 						</span>
@@ -49,7 +49,7 @@
 	@import "../../theme/breakpoints.scss";
 	#summary {
 		background-color: var(--color-rock-invert-700);
-		padding: var(--s-12) 0 var(--s-12) 0;
+		padding: calc(var(--s-12) + 30px) 0 var(--s-12) 0;
 		@include lg {
 			padding: calc(var(--s-13) + 60px) 0 var(--s-13) 0;
 		}
@@ -61,10 +61,13 @@
 			padding: 0 var(--s-6);
 			@include lg {
 				grid-template-columns: 3fr 2fr;
-				align-items: center;
+				align-items: flex-start;
 				gap: var(--s-5);
 				max-width: 1300px;
 				padding: 0 var(--s-8);
+			}
+			@include xl {
+				align-items: center;
 			}
 			.preview {
 				display: flex;
@@ -113,16 +116,20 @@
 					.row {
 						display: flex;
 						align-items: center;
+						width: fit-content;
 						img {
 							filter: var(--icon-filter);
-							width: 18px;
+							width: 20px;
 							margin-right: 10px;
 						}
 						span {
-							font-size: 0.9rem;
+							font-size: 0.8rem;
 							font-family: var(--font-body);
 							font-weight: 400;
 							color: var(--color-rock-100);
+							@include xs {
+								font-size: 0.9rem;
+							}
 							@include lg {
 								font-size: 1rem;
 							}
@@ -134,11 +141,12 @@
 				position: relative;
 				width: 98%;
 				min-width: 250px;
-				height: 350px;
+				height: auto;
 				overflow: hidden;
 				margin: 0 auto;
 				border: solid 4px var(--color-rock-100);
 				@include xl {
+					height: 350px;
 					height: 110%;
 				}
 				img {
@@ -154,6 +162,7 @@
 		padding: var(--s-12) var(--s-6);
 		margin: 0 auto;
 		background-color: var(--color-bg-primary);
+		overflow: hidden;
 		@include lg {
 			max-width: $md;
 		}

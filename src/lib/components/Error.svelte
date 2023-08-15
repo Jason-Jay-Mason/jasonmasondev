@@ -22,6 +22,10 @@
 		margin: 0 auto;
 		height: 85vh;
 		padding: 0 var(--s-7);
+		text-align: center;
+		@include sm {
+			text-align: left;
+		}
 		h1 {
 			font-size: var(--text-xl);
 			font-family: var(--font-headline);
