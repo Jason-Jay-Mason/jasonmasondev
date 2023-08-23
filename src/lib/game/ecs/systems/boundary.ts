@@ -12,15 +12,16 @@ export function boundary(w: IWorld, g: Globals): void {
   for (const eid of eids) {
     if (U.isLaser(w, eid)) {
       const outOfView = (
-        C.Position.x[eid] <= 0 ||
-        C.Position.x[eid] >= g.dom.canvas.clientWidth ||
-        C.Position.y[eid] <= 0 ||
-        C.Position.y[eid] >= g.dom.canvas.clientHeight
+        C.Position.x[eid] <= -30 ||
+        C.Position.x[eid] >= g.dom.canvas.clientWidth + 30 ||
+        C.Position.y[eid] <= -30 ||
+        C.Position.y[eid] >= g.dom.canvas.clientHeight + 30
       )
 
       if (outOfView) {
         addComponent(w, C.Destroy, eid)
       }
+      continue
     }
 
     const topWallCollision = (C.Position.y[eid] <= 0 + C.Size.p[eid] &&
