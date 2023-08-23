@@ -1,7 +1,3 @@
-<script>
-	export let portableText
-</script>
-
 <ul>
 	<slot />
 </ul>

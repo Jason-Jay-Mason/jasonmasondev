@@ -28,20 +28,5 @@
 		@include xl {
 			grid-template-columns: 1fr 1fr 1fr;
 		}
-		.title {
-			font-size: var(--text-md);
-			text-align: center;
-			font-family: var(--font-headline);
-			letter-spacing: 3.36px;
-			color: var(--color-bg-primary);
-			text-transform: uppercase;
-			width: 100%;
-			background-color: var(--color-rock-100);
-		}
-		.column {
-			background-image: url("/pencil-bg.svg");
-			background-size: cover;
-			border: solid 4px var(--color-rock-100);
-		}
 	}
 </style>

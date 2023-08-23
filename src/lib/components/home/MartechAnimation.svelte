@@ -823,12 +823,6 @@
 		}
 	}
 
-	a:hover svg {
-		#maildata {
-			animation: data-forward 5s linear infinite;
-		}
-	}
-
 	#mail-top,
 	#videobox,
 	#videotargetcircle,

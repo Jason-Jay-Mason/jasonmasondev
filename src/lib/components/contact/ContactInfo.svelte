@@ -29,13 +29,16 @@
 		<div class="icon">
 			<GithubIcon />
 		</div>
-		<a href="https://github.com/jasonjaymason" target="_blank">github.com/jasonjaymason</a>
+		<a href="https://github.com/jasonjaymason" target="_blank" rel="noreferrer"
+			>github.com/jasonjaymason</a
+		>
 	</div>
 	<div class="item">
 		<div class="icon">
 			<LinkedinIcon />
 		</div>
-		<a href="https://linkedin.com/in/jasonjaymason" target="_blank">linkedin.com/in/jasonjaymason</a
+		<a href="https://linkedin.com/in/jasonjaymason" target="_blank" rel="noreferrer"
+			>linkedin.com/in/jasonjaymason</a
 		>
 	</div>
 </div>

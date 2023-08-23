@@ -1,15 +1,24 @@
 <script lang="ts">
 	import type { Link } from "$lib/types"
 	import { ThemeSwitcher } from "$lib/components"
+	import { outclickaction } from "$lib/actions/outclick"
 
 	export let data: Link[]
 	export let active: boolean
 </script>
 
-<div class="modal" class:inactive={active === false}>
+<div
+	use:outclickaction
+	on:outclick={() => (active = false)}
+	class="modal"
+	class:inactive={active === false}
+>
 	<div
 		class="modal-links"
 		on:click={() => {
+			active = !active
+		}}
+		on:keydown={() => {
 			active = !active
 		}}
 	>

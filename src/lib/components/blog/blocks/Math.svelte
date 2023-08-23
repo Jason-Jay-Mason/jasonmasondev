@@ -10,23 +10,23 @@
 	</div>
 </div>
 
-<style lang="scss">
-	@import "../../../theme/breakpoints.scss";
-	.math {
-		width: 100%;
-		.m-container {
-			color: var(--color-rock-100);
-			font-size: 1rem;
-			padding: var(--s-7) 0;
-			@include xs {
-				font-size: 1.2rem;
-			}
-			@include lg {
-				font-size: 1.5rem;
-			}
-			svg {
-				stroke: var(--color-rock-100);
-			}
-		}
-	}
-</style>
+<!-- <style lang="scss"> -->
+<!-- 	@import "../../../theme/breakpoints.scss"; -->
+<!-- 	.math { -->
+<!-- 		width: 100%; -->
+<!-- 		.m-container { -->
+<!-- 			color: var(--color-rock-100); -->
+<!-- 			font-size: 1rem; -->
+<!-- 			padding: var(--s-7) 0; -->
+<!-- 			@include xs { -->
+<!-- 				font-size: 1.2rem; -->
+<!-- 			} -->
+<!-- 			@include lg { -->
+<!-- 				font-size: 1.5rem; -->
+<!-- 			} -->
+<!-- 			svg { -->
+<!-- 				stroke: var(--color-rock-100); -->
+<!-- 			} -->
+<!-- 		} -->
+<!-- 	} -->
+<!-- </style> -->

@@ -9,7 +9,7 @@
 </script>
 
 <a href={websites[tech]}>
-	<img src={`/${tech}-logo.svg`} />
+	<img alt="Tech icon" src={`/${tech}-logo.svg`} />
 </a>
 
 <style lang="scss">
