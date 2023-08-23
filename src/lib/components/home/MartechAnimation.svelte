@@ -252,7 +252,7 @@
 						stroke="#3D3834"
 					/>
 				</g>
-				<g id="videoads">
+				<g id="vblobsicon">
 					<rect
 						id="videobox"
 						x="117.888"
@@ -306,7 +306,7 @@
 					<path id="mailline" d="M73 81L109 92" stroke="#828282" stroke-width="1.2" />
 					<path id="notificationline" d="M209 81L173 92" stroke="#828282" stroke-width="1.2" />
 					<path id="chatboxline" d="M209 146L173 136" stroke="#828282" stroke-width="1.2" />
-					<path id="videoadsline" d="M144 168L144 152" stroke="#828282" stroke-width="1.2" />
+					<path id="vblobsiconline" d="M144 168L144 152" stroke="#828282" stroke-width="1.2" />
 					<path id="metricsline" d="M144 70L144 54" stroke="#828282" stroke-width="1.2" />
 					<path id="automationsline" d="M76 146L113 136" stroke="#828282" stroke-width="1.2" />
 				</g>
@@ -897,7 +897,7 @@
 	#videoplayicon,
 	#automationsline,
 	#metricsline,
-	#videoadsline,
+	#vblobsiconline,
 	#chatboxline,
 	#notificationline,
 	#mailline,
