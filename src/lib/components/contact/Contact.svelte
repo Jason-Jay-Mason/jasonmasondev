@@ -143,7 +143,7 @@
 				@include md {
 					grid-row: 1 / span 3;
 					align-self: center;
-					height: min-content;
+					height: fit-content;
 				}
 			}
 			.textarea {

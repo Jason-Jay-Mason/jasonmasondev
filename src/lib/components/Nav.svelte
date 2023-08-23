@@ -3,7 +3,7 @@
 	import { ThemeSwitcher, Modal } from "$lib/components"
 	import { afterNavigate } from "$app/navigation"
 
-	export let data: Navbar = {
+	let data: Navbar = {
 		links: [
 			{
 				innerText: "Projects",
@@ -19,6 +19,10 @@
 			}
 		]
 	}
+	let modalLinks = [
+		{ innerText: "Home", href: "/" },
+		...data.links.filter((link) => link.href !== "/mustachio")
+	]
 
 	let scrollY = 0
 	let hidden = false
@@ -84,7 +88,7 @@
 			<div />
 		</button>
 	</div>
-	<Modal data={data.links.filter((link) => link.href !== "/mustachio")} bind:active={modalActive} />
+	<Modal data={modalLinks} bind:active={modalActive} />
 </nav>
 
 <style lang="scss">

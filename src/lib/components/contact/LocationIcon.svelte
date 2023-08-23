@@ -26,7 +26,7 @@
 <style lang="scss">
 	svg {
 		width: 100%;
-		height: fit-content;
+		height: 100%;
 	}
 	#location-icon-pin,
 	#location-icon-bottom {

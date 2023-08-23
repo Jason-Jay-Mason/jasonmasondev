@@ -11,32 +11,32 @@
 		<div class="icon">
 			<PhoneIcon />
 		</div>
-		<span>+1(253) 651 8568</span>
+		<p>+1(253) 651 8568</p>
 	</div>
 	<div class="item">
 		<div class="icon">
 			<MailIcon />
 		</div>
-		<span>jasonjaymason@gmail.com</span>
+		<p>jasonjaymason@gmail.com</p>
 	</div>
 	<div class="item">
 		<div class="icon">
 			<LocationIcon />
 		</div>
-		<span>Denver, CO</span>
+		<p>Denver, CO</p>
 	</div>
 	<div class="item">
 		<div class="icon">
 			<GithubIcon />
 		</div>
-		<span>github.com/jasonjaymason</span>
+		<a href="https://github.com/jasonjaymason" target="_blank">github.com/jasonjaymason</a>
 	</div>
 	<div class="item">
 		<div class="icon">
 			<LinkedinIcon />
 		</div>
-
-		<span>github.com/jasonjaymason</span>
+		<a href="https://linkedin.com/in/jasonjaymason" target="_blank">linkedin.com/in/jasonjaymason</a
+		>
 	</div>
 </div>
 
@@ -46,42 +46,50 @@
 		display: none;
 		flex-direction: column;
 		justify-content: space-between;
-		width: min-content;
 		height: 100%;
 		margin: 0 auto;
 		padding: var(--s-4) var(--s-4);
 		@include sm {
 			display: flex;
+			gap: var(--s-2);
 		}
 		@include md {
 			padding-left: var(--s-2);
+			gap: var(--s-6);
+		}
+		@include lg {
+			gap: var(--s-7);
 		}
 		.item {
 			display: grid;
 			grid-template-columns: 1fr 10fr;
 			justify-items: left;
 			align-items: center;
+			height: 40px;
 			@include md {
-				padding: var(--s-4);
 				column-gap: var(--s-4);
 			}
-			span {
-				font-size: 1rem;
+			p,
+			a {
+				font-size: 0.9rem;
 				font-family: Open Sans;
+				font-weight: 400;
 				text-align: center;
+				white-space: nowrap;
 				line-height: 1;
 				letter-spacing: 2px;
 				color: var(--color-text-body);
 				margin: -3px 0 0 10px;
 				@include lg {
-					font-size: 1.3rem;
+					font-size: 1.2rem;
 				}
 			}
 			.icon {
-				line-height: 0;
-				min-width: 25px;
+				width: 100%;
+				height: 100%;
+				min-width: 35px;
 				padding: 0;
-
+				line-height: 0;
 				@include md {
 					width: 35px;
 				}

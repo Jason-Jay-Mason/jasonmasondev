@@ -45,7 +45,7 @@
 		display: none;
 		height: 1200px;
 		width: 100%;
-		@include sm {
+		@include md {
 			display: inline-block;
 		}
 	}

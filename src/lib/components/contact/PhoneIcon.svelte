@@ -55,7 +55,7 @@
 <style lang="scss">
 	svg {
 		width: 100%;
-		height: fit-content;
+		height: 100%;
 	}
 	@for $i from 1 to 4 {
 		#phone-message-dot-#{$i} {
