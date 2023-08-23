@@ -17,6 +17,7 @@ export const load: PageServerLoad = async ({ params }) => {
   try {
     let post: PostData = await SanityApi.get.post(params.post)
 
+
     post.body = post.body.map(text => {
       if (text._type === 'code') {
         text.markup = hljs.highlightAuto(text.code).value

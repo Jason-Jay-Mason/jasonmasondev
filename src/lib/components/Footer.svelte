@@ -54,6 +54,7 @@
 		z-index: 99;
 		position: relative;
 		background-color: var(--color-rock-invert-800);
+		border-top: 2px solid var(--color-rock-200);
 		.top {
 			display: flex;
 			justify-content: space-between;
@@ -66,16 +67,6 @@
 				position: relative;
 				filter: var(--icon-filter);
 				width: var(--s-12);
-			}
-			&::before {
-				content: "";
-				position: absolute;
-				top: 0;
-				left: 0;
-				right: 0;
-				height: 2px;
-				margin: 0 auto;
-				background-color: var(--color-rock-200);
 			}
 			.links {
 				display: none;

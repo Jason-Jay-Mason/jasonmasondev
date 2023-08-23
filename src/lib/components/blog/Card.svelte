@@ -9,7 +9,9 @@
 
 <a href={`/blog/${post.slug}`} transition:blur>
 	<div class="card rainbow-hover">
-		<img src={post.imgSrc} alt={post.longTitle} />
+		<div class="featured-img">
+			<img src={post.imgSrc} alt={post.longTitle} />
+		</div>
 		<div class="details">
 			<h5>{post.shortTitle}</h5>
 			<p>{post.preview}</p>
@@ -40,23 +42,32 @@
 		margin: 0 auto;
 		border: solid 4px var(--color-rock-100);
 		&:hover {
-			img {
-				filter: grayscale(0);
+			.featured-img {
+				img {
+					filter: grayscale(0);
+				}
 			}
 			.details {
-				background-color: var(--color-bg-card);
+				background-color: var(--color-bg-primary);
 			}
 		}
-		img {
-			width: 100%;
-			height: 50%;
-			filter: grayscale(80%);
-			transition: all 0.3s ease;
+		.featured-img {
+			display: relative;
+			overflow: hidden;
+			height: 270px;
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				filter: grayscale(80%);
+				transition: all 0.3s ease;
+			}
 		}
+
 		.details {
 			padding: var(--s-6) var(--s-6);
 			color: var(--color-text-body);
-			background-color: var(--color-bg-field);
+			background-color: var(--color-rock-invert-800);
 			@include xs {
 				padding: var(--s-6) var(--s-8);
 			}
@@ -85,7 +96,7 @@
 				}
 			}
 			p {
-				font-size: 0.7rem;
+				font-size: 0.8rem;
 				display: -webkit-box;
 				-webkit-line-clamp: 3;
 				-webkit-box-orient: vertical;
@@ -98,7 +109,7 @@
 				flex-direction: row;
 				justify-content: space-between;
 				align-items: center;
-				gap: var(--s-5);
+				gap: var(--s-6);
 				padding-bottom: var(--s-5);
 				.time {
 					font-size: 0.8rem;
@@ -109,20 +120,21 @@
 				.tags {
 					display: flex;
 					flex-direction: row;
-					justify-content: center;
+					justify-content: flex-start;
 					align-content: center;
+					flex-wrap: wrap;
+					gap: var(--s-3);
 					width: fit-content;
 					.tag {
 						display: flex;
 						justify-content: center;
 						align-content: center;
 						height: fit-content;
-						margin-right: 4px;
 						padding: var(--s-4) 10px;
 						border: solid 1px var(--color-rock-100);
 						background-color: var(--color-rock-invert-700);
 						.tag-name {
-							font-size: 0.7rem;
+							font-size: 0.8rem;
 							font-family: var(--font-body);
 							font-weight: 400;
 							white-space: nowrap;

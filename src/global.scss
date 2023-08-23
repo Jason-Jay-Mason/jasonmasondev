@@ -105,5 +105,9 @@ img {
 
 math {
   text-align: left;
+  margin-top: calc((var(--s-8) * -1));
+  @include sm {
+  margin-top: calc((var(--s-9) * -1));
+  }
 }
 

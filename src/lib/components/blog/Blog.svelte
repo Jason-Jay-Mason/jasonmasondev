@@ -16,7 +16,7 @@
 	@import "../../../lib/theme/breakpoints.scss";
 	section {
 		max-width: 450;
-		margin: var(--s-11) auto 0 auto;
+		margin: var(--s-11) auto var(--s-11) auto;
 		padding: 0 var(--s-4);
 		@include sm {
 			max-width: $lg;

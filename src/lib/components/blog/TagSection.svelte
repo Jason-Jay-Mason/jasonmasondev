@@ -7,7 +7,7 @@
 
 <div class="top">
 	<div class="headline">
-		<h1>Woh! Neat blog!</h1>
+		<h1>Webdev blog</h1>
 		<div class="mask">
 			<img src="/lines.svg" alt="Stylized background" />
 		</div>
@@ -29,20 +29,11 @@
 		.headline {
 			position: relative;
 			h1 {
-				@keyframes headline {
-					from {
-						transform: rotate(0deg);
-					}
-					to {
-						transform: rotate(-724deg);
-					}
-				}
 				font-size: var(--text-xl);
 				font-family: var(--font-subheadline);
 				color: var(--color-rock-100);
-				transform: rotate(-4deg);
+				transform: rotate(-2deg);
 				padding: var(--s-4) var(--s-10) 0 var(--s-10);
-				animation: headline 1.5s 1;
 			}
 			.mask {
 				z-index: -1;
@@ -50,7 +41,7 @@
 				top: 0;
 				bottom: 0;
 				width: 100%;
-				height: 60%;
+				height: 50%;
 				margin: auto 0;
 				overflow: hidden;
 				img {

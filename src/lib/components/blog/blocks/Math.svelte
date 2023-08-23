@@ -5,20 +5,19 @@
 </script>
 
 <div class="math">
-	<p>
+	<div class="m-container">
 		{@html portableText.value.markup}
-	</p>
+	</div>
 </div>
 
 <style lang="scss">
 	@import "../../../theme/breakpoints.scss";
 	.math {
 		width: 100%;
-		p {
+		.m-container {
 			color: var(--color-rock-100);
 			font-size: 1rem;
-			padding: var(--s-6) 0;
-			margin: var(--s-1) 0;
+			padding: var(--s-7) 0;
 			@include xs {
 				font-size: 1.2rem;
 			}

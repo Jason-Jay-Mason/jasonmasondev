@@ -114,7 +114,7 @@
 		}
 		&:hover {
 			background-color: var(--color-rock-invert-900);
-			border-color: var(--color-rock-500);
+			border-color: var(--color-rock-200);
 		}
 		.link {
 			position: relative;
@@ -263,7 +263,7 @@
 
 	.sticky {
 		background-color: var(--color-rock-invert-900);
-		border-color: var(--color-rock-500);
+		border-color: var(--color-rock-200);
 		.logo {
 			width: 90px;
 			@include lg {
