@@ -4,9 +4,10 @@ import preprocess from 'svelte-preprocess'
 
 
 const config = {
-  extensions: ['.svelte', '.svelte.md', '.md', '.svx'],
+  extensions: ['.svelte'],
   preprocess: [
     preprocess({
+      preserve: ['partytown'],
       postcss: {
         plugins: [autoprefixer()]
       }
