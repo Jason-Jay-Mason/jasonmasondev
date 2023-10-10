@@ -5,9 +5,7 @@
 
 <div class="gridlink rainbow-hover">
 	<div class="frame">
-		<div class="mask">
-			<img class="background" src="/pencil-bg.svg" alt="Stylized background" />
-		</div>
+		<div class="mask" />
 		<div class="animation">
 			<slot />
 		</div>
@@ -46,6 +44,10 @@
 			align-items: center;
 			justify-content: center;
 			height: 296px;
+			background-image: url("/lines.svg");
+			background-size: 130%;
+			background-repeat: repeat;
+			background-color: var(--color-bg-card);
 			.animation {
 				z-index: 10;
 				height: 100%;
@@ -58,15 +60,7 @@
 				width: 100%;
 				height: 100%;
 				overflow: hidden;
-				background-color: var(--color-bg-card);
-				.background {
-					position: absolute;
-					top: 0;
-					width: 600px;
-					height: 100%;
-					object-fit: cover;
-					opacity: var(--opacity-pencilbg);
-				}
+				background-color: var(--color-bg-pencil-overlay);
 			}
 		}
 		.container {

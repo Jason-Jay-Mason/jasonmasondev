@@ -60,7 +60,7 @@
 			height: 100%;
 			overflow: scroll;
 			padding: var(--s-6) var(--s-6);
-			background-color: var(--color-column);
+			background-color: var(--color-bg-pencil-overlay);
 			@include xl {
 				height: 700px;
 			}

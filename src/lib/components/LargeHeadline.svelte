@@ -46,7 +46,7 @@
 					left: 0;
 					width: 500px;
 					opacity: var(--opacity-pencilbg);
-					object-fit: repeat;
+					object-fit: contain;
 					margin: auto 0;
 				}
 			}

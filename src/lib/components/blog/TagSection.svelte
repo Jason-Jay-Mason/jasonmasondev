@@ -41,7 +41,7 @@
 				top: 0;
 				bottom: 0;
 				width: 100%;
-				height: 50%;
+				height: 40%;
 				margin: auto 0;
 				overflow: hidden;
 				img {
@@ -49,8 +49,7 @@
 					top: 0;
 					bottom: 0;
 					left: 0;
-					width: 1000px;
-					object-fit: repeat;
+					width: 180%;
 					margin: auto 0;
 					opacity: var(--opacity-pencilbg);
 				}
