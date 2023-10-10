@@ -48,9 +48,6 @@ function get(): Getters {
   }
 
   const tasks = async () => {
-    // if (dev) {
-    //   return await backupTasks()
-    // }
 
     const res = await fetch(endPoint + params, {
       method: "GET",
@@ -92,8 +89,8 @@ interface Client {
   get: Getters
 }
 
-const sanity: Client = {
+const clickup: Client = {
   get: get()
 }
 
-export default sanity
+export default clickup

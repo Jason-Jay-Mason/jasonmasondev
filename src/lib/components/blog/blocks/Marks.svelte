@@ -4,7 +4,8 @@
 		sub = "sub",
 		sup = "sup",
 		strong = "strong",
-		em = "em"
+		em = "em",
+		link = "link"
 	}
 
 	export let portableText: MarkComponentProps
@@ -19,4 +20,16 @@
 	<sub><slot /></sub>
 {:else if type === marks.sup}
 	<sup><slot /></sup>
+{:else if type === marks.link}
+	<a href={portableText?.value?.href}><slot /></a>
+	<!-- else if content here -->
 {/if}
+
+<style>
+	a {
+		color: var(--color-link);
+	}
+	a:hover {
+		opacity: 0.9;
+	}
+</style>

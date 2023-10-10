@@ -5,6 +5,7 @@
 	import { debounce } from "$lib/utils"
 	import { outclickaction } from "$lib/actions/outclick"
 	import { FilterField, TrashIcon } from "$lib/components"
+	import { fade, slide } from "svelte/transition"
 
 	export let data: FilterableData[]
 	export let filtered: FilterableData[]
@@ -126,15 +127,17 @@
 			Advanced</button
 		>
 		{#if advancedVisible}
-			<div class="menu">
+			<div class="menu" transition:fade={{ delay: 0, duration: 100 }}>
 				<button class="add-filter" on:click={addFilter}>➕ Add Filter</button>
 				{#each activeFilters as filter, i (filter.id)}
 					{#if i !== 0}
-						<div class="filter-field">
-							<FilterField bind:filter {options} />
-							<button class="delete-filter" on:click={() => removeFilter(i)}>
-								<TrashIcon />
-							</button>
+						<div transition:fade={{ delay: 0, duration: 100 }}>
+							<div class="filter-field" transition:slide={{ duration: 100 }}>
+								<FilterField bind:filter {options} />
+								<button class="delete-filter" on:click={() => removeFilter(i)}>
+									<TrashIcon />
+								</button>
+							</div>
 						</div>
 					{/if}
 				{/each}

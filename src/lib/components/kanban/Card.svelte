@@ -2,14 +2,15 @@
 	import type { ClickupTask } from "$lib/types"
 	import { Months } from "$lib/types"
 	import { KanbanTechIcon as TechIcon } from "$lib/components"
+	import { fade, slide } from "svelte/transition"
 
 	export let task: ClickupTask
 	const endpoint = `https://sharing.clickup.com/${task.teamId}/v/6-901100158350-1/t/h/${task.id}/b0ef6cf2ff76ff1`
 	const date = new Date(parseInt(task.dueDate))
 </script>
 
-<a href={endpoint} target="_blank" rel="noreferrer">
-	<div class="card">
+<a href={endpoint} target="_blank" rel="noreferrer" transition:fade={{ delay: 0, duration: 100 }}>
+	<div class="card" transition:slide={{ delay: 100, duration: 300 }}>
 		<div class="title">
 			<h6>{task.name}</h6>
 			{#if task.organizationLogoSrc}

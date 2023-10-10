@@ -3,6 +3,7 @@ body {
 	--color-text-body: black;
 	--color-bg-primary: white;
 	--color-bg-card: white;
+  --color-link: #575BB1;
   --color-bg-field: #FAFAFA;
   --color-bg-code: #46423F;
   --color-bg-codetitle: #36322E;
@@ -41,6 +42,7 @@ body {
 
   //Overwrite colors for dark mode
 	&[data-theme='dark'] {
+  --color-link: #6C71E5;
 		--color-bg-primary: #36322F;
 		--color-bg-card: #302C29;
     --color-bg-field: #302C29;

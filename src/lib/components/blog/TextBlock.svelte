@@ -10,6 +10,7 @@
 	import Marks from "./blocks/Marks.svelte"
 
 	export let value
+	console.log(value)
 </script>
 
 <PortableText
@@ -24,7 +25,8 @@
 			sub: Marks,
 			sup: Marks,
 			bold: Marks,
-			Italic: Marks
+			Italic: Marks,
+			link: Marks
 		},
 		block: {
 			normal: Text,
