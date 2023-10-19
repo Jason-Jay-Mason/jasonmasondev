@@ -6,6 +6,7 @@ import { error } from '@sveltejs/kit';
 import SanityApi from '$lib/sanity';
 import hljs from "highlight.js/lib/core"
 import typescript from "highlight.js/lib/languages/typescript"
+//@ts-ignore
 import mathjax from 'mathjax'
 
 hljs.registerLanguage("typescript", typescript)

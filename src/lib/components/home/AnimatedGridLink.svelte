@@ -23,6 +23,8 @@
 		width: 100%;
 		margin: 0 auto;
 		border: 4px solid var(--color-rock-100);
+		background-color: var(--color-bg-card);
+		height: 100%;
 		&:hover {
 			border: 4px solid var(--color-rock-100);
 			h3 {
@@ -64,8 +66,7 @@
 			}
 		}
 		.container {
-			background-color: var(--color-bg-card);
-			padding: var(--s-6) var(--s-7);
+			padding: var(--s-7) var(--s-7);
 			@include sm {
 				padding: var(--s-7) var(--s-8);
 			}

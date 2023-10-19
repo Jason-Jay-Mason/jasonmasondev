@@ -5,7 +5,7 @@
 	$: ({ href, headline, hook } = link)
 </script>
 
-<a {href} class="gridlink ">
+<a {href} class="gridlink">
 	<div class="container rainbow-hover">
 		<h3>{headline}</h3>
 		<p>{hook}</p>
@@ -16,8 +16,10 @@
 	@import "../../theme/breakpoints.scss";
 	.gridlink {
 		position: relative;
+		display: block;
 		border: 4px solid var(--color-rock-100);
 		width: 100%;
+		height: 100%;
 		h3 {
 			font-size: 2em;
 			font-family: var(--font-headline);
@@ -30,6 +32,7 @@
 		.container {
 			padding: var(--s-6) var(--s-7);
 			background-color: var(--color-bg-card);
+			height: 100%;
 			@include sm {
 				padding: var(--s-7) var(--s-8);
 			}
