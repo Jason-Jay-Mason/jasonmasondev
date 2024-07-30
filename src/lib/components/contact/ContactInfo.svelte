@@ -29,8 +29,8 @@
 		<div class="icon">
 			<GithubIcon />
 		</div>
-		<a href="https://github.com/jasonjaymason" target="_blank" rel="noreferrer"
-			>github.com/jasonjaymason</a
+		<a href="https://github.com/jason-jay-mason" target="_blank" rel="noreferrer"
+			>github.com/jason-jay-mason</a
 		>
 	</div>
 	<div class="item">
