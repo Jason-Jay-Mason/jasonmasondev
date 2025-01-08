@@ -4,8 +4,10 @@
 @import './lib/theme/spacing.scss';
 @import './lib/theme/highlightjs.scss';
 
-*, *:before, *:after {
-  -webkit-box-sizing:border-box !important;
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box !important;
   -moz-box-sizing: border-box !important;
   -ms-box-sizing: border-box !important;
   box-sizing: border-box !important;
@@ -32,10 +34,12 @@
     border-image-source: var(--color-rainbow);
     pointer-events: none;
   }
-  &:hover{
-  transition: all 0.3s;
-  cursor: pointer;
-    &::after{
+
+  &:hover {
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &::after {
       transform: translate(-5px, -5px);
       border-width: 30px;
       opacity: 1;
@@ -46,9 +50,9 @@
 }
 
 body {
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
   height: 100%;
   background-color: white;
@@ -64,40 +68,44 @@ h3,
 h4,
 h5,
 h6 {
-	padding: 0;
-	margin: 0;
+  padding: 0;
+  margin: 0;
 }
 
-a,p{
-	color: var(--color-text-body);
-	color: var(--color-text-body);
+a,
+p {
+  color: var(--color-text-body);
+  color: var(--color-text-body);
 }
 
-p, li{
-	font-family: var(--font-body);
-	font-style: normal;
-	font-weight: 300;
-	font-size: var(--text-base);
-	line-height: 150%;
-	letter-spacing: 0.07em;
+p,
+li {
+  font-family: var(--font-body);
+  font-style: normal;
+  font-weight: 300;
+  font-size: var(--text-base);
+  line-height: 150%;
+  letter-spacing: 0.07em;
 }
 
 
 
 a {
-	text-decoration: none;
-	position: relative;
-  padding:0;
-  margin:0;
+  text-decoration: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
 }
 
 .text a {
   color: #575BB1;
   font-weight: 400;
+
   &:hover {
     opacity: 0.9;
   }
 }
+
 img {
   font-size: 8px;
   color: transparent;
@@ -106,8 +114,8 @@ img {
 math {
   text-align: left;
   margin-top: calc((var(--s-8) * -1));
+
   @include sm {
-  margin-top: calc((var(--s-9) * -1));
+    margin-top: calc((var(--s-9) * -1));
   }
 }
-

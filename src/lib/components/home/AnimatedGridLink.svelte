@@ -11,7 +11,7 @@
 		</div>
 	</div>
 	<div class="container">
-		<h3>{headline}</h3>
+		<h2>{headline}</h2>
 		<p>{hook}</p>
 	</div>
 </div>

@@ -22,6 +22,7 @@
 		grid-row: 3;
 		.cards {
 			max-height: 400px;
+			overflow-x: hidden;
 		}
 		@include md {
 			grid-column: 2;
@@ -58,7 +59,7 @@
 			display: flex;
 			flex-direction: column;
 			height: 100%;
-			overflow: scroll;
+			overflow-y: scroll;
 			padding: var(--s-6) var(--s-6);
 			background-color: var(--color-bg-pencil-overlay);
 			@include xl {

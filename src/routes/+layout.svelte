@@ -28,7 +28,7 @@
 	<link
 		href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700;800&family=Pragati+Narrow:wght@400;700&family=Qwigley&display=swap"
 		rel="stylesheet"
-	/><meta name="robots" content="noindex" /><meta name="googlebot" content="noindex" />
+	/>
 </svelte:head>
 
 {#if $page.error}

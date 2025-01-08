@@ -35,6 +35,7 @@
 	@import "../../theme/breakpoints.scss";
 	.container {
 		position: relative;
+		overflow-y: hidden;
 	}
 	.mustachio {
 		z-index: 6;

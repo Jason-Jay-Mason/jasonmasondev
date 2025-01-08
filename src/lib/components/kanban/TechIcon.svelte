@@ -1,20 +1,14 @@
 <script lang="ts">
 	export let tech: string
-
-	const websites: Record<string, string> = {
-		Svelte: "https://svelte.dev/",
-		Go: "https://go.dev/",
-		Scss: "https://sass-lang.com/"
-	}
 </script>
 
-<a href={websites[tech]}>
+<span>
 	<img alt="Tech icon" src={`/${tech}-logo.svg`} />
-</a>
+</span>
 
 <style lang="scss">
 	@import "../../theme/breakpoints.scss";
-	a {
+	span {
 		display: flex;
 		justify-content: center;
 		align-items: center;

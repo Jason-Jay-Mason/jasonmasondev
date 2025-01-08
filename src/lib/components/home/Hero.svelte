@@ -21,9 +21,9 @@
 			<div class="line-background" />
 		</div>
 		<div class="blurb">
-			<p>
+			<h2>
 				{data.hook}
-			</p>
+			</h2>
 		</div>
 		<div class="cta-container">
 			<div class="row">
