@@ -7,7 +7,7 @@
 
 <a {href} class="gridlink">
 	<div class="container rainbow-hover">
-		<h3>{headline}</h3>
+		<h2>{headline}</h2>
 		<p>{hook}</p>
 	</div>
 </a>
@@ -20,7 +20,7 @@
 		border: 4px solid var(--color-rock-100);
 		width: 100%;
 		height: 100%;
-		h3 {
+		h2 {
 			font-size: 2em;
 			font-family: var(--font-headline);
 			color: var(--color-rock-100);

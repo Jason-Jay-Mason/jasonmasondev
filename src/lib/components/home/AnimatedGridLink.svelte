@@ -31,7 +31,7 @@
 				color: var(--color-rock-100);
 			}
 		}
-		h3 {
+		h2 {
 			font-size: 2em;
 			font-family: var(--font-headline);
 			line-height: 100%;

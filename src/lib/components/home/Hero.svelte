@@ -143,6 +143,14 @@
 			text-align: center;
 			width: 90%;
 			padding: var(--s-8) 0;
+			h2 {
+				font-family: var(--font-body);
+				font-style: normal;
+				font-weight: 300;
+				font-size: var(--text-base);
+				line-height: 150%;
+				letter-spacing: 0.07em;
+			}
 			@include md {
 				width: 88%;
 			}
