@@ -148,6 +148,7 @@
 				font-style: normal;
 				font-weight: 300;
 				font-size: var(--text-base);
+				color: var(--color-rock-100);
 				line-height: 150%;
 				letter-spacing: 0.07em;
 			}
